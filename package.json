@@ -1,32 +1,27 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
-    "version": "5.2.2",
+    "title": "AK Video Redesign",
+    "name": "akvideore_design",
+    "version": "1.0.0",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "Agency is a one page HTML theme for Bootstrap.",
+    "description": "Redesign of AK Video Website",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+        "AKVideo",
+        "AK",
+        "Video",
+        "AK Video",
+        "Münchberg",
+        "Jugendarbeit"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/agency",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
-    },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "AK Video",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Yannick Lang"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+        "url": "https://github.com/layaxx/akvideo_website"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.10.2",
