@@ -1,7 +1,11 @@
 /*!
- * Start Bootstrap - AK Video Redesign v1.0.0 ()
- * Licensed under MIT (https://github.com/BlackrockDigital/akvideore_design/blob/master/LICENSE)
+ * Start Bootstrap - AK Video Redesign v1.0.0 
  */
+
+ :root {
+    --main-colour: #f69021;
+    --sec-colour: #faab54;
+}
 
 body {
     overflow-x: hidden;
@@ -13,7 +17,7 @@ p {
 }
 
 a {
-    color: #fed136;
+    color: var(--main-colour);
 }
 
 a:hover {
@@ -21,7 +25,7 @@ a:hover {
 }
 
 .text-primary {
-    color: #fed136 !important;
+    color: var(--main-colour) !important;
 }
 
 h1,
@@ -60,12 +64,12 @@ h6 {
 }
 
 ::-moz-selection {
-    background: #fed136;
+    background: var(--main-colour);
     text-shadow: none;
 }
 
 ::selection {
-    background: #fed136;
+    background: var(--main-colour);
     text-shadow: none;
 }
 
@@ -92,21 +96,35 @@ img::-moz-selection {
 }
 
 .btn-primary {
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: var(--main-colour);
+    border-color: var(--main-colour);
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-    background-color: #fec810 !important;
-    border-color: #fec810 !important;
+    background-color: rgba(246, 144, 33, 0) !important;
+    border-color: var(--main-colour) !important;
     color: white;
 }
 
 .btn-primary:active,
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
+
+.btn-primary2 {
+    background-color: var(--main-colour);
+    border-color: var(--main-colour);
+    color: white;
+}
+
+.btn-primary2:active,
+.btn-primary2:focus,
+.btn-primary2:hover {
+    background-color: var(--sec-colour) !important;
+    border-color: var(--sec-colour) !important;
+    color: black;
 }
 
 #mainNav {
@@ -120,12 +138,12 @@ img::-moz-selection {
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: var(--main-colour);
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: var(--main-colour);
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -147,7 +165,7 @@ img::-moz-selection {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: var(--main-colour);
 }
 
 @media (min-width: 992px) {
@@ -252,7 +270,7 @@ header.masthead .intro-text .intro-heading {
     height: 100%;
     transition: all ease 0.5s;
     opacity: 0;
-    background: rgba(254, 209, 54, 0.9);
+    background: rgba(246, 144, 33, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -449,7 +467,7 @@ header.masthead .intro-text .intro-heading {
     color: white;
     border: 7px solid #e9ecef;
     border-radius: 100%;
-    background-color: #fed136;
+    background-color: var(--main-colour);
 }
 
 .timeline>li .timeline-image h4 {
@@ -620,7 +638,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-    border-color: #fed136;
+    border-color: var(--main-colour);
     box-shadow: none;
 }
 
@@ -688,5 +706,5 @@ ul.social-buttons li a {
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: var(--main-colour);
 }
