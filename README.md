@@ -30,3 +30,6 @@ TODO:
     - Übersicht über Presseartikel über den AK?
     - Generelle Informationen, die für Journalisten interessant sein könnten?
     - Gründung, Mitglieder, Vorsitzender...
+    
+  - Domain & Hosting
+    - akvideo-mueb.de ?
