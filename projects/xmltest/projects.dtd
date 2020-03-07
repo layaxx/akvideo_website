@@ -1,0 +1,17 @@
+<!ELEMENT projects (project*)>
+<!ELEMENT project ((tables|other), videos?, bts)>
+<!ATTLIST project
+    name CDATA #REQUIRED
+    subline CDATA #REQUIRED
+>
+<!ELEMENT tables (table*)>
+<!ELEMENT table (entry*)>
+<!ELEMENT entry EMPTY>
+<!ATTLIST entry
+    position CDATA #REQUIRED
+    name CDATA #REQUIRED
+>
+<!ELEMENT videos (video*)>
+<!ELEMENT video (CDATA)>
+<!ELEMENT bts (paragraph*)>
+<!ELEMENT paragraph (#PCDATA)>
