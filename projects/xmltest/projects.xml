@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE projects SYSTEM "projects.dtd">
 <projects>
-  <to>Tove</to>
-  <from>Jani</from>
-  <heading>Reminder</heading>
-  <body>Don't forget me this weekend!</body>
+  <project name="Lichtblick" subline="Kurzfilm aus dem Jahr 2015">
+    <tables>
+      <table name="technische Details">
+        <entry position="Titel" name="Lichtblick" />
+        <entry position="Genre" name="Kurzfilm" />
+        <entry position="Länge" name="40 min." />
+        <entry position="Produktionsjahr" name="2015" />
+        <entry position="Produktionsort" name="Fränkische Schweiz" />
+        <entry position="Auflösung" name="UHD (16:9)" />
+        <entry position="Kamera" name="Blackmagic Pocket Cinema Camera" />
+      </table>
+      <table name="Besetzung">
+        <entry position="Produktion" name="Hugo Singer" />
+        <entry position="Regie" name="Philipp Jahn" />
+        <entry position="Drehbuch" name="Philipp Jahn" />
+        <entry position="Kamera" name="Philipp Jahn" />
+        <entry position="Kameraassistenz" name="Yannick Lang" />
+      </table>
+    </tables>
+    <videos name="Teaser + Trailer">
+      <video>https://www.youtube-nocookie.com/embed/o6ffaNycQSs</video>
+      <video>https://www.youtube-nocookie.com/embed/MKp10FyhZgU</video>
+    </videos>
+    <bts>
+      <section headline="NOVEMBER 2014 - MÄRZ 2015">
+        <paragraph>Anfang November 2014 startete die Crew mit dem Brainstorming. 
+        Die dort entstandene Geschichte hat noch nichts mit der finalen Version zu tun. 
+        4 andere Storys wurden verworfen - erst im März 2015 stand dann die endgültige Geschichte fest.</paragraph>
+        <pictures>
+          <picture path="test.png">
+            <description>
+            Die Crew bei der Entwicklung der Geschichte (März 2015)
+          </description>
+            <names>
+            Jannik Metz, Philipp Jahn, Adrian Roßner, Hannah Eul, Yannick Lang
+          </names>
+          </picture>
+        </pictures>
+      </section>
+    </bts>
+  </project>
 </projects>

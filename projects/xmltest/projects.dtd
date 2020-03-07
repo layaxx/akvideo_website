@@ -6,12 +6,21 @@
 >
 <!ELEMENT tables (table*)>
 <!ELEMENT table (entry*)>
+<!ATTLIST table name CDATA #REQUIRED>
 <!ELEMENT entry EMPTY>
 <!ATTLIST entry
     position CDATA #REQUIRED
     name CDATA #REQUIRED
 >
 <!ELEMENT videos (video*)>
-<!ELEMENT video (CDATA)>
-<!ELEMENT bts (paragraph*)>
+<!ATTLIST videos name CDATA #REQUIRED>
+<!ELEMENT video (#PCDATA)>
+<!ELEMENT bts (section*)>
+<!ELEMENT section (paragraph*, pictures)>
+<!ATTLIST section headline CDATA #REQUIRED>
 <!ELEMENT paragraph (#PCDATA)>
+<!ELEMENT pictures (picture*)>
+<!ELEMENT picture (description, names)>
+<!ATTLIST picture path CDATA #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT names (#PCDATA)>
