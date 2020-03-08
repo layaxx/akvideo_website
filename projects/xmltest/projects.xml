@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE projects SYSTEM "projects.dtd">
 <projects>
-  <project name="Lichtblick" subline="Kurzfilm aus dem Jahr 2015">
+  <project name="Lichtblick" subline="Kurzfilm aus dem Jahr 2015" uptodate="FALSE">
     <tables>
       <table name="technische Details">
         <entry position="Titel" name="Lichtblick" />

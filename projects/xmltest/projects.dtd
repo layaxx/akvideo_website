@@ -3,6 +3,7 @@
 <!ATTLIST project
     name CDATA #REQUIRED
     subline CDATA #REQUIRED
+    uptodate (TRUE|FALSE) #REQUIRED
 >
 <!ELEMENT tables (table*)>
 <!ELEMENT table (entry*)>
