@@ -15,9 +15,25 @@
       <table name="Besetzung">
         <entry position="Produktion" name="Hugo Singer" />
         <entry position="Regie" name="Philipp Jahn" />
-        <entry position="Drehbuch" name="Philipp Jahn" />
+        <entry position="Co-Regie" name="Hannah Eul" />
+        <entry position="Buch" name="Philipp Jahn" />
+        <entry position="Buch" name="Marius Bloß" />
+        <entry position="Musik" name="Kari Hennig" />
+        <entry position="Script" name="Lara Reichel" />
+        <entry position="Schnitt" name="Philipp Jahn" />
         <entry position="Kamera" name="Philipp Jahn" />
         <entry position="Kameraassistenz" name="Yannick Lang" />
+        <entry position="Kameraassistenz" name="Konstantin Agel" />
+        <entry position="Executive Producer" name="Lucas Krauß" />
+        <entry position="Ton" name="Laura Loy" />
+        <entry position="Ton" name="Saskia Villa" />
+        <entry position="Ton" name="Victor Fischer" />
+        <entry position="Technikassistenz" name="Selina Benker" />
+        <entry position="Technikassistenz" name="John Höllerich" />
+        <entry position="Technikassistenz" name="Adrian Roßner" />
+        <entry position="Technikassistenz" name="Daniel Hoke" />
+        <entry position="Hauptrolle" name="Marius Bloß" />
+        <entry position="Hauptrolle" name="Timo Rauh" />
       </table>
     </tables>
     <videos name="Teaser + Trailer">
