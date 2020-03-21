@@ -35,6 +35,19 @@ a {
     color: var(--main-colour);
 }
 
+/* start index.html only */
+.badge-warning{
+    background-color: #f69021;
+    color: white;
+}
+
+.badge{
+    position: absolute; 
+    top: 5px; 
+    right: 5px;
+}
+/* end index.html only */
+
 a:hover {
     color: #fec503;
 }
