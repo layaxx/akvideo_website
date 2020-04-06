@@ -41,10 +41,9 @@ a {
     color: white;
 }
 
-.badge{
-    position: absolute; 
-    top: 5px; 
-    right: 5px;
+
+.badge{ 
+  margin-bottom: 15px;
 }
 /* end index.html only */
 
