@@ -1,0 +1,153 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+    title AK Video - Workshops GSM
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='../assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(../assets/img/header/header-grundschule.jpg)')
+            .container
+                .masthead-heading.text-uppercase(style='text-shadow: 3px 3px 3px #000') Kooperation mit der Grundschule M&uuml;nchberg
+                .masthead-subheading April + Mai 2020
+
+        
+        section#alert.page-section
+          .container
+            .row
+              .alert.alert-danger
+                strong Update:
+                |  Wegen des Coronavirus und der Ma&szlig;nahmen zu dessen Eingrenzen kann dieses 
+                |  Projekt nicht wie bisher geplant stattfinden. Ob oder wann das Projekt zu einem sp&auml;teren Zeitpunkt 
+                |  stattfinden kann, ist aktuell noch nicht absehbar.
+        section#portfolio.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase geplanter Ablauf [hinf&auml;llig]
+            .row
+              .col-md-4.col-sm-6.portfolio-item
+                .portfolio-caption
+                  h4.text-muted 3. April 2020
+                  hr
+                  h4 Vorstellung
+                  hr
+                  p
+                    | Wir kommen an die Grundschule, zeigen unsere Filme und erz&auml;hlen, was zur Produktion
+                    | eines Films alles dazugeh&ouml;rt.
+              .col-md-4.col-sm-6.portfolio-item
+                .portfolio-caption
+                  h4.text-muted 15-17. Mai 2020
+                  hr
+                  h4 Filmdreh
+                  hr
+                  p
+                    | Zusammen mit interessierten Sch&uuml;lern denken wir uns eine Geschichte aus,
+                    | schreiben ein Drehbuch und produzieren daraus einen Kurzfim.
+              .col-md-4.col-sm-6.portfolio-item
+                .portfolio-caption
+                  h4.text-muted 28. Mai 2020
+                  hr
+                  h4 Premiere
+                  hr
+                  p
+                    | Wir bringen nochmal Kinoatmosph&auml;re in die Grundschule: Die Premiere des
+                    | entstandenen Films mit Beteiligten, Eltern &amp; Freunden
+        section#bts.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Behind The Scenes
+                .gap-20
+            .row
+              .col-lg-12
+                h3.text-uppercase Planung
+                p
+                  | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                  | ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                  | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                  | sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                  | invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  | justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                  | ipsum dolor sit amet.
+                .row
+                  .col-lg-2.col-md-0
+                  .col-lg-8.col-md-12
+                    img.img-fluid(src='../img/projects/grundschule/image1.jpg' alt='crew')
+                    .portfolio-caption
+                      p.text-muted(style='float:right')
+                        em
+                          | Marius Blo&szlig;, John H&ouml;llerich, Yannick Lang, Lara Reichel, Philipp
+                          | Jahn,
+                          | Philipp Inzenhofer
+                  .col-lg-2.col-md-0
+                h3.text-uppercase Phase 1 - Filme schauen!
+                p
+                  | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                  | ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                  | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                  | sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                  | invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  | justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                  | ipsum dolor sit amet.
+                h3.text-uppercase Phase 2 - Filme drehen!
+                p
+                  | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                  | ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                  | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                  | sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                  | invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  | justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                  | ipsum dolor sit amet.
+                h3.text-uppercase Phase 3 - wieder Film schauen!
+                p
+                  | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                  | ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                  | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                  | sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                  | invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  | justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                  | ipsum dolor sit amet.
+                h3.text-uppercase Ausblick
+                p
+                  | Ziel der Aktion ist es, Kinder f&uuml;r das Filmen zu begeistern. Wir hoffen, kreative K&ouml;pfe
+                  | f&uuml;r unsere n&auml;chsten Projekte gewinnen zu k&ouml;nnen. Auch die Gr&uuml;ndung einer
+                  | Filmgruppe an der Grundschule ist m&ouml;glich. Falls der Workshop auf gen&uuml;gend Zustimmung
+                  | st&ouml;&szlig;t, kann das Projekt in den kommenden Jahren auf jeden Fall widerholt, eventuell
+                  | auch auf mehr Klassen ausgeweitet werden.
+
+
+
+        include include/footer.pug
+
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+
+        // Core theme JS
+        script(src='../js/scripts.js')

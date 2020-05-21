@@ -1,0 +1,229 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+    title AK Video - Lichtblick
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='../assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(../assets/img/header/header-lichtblick.jpg)')
+            .container
+                .masthead-heading.text-uppercase Lichtblick
+                .masthead-subheading Kurzfilm aus dem Jahr 2015
+
+        
+        section#overview.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase &Uuml;bersicht
+            .row
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th technische Details
+                        th
+                    tbody
+                      tr
+                        td Titel
+                        td Lichtblick
+                      tr
+                        td Genre
+                        td Kurzfilm
+                      tr
+                        td L&auml;nge
+                        td xx min.
+                      tr
+                        td Produktionsjahr
+                        td 2015
+                      tr
+                        td Produktionsort
+                        td Fr&auml;nkische Schweiz
+                      tr
+                        td Resolution
+                        td UHD (16:9)
+                      tr
+                        td Kamera
+                        td Blackmagic Pocket Cinema Camera
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Besetzung
+                        th
+                    tbody
+                      tr
+                        td Produktion
+                        td Hugo Singer
+                      tr
+                        td Regie
+                        td Philipp Jahn
+                      tr
+                        td Drehbuch
+                        td Philipp Jahn
+                      tr
+                        td Kamera
+                        td Philipp Jahn
+                      tr
+                        td Kameraassistenz
+                        td Yannick Lang
+                      tr
+                        td Animation
+                        td Philipp Inzenhofer
+                      tr
+                        td Animation
+                        td Philipp Jahn
+                      tr
+                        td Nachvertonung
+                        td Henri Meister
+        section#trailer.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Teaser &amp; Trailer
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/o6ffaNycQSs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        section#bts.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Behind The Scenes
+                .gap-20
+            .row
+              .col-lg-12
+                h3.text-uppercase November 2014 - M&auml;rz 2015
+                p
+                  | Anfang November 2014 startete die Crew mit dem Brainstorming. Die dort entstandene Geschichte
+                  | hat noch nichts mit der finalen Version zu tun. 4&nbsp;andere Storys wurden verworfen - erst im
+                  | M&auml;rz
+                  | 2015 stand dann die endg&uuml;ltige Geschichte fest.
+                .row
+                  .col-lg-2.col-md-0
+                  .col-lg-8.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image1.jpg' alt='crew')
+                    .portfolio-caption
+                      p.text-muted(style='float:right')
+                        em Jannik Metz, Philipp Jahn, Adrian Ro&szlig;ner, Hannah Eul, Yannick Lang
+                      p(style='float: left;')
+                        em Die Crew bei der Entwicklung der Geschichte (M&auml;rz 2015)
+                  .col-lg-2.col-md-0
+                h3.text-uppercase April 2015
+                p
+                  | Nachdem die grobe Handlung fest stand, wurde die Geschichte strukturiert, wodurch der
+                  | Handlungsverlauf klar erkennbar wurde. Die Einzelheiten wurden noch mehrmals ge&auml;ndert, um die
+                  | Spannung des Film zu erh&ouml;hen. Ende April ging es dann zum ersten mal in
+                  | die Fr&auml;nkische Schweiz, um einige Drehorte zu besichtigen und um Inspiration f&uuml;r die Geschichte
+                  | zu bekommen.
+                h3.text-uppercase Mai 2015
+                p
+                  | Mitte Mai ging es dann mit einer gr&ouml;&szlig;eren Anzahl an Mitwirkenden nochmal in die Fr&auml;nkische
+                  | Schweiz, diesmal ein ganzes Wochenende lang. Weitere Drehorte wurden besichtigt und auch die
+                  | Geschichte wurde erneut besprochen und verbessert.
+                h3.text-uppercase Juni 2015
+                p
+                  | Nach zwei Wochen Erholung in den Pfingstferien ging es dann Anfang Juni mit dem Schreiben des
+                  | Drehbuchs los. Au&szlig;erdem wurden die Hauptrollen charakterisiert und weitere Einzelheiten in die
+                  | Geschichte eingebaut. Ende Juni drehte die
+                  | Crew den Teaser und machte, zusammen mit dem Musiker und Hobbyfotografen Christian Schmalz, die
+                  | Bilder f&uuml;r das DVD Label und die sozialen Netzwerke.
+                .row
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image4.jpg' alt='crew')
+                    .portfolio-caption
+                      p.text-muted(style='float:right')
+                        em
+                          | Timo Rauh, Lucas Krau&szlig;, Adrian Ro&szlig;ner, Yannick Lang, Marius Blo&szlig;, Christian
+                          | Schmalz, Philipp Jahn
+                      p(style='float: left;')
+                        em Teaserdreh &amp; Fotos (Juni 2015)
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image3.jpg' alt='crew')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Drehortbesichtigung
+                h3.text-uppercase August &amp; September 2015
+                p
+                  | Vom 25.08.2015 bis zum 05.09.2015 wurde dann nach einem Dreivierteljahr Planung der Film in der
+                  | Fr&auml;nkischen Schweiz und in M&uuml;nchberg gedreht. Aufgrund unserer super Crew, die perfekt zusammen
+                  | gearbeitet hat., konnten wir alle Szenen rechtzeitig fertig
+                  | drehen. Jeden Tag wurde ca. 10 Stunden gedreht. Es war eine harte aber sehr sch&ouml;ne Arbeit!
+                p
+                  | Weil so viele Personen auf einmal an einem Ort waren, musste alles im Voraus gut geplant werden.
+                  | Und wenn die Crew nicht voll dabei gewesen, w&auml;re auch ncit alles so reibungslos abgelaufen.
+                  | Danke an die Crew! Ohne einen Anh&auml;nger h&auml;tten wir unsere Technik
+                  | nie von einem Drehort zum n&auml;chsten bekommen. Vielen Dank an die Firma Ordnung f&uuml;r die
+                  | Bereitstellung!
+                p
+                  | Nachdem der Dreh am 05.09.2015 dann abgeschlossen war, ging es am 06.09.2015 dann mit dem
+                  | Schnitt los. 15 Stunden Rohmaterial m&uuml;ssen gesichtet, syncronisiert, gegradet und gemastert
+                  | werden. Dieser Prozess wird bis zur Premiere am 24.10.2015 andauern.
+                .row
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image11.jpg' alt='crew')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Filmdreh (August 2015)
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image5.jpg' alt='crew')
+                h3.text-uppercase Oktober 2015
+                p
+                  | Zusammen mit x Leuten konnten wir im Judoclub M&uuml;nchberg eine tolle Premiere feiern!
+                .row
+                  .col-lg-2.col-md-0
+                  .col-lg-8.col-md-12
+                    img.img-fluid(src='../assets/img/projects/lichtblick/image8.jpg' alt='premiere')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Premiere in M&uuml;nchberg
+                  .col-lg-2.col-md-0
+                h3.text-uppercase November 2015
+                p
+                  | Wir haben beim JUFINALE 2015 in Bamberg den Preis f&uuml;r den besten Film gewonnen!
+                .row
+                  .col-lg-2.col-md-0
+                  .col-lg-8.col-md-12
+                    iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/WauK6ITurX4' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                  .col-lg-2.col-md-0
+        hr
+
+        
+
+
+        include include/footer.pug
+
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+
+        // Core theme JS
+        script(src='../js/scripts.js')

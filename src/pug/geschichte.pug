@@ -1,0 +1,143 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+
+    title AK Video - Geschichte
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(assets/img/header/header-bg.jpg)')
+            .container
+                .masthead-heading.text-uppercase Wir sind der AK Video.
+                .masthead-subheading Unsere Entwicklung seit 2000
+
+        section#about.page-section
+            .container
+              .row
+                .col-lg-12
+                  ul.timeline
+                    li
+                      .timeline-image
+                        img.rounded-circle.img-fluid(src='img/about/1.jpg' alt='')
+                      .timeline-panel
+                        .timeline-heading
+                          h4 2000-20XX
+                          h4.subheading 1. Generation
+                        .timeline-body
+                          p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                      .timeline-image
+                        img.rounded-circle.img-fluid(src='img/about/2.jpg' alt='')
+                      .timeline-panel
+                        .timeline-heading
+                          h4 20XX-20YY
+                          h4.subheading 2. Generation
+                        .timeline-body
+                          p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li
+                      .timeline-image
+                        img.rounded-circle.img-fluid(src='img/about/3.jpg' alt='')
+                      .timeline-panel
+                        .timeline-heading
+                          h4 20YY-20ZZ
+                          h4.subheading 3. Generation
+                        .timeline-body
+                          p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                      .timeline-image
+                        img.rounded-circle.img-fluid(src='img/about/4.jpg' alt='')
+                      .timeline-panel
+                        .timeline-heading
+                          h4 20ZZ-20NN
+                          h4.subheading 4. Generation
+                        .timeline-body
+                          p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                      .timeline-image
+                        h4
+                          | Sei auch 
+                          br
+                          |  DU
+                          br
+                          | mit dabei!
+
+               
+
+
+        // Contact
+        section#contact.page-section
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Schreib uns!
+                    h3.section-subheading(style='color:white') Wir freuen uns immer über Feedback und neue Mitglieder, 
+                        | sowohl Kreative als auch Sponsoren.
+                form#contactForm(name='sentMessage', novalidate='novalidate')
+                    .row.align-items-stretch.mb-5
+                        .col-md-6
+                            .form-group
+                                input#name.form-control(type='text', placeholder='Name *', required='required', data-validation-required-message='Bitte teile uns deinen Namen mit.')
+                                p.help-block.text-danger
+                            .form-group
+                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten können.')
+                                p.help-block.text-danger
+                            .form-group.mb-md-0
+                                input#phone.form-control(type='tel', placeholder='Handynummer (optional)')
+                                p.help-block.text-danger
+                        .col-md-6
+                            .form-group.form-group-textarea.mb-md-0
+                                textarea#message.form-control(placeholder='Nachricht *', required='required', data-validation-required-message='Was m&ouml;chtest du uns mitteilen?')
+                                p.help-block.text-danger
+                    .text-center
+                            #success
+                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
+
+
+
+        include include/footer.pug
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+        // Contact form JS
+        script(src='assets/mail/jqBootstrapValidation.js')
+        script(src='assets/mail/contact_me.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')

@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+
+    title Hugo Singer
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(assets/img/header/header-bg.jpg)')
+            .container
+                .masthead-heading.text-uppercase Hugo Singer
+                .masthead-subheading Der Gründer des Arbeitskreises
+
+        section#about.page-section
+            .container
+              .row
+                .col-lg-12
+                  h2.section-heading.text-uppercase Wer ist Hugo?
+                  img(src='assets/ img/hugo/portrait.jpg' width='30%' style='float: left; margin-right: 5%;')
+                  p
+                    | Ohne unseren Hugo g&auml;be es den AK Video nicht. Seit
+                    | der Gr&uuml;ndung ist
+                    | immer Hugo derjenige, der den Arbeitskreis zusammengehalten hat. Egal ob neue Mitglieder
+                    | anwerben oder Projekte organisieren, Hugo ist immer mit dabei. Lange Zeit war auch Hugos blaues
+                    | Auto fester Bestandteil jedes Films, egal ob vor oder hinter den Kulissen.
+                  p
+                    | Neben der Jugendarbei ist Hugos gro&szlig;e Leidenschaft die Musik. Egal ob am Lagerfeuer, im Kindergarten oder in der Seniorenwohnanlage - mit seiner Gitarre und seinem Schifferklavier sorgt Hugo immer f&uuml;r Stimmung.
+              .row
+                img(src='assets/img/hugo/rsz_img_7592.jpg')
+               
+
+        include include/footer.pug
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+        
+        // Core theme JS
+        script(src='js/scripts.js')

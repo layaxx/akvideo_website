@@ -1,0 +1,92 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+
+    title Seite nicht gefunden
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(assets/img/header/header-error.jpg)')
+            .container
+                .masthead-heading.text-uppercase 404
+                .masthead-subheading Leider existiert diese Seite nicht.
+
+        // error
+        section#error.page-section.bg-light
+            .container
+                .row
+                    .text-center
+                        h2.section-subheading(style='margin-bottom: 50px')
+                            | Die angeforderte Seite wurde gelöscht oder hat nie existiert. Hier findest du andere interessante Seiten:
+
+                .row
+                    .col-lg-6.col-md-12.text-center(style='margin-bottom: 20px')
+                        a(href='index.html')
+                            button.btn.btn-primary.btn-xl.text-uppercase Startseite
+                    .col-lg-6.col-md-12.text-center(style='margin-bottom: 20px')
+                        a(href='projects/all.html')
+                            button.btn.btn-primary.btn-xl.text-uppercase Projekt&uuml;bersicht
+               
+
+
+        // Contact
+        section#contact.page-section
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Ist einer der Links auf unserer Seite kaputt?
+                    h3.section-subheading(style='color:white') Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.
+                form#contactForm(name='sentMessage', novalidate='novalidate')
+                    .row.align-items-stretch.mb-5
+                        .col-md-6
+                            .form-group
+                                input#name.form-control(type='text', placeholder='Von welcher Seite kommst du?')
+                                p.help-block.text-danger
+                            .form-group
+                                input#email.form-control(type='text', placeholder='Welche Seite wolltest du besuchen?')
+                                p.help-block.text-danger
+                        .col-md-6
+                            .form-group.form-group-textarea.mb-md-0
+                                textarea#message.form-control(placeholder='Sonstige Anmerkungen')
+                                p.help-block.text-danger
+                    .text-center
+                            #success
+                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Hinweis abschicken
+
+
+
+        include include/footer.pug
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+        // Contact form JS
+        script(src='assets/mail/jqBootstrapValidation.js')
+        script(src='assets/mail/contact_me.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')

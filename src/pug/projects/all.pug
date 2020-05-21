@@ -1,0 +1,360 @@
+doctype html
+html(lang='en')
+
+    include include/header.pug
+
+    title AK Video - Alle Projekte
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='../assets/img/logo.png', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+        // Masthead
+        header.masthead(style='background-image: url(../assets/img/header/header-bg.jpg)')
+            .container
+                .masthead-heading.text-uppercase Wir sind der AK Video!
+                .masthead-subheading Das sind unsere Projekte aus den letzten 20 Jahren
+
+        
+        // geplante Projekte
+        section#portfolio.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Projekte in Planung
+            .row
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link(href='grundschule.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/kreuzbergschule.jpg' alt='')
+                .portfolio-caption
+                  h4 Kooperation mit der GS M&uuml;nchberg
+                  p.text-muted Workshop
+              .col-lg-4.col-md-0.portfolio-item
+        section#portfolio.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Abgeschlossene Projekte
+            // finished projects year 2020
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2020
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link(href='grundschule.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/johns_adventure.jpg' alt='')
+                .portfolio-caption
+                  h4 John&acute;s Adventure
+                  p.text-muted Trickfilm
+              .col-lg-4.col-md-0.portfolio-item
+            // finished projects year 2019
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2019
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link(href='https://www.facebook.com/kclblaugold1949/videos/1252944378190311/')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-external-link-alt.fa-3x
+                  img.img-fluid(src='../assets/img/projects/5_tolle_tage.jpg' alt='')
+                .portfolio-caption
+                  h4 5 Tolle Tage
+                  p.text-muted Aftermovie
+              .col-lg-4.col-md-0.portfolio-item
+            // finished projects year 2018
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2018
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/talentlos.jpg' alt='')
+                .portfolio-caption
+                  h4 talentlos
+                  p.text-muted Kurzfilm (Freizeit)
+              .col-lg-4.col-md-0.portfolio-item
+            // finished projects year 2017
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2017
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link(href='sackgasse.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/sackgasse.jpg' alt='')
+                .portfolio-caption
+                  h4 Sackgasse
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            // finished projects year 2016
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2016
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='clipped.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Hintere H&ouml;he
+                  p.text-muted Schulprojekt
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='clipped.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Clipped: &Uuml;bersteuert
+                  p.text-muted Kurzfilm (Workshop)
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Flashdance Fever
+                  p.text-muted Aftermovie
+            // finished projects year 2015
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2015
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='panzerknacker.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/panzerknacker.jpg' alt='')
+                .portfolio-caption
+                  h4 Panzerknacker
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='lichtblick.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/lichtblick.jpg' alt='')
+                .portfolio-caption
+                  h4 Lichtblick
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='https://www.youtube.com/watch?v=gNyvTilYx1I')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-external-link-alt.fa-3x
+                  img.img-fluid(src='../assets/img/projects/funke_in_der_nacht.jpg' alt='')
+                .portfolio-caption
+                  h4 Funke in der Nacht
+                  p.text-muted Musikvideo
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/danke_emma.jpg' alt='')
+                .portfolio-caption
+                  h4 Danke, Emma
+                  p.text-muted Kurzfilm (Freizeit)
+              .col-lg-4.col-md-0.portfolio-item
+            // finished projects year 2014
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2014
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Historischer Weg M&uuml;nchberg
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link(href='handycap.html')
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-arrow-right.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Handycap
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Historischer Film &uuml;ber M&uuml;nchberg
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-6.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Der Stein
+                  p.text-muted Kurzfilm (Freizeit)
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2013
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 4 Freunde und die Droge
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2009
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Schneeflittchen
+                  p.text-muted Freizeit
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2008
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Die Br&uuml;cke am Tay
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2007
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 untitled Finale
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2005
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 M&uuml;nchbergs TRAUMhafte Unterwelt
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2004
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Das Testament
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2003
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Die Probe
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-muted 2000
+              .col-lg-4.col-md-0.portfolio-item
+              .col-lg-4.col-md-12.portfolio-item
+                a.portfolio-link
+                  .portfolio-hover
+                    .portfolio-hover-content
+                      i.fas.fa-times.fa-3x
+                  img.img-fluid(src='../assets/img/projects/platzhalter.jpg' alt='')
+                .portfolio-caption
+                  h4 Die geklaute Stadtkasse
+                  p.text-muted Kurzfilm
+              .col-lg-4.col-md-0.portfolio-item
+
+
+
+        include include/footer.pug
+
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+
+        // Core theme JS
+        script(src='../js/scripts.js')
