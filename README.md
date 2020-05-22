@@ -5,7 +5,7 @@ Re-Design der AK Video Münchberg Website
 
 **[View Live Preview](https://layaxx.github.io/akvideo_website/)**
 
-TODO:
+## TODO:
 - Bilder:
   - Gruppenbild (Header)
   - Thumbnails für Projekte
