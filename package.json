@@ -33,7 +33,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+        "url": "https://github.com/layaxx/akvideo_website.git"
     },
     "dependencies": {
         "bootstrap": "4.5.0"
