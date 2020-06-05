@@ -10,21 +10,23 @@ html(lang='en')
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    img(src='../assets/img/logo.png', alt='')
+                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                    img(src='../assets/img/logo.png', alt='Startseite')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+                  ul.navbar-nav.text-uppercase.d-none.d-md-block
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+                  ul.navbar-nav.text-uppercase.ml-auto
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#trailer') Trailer
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+    
         // Masthead
         header.masthead(style='background-image: url(../assets/img/header/header-bg.jpg)')
             .container
@@ -196,8 +198,16 @@ html(lang='en')
                         td Heike Eul
 
 
-
-        section#bts.page-section
+        section#trailer.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Teaser &amp; Trailer
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/o6ffaNycQSs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        section#bts.page-section.bg-light
           .container
             .row
               .col-lg-12.text-center
