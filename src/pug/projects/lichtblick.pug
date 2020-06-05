@@ -10,21 +10,23 @@ html(lang='en')
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='#page-top')
-                    img(src='../assets/img/logo.png', alt='')
+                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                    img(src='../assets/img/logo.png', alt='Startseite')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+                  ul.navbar-nav.text-uppercase.d-none.d-md-block
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+                  ul.navbar-nav.text-uppercase.ml-auto
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#trailer') Trailer
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+    
         // Masthead
         header.masthead(style='background-image: url(../assets/img/header/header-lichtblick.jpg)')
             .container

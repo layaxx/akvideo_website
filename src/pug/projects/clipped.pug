@@ -10,21 +10,23 @@ html(lang='en')
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='#page-top')
-                    img(src='../assets/img/logo.png', alt='')
+                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                    img(src='../assets/img/logo.png', alt='Startseite')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+                  ul.navbar-nav.text-uppercase.d-none.d-md-block
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+                  ul.navbar-nav.text-uppercase.ml-auto
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt    
+
         // Masthead
         header.masthead(style='background-image: url(../assets/img/header/header-clipped.jpg)')
             .container
@@ -111,7 +113,7 @@ html(lang='en')
                         td Unterst&uuml;tzung
                         td Jannik Metz
 
-
+        //BTS
         section#bts.page-section
           .container
             .row
@@ -131,7 +133,10 @@ html(lang='en')
                 h3.text-uppercase(style='margin-top: 5%') Der Dreh
                 img(src='../assets/img/projects/clipped/img_0019.jpg' width='35%' style='float: left; margin-right: 5%; margin-bottom: 5%')
                 p
-                | hsadhfljkahsfjkhsdjkfhgsgdfhjksdgfhjksgdjhfgjkshdgfhjk
+                | Als Drehorte standen schnell verschiedene Zimmer des Schullandheims, in dem wir den Workshop veranstalteten, sowie 
+                | der angrenzende Wald fest. Nachdem die Story feststand, organisierten wir die notwendigen Requisiten, insbesondere das 
+                | Fernsehger&auml;t, die Kettens&auml;ge und den B&ouml;ller. Mittels eines RGB LED Streifens haben wir dann als erstes den 
+                | Keller des Schullandheims zur Partylocation umfunktioniert. 
                 
                   
                 h3.text-uppercase(style='margin-top: 5%') Postproduktion

@@ -3,37 +3,245 @@ html(lang='en')
 
     include include/header.pug
 
-    title AK Video - Alle Projekte
+    title AK Video - Sackgasse
 
     body#page-top
 
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='#page-top')
-                    img(src='../assets/img/logo.png', alt='')
+                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                    img(src='../assets/img/logo.png', alt='Startseite')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+                  ul.navbar-nav.text-uppercase.d-none.d-md-block
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+                  ul.navbar-nav.text-uppercase.ml-auto
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#trailer') Trailer
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+    
         // Masthead
         header.masthead(style='background-image: url(../assets/img/header/header-bg.jpg)')
             .container
-                .masthead-heading.text-uppercase Wir sind der AK Video!
-                .masthead-subheading Das sind unsere Projekte aus den letzten 20 Jahren
+                .masthead-heading.text-uppercase Sackgasse
+                .masthead-subheading Kurzfilm aus dem Jahr 2017
 
         
+        // Tables
+        section#overview.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase &Uuml;bersicht
+            .row
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th technische Details
+                        th
+                    tbody
+                      tr
+                        td Titel
+                        td Sackgasse
+                      tr
+                        td Genre
+                        td Kurzfilm
+                      tr
+                        td L&auml;nge
+                        td 7:55
+                      tr
+                        td Produktionsjahr
+                        td 2017
+                      tr
+                        td Produktionsort
+                        td M&uuml;nchberg
+                      tr
+                        td Aufl&ouml;sung
+                        td FHD (21:9)
+                      tr
+                        td Kamera
+                        td Panasonic GH4
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Cast
+                        th
+                    tbody
+                      tr
+                        td Polizistin
+                        td Dominique Marquet
+                      tr
+                        td Polizist
+                        td Steffen Merkel
+                      tr
+                        td Elias
+                        td Marius Blo&szlig;
+                      tr
+                        td Kumpel 1
+                        td Gilian Offial
+                      tr
+                        td Kumpel 2
+                        td Timo Rauh
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Crew
+                        th
+                    tbody
+                      tr
+                        td nach einer Kurzgeschichte von
+                        td Kari Hennig
+                      tr
+                        td Regie
+                        td Konstantin Agel
+                      tr
+                        td Buch/Kamera/Post
+                        td Philipp Jahn
+                      tr
+                        td Setton
+                        td Yannick Lang
+                      tr
+                        td Setton
+                        td Victor Fischer
+                      tr
+                        td Aufnahmeleitung
+                        td Hannah Eul
+                      tr
+                        td Aufnahmeleitung
+                        td Lara Reichel
+                      tr
+                        td Aufnahmeleitung
+                        td Yannick Lang
+                      tr
+                        td Kameraassistenz
+                        td Lukas Weigmann
+                      tr
+                        td Kameraassistenz
+                        td Timo Rauh
+                      tr
+                        td Technik
+                        td Lucas Krau&szlig;
+                      tr
+                        td Technik
+                        td André Kienzle
+                      tr
+                        td Technik
+                        td Niklas Jahn
+                      tr
+                        td Klappe
+                        td Adrian Ro&szlig;ner
+                      tr
+                        td Colour Grading
+                        td Lukas Weigmann
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead
+                      tr
+                        th(style='color: transparent') m
+                        th
+                    tbody
+                      tr
+                        td Colour Grading
+                        td Philipp Jahn
+                      tr
+                        td Tonschnitt (Stimmen)
+                        td Yannick Lang
+                      tr
+                        td Tonschnitt (Ger&auml;usche)
+                        td Philipp Jahn
+                      tr
+                        td Nachvertonung
+                        td Philipp Jahn 
+                      tr
+                        td Nachvertonung
+                        td Yannick Lang
+                      tr
+                        td Nachvertonung
+                        td Konstantin Agel
+                      tr
+                        td Requisite
+                        td Jannik Metz
+                      tr
+                        td Requisite
+                        td Hannah Eul
+                      tr
+                        td Maske
+                        td Renate Merkel
+                      tr
+                        td Funkstimme
+                        td Thomas Agel
+                      tr
+                        td Fotografie & Making-of
+                        td Jonas Wiede
+                      tr
+                        td Catering
+                        td Christiane Jahn
+                      tr
+                        td Catering
+                        td Thomas Jahn
+                      tr
+                        td Catering
+                        td Heike Eul
+
+
+        section#trailer.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Teaser &amp; Trailer
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/o6ffaNycQSs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+              .col-lg-6.col-md-12
+                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        section#bts.page-section.bg-light
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Behind The Scenes
+                .gap-20
+            .row
+              .col-lg-12
+                h3.text-uppercase Die Location
+                p(style='text-align: justify')
+                  | Als Hauptdrehort haben wir ein leerstehendes Fabrikgel&auml;nde ausgew&auml;hlt. 
+                h3.text-uppercase(style='margin-top: 5%') Der Dreh
+                img(src='../assets/img/projects/clipped/img_0019.jpg' width='35%' style='float: left; margin-right: 5%; margin-bottom: 5%')
+                p
+                | Als Drehorte standen schnell verschiedene Zimmer des Schullandheims, in dem wir den Workshop veranstalteten, sowie 
+                | der angrenzende Wald fest. Nachdem die Story feststand, organisierten wir die notwendigen Requisiten, insbesondere das 
+                | Fernsehger&auml;t, die Kettens&auml;ge und den B&ouml;ller. Mittels eines RGB LED Streifens haben wir dann als erstes den 
+                | Keller des Schullandheims zur Partylocation umfunktioniert. 
+                
+                  
+                h3.text-uppercase(style='margin-top: 5%') Postproduktion
+                p(style='text-align: justify')
+                  | Von Anfang an war klar, dass bei diesem Workshop der Fokus auf der Postproduktion liegen sollte. Sowohl Schnitt, 
+                  | als auch Colorgrading und insbesondere Nachvertonung, da wir damit am wenigsten Erfahrung hatten, aber f&uuml;r 
+                  | unsere n&auml;chstes gro&szlig;es Projekt (
+                  a(href='sackgasse') Sackgasse
+                  | ) testen wollten. Aus Zeitgr&uuml;nden haben wir uns nach dem Dreh in zwei Gruppen aufgeteilt. Eine Gruppe hat 
+                  | Schnitt und Colorgrading &uuml;bernommen, w&auml;hrend sich die Andere mit der Aufnahme und dem Abmischen diverser 
+                  | Ger&auml;uschkulissen und Soundeffekten besch&auml;ftigt hat. Besonders interessant war hier die Nachvertonung der 
+                  | Videospielszene, da wir hier die Ger&auml;uschumgebung eines Videospiels von Grund auf aus verschiedenen Soundeffekten 
+                  | neu zusammengebastelt haben.
+                
         
 
+        hr 
 
         include include/footer.pug
 
