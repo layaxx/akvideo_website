@@ -5,6 +5,10 @@ html(lang='en')
 
     title AK Video - Alle Projekte
 
+    style.
+      .text-muted {text-align: center;}
+
+
     body#page-top
 
         // Navigation
@@ -21,9 +25,9 @@ html(lang='en')
                       a.nav-link.js-scroll-trigger(href='../index.html') Startseite
                   ul.navbar-nav.text-uppercase.ml-auto
                     li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#portfolio') geplante Projekte
+                      a.nav-link.js-scroll-trigger(href='#future') geplante Projekte
                     li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#portfolio') abgeschlossene Projekte
+                      a.nav-link.js-scroll-trigger(href='#past') abgeschlossene Projekte
                     li.nav-item
                       a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
     
@@ -37,7 +41,7 @@ html(lang='en')
         
         // geplante Projekte
         section#portfolio.bg-light.page-section
-          .container
+          .container#future
             .row
               .col-lg-12.text-center
                 h2.section-heading.text-uppercase Projekte in Planung
@@ -55,7 +59,7 @@ html(lang='en')
               .col-lg-4.col-md-0.portfolio-item
 
         section#portfolio.page-section
-          .container
+          .container#past
             .row
               .col-lg-12.text-center
                 h2.section-heading.text-uppercase Abgeschlossene Projekte
@@ -348,7 +352,8 @@ html(lang='en')
               .col-lg-4.col-md-0.portfolio-item
 
 
-
+        hr
+        
         include include/footer.pug
 
 
