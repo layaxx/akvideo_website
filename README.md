@@ -7,13 +7,22 @@ Re-Design der AK Video Münchberg Website
 
 ## TODO:
 - Bilder:
-  - Gruppenbild (Header)
-  - Thumbnails für Projekte
-  - Preise ?
+  - Thumbnails für Projekte verbessern
   
  - Content:
     - 20 Jahre AK (Text)
-    - einzelne Seiten für alle/wichtige Projekte (Bilder + Text)
+    - einzelne Seiten für wichtige Projekte (Bilder + Text)
+      - es fehlen komplett:
+         - Die geklaute Stadtkasse
+         - Das Geheimnis des Waldsteins
+         - Die Probe
+         - Zusammen durch die Zeit
+         - Panzerknacker
+         - Die TRAUMhafte Münchberger Unterwelt
+      - es fehlt Content:
+         - Sackgasse
+         - Lichtblick (anpassen/neuschreiben)
+         - Clipped
     
  - Footer:
     - Impressum **(Kontaktinformationen müssen angepasst werden)**
@@ -22,11 +31,6 @@ Re-Design der AK Video Münchberg Website
   
  - Struktur:
     - Awards als Slideshow?
- 
- - Presse Sektion (entweder auf main page oder als eigene Seite)
-    - Übersicht über Presseartikel über den AK?
-    - Generelle Informationen, die für Journalisten interessant sein könnten?
-    - Gründung, Mitglieder, Vorsitzender...
     
   - Domain & Hosting
     - akvideo-mueb.de ?
