@@ -42,6 +42,79 @@
                 </div>
             </div>
         </section>
+        <!-- Modal 1: Address-->
+        <div class="portfolio-modal modal fade" id="ModalAddress" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Du willst wissen wo du uns finden kannst?</h2>
+                                    <p class="item-intro text-muted">Im Bürgerzentrum in Münchberg</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" /><!-- Adresse vom Büz, eventuell interaktive Karte--><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Info-Karte schließen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 2: Movies-->
+        <div class="portfolio-modal modal fade" id="ModalMovies" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Du willst unsere fertigen Filme ansehen?</h2>
+                                    <p class="item-intro text-muted">Manche findest du auf YouTube:</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Threads</li>
+                                        <li>Category: Illustration</li>
+                                    </ul>
+                                    <p>Alle anderen Filme können <a href="#contact" data-dismiss="modal" type="button">auf Anfrage </a> als DVD ausgeliehen werden.</p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Info-Karte schließen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3: Phone-->
+        <div class="portfolio-modal modal fade" id="ModalPhone" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Du willst dich direkt mit uns in Kontakt setzten?</h2>
+                                    <p class="item-intro text-muted">Dann ruf uns einfach an!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
+                                    <ul class="list-inline">
+                                        <li>Hugo Singer: Handynummer</li>
+                                        <li>Philipp Jahn: Handynummer</li>
+                                        <li>Yannick Lang: Handynummer</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Info-Karte schließen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
@@ -53,7 +126,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fas fa-address-card"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fas fa-phone-alt"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2 portfolio-link" data-toggle="modal" href="#ModalAddress"><i class="fas fa-address-card"></i></a><a class="btn btn-dark btn-social mx-2 portfolio-link" data-toggle="modal" href="#ModalMovies"><i class="fab fa-youtube"></i></a><a class="btn btn-dark btn-social mx-2 portfolio-link" data-toggle="modal" href="#ModalPhone"><i class="fas fa-phone-alt"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right"><a class="mr-3" href="legal/impressum.html">Impressum</a><a href="legal/datenschutz.html">Datenschutzerkl&auml;rung</a></div>
                 </div>

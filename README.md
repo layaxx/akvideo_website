@@ -18,6 +18,7 @@ Re-Design der AK Video Münchberg Website
          - Die Probe
          - Zusammen durch die Zeit
          - Panzerknacker
+         - Stuhlgeschichten - Menschen auf Stühlen
          - Die TRAUMhafte Münchberger Unterwelt
       - es fehlt Content:
          - Sackgasse

@@ -1,3 +1,69 @@
+// Modal 1: Address
+#ModalAddress.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project Details Go Here
+                            h2.text-uppercase Du willst wissen wo du uns finden kannst?
+                            p.item-intro.text-muted Im Bürgerzentrum in Münchberg
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/01-full.jpg', alt='')
+                            // Adresse vom Büz, eventuell interaktive Karte
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
+// Modal 2: Movies
+#ModalMovies.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project Details Go Here
+                            h2.text-uppercase Du willst unsere fertigen Filme ansehen?
+                            p.item-intro.text-muted Manche findest du auf YouTube:
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/01-full.jpg', alt='')
+                            ul.list-inline
+                                li Date: January 2020
+                                li Client: Threads
+                                li Category: Illustration
+                            p   Alle anderen Filme können 
+                                a(href="#contact" data-dismiss='modal', type='button') auf Anfrage 
+                                |  als DVD ausgeliehen werden.
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
+// Modal 3: Phone
+#ModalPhone.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project Details Go Here
+                            h2.text-uppercase Du willst dich direkt mit uns in Kontakt setzten?
+                            p.item-intro.text-muted Dann ruf uns einfach an!
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/01-full.jpg', alt='')
+                            ul.list-inline
+                                li Hugo Singer: Handynummer
+                                li Philipp Jahn: Handynummer
+                                li Yannick Lang: Handynummer
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
 // Footer
 footer.footer.py-4
     .container
@@ -10,12 +76,12 @@ footer.footer.py-4
                   a(href='https://www.github.com/layaxx') Yannick Lang
                   
             .col-lg-4.my-3.my-lg-0
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalAddress')
                     i.fas.fa-address-card
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalMovies')
+                    i.fab.fa-youtube
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalPhone')
                     i.fas.fa-phone-alt
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
-                    i.fab.fa-linkedin-in
             .col-lg-4.text-lg-right
                 a.mr-3(href='legal/impressum.html') Impressum
                 a(href='legal/datenschutz.html') Datenschutzerkl&auml;rung
