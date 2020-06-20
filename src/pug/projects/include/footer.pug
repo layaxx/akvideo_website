@@ -1,3 +1,71 @@
+// Modal 1: Address
+#ModalAddress.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="../assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            h2.text-uppercase Du willst wissen wo du uns finden kannst?
+                            p(style="text-align:center;").item-intro.text-muted Im Bürgerzentrum in Münchberg
+                            p(style="text-align:center;") Stadtjugend Münchberg e.V. 
+                                br
+                                | Jugendtreff im Bürgerzentrum
+                                br
+                                | Bürgermeister-Specht-Platz 3
+                                br
+                                | 95213 Münchberg
+                            a(href="https://www.google.com/maps/place/Stadtjugend+Münchberg+e.V.+Jugendtreff+im+Bürgerzentrum/@50.1896871,11.7880962,18z/data=!4m5!3m4!1s0x47a10eeeb1b4d6f3:0xeb96308e36c4e6c3!8m2!3d50.18952!4d11.78746" target="_blank" style="font-weight: bold") in Google Maps ansehen
+                            // Adresse vom Büz, eventuell interaktive Karte
+                            br
+                            hr
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
+// Modal 2: Movies
+#ModalMovies.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="../assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            h2.text-uppercase Du willst unsere fertigen Filme ansehen?
+                            p(style="text-align:center;").item-intro.text-muted Manche findest du auf YouTube:
+                            ul.list-inline
+                                li 
+                                    a(href="https://youtu.be/zVVgRe6Opjc") John's Adventure
+                            p(style="text-align:center;")   Die meisten anderen Filme können 
+                                a(href="#contact" data-dismiss='modal', type='button') auf Anfrage 
+                                |  als DVD ausgeliehen werden.
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
+// Modal 3: Phone
+#ModalPhone.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-dismiss='modal')
+                img(src="../assets/img/close-icon.svg", alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            h2.text-uppercase Du willst dich direkt mit uns in Kontakt setzen?
+                            p(style="text-align:center;").item-intro.text-muted Dann ruf uns einfach an!
+                            ul.list-inline
+                                li Hugo Singer: 0171 3595437
+                                li Yannick Lang: 0151 70008124
+                            button.btn.btn-primary(data-dismiss='modal', type='button')
+                                i.fas.fa-times.mr-1
+                                | Info-Karte schließen
+
 // Footer
 footer.footer.py-4
     .container
@@ -8,14 +76,14 @@ footer.footer.py-4
                 .tooltiptext
                   | This site is maintained by 
                   a(href='https://www.github.com/layaxx') Yannick Lang
-                
+                  
             .col-lg-4.my-3.my-lg-0
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalAddress')
                     i.fas.fa-address-card
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalMovies')
+                    i.fab.fa-youtube
+                a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalPhone')
                     i.fas.fa-phone-alt
-                a.btn.btn-dark.btn-social.mx-2(href='#!')
-                    i.fab.fa-linkedin-in
             .col-lg-4.text-lg-right
                 a.mr-3(href='../legal/impressum.html') Impressum
                 a(href='../legal/datenschutz.html') Datenschutzerkl&auml;rung
