@@ -10326,6 +10326,7 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
+  text-shadow: 5px 5px 10px #000000;
   color: #fff;
   background-image: url("../assets/img/header-bg.jpg");
   background-repeat: no-repeat;

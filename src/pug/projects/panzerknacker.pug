@@ -23,17 +23,169 @@ html(lang='en')
                     li.nav-item
                       a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
                     li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#film') Film
-                    li.nav-item
                       a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#hintergrund') Hintergrund
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#dreh') Dreh
+                    li.nav-item
+                      a.nav-link.js-scroll-trigger(href='#premiere') Premiere                   
     
         // Masthead
-        header.masthead(style='background-image: url(../assets/img/header/header-bg.jpg)')
+        header.masthead(style='background-image: url(../assets/img/header/header-panzerknacker.jpg)')
             .container
-                .masthead-heading.text-uppercase Wir sind der AK Video!
-                .masthead-subheading Das sind unsere Projekte aus den letzten 20 Jahren
+                .masthead-heading.text-uppercase Die Panzerknacker schlagen zu
+                .masthead-subheading Kurzfilm aus dem Jahr 2015
 
         
+        // Tables
+        section#overview.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase &Uuml;bersicht
+            .row
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th technische Details
+                        th
+                    tbody
+                      tr
+                        td Titel
+                        td Die Panzerknacker schlagen zu
+                      tr
+                        td Genre
+                        td Kurzfilm
+                      tr
+                        td L&auml;nge
+                        td 09:02
+                      tr
+                        td Produktionsjahr
+                        td 2015
+                      tr
+                        td Produktionsort
+                        td Schwarzenbach a.d. Saale
+                      tr
+                        td Aufl&ouml;sung
+                        td FullHD
+                      tr
+                        td Kamera
+                        td EOS 700D
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Cast & Crew
+                        th
+                    tbody
+                      tr
+                        td Produktion
+                        td Hugo Singer
+                      tr
+                        td Kamera & Schnitt
+                        td Philipp Jahn
+                      tr
+                        td Tontechnik
+                        td Hannah Eul
+                      tr
+                        td Tontechnik
+                        td Yannick Lang
+                      tr
+                        td Tontechnik
+                        td Adrian Roßner
+                      tr
+                        td Technik
+                        td Lukas Pittroff
+                      tr
+                        td Technik
+                        td Viktor Plaum
+
+
+        section#bts.bg-light.page-section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2.section-heading.text-uppercase Behind The Scenes
+                .gap-20
+            .row
+              .col-lg-12
+                h3#hintergrund.text-uppercase Hintergrund
+                p
+                  | 2015 wurde in Schwarzenbach an der Saale das 
+                  a(href="http://www.erika-fuchs.de/") Erika-Fuchs-Haus 
+                  | eröffnet, ein Museum zu Ehren der Übersetzerin der Comics rund um Micky Maus und Donald Duck, die jahrzehntelang in Schwarzenbach lebte und arbeitete. Bereits während der Entwicklungsphase 
+                  | machten sich Jugendliche der Gitarrengruppe von Hugo Singer im Jugendtreff "Gleis 2" erste Gedanken über ein Filmprojekt zum Thema "Donald Duck", unter ihnen auch Joschka Plaum, der 
+                  | Weltmeister im Badewannenrennen. Schließlich steht das Drehbuch: Die gefürchteten Panzerknacker sind wieder einmal entwischt und terrorisieren ganz Schwarzenbach, und es gibt nur einen der sie aufhalten kann...
+                .row
+                  .col-lg-6.col-md-12
+                    a(title='Kreuzschnabel / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)' href='https://commons.wikimedia.org/wiki/File:Erika-Fuchs-Haus,_Schwarzenbach_an_der_Saale.jpg')
+                      img.img-fluid(style ='display: block; margin-left: auto; margin-right: auto; height: 340px;' alt='Erika-Fuchs-Haus, Schwarzenbach an der Saale' 
+                          src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Erika-Fuchs-Haus%2C_Schwarzenbach_an_der_Saale.jpg/256px-Erika-Fuchs-Haus%2C_Schwarzenbach_an_der_Saale.jpg')
+                      .portfolio-caption
+                        p(style='color:black; text-align: center; display: block; margin-left: auto; margin-right: auto;')
+                          em Das Erika-Fuchs-Haus
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image2.jpg' alt='Die Panzerknacker')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Die Panzerknacker überqueren die Saale.
+                h3#dreh.text-uppercase Der Dreh
+                p
+                  | Geld von Straßenkünstlern, Kunstwerke, der Tresor der Sparkasse: Nach ihrem Ausbruch brauchen die Panzerknacker erst einmal Geld und dabei ist nichts und niemand vor ihnen sicher. 
+                  | Zusammen mit den Jugendlichen aus dem Schwarzenbacher Jugendtreff "Gleis 2" haben wir ein Drehbuch finalisiert und umgesetzt. Als Kulisse dient hierfür Schwarzenbach selbst, 
+                  | insbesondere das Ufer der sächsischen Saale, der Jugendtreff und das Gelände der alten Porzellanfabrik Winterling, auf dem die Panzerknackerbande ihr Hauptquartier aufgeschlagen hat.
+                .row
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image7.jpg' alt='Kunstschätze')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em gestohlene Kunstwerke
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image6.jpg' alt='Raub des Banktresors')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Angriff auf die Bank
+                h3.text-uppercase Blaulicht, Explosionen und unbemannte Flugobjekte
+                p
+                  | Nachdem die Panzerknacker den Tresor der Sparkasse geklaut und zu ihrem Wohnwagen transportiert haben, müssen sie nur noch an den Inhalt gelangen. 
+                  | Dafür gibt es natürlich nur eine Möglichkeit: TNT. Beim Drehen dieser Szene hatten wir jede Menge Unterstützung: Neben einem Sprengmeister war die örtliche Feuerwehr mit einer Drehleiter 
+                  | vor Ort und für zusätzliche Luftaufnahmen ließen wir auch noch eine Drohne inklusive Kamera fliegen. Vielen Dank hierfür an 
+                  a(href='http://www.marcoschott.com/') Marco Schott
+                  | , der früher auch selbst aktives Mitglied im AK Video war.
+                  | Zusammen mit Schülern der Grundschule gelingt es schlussendlich Phantomias, die Verbrecher einzufangen und der Polizei zu übergeben.
+                .row
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image8.jpg' alt='Tresor')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Der aufgesprengte Tresor
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image5.jpg' alt='Panzerknackerbande')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Panzerknacker
+
+                h3#premiere.text-uppercase Film ab!
+                p
+                  | ... hieß es am 28. November 2015 im inzwischen fertiggestellten Erika-Fuchs-Haus, das natürlich der perfekte Ort für die Premiere unseres Films war. Davor hatten wir noch im Museum 
+                  | einen kurzen Trailer im Comic-Stil produziert.
+                .row
+                  .col-lg-6.col-md-12
+                    a(title='Artikel der Frankenpost über die Premiere' href='http://www.erika-fuchs.de/wp-content/uploads/2015/12/2015-12-01_frankenpost_Filmpremiere-Panzerknacker.pdf')
+                      img.img-fluid( alt='Artikel der Frankenpost über die Premiere' src='../assets/img/projects/panzerknacker/image9.jpg')
+                      .portfolio-caption
+                        p(style='color:black;')
+                          em Artikel der Frankenpost über die Premiere
+                  .col-lg-6.col-md-12
+                    img.img-fluid(src='../assets/img/projects/panzerknacker/image10.jpg' alt='trailer')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Frame aus dem Trailer
+                  
         
 
 
