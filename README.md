@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ab9dbb29-10eb-4bb8-8248-c774143daa1c/deploy-status)](https://app.netlify.com/sites/akvideo/deploys)
+
 # akvideo_website
 Re-Design der AK Video Münchberg Website
 
@@ -17,7 +19,6 @@ Re-Design der AK Video Münchberg Website
          - Das Geheimnis des Waldsteins
          - Die Probe
          - Zusammen durch die Zeit
-         - Panzerknacker
          - Stuhlgeschichten - Menschen auf Stühlen
          - Die TRAUMhafte Münchberger Unterwelt
       - es fehlt Content:
@@ -33,9 +34,6 @@ Re-Design der AK Video Münchberg Website
  - Struktur:
     - Awards als Slideshow?
     
-  - Domain & Hosting
-    - akvideo-mueb.de ?
-
 
 
 This Website is based on the Agency Template by Start Bootstrap
