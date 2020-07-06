@@ -34,19 +34,19 @@ html(lang='en')
                 .masthead-subheading Kurzfilm aus dem Jahr 2015
 
         
+        // Tables
         section#overview.bg-light.page-section
           .container
             .row
               .col-lg-12.text-center
                 h2.section-heading.text-uppercase &Uuml;bersicht
             .row
-              .col-sm-6
+              .col-sm-4
                 .team-member
                   table.table.table-sm
                     thead.thead-dark
                       tr
-                        th technische Details
-                        th
+                        th(colspan="2") technische Details
                     tbody
                       tr
                         td Titel
@@ -56,7 +56,7 @@ html(lang='en')
                         td Kurzfilm
                       tr
                         td L&auml;nge
-                        td xx min.
+                        td 35:45
                       tr
                         td Produktionsjahr
                         td 2015
@@ -64,28 +64,101 @@ html(lang='en')
                         td Produktionsort
                         td Fr&auml;nkische Schweiz
                       tr
-                        td Resolution
+                        td Aufl&ouml;sung
                         td UHD (16:9)
                       tr
                         td Kamera
                         td Blackmagic Pocket Cinema Camera
+              .col-sm-4
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Cast
+                        th
+                    tbody
+                      tr
+                        td Elias Koch
+                        td Marius Blo&szlig;
+                      tr
+                        td Lennard Jahn
+                        td Timo Rauh
+                      tr
+                        td Campleiter LJ
+                        td Christoph Schaller
+                      tr
+                        td Campleiter CF
+                        td Christian Schmalz
+                      tr
+                        td Louis Koch
+                        td Niklas Jahn
+                      tr
+                        td Susanne Koch
+                        td Christiane Jahn
+                      tr
+                        td Manuel Jahn
+                        td Thomas Agel
+                      tr
+                        td Wanderer 1
+                        td Hugo Singer
+                      tr
+                        td Wanderer 2
+                        td Reiner Reichelt
+                      tr
+                        td Alfons 
+                        td Bernd K&ouml;hler
+              .col-sm-4
+                .team-member
+                  table.table.table-sm
+                    thead.thead-dark
+                      tr
+                        th Lagerfeuerjunkies
+                        th Campingfreunde
+                    tbody
+                      tr
+                        td Alexander Tho&szlig;
+                        td Saskia Villa
+                      tr
+                        td Christian Schubert
+                        td Celina Gerspitzer
+                      tr
+                        td Gilian Offial
+                        td Simone Schmitt
+                      tr
+                        td Lena Hertrich
+                        td Silvia Fuchs
+                      tr
+                        td Maximilian Seiferth
+                        td Jan Linhardt
+                      tr
+                        td Ricco Mehl
+                        td Nicolas Neupert
+                      tr
+                        td Paul Sch&ouml;nberger
+                        td Tobias Wei&szlig;enberger
+                      tr
+                        td Ronja Schuldner
+                        td 
+                      tr
+                        td Lea Schaller
+                        td 
               .col-sm-6
                 .team-member
                   table.table.table-sm
                     thead.thead-dark
                       tr
-                        th Besetzung
+                        th Crew
                         th
                     tbody
-                      tr
-                        td Produktion
-                        td Hugo Singer
                       tr
                         td Regie
                         td Philipp Jahn
                       tr
-                        td Drehbuch
-                        td Philipp Jahn
+                        td Executive Producer
+                        td Lucas Krau&szlig;
+                      tr
+                        td Co-Regie
+                        td Hannah Eul
                       tr
                         td Kamera
                         td Philipp Jahn
@@ -93,23 +166,77 @@ html(lang='en')
                         td Kameraassistenz
                         td Yannick Lang
                       tr
-                        td Animation
-                        td Philipp Inzenhofer
+                        td Kameraassistenz
+                        td Konstantin Agel
                       tr
-                        td Animation
+                        td Ton
+                        td Laura Loy
+                      tr
+                        td Ton
+                        td Saskia Villa
+                      tr
+                        td Tontechnik
+                        td Victor Fischer
+                      tr
+                        td Musik
+                        td Kari Hennig
+                      tr
+                        td Licht
+                        td Lucas Krau&szlig;
+                     
+              .col-sm-6
+                .team-member
+                  table.table.table-sm
+                    thead
+                      tr
+                        th(style='color: transparent') m
+                        th
+                    tbody
+                      tr
+                        td Licht
+                        td Adrian Ro&szlig;ner
+                      tr
+                        td Script/Klappe
+                        td Lara Reichel
+                      tr
+                        td Schnitt/Colorgrade
                         td Philipp Jahn
                       tr
-                        td Nachvertonung
-                        td Henri Meister
+                        td Technikcrew
+                        td Adrian Ro&szlig;ner
+                      tr
+                        td Technikcrew
+                        td John H&ouml;llerich
+                      tr
+                        td Toncrew
+                        td Selina Benker
+                      tr
+                        td Buch
+                        td Philipp Jahn
+                      tr
+                        td Buch
+                        td Marius Blo&szlig;
+                      tr
+                        td Drohnenaufnahmen
+                        td Kari Hennig
+                      tr
+                        td Organisation
+                        td Hugo Singer
+                    
+
+
         section#trailer.page-section
           .container
             .row
               .col-lg-12.text-center
                 h2.section-heading.text-uppercase Teaser &amp; Trailer
+              .col-lg-12.text-center
+                p Elias Koch braucht dringend Geld und bittet den Computerfreak Lennard um Hilfe. Die zwei v&ouml;llig unterschiedlichen Charaktere gehen deshalb in die Fr&auml;nkische Schweiz und suchen einen Code, mit dem sie an Geld kommen k&ouml;nnen. 
+                  | Elias ist die Arroganz in Person und Lennard ist der sch&uuml;chterne, ruhige Typ. Doch wie sollen die zwei an das Geld kommen, wenn nicht beide am selben Strang ziehen?
               .col-lg-6.col-md-12
-                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/o6ffaNycQSs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                iframe(width='100%' src='https://www.youtube-nocookie.com/embed/o6ffaNycQSs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
               .col-lg-6.col-md-12
-                iframe(width='500' height='315' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                iframe(width='100%' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
         section#bts.bg-light.page-section
           .container
             .row
@@ -120,9 +247,9 @@ html(lang='en')
               .col-lg-12
                 h3.text-uppercase November 2014 - M&auml;rz 2015
                 p
-                  | Anfang November 2014 startete die Crew mit dem Brainstorming. Die dort entstandene Geschichte
-                  | hat noch nichts mit der finalen Version zu tun. 4&nbsp;andere Storys wurden verworfen - erst im
-                  | M&auml;rz
+                  | Anfang November 2014 startete die Crew mit dem Brainstorming. Die dort entstandene Geschichte 
+                  | hat noch nichts mit der finalen Version zu tun. 4&nbsp;andere Storys wurden verworfen - erst im 
+                  | M&auml;rz 
                   | 2015 stand dann die endg&uuml;ltige Geschichte fest.
                 .row
                   .col-lg-2.col-md-0
