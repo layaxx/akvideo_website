@@ -56,7 +56,7 @@ html(lang='en')
                 .text-center
                     h2.section-heading.text-uppercase Ist einer der Links auf unserer Seite kaputt?
                     h3.section-subheading(style='color:white') Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.
-                form#contactForm(name='sentMessage', novalidate='novalidate')
+                form#contactForm(name='sentMessage', novalidate='novalidate', data-netlify="true")
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
@@ -83,10 +83,6 @@ html(lang='en')
 
         // Third party plugin JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
-
-        // Contact form JS
-        script(src='assets/mail/jqBootstrapValidation.js')
-        script(src='assets/mail/contact_me.js')
 
         // Core theme JS
         script(src='js/scripts.js')

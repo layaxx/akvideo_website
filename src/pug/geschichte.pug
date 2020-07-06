@@ -96,7 +96,6 @@ html(lang='en')
 
                
 
-
         // Contact
         section#contact.page-section
             .container
@@ -104,7 +103,7 @@ html(lang='en')
                     h2.section-heading.text-uppercase Schreib uns!
                     h3.section-subheading(style='color:white') Wir freuen uns immer über Feedback und neue Mitglieder, 
                         | sowohl Kreative als auch Sponsoren.
-                form#contactForm(name='sentMessage', novalidate='novalidate')
+                form#contactForm(name='sentMessage', novalidate='novalidate', data-netlify="true")
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
@@ -134,10 +133,6 @@ html(lang='en')
 
         // Third party plugin JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
-
-        // Contact form JS
-        script(src='assets/mail/jqBootstrapValidation.js')
-        script(src='assets/mail/contact_me.js')
 
         // Core theme JS
         script(src='js/scripts.js')
