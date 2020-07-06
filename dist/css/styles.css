@@ -10066,6 +10066,18 @@ img::-moz-selection {
   border-radius: 100%;
 }
 
+.copyright {
+  background: lightgray;
+  position: absolute;
+  left: 14px;
+}
+
+.copyright a {
+  padding: 2px 5px;
+  color: black;
+  text-decoration: underline;
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
