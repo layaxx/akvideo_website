@@ -90,13 +90,10 @@ html(lang='en')
               .col-lg-12
                 h3.text-uppercase Planung
                 p
-                  | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                  | ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                  | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                  | sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                  | invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  | justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                  | ipsum dolor sit amet.
+                  | Weil viele unserer Mitglieder aktuell wenig Zeit f&uuml;r die Planung gro&szlig;er Filmprojekte haben, manche weil sie gerade mit Abschlusspr&uuml;fungen besch&auml;ftigt sind, 
+                  | andere weil sie gerade ihr Studium begonnen haben und eventuell auch gar nicht mehr in M&uuml;nchberg wohnen, sind wir aktuell auf der Suche nach neuen, j&uuml;ngeren 
+                  | Mitgliedern. Als wir vom Schulleiter der M&uuml;nchberger Grundschule gefragt wurden, ob wir nicht zusammen ein Projekt planen und umsetzen wollen, machten wir uns 
+                  | sofort auf die Suche nach einem Konzept, mit dem wir Schulkindern das Filmen n&auml;herbringen wollen.
                 .row
                   .col-lg-2.col-md-0
                   .col-lg-8.col-md-12
@@ -104,9 +101,11 @@ html(lang='en')
                     .portfolio-caption
                       p.text-muted(style='float:right')
                         em
-                          | Marius Blo&szlig;, John H&ouml;llerich, Yannick Lang, Lara Reichel, Philipp
-                          | Jahn,
-                          | Philipp Inzenhofer
+                          | Marius, John, Yannick, Lara, Philipp, Philipp und Hugo (Foto)
+                      p(style='float:left')
+                        em
+                          | Strategiebesprechung Februar 2020
+                      
                   .col-lg-2.col-md-0
                 h3#vorstellung.text-uppercase Phase 1 - Filme schauen!
                 p
@@ -120,7 +119,7 @@ html(lang='en')
                   | Nachdem wir in der ersten Phase den Kindern gezeigt haben, wie man einen Film dreht udn wie das Resultat 
                   | aussehen kann, werden wir danach mit ein bis zwei Gruppen an einem Wochenende selbst einen Film drehen. 
                   | Hierbei wollen wir die Sch&uuml;ler so viel wie m&ouml;glich selbst machen lassen: Geschichte ausdenken, 
-                  | Kamera bedienen, Regie f&uuml;hren... Wir werden als Unterst&uuml;tzer natürlich mit Rat und Tat zur Seite 
+                  | Kamera bedienen, Regie f&uuml;hren... Wir werden als Unterst&uuml;tzer nat&uuml;rlich mit Rat und Tat zur Seite 
                   | stehen, aber legen eben viel Wert darauf, den Kindern die Realisierung ihrer eigenen Fantasie zu erm&ouml;glichen.
                 h3#premiere.text-uppercase Phase 3 - wieder Film schauen!
                 p
@@ -146,16 +145,16 @@ html(lang='en')
             .container
                 .text-center
                     h2.section-heading.text-uppercase Du willst mit uns Filme drehen?
-                    h3.section-subheading(style='color:white') Dann schreib uns! Wir freuen uns immer über Feedback und neue Mitglieder, 
+                    h3.section-subheading(style='color:white') Dann schreib uns! Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, 
                         | sowohl Kreative als auch Sponsoren.
-                form#contactForm(name='sentMessage', novalidate='novalidate')
+                form#contactForm(data-netlify="true" name='sentMessage', novalidate='novalidate')
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
                                 input#name.form-control(type='text', placeholder='Name *', required='required', data-validation-required-message='Bitte teile uns deinen Namen mit.')
                                 p.help-block.text-danger
                             .form-group
-                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten können.')
+                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten k&ouml;nnen.')
                                 p.help-block.text-danger
                             .form-group.mb-md-0
                                 input#phone.form-control(type='tel', placeholder='Handynummer (optional)')
