@@ -224,34 +224,30 @@ html(lang='en')
                                 a(href='projects/probe.html') "Die Probe"    
 
 
-        // Contact
         section#contact.page-section
             .container
+              .text-center
+                h2.section-heading.text-uppercase Schreib uns!
+                h3.section-subheading(style='color: white;')
+                  | Wir freuen uns immer &uuml;ber Feedback und neue
+                  | Mitglieder, sowohl Kreative als auch Sponsoren.
+              form(name='contact' method='POST' data-netlify='true')
+                .row(style='overflow: hidden;')
+                  .col-lg-6.col-sm-12.text-center
+                    p
+                      label
+                        input(type='text' name='name' placeholder='Dein Name' style='padding: 0.5rem; min-width: 25rem;')
+                  .col-lg-6.col-sm-12.text-center
+                    p
+                      label
+                        input(type='email' name='email' placeholder='Deine E-Mail Adresse' style='padding: 0.5rem; min-width: 25rem;')
+                .text-center(style='overflow: hidden;')
+                  p
+                    label
+                      textarea(name='message' placeholder='Dein Nachricht an uns' style='padding: 0.5rem; min-width: 61rem; min-height: 10rem;')
                 .text-center
-                    h2.section-heading.text-uppercase Schreib uns!
-                    h3.section-subheading(style='color:white') Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, 
-                        | sowohl Kreative als auch Sponsoren.
-                form(name='contact' method='POST' data-netlify='true')
-                    p
-                      label
-                        | Your Name: 
-                        input(type='text' name='name')
-                    p
-                      label
-                        | Your Email: 
-                        input(type='email' name='email')
-                    p
-                      label
-                        | Your Role: 
-                        select(name='role[]' multiple='')
-                          option(value='leader') Leader
-                          option(value='follower') Follower
-                    p
-                      label
-                        | Message: 
-                        textarea(name='message')
-                    p
-                      button(type='submit') Send
+                  p
+                    button(type='submit' style='padding: 0.5rem 5rem; background-color: orange; color:white') Nachricht abschicken
 
 
 
