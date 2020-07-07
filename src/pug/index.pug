@@ -173,7 +173,7 @@ html(lang='en')
                                     | Die meisten Mitglieder der letzten Generation sind noch dabei, aber aufgrund von Schule oder Studium nicht mehr in der Lage, so h&auml;ufig wie fr&uuml;her Projekte durchzuf&uuml;hren. 
                                     | Willst du mit dabei sein? 
                                     a(href="#contact") Dann melde dich bei uns!
-                    li.timeline-inverted
+                    li.timeline-inverted.d-none.d-md-block
                         .timeline-image
                             h4
                                 | Sei auch
@@ -231,25 +231,20 @@ html(lang='en')
                     h2.section-heading.text-uppercase Schreib uns!
                     h3.section-subheading(style='color:white') Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, 
                         | sowohl Kreative als auch Sponsoren.
-                form#contactForm(name='sentMessage', novalidate='novalidate', method='POST', data-netlify="true")
+                form#contactForm(name='contact' method='POST' data-netlify="true")
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
-                                input#name.form-control(type='text', placeholder='Name *', required='required', data-validation-required-message='Bitte teile uns deinen Namen mit.')
-                                p.help-block.text-danger
+                                input#name.form-control(type='text' placeholder='Name *')
                             .form-group
-                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten k&ouml;nnen.')
-                                p.help-block.text-danger
+                                input#email.form-control(type='email' placeholder='E-Mail Adresse *')
                             .form-group.mb-md-0
-                                input#phone.form-control(type='tel', placeholder='Handynummer (optional)')
-                                p.help-block.text-danger
+                                input#phone.form-control(type='tel' placeholder='Handynummer (optional)')
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Nachricht *', required='required', data-validation-required-message='Was m&ouml;chtest du uns mitteilen?')
-                                p.help-block.text-danger
+                                textarea#message.form-control(placeholder='Nachricht *')
                     .text-center
-                            #success
-                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
+                        button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
 
 
 

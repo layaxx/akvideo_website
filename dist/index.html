@@ -182,7 +182,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
+                    <li class="timeline-inverted d-none d-md-block">
                         <div class="timeline-image">
                             <h4>Sei auch<br />DU<br />mit dabei!</h4>
                         </div>
@@ -237,33 +237,18 @@
                     <h2 class="section-heading text-uppercase">Schreib uns!</h2>
                     <h3 class="section-subheading" style="color: white;">Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, sowohl Kreative als auch Sponsoren.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate" data-netlify="true">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Name *" required="required" data-validation-required-message="Bitte teile uns deinen Namen mit." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="E-Mail Adresse *" required="required" data-validation-required-message="Bitte gib deine E-Mail Adresse an, damit wir dir antworten k&amp;ouml;nnen." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Handynummer (optional)" />
-                                <p class="help-block text-danger"></p>
-                            </div>
+                            <div class="form-group"><input class="form-control" id="name" type="text" placeholder="Name *" /></div>
+                            <div class="form-group"><input class="form-control" id="email" type="email" placeholder="E-Mail Adresse *" /></div>
+                            <div class="form-group mb-md-0"><input class="form-control" id="phone" type="tel" placeholder="Handynummer (optional)" /></div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Nachricht *" required="required" data-validation-required-message="Was m&amp;ouml;chtest du uns mitteilen?"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
+                            <div class="form-group form-group-textarea mb-md-0"><textarea class="form-control" id="message" placeholder="Nachricht *"></textarea></div>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Mitteilung abschicken</button>
-                    </div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Mitteilung abschicken</button></div>
                 </form>
             </div>
         </section>
