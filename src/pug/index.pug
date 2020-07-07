@@ -231,20 +231,27 @@ html(lang='en')
                     h2.section-heading.text-uppercase Schreib uns!
                     h3.section-subheading(style='color:white') Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, 
                         | sowohl Kreative als auch Sponsoren.
-                form#contactForm(name='contact' method='POST' data-netlify="true")
-                    .row.align-items-stretch.mb-5
-                        .col-md-6
-                            .form-group
-                                input#name.form-control(type='text' placeholder='Name *')
-                            .form-group
-                                input#email.form-control(type='email' placeholder='E-Mail Adresse *')
-                            .form-group.mb-md-0
-                                input#phone.form-control(type='tel' placeholder='Handynummer (optional)')
-                        .col-md-6
-                            .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Nachricht *')
-                    .text-center
-                        button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
+                form(name='contact' method='POST' data-netlify='true')
+                    p
+                      label
+                        | Your Name: 
+                        input(type='text' name='name')
+                    p
+                      label
+                        | Your Email: 
+                        input(type='email' name='email')
+                    p
+                      label
+                        | Your Role: 
+                        select(name='role[]' multiple='')
+                          option(value='leader') Leader
+                          option(value='follower') Follower
+                    p
+                      label
+                        | Message: 
+                        textarea(name='message')
+                    p
+                      button(type='submit') Send
 
 
 

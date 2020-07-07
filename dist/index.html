@@ -237,18 +237,26 @@
                     <h2 class="section-heading text-uppercase">Schreib uns!</h2>
                     <h3 class="section-subheading" style="color: white;">Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, sowohl Kreative als auch Sponsoren.</h3>
                 </div>
-                <form id="contactForm" name="contact" method="POST" data-netlify="true">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group"><input class="form-control" id="name" type="text" placeholder="Name *" /></div>
-                            <div class="form-group"><input class="form-control" id="email" type="email" placeholder="E-Mail Adresse *" /></div>
-                            <div class="form-group mb-md-0"><input class="form-control" id="phone" type="tel" placeholder="Handynummer (optional)" /></div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0"><textarea class="form-control" id="message" placeholder="Nachricht *"></textarea></div>
-                        </div>
-                    </div>
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Mitteilung abschicken</button></div>
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                        <label>Your Name: <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                        <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <label
+                            >Your Role:
+                            <select name="role[]" multiple=""
+                                ><option value="leader">Leader</option
+                                ><option value="follower">Follower</option></select
+                            ></label
+                        >
+                    </p>
+                    <p>
+                        <label>Message: <textarea name="message"></textarea></label>
+                    </p>
+                    <p><button type="submit">Send</button></p>
                 </form>
             </div>
         </section>
