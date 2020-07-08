@@ -1,33 +1,54 @@
 doctype html
 html(lang='en')
 
-    include include/header.pug
+    head
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='Ak Video')
 
 
+    link(rel='icon', type='image/png', href='/assets/img/fav.png')
+
+    
     title Seite nicht gefunden
+
+    // Font Awesome icons (free version)
+    script(src='https://use.fontawesome.com/releases/v5.13.0/js/all.js', crossorigin='anonymous')
+
+    // Google fonts
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css')
+
+    // Core theme CSS (includes Bootstrap)
+    link(href='/css/styles.css', rel='stylesheet')
+
 
     body#page-top
 
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    img(src='assets/img/logo.png', alt='')
+                a.navbar-brand.js-scroll-trigger(href='/index.html#page-top')
+                    img(src='/assets/img/logo.png', alt='')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ml-auto
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+                            a.nav-link.js-scroll-trigger(href='/index.html#portfolio') Projekte
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+                            a.nav-link.js-scroll-trigger(href='/index.html#about') 20 Jahre AK
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+                            a.nav-link.js-scroll-trigger(href='/index.html#awards') Auszeichnungen
                         li.nav-item
                             a.nav-link.js-scroll-trigger(href='#contact') Kontakt
         // Masthead
-        header.masthead(style='background-image: url(assets/img/header/header-error.jpg)')
+        header.masthead(style='background-image: url(/assets/img/header/header-error.jpg)')
             .container
                 .masthead-heading.text-uppercase 404
                 .masthead-subheading Leider existiert diese Seite nicht.
@@ -42,10 +63,10 @@ html(lang='en')
 
                 .row
                     .col-lg-6.col-md-12.text-center(style='margin-bottom: 20px')
-                        a(href='index.html')
+                        a(href='/index.html')
                             button.btn.btn-primary.btn-xl.text-uppercase Startseite
                     .col-lg-6.col-md-12.text-center(style='margin-bottom: 20px')
-                        a(href='projects/all.html')
+                        a(href='/projects/all.html')
                             button.btn.btn-primary.btn-xl.text-uppercase Projekt&uuml;bersicht
                
 
@@ -56,26 +77,110 @@ html(lang='en')
                 .text-center
                     h2.section-heading.text-uppercase Ist einer der Links auf unserer Seite kaputt?
                     h3.section-subheading(style='color:white') Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.
-                form#contactForm(name='sentMessage', novalidate='novalidate', data-netlify="true")
+                form#contactForm(name='sentMessage' method='POST' data-netlify="true")
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
-                                input#name.form-control(type='text', placeholder='Von welcher Seite kommst du?')
-                                p.help-block.text-danger
+                                input.form-control(type='text', placeholder='Von welcher Seite kommst du?')
                             .form-group
-                                input#email.form-control(type='text', placeholder='Welche Seite wolltest du besuchen?')
-                                p.help-block.text-danger
+                                input.form-control(type='text', placeholder='Welche Seite wolltest du besuchen?')
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Sonstige Anmerkungen')
-                                p.help-block.text-danger
+                                textarea.form-control(placeholder='Sonstige Anmerkungen')
                     .text-center
-                            #success
-                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Hinweis abschicken
+                            button.btn.btn-primary.btn-xl.text-uppercase(type='submit') Hinweis abschicken
 
 
 
-        include include/footer.pug
+        // Modal 1: Address
+        #ModalAddress.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .close-modal(data-dismiss='modal')
+                        img(src="/assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    h2.text-uppercase Du willst wissen wo du uns finden kannst?
+                                    p.item-intro.text-muted Im B&uuml;rgerzentrum in M&uuml;nchberg
+                                    p Stadtjugend M&uuml;nchberg e.V. 
+                                        br
+                                        | Jugendtreff im B&uuml;rgerzentrum
+                                        br
+                                        | B&uuml;rgermeister-Specht-Platz 3
+                                        br
+                                        | 95213 M&uuml;nchberg
+                                    a(href="https://www.google.com/maps/place/Stadtjugend+Münchberg+e.V.+Jugendtreff+im+Bürgerzentrum/@50.1896871,11.7880962,18z/data=!4m5!3m4!1s0x47a10eeeb1b4d6f3:0xeb96308e36c4e6c3!8m2!3d50.18952!4d11.78746" target="_blank" style="font-weight: bold") in Google Maps ansehen
+                                    // Adresse vom Büz, eventuell interaktive Karte
+                                    br
+                                    hr
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Info-Karte schließen
+
+        // Modal 2: Movies
+        #ModalMovies.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .close-modal(data-dismiss='modal')
+                        img(src="/assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    h2.text-uppercase Du willst unsere fertigen Filme ansehen?
+                                    p.item-intro.text-muted Manche findest du auf YouTube:
+                                    ul.list-inline
+                                        li 
+                                            a(href="https://youtu.be/zVVgRe6Opjc") 	&bull; John's Adventure
+                                    p   Die meisten anderen Filme k&ouml;nnen 
+                                        a(href="#contact" data-dismiss='modal', type='button') auf Anfrage 
+                                        |  als DVD ausgeliehen werden.
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Info-Karte schließen
+
+        // Modal 3: Phone
+        #ModalPhone.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .close-modal(data-dismiss='modal')
+                        img(src="/assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    h2.text-uppercase Du willst dich direkt mit uns in Kontakt setzen?
+                                    p.item-intro.text-muted Dann ruf uns einfach an!
+                                    ul.list-inline
+                                        li Hugo Singer: 0171 3595437
+                                        li Yannick Lang: 0151 70008124
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Info-Karte schließen
+
+        // Footer
+        footer.footer.py-4
+            .container
+                .row.align-items-center
+                    .col-lg-4.text-lg-left
+                      .tooltipContainer 
+                        | Copyright &copy; AK Video 2020
+                        .tooltiptext
+                          | This site is maintained by 
+                          a(href='https://www.github.com/layaxx') Yannick Lang
+
+                    .col-lg-4.my-3.my-lg-0
+                        a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalAddress')
+                            i.fas.fa-address-card
+                        a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalMovies')
+                            i.fab.fa-youtube
+                        a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalPhone')
+                            i.fas.fa-phone-alt
+                    .col-lg-4.text-lg-right
+                        a.mr-3(href='/legal/impressum.html') Impressum
+                        a(href='/legal/datenschutz.html') Datenschutzerkl&auml;rung
 
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
