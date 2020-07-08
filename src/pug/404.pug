@@ -77,18 +77,23 @@ html(lang='en')
                 .text-center
                     h2.section-heading.text-uppercase Ist einer der Links auf unserer Seite kaputt?
                     h3.section-subheading(style='color:white') Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.
-                form#contactForm(name='sentMessage' method='POST' data-netlify="true")
-                    .row.align-items-stretch.mb-5
-                        .col-md-6
-                            .form-group
-                                input.form-control(type='text', placeholder='Von welcher Seite kommst du?')
-                            .form-group
-                                input.form-control(type='text', placeholder='Welche Seite wolltest du besuchen?')
-                        .col-md-6
-                            .form-group.form-group-textarea.mb-md-0
-                                textarea.form-control(placeholder='Sonstige Anmerkungen')
+                form(name='contact' method='POST' data-netlify='true')
+                    .row(style='overflow: hidden;')
+                      .col-lg-6.col-sm-12.text-center
+                        p
+                          label
+                            input.formelem(type='from' name='name' placeholder='von welcher Seite kommst du?')
+                      .col-lg-6.col-sm-12.text-center
+                        p
+                          label
+                            input.formelem(type='to' name='email' placeholder='auf welche Seite wolltest du?')
+                    .text-center(style='overflow: hidden;')
+                      p
+                        label
+                          textarea.formelem(name='message' placeholder='sonstige Anmerkungen' style='min-width: 61rem; min-height: 10rem;')
                     .text-center
-                            button.btn.btn-primary.btn-xl.text-uppercase(type='submit') Hinweis abschicken
+                      p
+                        button.formButton(type='submit') Hinweis abschicken
 
 
 

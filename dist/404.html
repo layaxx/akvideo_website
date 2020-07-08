@@ -50,17 +50,27 @@
                     <h2 class="section-heading text-uppercase">Ist einer der Links auf unserer Seite kaputt?</h2>
                     <h3 class="section-subheading" style="color: white;">Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" method="POST" data-netlify="true">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group"><input class="form-control" type="text" placeholder="Von welcher Seite kommst du?" /></div>
-                            <div class="form-group"><input class="form-control" type="text" placeholder="Welche Seite wolltest du besuchen?" /></div>
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="row" style="overflow: hidden;">
+                        <div class="col-lg-6 col-sm-12 text-center">
+                            <p>
+                                <label><input class="formelem" type="from" name="name" placeholder="von welcher Seite kommst du?" /></label>
+                            </p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0"><textarea class="form-control" placeholder="Sonstige Anmerkungen"></textarea></div>
+                        <div class="col-lg-6 col-sm-12 text-center">
+                            <p>
+                                <label><input class="formelem" type="to" name="email" placeholder="auf welche Seite wolltest du?" /></label>
+                            </p>
                         </div>
                     </div>
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" type="submit">Hinweis abschicken</button></div>
+                    <div class="text-center" style="overflow: hidden;">
+                        <p>
+                            <label><textarea class="formelem" name="message" placeholder="sonstige Anmerkungen" style="min-width: 61rem; min-height: 10rem;"></textarea></label>
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <p><button class="formButton" type="submit">Hinweis abschicken</button></p>
+                    </div>
                 </form>
             </div>
         </section>

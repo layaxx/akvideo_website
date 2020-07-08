@@ -140,35 +140,31 @@ html(lang='en')
                   | auch auf mehr Klassen ausgeweitet werden.
 
 
-        // Contact
         section#contact.page-section
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase Du willst mit uns Filme drehen?
-                    h3.section-subheading(style='color:white') Dann schreib uns! Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, 
-                        | sowohl Kreative als auch Sponsoren.
-                form#contactForm(data-netlify="true" name='sentMessage', novalidate='novalidate')
-                    .row.align-items-stretch.mb-5
-                        .col-md-6
-                            .form-group
-                                input#name.form-control(type='text', placeholder='Name *', required='required', data-validation-required-message='Bitte teile uns deinen Namen mit.')
-                                p.help-block.text-danger
-                            .form-group
-                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten k&ouml;nnen.')
-                                p.help-block.text-danger
-                            .form-group.mb-md-0
-                                input#phone.form-control(type='tel', placeholder='Handynummer (optional)')
-                                p.help-block.text-danger
-                        .col-md-6
-                            .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Nachricht *', required='required', data-validation-required-message='Was m&ouml;chtest du uns mitteilen?')
-                                p.help-block.text-danger
-                    .text-center
-                            #success
-                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
-
-
-
+          .container
+            .text-center
+              h2.section-heading.text-uppercase Du willst mit uns Filme drehen?
+              h3.section-subheading(style='color: white;')
+                | Wir freuen uns immer &uuml;ber Feedback und neue
+                | Mitglieder, sowohl Kreative als auch Sponsoren.
+            form(name='contact' method='POST' data-netlify='true')
+              .row(style='overflow: hidden;')
+                .col-lg-6.col-sm-12.text-center
+                  p
+                    label
+                      input.formelem(type='text' name='name' placeholder='Dein Name')
+                .col-lg-6.col-sm-12.text-center
+                  p
+                    label
+                      input.formelem(type='email' name='email' placeholder='Deine E-Mail Adresse')
+              .text-center(style='overflow: hidden;')
+                p
+                  label
+                    textarea.formelem(name='message' placeholder='Dein Nachricht an uns' style='min-width: 61rem; min-height: 10rem;')
+              .text-center
+                p
+                  button.formButton(type='submit') Nachricht abschicken
+                  
         include include/footer.pug
 
 
