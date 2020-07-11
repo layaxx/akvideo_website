@@ -36,93 +36,55 @@ html(lang='en')
             .container
               .row
                 .col-lg-12
-                  ul.timeline
-                    li
-                      .timeline-image
-                        img.rounded-circle.img-fluid(src='img/about/1.jpg' alt='')
-                      .timeline-panel
-                        .timeline-heading
-                          h4 2000-20XX
-                          h4.subheading 1. Generation
-                        .timeline-body
-                          p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                    li.timeline-inverted
-                      .timeline-image
-                        img.rounded-circle.img-fluid(src='img/about/2.jpg' alt='')
-                      .timeline-panel
-                        .timeline-heading
-                          h4 20XX-20YY
-                          h4.subheading 2. Generation
-                        .timeline-body
-                          p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                    li
-                      .timeline-image
-                        img.rounded-circle.img-fluid(src='img/about/3.jpg' alt='')
-                      .timeline-panel
-                        .timeline-heading
-                          h4 20YY-20ZZ
-                          h4.subheading 3. Generation
-                        .timeline-body
-                          p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                    li.timeline-inverted
-                      .timeline-image
-                        img.rounded-circle.img-fluid(src='img/about/4.jpg' alt='')
-                      .timeline-panel
-                        .timeline-heading
-                          h4 20ZZ-20NN
-                          h4.subheading 4. Generation
-                        .timeline-body
-                          p.text-muted
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                            | ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                            | recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                    li.timeline-inverted
-                      .timeline-image
-                        h4
-                          | Sei auch 
-                          br
-                          |  DU
-                          br
-                          | mit dabei!
+                  h2.text-center Die Gr&uuml;ndung
+                  p(style='text-align:justify') Die Geschichte unseres Arbeitskreises beginnt, wie so manches unserer Projekte, mit 
+                    a(href="hugo.html") Hugo Singer. 
+                    | Der war um die Jahrtausendwende im Jugendtreff im M&uuml;nchberger B&uuml;rgerzentrum als Hauptamtlicher t&auml;tig. 
+                    | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten auf Film festzuhalten. 
+                    | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
+                    | Daraus entwickelte sich schlussendlich 
+                    a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse", 
+                    | ein Actionfilm inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
+              .row
+                .col-lg-6.col-md-12
+                    img.img-fluid(src='assets/img/history/image1.jpg' alt='Zeitungsartikel')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em der erste Zeitungsartikel &uuml;ber den Arbeitskreis (Frankenpost 2000)
+                .col-lg-6.col-md-12
+                    img.img-fluid(src='assets/img/projects/stadtkasse/image1.jpg' alt='Stadtkasse')
+                    .portfolio-caption
+                      p(style='float: left;')
+                        em Dreharbeiten zu "Die geklaute Stadtkasse"
+
+
 
                
-
         // Contact
         section#contact.page-section
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase Schreib uns!
-                    h3.section-subheading(style='color:white') Wir freuen uns immer über Feedback und neue Mitglieder, 
-                        | sowohl Kreative als auch Sponsoren.
-                form#contactForm(name='sentMessage', novalidate='novalidate', data-netlify="true")
-                    .row.align-items-stretch.mb-5
-                        .col-md-6
-                            .form-group
-                                input#name.form-control(type='text', placeholder='Name *', required='required', data-validation-required-message='Bitte teile uns deinen Namen mit.')
-                                p.help-block.text-danger
-                            .form-group
-                                input#email.form-control(type='email', placeholder='E-Mail Adresse *', required='required', data-validation-required-message='Bitte gib deine E-Mail Adresse an, damit wir dir antworten können.')
-                                p.help-block.text-danger
-                            .form-group.mb-md-0
-                                input#phone.form-control(type='tel', placeholder='Handynummer (optional)')
-                                p.help-block.text-danger
-                        .col-md-6
-                            .form-group.form-group-textarea.mb-md-0
-                                textarea#message.form-control(placeholder='Nachricht *', required='required', data-validation-required-message='Was m&ouml;chtest du uns mitteilen?')
-                                p.help-block.text-danger
-                    .text-center
-                            #success
-                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Mitteilung abschicken
-
+          .container
+            .text-center
+              h2.section-heading.text-uppercase Du willst Teil des AK Video werden?
+              h3.section-subheading(style='color: white;')
+                | Wir freuen uns immer &uuml;ber Feedback und neue 
+                | Mitglieder, sowohl Kreative als auch Sponsoren.
+            form(name='brokenLink' method='POST' data-netlify='true')
+              .row(style='overflow: hidden;')
+                .col-lg-6.col-sm-12.text-center
+                  p(style="text-align: inherit;")
+                    label
+                      input.formelem(type='text' name='name' placeholder='Dein Name')
+                .col-lg-6.col-sm-12.text-center
+                  p(style="text-align: inherit;")
+                    label
+                      input.formelem(type='email' name='email' placeholder='Deine E-Mail Adresse')
+              .text-center(style='overflow: hidden;')
+                p(style="text-align: inherit;")
+                  label
+                    textarea.formelem(name='message' placeholder='Dein Nachricht an uns' style='min-width: 61rem; min-height: 10rem;')
+              .text-center
+                p(style="text-align: inherit;")
+                  button.formButton(type='submit') Nachricht abschicken
 
 
         include include/footer.pug

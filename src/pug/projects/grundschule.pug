@@ -147,24 +147,24 @@ html(lang='en')
               h3.section-subheading(style='color: white;')
                 | Wir freuen uns immer &uuml;ber Feedback und neue
                 | Mitglieder, sowohl Kreative als auch Sponsoren.
-            form(name='contact' method='POST' data-netlify='true')
+            form(name='brokenLink' method='POST' data-netlify='true')
               .row(style='overflow: hidden;')
                 .col-lg-6.col-sm-12.text-center
-                  p
+                  p(style="text-align: inherit;")
                     label
                       input.formelem(type='text' name='name' placeholder='Dein Name')
                 .col-lg-6.col-sm-12.text-center
-                  p
+                  p(style="text-align: inherit;")
                     label
                       input.formelem(type='email' name='email' placeholder='Deine E-Mail Adresse')
               .text-center(style='overflow: hidden;')
-                p
+                p(style="text-align: inherit;")
                   label
                     textarea.formelem(name='message' placeholder='Dein Nachricht an uns' style='min-width: 61rem; min-height: 10rem;')
               .text-center
-                p
+                p(style="text-align: inherit;")
                   button.formButton(type='submit') Nachricht abschicken
-                  
+
         include include/footer.pug
 
 
