@@ -29,7 +29,6 @@ Re-Design der AK Video Münchberg Website
  - Footer:
     - Impressum **(Kontaktinformationen müssen angepasst werden)**
     - Datenschutzerklärung **(Kontaktinformationen müssen angepasst werden)**
-    - Sitemap ?
   
  - Struktur:
     - Awards als Slideshow?
