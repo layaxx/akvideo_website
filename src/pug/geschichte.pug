@@ -12,7 +12,7 @@ html(lang='en')
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
                 a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    img(src='assets/img/logo.png', alt='')
+                    img(src='assets/img/logo.png', alt='logo')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
@@ -41,7 +41,7 @@ html(lang='en')
                     a(href="hugo.html") Hugo Singer. 
                     | Der war um die Jahrtausendwende im Jugendtreff im M&uuml;nchberger B&uuml;rgerzentrum als Hauptamtlicher t&auml;tig. 
                     | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten auf Film festzuhalten. 
-                    | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
+                    | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann zusammen mit anderen Jugendlichen, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
                     | Daraus entwickelte sich schlussendlich 
                     a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse", 
                     | ein Actionfilm inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
@@ -56,10 +56,12 @@ html(lang='en')
                     .portfolio-caption
                       p(style='float: left;')
                         em Dreharbeiten zu "Die geklaute Stadtkasse"
+              .row
+                .col-lg-5.col-md-12
+                    img(src='assets/img/history/image3.jpg' style='width:100%')
+                .col-lg-7.col-md-12
+                    p(style='text-align:justify; margin-left: 30px; margin-top:40px;') Weiter ging es mit dem Kurzfilm "die Probe", mit dem wir beim JuFinale 2003 den Preis für den besten Film gewinnen konnten. 
 
-
-
-               
         // Contact
         section#contact.page-section
           .container
@@ -68,7 +70,7 @@ html(lang='en')
               h3.section-subheading(style='color: white;')
                 | Wir freuen uns immer &uuml;ber Feedback und neue 
                 | Mitglieder, sowohl Kreative als auch Sponsoren.
-            form(name='brokenLink' method='POST' data-netlify='true')
+            form#contactForm(name='contactHistory' method='POST' data-netlify='true')
               .row(style='overflow: hidden;')
                 .col-lg-6.col-sm-12.text-center
                   p(style="text-align: inherit;")
