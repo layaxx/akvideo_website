@@ -3,38 +3,35 @@
 # akvideo_website
 Re-Design der AK Video Münchberg Website
 
-## Preview
+## Live Versions
 
-**[View Live Preview](https://layaxx.github.io/akvideo_website/)**
+**[View Live Preview on Github Pages](https://layaxx.github.io/akvideo_website/)**
+**[View Production Deploy](https://arbeitskreis.video)**
+The Production version of this website is hosted by [Netlify](https://www.netlify.com/)
 
 ## TODO:
 - Bilder:
-  - Thumbnails für Projekte verbessern
+  - improve Thumbnails of Projects 
+  - change Thumbnails in 20 JAHRE AK VIDEO Section 
   
- - Content:
+ - missing Content:
     - 20 Jahre AK (Text)
-    - einzelne Seiten für wichtige Projekte (Bilder + Text)
-      - es fehlen komplett:
+    - sites for most important projects (Images + Text)
+      - completely missing
          - Die geklaute Stadtkasse
          - Das Geheimnis des Waldsteins
-         - Die Probe
          - Zusammen durch die Zeit
          - Stuhlgeschichten - Menschen auf Stühlen
          - Die TRAUMhafte Münchberger Unterwelt
-      - es fehlt Content:
-         - Sackgasse
-         - Lichtblick (anpassen/neuschreiben)
-         - Clipped
-    
- - Footer:
-    - Impressum **(Kontaktinformationen müssen angepasst werden)**
-    - Datenschutzerklärung **(Kontaktinformationen müssen angepasst werden)**
+      - missing some content:
+         - Sackgasse (add text)
+         - Lichtblick (rewrite text)
+         - Clipped 
   
- - Struktur:
-    - Awards als Slideshow?
+ - structure:
+    - maybe show Awards as Slideshow?
     
-
-
+    
 This Website is based on the Agency Template by Start Bootstrap
 
 ## [Start Bootstrap - Agency](https://startbootstrap.com/themes/agency/)
@@ -42,16 +39,22 @@ This Website is based on the Agency Template by Start Bootstrap
 
 ## Download and Installation
 
-To edit this website, choose one of the following options to get started:
+To edit this website clone it first:
 
 - Clone the repo: `git clone https://github.com/layaxx/akvideo_website.git`
-- [Fork, Clone, or Download on GitHub](https://github.com/layaxx/akvideo_website)
 
-## Usage
+Images are located in `src/assets/img` and its subdirectories 
 
-### Advanced Usage
+To make changes to the html files, you will want to edit the [.pug](https://www.npmjs.com/package/pug) files in `src/pug` and respective subdirectories. 
+You can convert [html to pug](https://html-to-pug.com/), but be sure to correctly indent pasted code.
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+For changes to global css, edit the [.scss](https://sass-lang.com/) (basically regular css syntax) files located in `src/scss` and subfolders. Note that if files are added, 
+they need to be imported in `src/scss/styles.scss`
+
+To preview your changes locally, you need to have npm installed. In the root directory of this repository, run `npm install` (only needed the very first time) and then `npm run-script build`. Website files are generated in the `dist` folder and can then be viewed with a browser.
+Note that the contact form will not work locally, as it depends on a Netlify plugin.
+
+Apart from `npm run-script build` there are other npm scripts available, which will only build parts of the website instead of everything. You can view all available scripts in `package.json`.
 
 #### npm Scripts
 
@@ -64,8 +67,5 @@ Clone the source files of the theme and navigate into the theme's root directory
 - `npm run start:debug` runs the project in debug mode
 - `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
-#### publish changes to live-demo
+#### publish changes to Github pages live-demo
 - `git subtree push --prefix dist origin gh-pages`
-
-You must have npm installed in order to use this build environment.
-
