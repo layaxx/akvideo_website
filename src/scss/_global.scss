@@ -30,7 +30,6 @@ p {
 }
 
 // Highlight color customization
-
 ::-moz-selection {
     background: $primary;
     text-shadow: none;
@@ -38,6 +37,7 @@ p {
 
 ::selection {
     background: $primary;
+    color: white;
     text-shadow: none;
 }
 
