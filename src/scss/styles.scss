@@ -1,12 +1,9 @@
 // Import variables
 @import "./variables.scss";
-
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
-
 // Global CSS
 @import "./global.scss";
-
 // Components
 @import "./components/buttons.scss";
 @import "./components/copyright.scss";
@@ -15,11 +12,10 @@
 @import "./components/toolTips.scss";
 @import "./components/tableOfContents.scss";
 @import "./components/form.scss";
-
 // Sections
 @import "./sections/masthead.scss";
 @import "./sections/portfolio.scss";
 @import "./sections/timeline.scss";
-@import "./sections/team.scss";
+@import "./sections/award.scss";
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
