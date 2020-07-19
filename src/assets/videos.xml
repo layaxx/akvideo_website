@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE videolist [
+    <!ELEMENT videolist (video*)>
+    <!ELEMENT video (name,length,year,url)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT length (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+]>
+<videolist>
+    <video>
+        <name>John's Adventure</name>
+        <length>3:30</length>
+        <year>2020</year>
+        <url>123 Maple Street</url>
+    </video>
+    <video>
+        <name>Clipped - Übersteuert</name>
+        <length>2:09</length>
+        <year>2016</year>
+        <url>123 Maple Street</url>
+    </video>
+</videolist>
