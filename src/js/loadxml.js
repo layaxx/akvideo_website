@@ -39,6 +39,7 @@ function myFunction(xml) {
     allURLs.sort();
     var dirOld = dir(allURLs[0]);
     for (const url of allURLs) {
+        var flag = false;
         if (dirOld !== dir(url)) {
             list = dirchange(url, list);
             dirOld = dir(url);
@@ -47,7 +48,7 @@ function myFunction(xml) {
         sitename = sitename[sitename.length - 1];
         switch (sitename) {
             case '404':
-                sitename = 'Fehlerseite';
+                flag = true;
                 break;
             case '':
                 sitename = 'Startseite';
@@ -62,7 +63,9 @@ function myFunction(xml) {
                 sitename = sitename.replace('_', ' ');
         }
         sitename = capitalizeFLetter(sitename);
-        list += "<li><a href='" + url + "'>" + sitename + '</a></li>';
+        if (!flag) {
+            list += "<li><a href='" + url + "'>" + sitename + '</a></li>';
+        }
     }
     list += '</ul>';
     document.getElementsByClassName('sitemapcontainer')[0].innerHTML = list;
