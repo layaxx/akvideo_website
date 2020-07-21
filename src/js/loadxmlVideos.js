@@ -4,7 +4,7 @@ xmlhttp.onreadystatechange = function() {
         myFunction(this);
     }
 };
-xmlhttp.open('GET', 'assets/videos.xml', true);
+xmlhttp.open('GET', '/assets/videos.xml', true);
 xmlhttp.send();
 
 function myFunction(xml) {

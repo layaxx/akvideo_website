@@ -60,8 +60,12 @@
                             h2.text-uppercase Du willst dich direkt mit uns in Kontakt setzen?
                             p.item-intro.text-muted Dann ruf uns einfach an!
                             ul.list-inline
-                                li Hugo Singer: 0171 3595437
-                                li Yannick Lang: 0151 70008124
+                                li 
+                                    a(href="#mailgo" data-tel="+491713595437") Hugo Singer
+                                li 
+                                    a(href="#mailgo" data-tel="+4915164331824") Philipp Jahn
+                                li 
+                                    a(href="#mailgo" data-tel="+4915170008124") Yannick Lang
                             button.btn.btn-primary(data-dismiss='modal', type='button')
                                 i.fas.fa-times.mr-1
                                 | Info-Karte schließen
@@ -88,3 +92,16 @@ footer.footer.py-4
                 a.mr-3(href='sitemap.html') Sitemap
                 a.mr-3(href='legal/impressum.html') Impressum
                 a(href='legal/datenschutz.html') Datenschutzerkl&auml;rung
+
+//- Bootstrap core JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+//- Third party plugin JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+//- Core theme JS
+script(src='js/scripts.js')
+
+//- Mailgo  
+script(src="https://cdn.jsdelivr.net/npm/mailgo@0.9.9/dist/mailgo.min.js")

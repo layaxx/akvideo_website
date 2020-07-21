@@ -159,8 +159,12 @@ html(lang='de')
                                     h2.text-uppercase Du willst dich direkt mit uns in Kontakt setzen?
                                     p.item-intro.text-muted Dann ruf uns einfach an!
                                     ul.list-inline
-                                        li Hugo Singer: 0171 3595437
-                                        li Yannick Lang: 0151 70008124
+                                        li 
+                                            a(href="#mailgo" data-tel="+491713595437") Hugo Singer
+                                        li 
+                                            a(href="#mailgo" data-tel="+4915164331824") Philipp Jahn
+                                        li 
+                                            a(href="#mailgo" data-tel="+4915170008124") Yannick Lang
                                     button.btn.btn-primary(data-dismiss='modal', type='button')
                                         i.fas.fa-times.mr-1
                                         | Info-Karte schließen
@@ -196,3 +200,6 @@ html(lang='de')
 
         //- Core theme JS
         script(src='js/scripts.js')
+    
+        //- Mailgo  
+        script(src="https://cdn.jsdelivr.net/npm/mailgo@0.9.9/dist/mailgo.min.js")

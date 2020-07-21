@@ -62,12 +62,13 @@ html(lang='de')
                         h2 Kontakt
                         p Telefon: +49 (0) 9251 5288
                             br
-                            |    E-Mail: stadtjugend@t-online.de 
+                            | E-Mail: 
+                            a(href="#mailgo" data-address="stadtjugend" data-domain="t-online.de") &#32;stadtjugend -et- t-online.de 
 
                         h2 Verantwortlich f&uuml;r den Inhalt nach &sect; 55 Abs. 2 RStV
                         p Yannick Lang
                             br
-                            | yl@arbeitskreis.video
+                            a(href="#mailgo" data-address="yl" data-domain="arbeitskreis.video") &#32;yl -et- arbeitskreis.video
                             br
                             | Mussener Weg 7
                             br
@@ -123,15 +124,3 @@ html(lang='de')
                             a(href="https://www.e-recht24.de") eRecht24
 
         include include/footer.pug
-
-
-        //- Bootstrap core JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
-
-        //- Third party plugin JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
-
-
-        //- Core theme JS
-        script(src='../js/scripts.js')
