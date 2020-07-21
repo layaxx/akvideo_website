@@ -11,14 +11,7 @@
         "clean": "node scripts/clean.js"
     },
     "description": "Agency is a one page HTML theme for Bootstrap.",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
+    "keywords": ["css", "sass", "html", "responsive", "theme", "template"],
     "homepage": "https://startbootstrap.com/template-overviews/agency",
     "bugs": {
         "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
@@ -26,10 +19,7 @@
     },
     "license": "MIT",
     "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)",
-        "Yannick Lang (http://y-lang.eu/)"
-    ],
+    "contributors": ["David Miller (http://davidmiller.io/)", "Yannick Lang (http://y-lang.eu/)"],
     "repository": {
         "type": "git",
         "url": "https://github.com/layaxx/akvideo_website.git"
@@ -41,6 +31,7 @@
         "autoprefixer": "9.8.5",
         "chokidar": "3.4.1",
         "concurrently": "5.2.0",
+        "cwebp-bin": "^6.1.1",
         "postcss": "7.0.32",
         "prettier": "2.0.5",
         "pug": "3.0.0",

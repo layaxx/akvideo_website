@@ -10,7 +10,9 @@ html(lang='de')
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
                 a.navbar-brand.js-scroll-trigger(href='#page-top')
-                    img(src='assets/img/logo.png', alt='logo')
+                    picture
+                        source(type="image/webp" srcset="assets/img/logo.webp")
+                        img(src='assets/img/logo.png', alt='logo')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
@@ -43,7 +45,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/kreuzbergschule.jpg', alt='Thumbnail GSM')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/kreuzbergschule.webp")
+                                    img.img-fluid(src='assets/img/projects/kreuzbergschule.jpg', alt='Thumbnail GSM')
                             .portfolio-caption
                                 .portfolio-caption-heading Kooperation mit der GS M&uuml;nchberg
                                 .portfolio-caption-subheading.text-muted Workshop, 2020
@@ -53,7 +57,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/johns_adventure.jpg', alt='Thumbnail John&acute;s Adventure')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/johns_adventure.webp")
+                                    img.img-fluid(src='assets/img/projects/johns_adventure.jpg', alt='Thumbnail John&acute;s Adventure')
                             .portfolio-caption
                                 .portfolio-caption-heading John's Adventure
                                 .portfolio-caption-subheading.text-muted Trickfilm, 2020
@@ -63,7 +69,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/sackgasse.jpg', alt='Thumbail Sackgasse')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/sackgasse.webp")
+                                    img.img-fluid(src='assets/img/projects/sackgasse.jpg', alt='Thumbail Sackgasse')
                             .portfolio-caption
                                 .portfolio-caption-heading Sackgasse
                                 .portfolio-caption-subheading.text-muted Kurzfilm, 2018
@@ -73,7 +81,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/clipped.jpg', alt='Thumbnail Clipped')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/clipped.webp")
+                                    img.img-fluid(src='assets/img/projects/clipped.jpg', alt='Thumbnail Clipped')
                             .portfolio-caption
                                 .portfolio-caption-heading Clipped - &Uuml;bersteuert
                                 .portfolio-caption-subheading.text-muted Kurzfilm (Workshop), 2016
@@ -83,7 +93,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/lichtblick.jpg', alt='Thumbnail Lichtblick')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/lichtblick.webp")
+                                    img.img-fluid(src='assets/img/projects/lichtblick.jpg', alt='Thumbnail Lichtblick')
                             .portfolio-caption
                                 .portfolio-caption-heading Lichtblick
                                 .portfolio-caption-subheading.text-muted Kurzfilm, 2015
@@ -93,7 +105,9 @@ html(lang='de')
                                 .portfolio-hover
                                     .portfolio-hover-content
                                         i.fas.fa-arrow-right.fa-3x
-                                img.img-fluid(src='assets/img/projects/panzerknacker.jpg', alt='Thumbnail Panzerknacker')
+                                picture
+                                    source(type="image/webp" srcset="assets/img/projects/panzerknacker.webp")       
+                                    img.img-fluid(src='assets/img/projects/panzerknacker.jpg', alt='Thumbnail Panzerknacker')
                             .portfolio-caption
                                 .portfolio-caption-heading Panzerknacker
                                 .portfolio-caption-subheading.text-muted Kurzfilm, 2015
@@ -121,7 +135,9 @@ html(lang='de')
                 ul.timeline
                     li
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/index/1.jpg', alt='')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/1.webp")
+                                img.rounded-circle.img-fluid(src='assets/img/index/1.jpg', alt='')
                         .timeline-panel
                             .timeline-heading
                                 h4 2000-2005
@@ -138,7 +154,9 @@ html(lang='de')
                                     a(href="projects/stadtkasse.html") &#32;"Die geklaute Stadtkasse".
                     li.timeline-inverted
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/index/2.jpg', alt='')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/2.webp")
+                                img.rounded-circle.img-fluid(src='assets/img/index/2.jpg', alt='')
                         .timeline-panel
                             .timeline-heading
                                 h4 2005-2011
@@ -152,7 +170,9 @@ html(lang='de')
                                     | zusammen mit der staatlichen Realschule Helmbrechts.
                     li
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/index/3.jpg', alt='')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/3.webp")
+                                img.rounded-circle.img-fluid(src='assets/img/index/3.jpg', alt='')
                         .timeline-panel
                             .timeline-heading
                                 h4 2011-2019
@@ -167,7 +187,9 @@ html(lang='de')
                                     | war es insbesondere Philipp Jahn, der die 3. Generation des AK Video pr&auml;gte
                     li.timeline-inverted
                         .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/index/4.jpg', alt='')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/4.webp")
+                                img.rounded-circle.img-fluid(src='assets/img/index/4.jpg', alt='')
                         .timeline-panel
                             .timeline-heading
                                 h4 seit 2019
@@ -206,7 +228,9 @@ html(lang='de')
                 .row
                     .col-lg-4
                         .award
-                            img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/jufinale1.webp")
+                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
                             h4 BESTER FILM
                             p.text-muted JUFINALE 2017
                             p f&uuml;r den Film 
@@ -214,7 +238,9 @@ html(lang='de')
                                     a(href='projects/sackgasse.html') "Sackgasse"        
                     .col-lg-4
                         .award
-                            img.mx-auto.rounded-circle(src='assets/img/index/weisserElefant.jpg', alt='wei&szlig;er Elefant')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/weisserElefant.webp")
+                                img.mx-auto.rounded-circle(src='assets/img/index/weisserElefant.jpg', alt='wei&szlig;er Elefant')
                             h4 Wei&szlig;er Elefant
                             p.text-muted Kinder-Medien-Preis 2012
                             p f&uuml;r den Film 
@@ -222,10 +248,13 @@ html(lang='de')
                                     a(href='projects/zddz.html') "Zusammen durch die Zeit"    
                     .col-lg-4
                         .award
-                            img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
+                            picture
+                                source(type="image/webp" srcset="assets/img/index/jufinale1.webp")
+                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
                             h4 BESTER FILM
                             p.text-muted JUFINALE 2003
                             p f&uuml;r den Film 
+                                a(href="#mailgo" data-address="contact" data-domain="arbeitskreis.video") write me!
                                 b
                                     a(href='projects/probe.html') "Die Probe"    
 

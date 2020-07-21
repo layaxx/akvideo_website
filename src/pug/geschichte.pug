@@ -10,7 +10,9 @@ html(lang='de')
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
                 a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    img(src='assets/img/logo.png', alt='logo')
+                    picture
+                        source(type="image/webp" srcset="assets/img/logo.webp")
+                        img(src='assets/img/logo.png', alt='logo')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
@@ -52,17 +54,23 @@ html(lang='de')
                     | ein Actionfilm inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
               .row
                 .col-lg-6.col-md-12
-                    img.img-fluid(src='assets/img/history/image1.jpg' alt='Zeitungsartikel')
+                    picture
+                      source(type="image/webp" srcset="assets/img/history/image1.webp")
+                      img.img-fluid(src='assets/img/history/image1.jpg' alt='Zeitungsartikel')
                     .portfolio-caption
                       p(style='float: left;')
                         em der erste Zeitungsartikel &uuml;ber den Arbeitskreis (Frankenpost 2000)
                 .col-lg-6.col-md-12
-                    img.img-fluid(src='assets/img/projects/stadtkasse/image1.jpg' alt='Stadtkasse')
+                    picture
+                      source(type="image/webp" srcset="assets/img/projects/stadtkasse/image1.webp")
+                      img.img-fluid(src='assets/img/projects/stadtkasse/image1.jpg' alt='Stadtkasse')
                     .portfolio-caption
                       p(style='float: left;')
                         em Dreharbeiten zu "Die geklaute Stadtkasse"
               .row
                 .col-lg-5.col-md-12
+                  picture
+                    source(type="image/webp" srcset="assets/img/history/image3.webp")
                     img(src='assets/img/history/image3.jpg' style='width:100%')
                 .col-lg-7.col-md-12
                     p(style='text-align:justify; margin-left: 30px; margin-top:40px;') Weiter ging es mit dem Kurzfilm "die Probe", mit dem wir beim JuFinale 2003 den Preis für den besten Film gewinnen konnten. 

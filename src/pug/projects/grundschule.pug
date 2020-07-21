@@ -10,6 +10,8 @@ html(lang='de')
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
                 a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                  picture
+                    source(type="image/webp" srcset="../assets/img/logo.webp")
                     img(src='../assets/img/logo.png', alt='Startseite')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
@@ -103,7 +105,9 @@ html(lang='de')
                 .row
                   .col-lg-2.col-md-0
                   .col-lg-8.col-md-12
-                    img.img-fluid(src='../assets/img/projects/grundschule/image1.jpg' alt='crew')
+                    picture
+                      source(type="image/webp" srcset="../assets/img/projects/grundschule/image1.webp")
+                      img.img-fluid(src='../assets/img/projects/grundschule/image1.jpg' alt='crew')
                     .portfolio-caption
                       p.text-muted(style='float:right')
                         em
@@ -141,11 +145,11 @@ html(lang='de')
                   |
                   | bei unseren eigenen Kurzfilmen, u.A.
                   |
-                  a(href='projects/lichtblick.html') &#32;Lichtblick&#32;
+                  a(href='lichtblick.html') &#32;Lichtblick&#32;
                   |
                   | und
                   |
-                  a(href='projects/sackgasse.html') &#32;Sackgasse&#32;
+                  a(href='sackgasse.html') &#32;Sackgasse&#32;
                   |
                   | , auch gemacht haben. Diese wird in der Aula der Grundschule stattfinden, und die G&auml;ste,
                   |

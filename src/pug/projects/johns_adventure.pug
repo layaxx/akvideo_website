@@ -1,220 +1,222 @@
 doctype html
 html(lang='de')
 
-    include include/header.pug
-      title AK Video - John's Adventure
-
-    body#page-top
-
-        //- Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-            .container
-                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
-                    img(src='../assets/img/logo.png', alt='Startseite')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars.ml-1
-                #navbarResponsive.collapse.navbar-collapse
-                  ul.navbar-nav.text-uppercase.d-none.d-md-block
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
-                  ul.navbar-nav.text-uppercase.ml-auto
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#film') Film
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
-    
-        //- Masthead
-        header.masthead(style='background-image: url(../assets/img/header/header-ja.jpg)')
-            .container
-                .masthead-heading.text-uppercase John's Adventure
-                .masthead-subheading Lego Stop-Motion Film
-
-        //- Tables
-        section#overview.bg-light.page-section
+  include include/header.pug
+    title AK Video - John's Adventure
+  body#page-top
+      //- Navigation
+      nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
           .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase &Uuml;bersicht
-            .row
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th technische Details
-                        th
-                    tbody
-                      tr
-                        td Titel
-                        td John&acute;s Adventure
-                      tr
-                        td Genre
-                        td Stop-Motion
-                      tr
-                        td L&auml;nge
-                        td 3:30
-                      tr
-                        td Produktionsjahr
-                        td 2020
-                      tr
-                        td Produktionsort
-                        td B&Uuml;Z M&uuml;nchberg
-                      tr
-                        td Aufl&ouml;sung
-                        td UHD
-                      tr
-                        td Kamera
-                        td EOS 100D
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th Crew
-                        th
-                    tbody
-                      tr
-                        td Drehbuch
-                        td Philipp Inzenhofer
-                      tr
-                        td Produktion
-                        td Hugo Singer
-                      tr
-                        td Kamera
-                        td Lara Reichel
-                      tr
-                        td Kamera
-                        td Yannick Lang
-                      tr
-                        td Postproduktion
-                        td Yannick Lang
-                      tr
-                        td Animation
-                        td Philipp Inzenhofer
-                      tr
-                        td Animation
-                        td Philipp Jahn
-                      tr
-                        td Nachvertonung
-                        td Henri Meister
-
-        section#film.page-section
+              a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+                picture
+                  source(type="image/webp" srcset="../assets/img/logo.webp")
+                  img(src='../assets/img/logo.png', alt='Startseite')
+              button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                  | Menu
+                  i.fas.fa-bars.ml-1
+              #navbarResponsive.collapse.navbar-collapse
+                ul.navbar-nav.text-uppercase.d-none.d-md-block
+                  li.nav-item
+                    a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+                ul.navbar-nav.text-uppercase.ml-auto
+                  li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+                  li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#film') Film
+                  li.nav-item
+                    a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+  
+      //- Masthead
+      header.masthead(style='background-image: url(../assets/img/header/header-ja.jpg)')
           .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase(style='margin-bottom: 5%') Der fertige Film
-            .row
-              .video-container-wrapper
-                .video-container(style='margin-bottom: -5%;')
-                  iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/zVVgRe6Opjc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-
-
-        section#bts.bg-light.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase Behind The Scenes
-                .gap-20
-            .row
-              .col-lg-12
-                h3.text-uppercase Vorbereitung
-                p
-                  | Besonders wichtig f&uuml;r das Gelingen eines Films ist die Story. Die kommt in diesem Fall von
-                  |
-                  | Philipp Inzenhofer, einem der j&uuml;ngsten Mitglieder unseres Arbeitskreises. Auch das
-                  |
-                  | Storyboard und die meisten der Materialien stammen von ihm.
-                .row
-                  .col-lg-6.col-md-12
+              .masthead-heading.text-uppercase John's Adventure
+              .masthead-subheading Lego Stop-Motion Film
+      //- Tables
+      section#overview.bg-light.page-section
+        .container
+          .row
+            .col-lg-12.text-center
+              h2.section-heading.text-uppercase &Uuml;bersicht
+          .row
+            .col-sm-6
+              .team-member
+                table.table.table-sm
+                  thead.thead-dark
+                    tr
+                      th technische Details
+                      th
+                  tbody
+                    tr
+                      td Titel
+                      td John&acute;s Adventure
+                    tr
+                      td Genre
+                      td Stop-Motion
+                    tr
+                      td L&auml;nge
+                      td 3:30
+                    tr
+                      td Produktionsjahr
+                      td 2020
+                    tr
+                      td Produktionsort
+                      td B&Uuml;Z M&uuml;nchberg
+                    tr
+                      td Aufl&ouml;sung
+                      td UHD
+                    tr
+                      td Kamera
+                      td EOS 100D
+            .col-sm-6
+              .team-member
+                table.table.table-sm
+                  thead.thead-dark
+                    tr
+                      th Crew
+                      th
+                  tbody
+                    tr
+                      td Drehbuch
+                      td Philipp Inzenhofer
+                    tr
+                      td Produktion
+                      td Hugo Singer
+                    tr
+                      td Kamera
+                      td Lara Reichel
+                    tr
+                      td Kamera
+                      td Yannick Lang
+                    tr
+                      td Postproduktion
+                      td Yannick Lang
+                    tr
+                      td Animation
+                      td Philipp Inzenhofer
+                    tr
+                      td Animation
+                      td Philipp Jahn
+                    tr
+                      td Nachvertonung
+                      td Henri Meister
+      section#film.page-section
+        .container
+          .row
+            .col-lg-12.text-center
+              h2.section-heading.text-uppercase(style='margin-bottom: 5%') Der fertige Film
+          .row
+            .video-container-wrapper
+              .video-container(style='margin-bottom: -5%;')
+                iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/zVVgRe6Opjc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      section#bts.bg-light.page-section
+        .container
+          .row
+            .col-lg-12.text-center
+              h2.section-heading.text-uppercase Behind The Scenes
+              .gap-20
+          .row
+            .col-lg-12
+              h3.text-uppercase Vorbereitung
+              p
+                | Besonders wichtig f&uuml;r das Gelingen eines Films ist die Story. Die kommt in diesem Fall von
+                |
+                | Philipp Inzenhofer, einem der j&uuml;ngsten Mitglieder unseres Arbeitskreises. Auch das
+                |
+                | Storyboard und die meisten der Materialien stammen von ihm.
+              .row
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image1.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image1.jpg' alt='storyboard')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Entwicklung des Storyboards
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Entwicklung des Storyboards
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image2.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image2.jpg' alt='darsteller')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Darsteller waren schnell gefunden.
-                h3.text-uppercase Der Dreh
-                p
-                  | Bild machen, Figuren bewegen, Bild machen, Figuren bewegen... 
-                  br
-                  |  Mehr als 1200 einzelne Bilder haben wir nach diesem Muster &uuml;ber mehrere Drehtage
-                  |
-                  |  aufgenommen. Zusammen ergeben diese dann die ca. 4 Minuten des fertigen Films. Um einen besseren
-                  |
-                  |  &Uuml;berblick zu erm&ouml;glichen haben wir die Spiegelreflexkamera mit unserem Laptop
-                  |
-                  |  verbunden. Damit konnten wir diesen sowohl zur Anzeige des Livebildes, als auch zum
-                  |
-                  |  Ausl&ouml;sen der Kamera nutzen.
-                .row
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Darsteller waren schnell gefunden.
+              h3.text-uppercase Der Dreh
+              p
+                | Bild machen, Figuren bewegen, Bild machen, Figuren bewegen... 
+                br
+                |  Mehr als 1200 einzelne Bilder haben wir nach diesem Muster &uuml;ber mehrere Drehtage
+                |
+                |  aufgenommen. Zusammen ergeben diese dann die ca. 4 Minuten des fertigen Films. Um einen besseren
+                |
+                |  &Uuml;berblick zu erm&ouml;glichen haben wir die Spiegelreflexkamera mit unserem Laptop
+                |
+                |  verbunden. Damit konnten wir diesen sowohl zur Anzeige des Livebildes, als auch zum
+                |
+                |  Ausl&ouml;sen der Kamera nutzen.
+              .row
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image4.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image4.jpg' alt='crew')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Liveview via EOS Utility
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Liveview via EOS Utility
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image3.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image3.jpg' alt='crew')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Unser Setup
-                h3.text-uppercase Postproduktion
-                p
-                  | Im Gegensatz zum eigentlichen Dreh ist der Postproduction-Workflow eines Stop-Motion Films
-                  |
-                  | ziemlich analog zu einem normalen Filmprojekt. Zum Einsatz kamen hier mehrere Programme aus
-                  |
-                  | Adobe&acute;s Creative Cloud. Adobe Lightroom, um die als .cr2 Dateien gespeicherten Fotos zu
-                  |
-                  | bearbeiten und als png zu speichern, Adobe Premiere Pro um aus den einzelnen Bildern
-                  |
-                  | Videosequenzen zu machen. Diese Sequenzen wurden dann in After Effects bearbeitet. Neben dem
-                  |
-                  | &Uuml;berwachungskameraeffekt und den Sch&uuml;ssen waren hier vor allem die Blaulichter
-                  |
-                  | f&uuml;r die Einsatzw&auml;gen der Polizei wichtig. Weil bei einem Stop-Motion Film
-                  |
-                  | logischerwei&szlig;e kein Ton aufgenommen wird, musste der Film komplett in der Postprodudktion
-                  |
-                  | vertont werden. Neben Musik und Dialog spielen hier auch Hintergrundger&auml;usche und
-                  |
-                  | Soundeffekte eine gro&szlig;e Rolle bei der Aufgabe, den Film zum Leben zu erwecken.
-                .row
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Unser Setup
+              h3.text-uppercase Postproduktion
+              p
+                | Im Gegensatz zum eigentlichen Dreh ist der Postproduction-Workflow eines Stop-Motion Films
+                |
+                | ziemlich analog zu einem normalen Filmprojekt. Zum Einsatz kamen hier mehrere Programme aus
+                |
+                | Adobe&acute;s Creative Cloud. Adobe Lightroom, um die als .cr2 Dateien gespeicherten Fotos zu
+                |
+                | bearbeiten und als png zu speichern, Adobe Premiere Pro um aus den einzelnen Bildern
+                |
+                | Videosequenzen zu machen. Diese Sequenzen wurden dann in After Effects bearbeitet. Neben dem
+                |
+                | &Uuml;berwachungskameraeffekt und den Sch&uuml;ssen waren hier vor allem die Blaulichter
+                |
+                | f&uuml;r die Einsatzw&auml;gen der Polizei wichtig. Weil bei einem Stop-Motion Film
+                |
+                | logischerwei&szlig;e kein Ton aufgenommen wird, musste der Film komplett in der Postprodudktion
+                |
+                | vertont werden. Neben Musik und Dialog spielen hier auch Hintergrundger&auml;usche und
+                |
+                | Soundeffekte eine gro&szlig;e Rolle bei der Aufgabe, den Film zum Leben zu erwecken.
+              .row
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image5.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image5.jpg' alt='crew')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Color Correction &amp; Grading (vorher/nachher)
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Color Correction &amp; Grading (vorher/nachher)
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image6.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image6.jpg' alt='crew')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Specialeffects: Blaulichter, Sch&uuml;sse, etc.
-                  .col-lg-3.col-md-0
-                  .col-lg-6.col-md-12
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Specialeffects: Blaulichter, Sch&uuml;sse, etc.
+                .col-lg-3.col-md-0
+                .col-lg-6.col-md-12
+                  picture
+                    source(type="image/webp" srcset="../assets/img/projects/ja/image7.webp")
                     img.img-fluid(src='../assets/img/projects/ja/image7.jpg' alt='crew')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Sounddesign
-                  .col-lg-3.col-md-0
-
-        
-
-
-        include include/footer.pug
-
-
-        //- Bootstrap core JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
-
-        //- Third party plugin JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
-
-
-        //- Core theme JS
-        script(src='../js/scripts.js')
+                  .portfolio-caption
+                    p(style='float: left;')
+                      em Sounddesign
+                .col-lg-3.col-md-0
+      
+      include include/footer.pug
+      //- Bootstrap core JS
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+      script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+      //- Third party plugin JS
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+      //- Core theme JS
+      script(src='../js/scripts.js')

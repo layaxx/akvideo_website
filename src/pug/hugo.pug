@@ -10,7 +10,9 @@ html(lang='de')
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
                 a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    img(src='assets/img/logo.png', alt='')
+                    picture
+                        source(type="image/webp" srcset="assets/img/logo.webp")
+                        img(src='assets/img/logo.png', alt='logo')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
@@ -34,25 +36,31 @@ html(lang='de')
             .container
               .row
                 .col-lg-12
-                  h2.section-heading.text-uppercase.text-center Wer ist Hugo?
-                  img(src='assets/img/hugo/portrait_2.jpg' width='40%' style='float: left; margin-right: 5%; margin-bottom: 5%')
-                  p(style='text-align: justify')
-                    | Ohne unseren Hugo g&auml;be es den AK Video nicht. Seit der Gr&uuml;ndung ist
-                    |
-                    | immer Hugo derjenige, der den Arbeitskreis zusammengehalten hat. Egal ob neue Mitglieder
-                    |
-                    | anwerben oder Projekte organisieren, Hugo ist immer mit dabei. Lange Zeit war auch Hugos blaues
-                    |
-                    | Auto fester Bestandteil jedes Films, egal ob vor oder hinter den Kulissen.
-                  p(style='text-align: justify')
-                    | Neben der Jugendarbeit ist Hugos gro&szlig;e Leidenschaft die Musik. Egal ob am Lagerfeuer, im Kindergarten oder in der Seniorenwohnanlage
-                    |
-                    | - mit seiner Gitarre und seinem Schifferklavier sorgt Hugo immer f&uuml;r gute Stimmung.
+                    h2.section-heading.text-uppercase.text-center Wer ist Hugo?
+                    picture
+                        source(type="image/webp" srcset="assets/img/hugo/portrait_2.webp")
+                        img(src='assets/img/hugo/portrait_2.jpg' width='40%' style='float: left; margin-right: 5%; margin-bottom: 5%')
+                    p(style='text-align: justify')
+                      | Ohne unseren Hugo g&auml;be es den AK Video nicht. Seit der Gr&uuml;ndung ist
+                      |
+                      | immer Hugo derjenige, der den Arbeitskreis zusammengehalten hat. Egal ob neue Mitglieder
+                      |
+                      | anwerben oder Projekte organisieren, Hugo ist immer mit dabei. Lange Zeit war auch Hugos blaues
+                      |
+                      | Auto fester Bestandteil jedes Films, egal ob vor oder hinter den Kulissen.
+                    p(style='text-align: justify')
+                      | Neben der Jugendarbeit ist Hugos gro&szlig;e Leidenschaft die Musik. Egal ob am Lagerfeuer, im Kindergarten oder in der Seniorenwohnanlage
+                      |
+                      | - mit seiner Gitarre und seinem Schifferklavier sorgt Hugo immer f&uuml;r gute Stimmung.
               .row
                 .col-lg-6
-                    img(src='assets/img/hugo/rsz_img_7592.jpg' width='100%' style='margin-bottom: 3%')
+                    picture
+                        source(type="image/webp" srcset="assets/img/hugo/rsz_img_7592.webp")
+                        img(src='assets/img/hugo/rsz_img_7592.jpg' width='100%' style='margin-bottom: 3%' alt='Hugo')
                 .col-lg-6
-                    img(src='assets/img/hugo/auto.jpg' width='100%' style='float: right')
+                    picture
+                        source(type="image/webp" srcset="assets/img/hugo/auto.webp")
+                        img(src='assets/img/hugo/auto.jpg' width='100%' style='float: right' alt='Hugos Auto')
                
 
         include include/footer.pug
