@@ -20,13 +20,13 @@ function dirchange(url, list) {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
+        setList(this);
     }
 };
 xmlhttp.open('GET', 'sitemap.xml', true);
 xmlhttp.send();
 
-function myFunction(xml) {
+function setList(xml) {
     var i;
     var xmlDoc = xml.responseXML;
     var list = '<p>Stammverzeichnis</p><ul>';
@@ -39,17 +39,12 @@ function myFunction(xml) {
     allURLs.sort();
     var dirOld = dir(allURLs[0]);
     for (const url of allURLs) {
-        var flag = false;
-        if (dirOld !== dir(url)) {
-            list = dirchange(url, list);
-            dirOld = dir(url);
-        }
         sitename = url.split('/');
         sitename = sitename[sitename.length - 1];
+        if (sitename === '404' || sitename === 'sitemap') {
+            continue;
+        }
         switch (sitename) {
-            case '404':
-                flag = true;
-                break;
             case '':
                 sitename = 'Startseite';
                 break;
@@ -63,9 +58,12 @@ function myFunction(xml) {
                 sitename = sitename.replace('_', ' ');
         }
         sitename = capitalizeFLetter(sitename);
-        if (!flag) {
-            list += "<li><a href='" + url + "'>" + sitename + '</a></li>';
+
+        if (dirOld !== dir(url)) {
+            list = dirchange(url, list);
+            dirOld = dir(url);
         }
+        list += "<li><a href='" + url + "'>" + sitename + '</a></li>';
     }
     list += '</ul>';
     document.getElementsByClassName('sitemapcontainer')[0].innerHTML = list;
