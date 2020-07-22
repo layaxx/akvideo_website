@@ -3,7 +3,7 @@
     .modal-dialog
         .modal-content
             .close-modal(data-dismiss='modal')
-                img(src="assets/img/close-icon.svg", alt='Close modal')
+                img(src="/assets/img/close-icon.svg", alt='Close modal')
             .container
                 .row.justify-content-center
                     .col-lg-8
@@ -30,7 +30,7 @@
     .modal-dialog
         .modal-content
             .close-modal(data-dismiss='modal')
-                img(src="assets/img/close-icon.svg", alt='Close modal')
+                img(src="/assets/img/close-icon.svg", alt='Close modal')
             .container
                 .row.justify-content-center
                     .col-lg-8
@@ -39,7 +39,7 @@
                             p.item-intro.text-muted Manche findest du auf YouTube:
                             .videolist#videolist
                                 p  Leider können die Videos aktuell nicht geladen werden
-                            script(src='js/loadxmlVideos.js')                                
+                            script(src='/js/loadxmlVideos.js')                                
                             p   Die meisten anderen Filme k&ouml;nnen&#32;
                                 a(href="#contact" data-dismiss='modal', type='button') auf Anfrage&#32;
                                 |  als DVD bzw. Blu-ray ausgeliehen werden.
@@ -52,7 +52,7 @@
     .modal-dialog
         .modal-content
             .close-modal(data-dismiss='modal')
-                img(src="assets/img/close-icon.svg", alt='Close modal')
+                img(src="/assets/img/close-icon.svg", alt='Close modal')
             .container
                 .row.justify-content-center
                     .col-lg-8
@@ -89,9 +89,9 @@ footer.footer.py-4
                 a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalPhone')
                     i.fas.fa-phone-alt
             .col-lg-4.text-lg-right
-                a.mr-3(href='sitemap.html') Sitemap
-                a.mr-3(href='legal/impressum.html') Impressum
-                a(href='legal/datenschutz.html') Datenschutzerkl&auml;rung
+                a.mr-3(href='/sitemap.html') Sitemap
+                a.mr-3(href='/legal/impressum.html') Impressum
+                a(href='/legal/datenschutz.html') Datenschutzerkl&auml;rung
 
 //- Bootstrap core JS
 script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
@@ -101,7 +101,7 @@ script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bund
 script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
 
 //- Core theme JS
-script(src='js/scripts.js')
+script(src='/js/scripts.js')
 
 //- Mailgo  
 script(src="https://cdn.jsdelivr.net/npm/mailgo@0.9.9/dist/mailgo.min.js")
