@@ -6,12 +6,13 @@ Re-Design der AK Video Münchberg Website
 ## Live Versions
 
 **[View Live Preview on Github Pages](https://layaxx.github.io/akvideo_website/)**
+
 **[View Production Deploy](https://arbeitskreis.video)**
+
 The Production version of this website is hosted by [Netlify](https://www.netlify.com/)
 
 ## TODO:
 - Bilder:
-  - improve Thumbnails of Projects 
   - change Thumbnails in 20 JAHRE AK VIDEO Section 
   
  - missing Content:
@@ -27,6 +28,7 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
          - Sackgasse (add text)
          - Lichtblick (rewrite text)
          - Clipped 
+         - Geschichte
   
  - structure:
     - maybe show Awards as Slideshow?
