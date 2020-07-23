@@ -47,10 +47,14 @@ html(lang='de')
                         li.nav-item
                             a.nav-link.js-scroll-trigger(href='#contact') Kontakt
         //- Masthead
-        header.masthead(style='background-image: url(/assets/img/header/header-error.jpg)')
+        header.masthead(style='background-image: url(/assets/img/header/header-error.webp)')
             .container
                 .masthead-heading.text-uppercase 404
                 .masthead-subheading Leider existiert diese Seite nicht.
+
+        script.
+            if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+            {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
         //- error
         section#error.page-section.bg-light
@@ -67,7 +71,7 @@ html(lang='de')
                     .col-lg-6.col-md-12.text-center(style='margin-bottom: 20px')
                         a(href='/projects/all.html')
                             button.btn.btn-primary.btn-xl.text-uppercase Projekt&uuml;bersicht
-               
+
 
 
         //- Contact
@@ -78,21 +82,21 @@ html(lang='de')
                     h3.section-subheading(style='color:white') Wir w&uuml;rden uns freuen, wenn du uns bei der Behebung des Fehlers hilfst.
                 form(name='contact' method='POST' data-netlify='true')
                     .row(style='overflow: hidden;')
-                      .col-lg-6.col-sm-12.text-center
-                        p
-                          label
-                            input.formelem(type='from' name='name' placeholder='von welcher Seite kommst du?')
-                      .col-lg-6.col-sm-12.text-center
-                        p
-                          label
-                            input.formelem(type='to' name='email' placeholder='auf welche Seite wolltest du?')
+                        .col-lg-6.col-sm-12.text-center
+                            p
+                                label
+                                    input.formelem(type='from' name='name' placeholder='von welcher Seite kommst du?')
+                        .col-lg-6.col-sm-12.text-center
+                            p
+                                label
+                                    input.formelem(type='to' name='email' placeholder='auf welche Seite wolltest du?')
                     .text-center(style='overflow: hidden;')
-                      p
-                        label
-                          textarea.formelem(name='message' placeholder='sonstige Anmerkungen' style='min-width: 61rem; min-height: 10rem;')
+                        p
+                            label
+                                textarea.formelem(name='message' placeholder='sonstige Anmerkungen' style='min-width: 61rem; min-height: 10rem;')
                     .text-center
-                      p
-                        button.formButton(type='submit') Hinweis abschicken
+                        p
+                            button.formButton(type='submit') Hinweis abschicken
 
 
 
@@ -173,11 +177,11 @@ html(lang='de')
             .container
                 .row.align-items-center
                     .col-lg-4.text-lg-left
-                      .tooltipContainer 
-                        | Copyright &copy; AK Video 2020
-                        .tooltiptext
-                          | This site is maintained by 
-                          a(href='https://www.github.com/layaxx') Yannick Lang
+                        .tooltipContainer 
+                            | Copyright &copy; AK Video 2020
+                            .tooltiptext
+                                | This site is maintained by 
+                                a(href='https://www.github.com/layaxx') Yannick Lang
 
                     .col-lg-4.my-3.my-lg-0
                         a.btn.btn-dark.btn-social.mx-2.portfolio-link(data-toggle='modal', href='#ModalAddress')
@@ -199,6 +203,6 @@ html(lang='de')
 
         //- Core theme JS
         script(src='js/scripts.js')
-    
+
         //- Mailgo  
         script(src="https://cdn.jsdelivr.net/npm/mailgo@0.9.9/dist/mailgo.min.js")

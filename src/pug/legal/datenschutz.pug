@@ -1,490 +1,494 @@
 doctype html
 html(lang='de')
 
-    include ../include/header.pug
-      title AK Video - Datenschutzerkl&auml;rung
+  include ../include/header.pug
+    title AK Video - Datenschutzerkl&auml;rung
 
-    body#page-top
+  body#page-top
 
-        //- Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-            .container
-                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
-                    img(src='../assets/img/logo.png', alt='')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars.ml-1
-                #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
-        //- Masthead
-        header.masthead(style='background-image: url(../assets/img/header/header-bg.jpg)')
-            .container
-                .masthead-heading.text-uppercase Wir sind der AK Video!
-                .masthead-subheading Jugendfilmarbeit seit 2000.
+    //- Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+          img(src='../assets/img/logo.png', alt='')
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.fas.fa-bars.ml-1
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
+    //- Masthead
+    header.masthead(style='background-image: url(../assets/img/header/header-bg.webp)')
+      .container
+        .masthead-heading.text-uppercase Wir sind der AK Video!
+        .masthead-subheading Jugendfilmarbeit seit 2000.
 
-        //- Impressum
-        section#impressum.page-section.bg-light
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase(style='color: var(--primary)') Datenschutzerkl&auml;rung
-                .row
-                    .datenschutz
-                        h2 Datenschutz
-                        p
-                          | Wir haben diese Datenschutzerkl&auml;rung (Fassung 14.07.2020-311194399) verfasst, um Ihnen gem&auml;&szlig; der Vorgaben der 
-                          a(href='https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=311194399' target='_blank' rel='noopener') Datenschutz-Grundverordnung (EU) 2016/679
-                          |  zu erkl&auml;ren, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsm&ouml;glichkeiten Sie als Besucher dieser Webseite haben.
-                        p
-                          | Leider liegt es in der Natur der Sache, dass diese Erkl&auml;rungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bem&uuml;ht die wichtigsten Dinge so einfach und klar wie m&ouml;glich zu beschreiben.
-                        h2 Automatische Datenspeicherung
-                        p
-                          | Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so auch auf dieser Webseite.
-                        p
-                          | Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite gespeichert ist) automatisch Daten wie
-                        ul
-                          li die Adresse (URL) der aufgerufenen Webseite
-                          li Browser und Browserversion
-                          li das verwendete Betriebssystem
-                          li die Adresse (URL) der zuvor besuchten Seite (Referrer URL)
-                          li den Hostname und die IP-Adresse des Ger&auml;ts von welchem aus zugegriffen wird
-                          li Datum und Uhrzeit
-                        p in Dateien (Webserver-Logfiles).
-                        p
-                          | In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gel&ouml;scht. Wir geben diese Daten nicht weiter, k&ouml;nnen jedoch nicht ausschlie&szlig;en, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
-                        h2 Cookies
-                        p
-                          | Unsere Website verwendet HTTP-Cookies um nutzerspezifische Daten zu speichern.
-                          br
-                          | Im Folgenden erkl&auml;ren wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende Datenschutzerkl&auml;rung besser verstehen.
-                        h3 Was genau sind Cookies?
-                        p
-                          | Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies.
-                        p
-                          | Eines ist nicht von der Hand zu weisen: Cookies sind echt n&uuml;tzliche Helferlein. Fast alle Webseiten verwenden&nbsp;Cookies. Genauer gesprochen sind es HTTP-Cookies, da es auch noch andere&nbsp;Cookies f&uuml;r andere Anwendungsbereiche gibt. HTTP-Cookies&nbsp;sind kleine Dateien, die von unserer Website auf Ihrem Computer gespeichert werden. Diese Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem &ldquo;Hirn&rdquo; Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und einem Wert. Bei der Definition eines Cookies m&uuml;ssen zus&auml;tzlich ein oder mehrere Attribute angegeben werden.
-                        p
-                          | Cookies&nbsp;speichern gewisse Nutzerdaten von Ihnen, wie beispielsweise Sprache oder pers&ouml;nliche Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen, &uuml;bermittelt Ihr Browser die &bdquo;userbezogenen&ldquo; Informationen an unsere Seite zur&uuml;ck. Dank der Cookies wei&szlig; unsere Website, wer Sie sind und bietet Ihnen Ihre gewohnte Standardeinstellung. In einigen Browsern hat jedes&nbsp;Cookie&nbsp;eine eigene Datei, in anderen wie beispielsweise Firefox sind alle&nbsp;Cookies&nbsp;in einer einzigen Datei gespeichert.
-                        p
-                          | Es gibt sowohl Erstanbieter Cookies als auch Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer Seite erstellt, Drittanbieter-Cookies werden von Partner-Webseiten (z.B. Google Analytics) erstellt.&nbsp;Jedes Cookie ist individuell zu bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit eines Cookies variiert von ein paar Minuten bis hin zu ein paar Jahren.&nbsp;Cookies sind keine Software-Programme und enthalten keine Viren, Trojaner oder andere &bdquo;Sch&auml;dlinge&ldquo;. Cookies k&ouml;nnen auch nicht auf Informationen Ihres PCs zugreifen.
-                        p So k&ouml;nnen zum Beispiel Cookie-Daten aussehen:
-                        ul
-                          li Name: _ga
-                          li Ablaufzeit: 2 Jahre
-                          li Verwendung: Unterscheidung der Webseitenbesucher
-                          li Beispielhafter Wert:&nbsp;GA1.2.1326744211.152311194399
-                        p Ein Browser sollte folgende Mindestgr&ouml;&szlig;en unterst&uuml;tzen:
-                        ul
-                          li Ein Cookie soll mindestens 4096 Bytes enthalten k&ouml;nnen
-                          li Pro Domain sollen mindestens 50 Cookies gespeichert werden k&ouml;nnen
-                          li Insgesamt sollen mindestens 3000 Cookies gespeichert werden k&ouml;nnen
-                        h3 Welche Arten von Cookies gibt es?
-                        p
-                          | Die Frage welche Cookies wir im Speziellen verwenden, h&auml;ngt von den verwendeten Diensten ab und wird in der folgenden Abschnitten der Datenschutzerkl&auml;rung gekl&auml;rt. An dieser Stelle m&ouml;chten wir kurz auf die verschiedenen Arten von HTTP-Cookies eingehen.
-                        p Man kann 4 Arten von Cookies unterscheiden:
-                        p
-                          strong
-                            | Unbedingt notwendige Cookies
-                            br
-                          | Diese Cookies sind n&ouml;tig, um grundlegende Funktionen der Website sicherzustellen. Zum Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und sp&auml;ter erst zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gel&ouml;scht, selbst wenn der User sein Browserfenster schlie&szlig;t.
-                        p
-                          strong
-                            | Funktionelle Cookies
-                            br
-                          | Diese Cookies sammeln Infos &uuml;ber das Userverhalten und ob der User etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Website bei verschiedenen Browsern gemessen.
-                        p
-                          strong
-                            | Zielorientierte Cookies
-                            br
-                          | Diese Cookies sorgen f&uuml;r eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene Standorte, Schriftgr&ouml;&szlig;en oder Formulardaten gespeichert.
-                        p
-                          strong
-                            | Werbe-Cookies
-                            br
-                          | Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.
-                        p
-                          | &Uuml;blicherweise werden Sie beim erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten Sie zulassen m&ouml;chten. Und nat&uuml;rlich wird diese Entscheidung auch in einem Cookie gespeichert.
-                        h3 Wie kann ich Cookies l&ouml;schen?
-                        p
-                          | Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabh&auml;ngig von welchem Service oder welcher Website die Cookies stammen, haben Sie immer die M&ouml;glichkeit&nbsp;Cookies zu l&ouml;schen, nur teilweise zuzulassen oder zu deaktivieren. Zum Beispiel k&ouml;nnen Sie Cookies von Drittanbietern blockieren, aber alle anderen Cookies zulassen.
-                        p
-                          | Wenn Sie feststellen m&ouml;chten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen &auml;ndern oder l&ouml;schen wollen, k&ouml;nnen Sie dies in Ihren Browser-Einstellungen finden:
-                        p
-                          a(href='https://support.google.com/chrome/answer/95647?tid=311194399' target='_blank' rel='noopener') Chrome: Cookies in Chrome l&ouml;schen, aktivieren und verwalten
-                        p
-                          a(href='https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=311194399' target='_blank' rel='noopener') Safari: Verwalten von Cookies und Websitedaten mit Safari
-                        p
-                          a(href='https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=311194399' target='_blank' rel='noopener')
-                            | Firefox: Cookies l&ouml;schen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben
-                        p
-                          a(href='https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=311194399' target='_blank' rel='noopener') Internet Explorer: L&ouml;schen und Verwalten von Cookies
-                        p
-                          a(href='https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=311194399' target='_blank' rel='noopener') Microsoft Edge: L&ouml;schen und Verwalten von Cookies
-                        p
-                          | Falls Sie grunds&auml;tzlich keine Cookies haben wollen, k&ouml;nnen Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So k&ouml;nnen Sie bei jedem einzelnen Cookie entscheiden, ob Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach Browser verschieden. Am besten ist es Sie suchen die Anleitung in Google mit dem Suchbegriff &ldquo;Cookies l&ouml;schen Chrome&rdquo; oder &ldquo;Cookies deaktivieren Chrome&rdquo; im Falle eines Chrome Browsers oder tauschen das Wort &ldquo;Chrome&rdquo; gegen den Namen Ihres Browsers, z.B. Edge, Firefox, Safari aus.
-                        h3 Wie sieht es mit meinem Datenschutz aus?
-                        p
-                          | Seit 2009 gibt es die sogenannten &bdquo;Cookie-Richtlinien&ldquo;. Darin ist festgehalten, dass das Speichern von Cookies eine Einwilligung von Ihnen verlangt. Innerhalb der EU-L&auml;nder gibt es allerdings noch sehr unterschiedliche Reaktionen auf diese Richtlinien. In Deutschland wurden die Cookie-Richtlinien nicht als nationales Recht umgesetzt. Stattdessen erfolgte die Umsetzung dieser Richtlinie weitgehend in &sect; 15 Abs.3 des Telemediengesetzes (TMG).
-                        p
-                          | Wenn Sie mehr &uuml;ber Cookies wissen m&ouml;chten und technischen Dokumentationen nicht scheuen, empfehlen wir&nbsp;
-                          a(href='https://tools.ietf.org/html/rfc6265' target='_blank' rel='nofollow noopener') https://tools.ietf.org/html/rfc6265
-                          | , dem Request for Comments der Internet Engineering Task Force (IETF) namens &ldquo;HTTP State Management Mechanism&rdquo;.
-                        h2 Speicherung pers&ouml;nlicher Daten
-                        p
-                          | Pers&ouml;nliche Daten, die Sie uns auf dieser Website elektronisch &uuml;bermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere pers&ouml;nlichen Angaben im Rahmen der &Uuml;bermittlung eines Formulars oder Kommentaren im Blog, werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.
-                        p
-                          | Wir nutzen Ihre pers&ouml;nlichen Daten somit nur f&uuml;r die Kommunikation mit jenen Besuchern, die Kontakt ausdr&uuml;cklich w&uuml;nschen und f&uuml;r die Abwicklung der auf dieser Webseite angebotenen Dienstleistungen und Produkte. Wir geben Ihre pers&ouml;nlichen Daten ohne Zustimmung nicht weiter, k&ouml;nnen jedoch nicht ausschlie&szlig;en, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
-                        p
-                          | Wenn Sie uns pers&ouml;nliche Daten per E-Mail schicken &ndash; somit abseits dieser Webseite &ndash; k&ouml;nnen wir keine sichere &Uuml;bertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals unverschl&uuml;sselt per E-Mail zu &uuml;bermitteln.
-                        p
-                          | Die Rechtsgrundlage besteht nach 
-                          a(href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311194399' target='_blank' rel='noopener') Artikel 6&nbsp; Absatz 1 a DSGVO
-                          |  (Rechtm&auml;&szlig;igkeit der Verarbeitung) darin, dass Sie uns die Einwilligung zur Verarbeitung der von Ihnen eingegebenen Daten geben. Sie k&ouml;nnen diesen Einwilligung jederzeit widerrufen &ndash; eine formlose E-Mail reicht aus, Sie finden unsere Kontaktdaten im Impressum.
-                        h2 Rechte laut Datenschutzgrundverordnung
-                        p
-                          | Ihnen stehen laut den Bestimmungen der DSGVO grunds&auml;tzlich die folgende Rechte zu:
-                        ul
-                          li Recht auf Berichtigung (Artikel 16 DSGVO)
-                          li Recht auf L&ouml;schung (&bdquo;Recht auf Vergessenwerden&ldquo;) (Artikel 17 DSGVO)
-                          li Recht auf Einschr&auml;nkung der Verarbeitung (Artikel 18 DSGVO)
-                          li
-                            | Recht auf Benachrichtigung &ndash; Mitteilungspflicht im Zusammenhang mit der Berichtigung oder L&ouml;schung personenbezogener Daten oder der Einschr&auml;nkung der Verarbeitung (Artikel 19 DSGVO)
-                          li Recht auf Daten&uuml;bertragbarkeit (Artikel 20 DSGVO)
-                          li Widerspruchsrecht (Artikel 21 DSGVO)
-                          li
-                            | Recht, nicht einer ausschlie&szlig;lich auf einer automatisierten Verarbeitung &mdash; einschlie&szlig;lich Profiling &mdash; beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)
-                        p
-                          | Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verst&ouml;&szlig;t oder Ihre datenschutzrechtlichen Anspr&uuml;che sonst in einer Weise verletzt worden sind, k&ouml;nnen Sie sich an die 
-                          a(href='https://www.bfdi.bund.de' target='_blank' rel='noopener') Bundesbeauftragte f&uuml;r den Datenschutz und die Informationsfreiheit (BfDI)
-                          |  wenden.
-                        h2 Auswertung des Besucherverhaltens
-                        p
-                          | In der folgenden Datenschutzerkl&auml;rung informieren wir Sie dar&uuml;ber, ob und wie wir Daten Ihres Besuchs dieser Website auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir k&ouml;nnen von Ihrem Verhalten auf dieser Website nicht auf Ihre Person schlie&szlig;en.
-                        p
-                          | Mehr &uuml;ber M&ouml;glichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden Datenschutzerkl&auml;rung.
-                        h2 TLS-Verschl&uuml;sselung mit https
-                        p
-                          | Wir verwenden https um Daten abh&ouml;rsicher im Internet zu &uuml;bertragen (Datenschutz durch Technikgestaltung 
-                          a(href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311194399' target='_blank' rel='noopener') Artikel 25 Absatz 1 DSGVO
-                          | ). Durch den Einsatz von TLS (Transport Layer Security), einem Verschl&uuml;sselungsprotokoll zur sicheren Daten&uuml;bertragung im Internet k&ouml;nnen wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Daten&uuml;bertragung am kleinen Schlo&szlig;symbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.
-                        h2 Google Fonts Datenschutzerkl&auml;rung
-                        p
-                          | Auf unserer Website verwenden wir Google Fonts. Das sind die &ldquo;Google-Schriften&rdquo; der Firma Google Inc. F&uuml;r den europ&auml;ischen Raum ist das Unternehmen Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) f&uuml;r alle Google-Dienste verantwortlich.
-                        p
-                          | F&uuml;r die Verwendung von Google-Schriftarten m&uuml;ssen Sie sich nicht anmelden bzw. ein Passwort hinterlegen. Weiters werden auch keine Cookies in Ihrem Browser gespeichert. Die Dateien (CSS, Schriftarten/Fonts) werden &uuml;ber die Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert. Laut Google sind die Anfragen nach CSS und Schriften vollkommen getrennt von allen anderen Google-Diensten. Wenn Sie ein Google-Konto haben, brauchen Sie keine Sorge haben, dass Ihre Google-Kontodaten, w&auml;hrend der Verwendung von Google Fonts, an Google &uuml;bermittelt werden. Google erfasst die Nutzung von CSS (Cascading Style Sheets) und der verwendeten Schriftarten und speichert diese Daten sicher. Wie die Datenspeicherung genau aussieht, werden wir uns noch im Detail ansehen.
-                        h3 Was sind Google Fonts?
-                        p
-                          | Google Fonts (fr&uuml;her Google Web Fonts) ist ein Verzeichnis mit &uuml;ber 800 Schriftarten, die&nbsp;
-                          a(href='https://de.wikipedia.org/wiki/Google_LLC?tid=311194399') Google
-                          | &nbsp;seinen Nutzern kostenlos zu Verf&uuml;gung stellt.
-                        p
-                          | Viele dieser Schriftarten sind unter der&nbsp;SIL Open Font License&nbsp;ver&ouml;ffentlicht, w&auml;hrend andere unter der&nbsp;Apache-Lizenz&nbsp;ver&ouml;ffentlicht wurden. Beides sind&nbsp;freie Software-Lizenzen.
-                        h3 Warum verwenden wir Google Fonts auf unserer Webseite?
-                        p
-                          | Mit Google Fonts k&ouml;nnen wir auf unserer eigenen Webseite Schriften nutzen, doch m&uuml;ssen sie nicht auf unseren eigenen Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualit&auml;t unserer Webseite hoch zu halten. Alle Google-Schriften sind automatisch f&uuml;r das Web optimiert und dies spart Datenvolumen und ist speziell f&uuml;r die Verwendung mit mobilen Endger&auml;ten ein gro&szlig;er Vorteil. Wenn Sie unsere Seite besuchen, sorgt die niedrige Dateigr&ouml;&szlig;e f&uuml;r eine schnelle Ladezeit. Des Weiteren sind Google Fonts sichere Web Fonts. Unterschiedliche Bildsynthese-Systeme (Rendering) in verschiedenen Browsern, Betriebssystemen und mobilen Endger&auml;ten k&ouml;nnen zu Fehlern f&uuml;hren. Solche Fehler k&ouml;nnen teilweise Texte bzw. ganze Webseiten optisch verzerren. Dank des schnellen Content Delivery Networks (CDN) gibt es mit Google Fonts keine plattform&uuml;bergreifenden Probleme. Google Fonts unterst&uuml;tzt alle g&auml;ngigen Browser (Google Chrome,&nbsp;Mozilla Firefox,&nbsp;Apple Safari,&nbsp;Opera) und funktioniert zuverl&auml;ssig auf den meisten modernen mobilen Betriebssystemen, einschlie&szlig;lich Android 2.2+ und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google Fonts also, damit wir unser gesamtes Online-Service so sch&ouml;n und einheitlich wie m&ouml;glich darstellen k&ouml;nnen.
-                        h3 Welche Daten werden von Google gespeichert?
-                        p
-                          | Wenn Sie unsere Webseite besuchen, werden die Schriften &uuml;ber einen Google-Server nachgeladen. Durch diesen externen Aufruf werden Daten an die Google-Server &uuml;bermittelt. So erkennt Google auch, dass Sie bzw. Ihre IP-Adresse unsere Webseite besuchen. Die Google Fonts API wurde entwickelt, um Verwendung, Speicherung und Erfassung von Endnutzerdaten auf das zu reduzieren, was f&uuml;r eine ordentliche Bereitstellung von Schriften n&ouml;tig ist.&nbsp;API steht &uuml;brigens f&uuml;r &bdquo;Application Programming Interface&ldquo; und dient unter anderem als Daten&uuml;bermittler im Softwarebereich.
-                        p
-                          | Google Fonts speichert CSS- und Schrift-Anfragen sicher bei Google und ist somit gesch&uuml;tzt.&nbsp;Durch die gesammelten Nutzungszahlen kann Google feststellen, wie gut die einzelnen Schriften ankommen. Die Ergebnisse ver&ouml;ffentlicht Google auf internen Analyseseiten, wie beispielsweise Google Analytics. Zudem verwendet Google auch Daten des eigenen Web-Crawlers, um festzustellen, welche Webseiten Google-Schriften verwenden. Diese Daten werden in der BigQuery-Datenbank von Google Fonts ver&ouml;ffentlicht. Unternehmer und Entwickler n&uuml;tzen das Google-Webservice&nbsp;BigQuery, um gro&szlig;e Datenmengen untersuchen und bewegen zu k&ouml;nnen.
-                        p
-                          | Zu bedenken gilt allerdings noch, dass durch jede Google Font Anfrage auch Informationen wie&nbsp;Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmaufl&ouml;sung des Browsers und Name des Browsers automatisch an die Google-Server &uuml;bertragen werden. Ob diese Daten auch gespeichert werden, ist nicht klar feststellbar bzw. wird von Google nicht eindeutig kommuniziert.
-                        h3 Wie lange und wo werden die Daten gespeichert?
-                        p
-                          | Anfragen f&uuml;r CSS-Assets speichert Google einen Tag lang auf seinen Servern, die haupts&auml;chlich au&szlig;erhalb der EU angesiedelt sind. Das erm&ouml;glicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu nutzen. Ein Stylesheet ist eine Formatvorlage, &uuml;ber die man einfach und schnell z.B. das Design bzw. die Schriftart einer Webseite &auml;ndern kann.
-                        p
-                          | Die Font-Dateien werden bei Google ein Jahr gespeichert. Google verfolgt damit das Ziel, die Ladezeit von Webseiten grunds&auml;tzlich zu verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften verweisen, werden sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen sp&auml;ter besuchten Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigr&ouml;&szlig;e zu reduzieren, die Abdeckung von Sprache zu erh&ouml;hen und das Design zu verbessern.
-                        h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
-                        p
-                          | Jene Daten, die Google f&uuml;r einen Tag bzw. ein Jahr speichert k&ouml;nnen nicht einfach gel&ouml;scht werden. Die Daten werden beim Seitenaufruf automatisch an Google &uuml;bermittelt. Um diese Daten vorzeitig l&ouml;schen zu k&ouml;nnen, m&uuml;ssen Sie den Google-Support auf 
-                          a(href='https://support.google.com/?hl=de&tid=311194399') https://support.google.com/?hl=de&amp;tid=311194399
-                          |  kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.
-                        p
-                          | Anders als andere Web-Schriften erlaubt uns Google uneingeschr&auml;nkten Zugriff auf alle Schriftarten. Wir k&ouml;nnen also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum f&uuml;r unsere Webseite rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf 
-                          a(href='https://developers.google.com/fonts/faq?tid=311194399') https://developers.google.com/fonts/faq?tid=311194399
-                          | . Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte Informationen &uuml;ber Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich pr&auml;zise Informationen &uuml;ber gespeicherten Daten zu bekommen.
-                        p
-                          | Welche Daten grunds&auml;tzlich von Google erfasst werden und wof&uuml;r diese Daten verwendet werden, k&ouml;nnen Sie auch auf 
-                          a(href='https://policies.google.com/privacy?hl=de&tid=311194399') https://www.google.com/intl/de/policies/privacy/
-                          |  nachlesen.
-                        h2 Eingebettete Social Media Elemente Datenschutzerkl&auml;rung
-                        p
-                          | Wir binden auf unserer Webseite Elemente von Social Media Diensten ein um Bilder, Videos und Texte anzuzeigen.
-                          br
-                          | Durch den Besuch von Seiten die diese Elemente darstellen, werden Daten von Ihrem Browser zum jeweiligen Social Media Dienst &uuml;bertragen und dort gespeichert. Wir haben keinen Zugriff auf diese Daten.
-                          br
-                          | Die folgenden Links f&uuml;hren Sie zu den Seiten der jeweiligen Social Media Dienste wo erkl&auml;rt wird, wie diese mit Ihren Daten umgehen:
-                        ul
-                          li
-                            | Instagram-Datenschutzrichtlinie: 
-                            a(href='https://help.instagram.com/519522125107875?tid=311194399' target='_blank' rel='noopener') https://help.instagram.com/519522125107875
-                          li
-                            | F&uuml;r YouTube gilt die Google Datenschutzerkl&auml;rung: 
-                            a(href='https://policies.google.com/privacy?hl=de&tid=311194399' target='_blank' rel='noopener') https://policies.google.com/privacy?hl=de
-                          li
-                            | Facebook-Datenrichtline:&nbsp;
-                            a(href='https://www.facebook.com/about/privacy?tid=311194399' target='_blank' rel='noopener') https://www.facebook.com/about/privacy
-                          li
-                            | Twitter Datenschutzrichtlinie:&nbsp;
-                            a(href='https://twitter.com/de/privacy?tid=311194399' target='_blank' rel='noopener') https://twitter.com/de/privacy
-                        h2 YouTube Datenschutzerkl&auml;rung
-                        p
-                          | Wir haben auf unserer Website YouTube-Videos eingebaut. So k&ouml;nnen wir Ihnen interessante Videos direkt auf unserer Seite pr&auml;sentieren. YouTube ist ein Videoportal, das seit 2006 eine Tochterfirma von Google ist. Betrieben wird das Videoportal durch YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Wenn Sie auf unserer Website eine Seite aufrufen, die ein YouTube-Video eingebettet hat, verbindet sich Ihr Browser automatisch mit den Servern von YouTube bzw. Google. Dabei werden (je nach Einstellungen) verschiedene Daten &uuml;bertragen. F&uuml;r die gesamte Datenverarbeitung im europ&auml;ischen Raum ist Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) verantwortlich.
-                        p
-                          | Im Folgenden wollen wir Ihnen genauer erkl&auml;ren, welche Daten verarbeitet werden, warum wir YouTube-Videos eingebunden haben und wie Sie Ihre Daten verwalten oder l&ouml;schen k&ouml;nnen.
-                        h3 Was ist YouTube?
-                        p
-                          | Auf YouTube k&ouml;nnen die User kostenlos Videos ansehen, bewerten, kommentieren und selbst hochladen. &Uuml;ber die letzten Jahre wurde YouTube zu einem der wichtigsten Social-Media-Kan&auml;le weltweit. Damit wir Videos auf unserer Webseite anzeigen k&ouml;nnen, stellt YouTube einen Codeausschnitt zur Verf&uuml;gung, den wir auf unserer Seite eingebaut haben.
-                        h3 Warum verwenden wir YouTube-Videos auf unserer Webseite?
-                        p
-                          | YouTube ist die Videoplattform mit den meisten Besuchern und dem besten Content. Wir sind bem&uuml;ht, Ihnen die bestm&ouml;gliche User-Erfahrung auf unserer Webseite zu bieten. Und nat&uuml;rlich d&uuml;rfen interessante Videos dabei nicht fehlen. Mithilfe unserer eingebetteten Videos stellen wir Ihnen neben unseren Texten und Bildern weiteren hilfreichen Content zur Verf&uuml;gung. Zudem wird unsere Webseite auf der Google-Suchmaschine durch die eingebetteten Videos leichter gefunden. Auch wenn wir &uuml;ber Google Ads Werbeanzeigen schalten, kann Google &ndash; dank der gesammelten Daten &ndash; diese Anzeigen wirklich nur Menschen zeigen, die sich f&uuml;r unsere Angebote interessieren.
-                        h3 Welche Daten werden von YouTube gespeichert?
-                        p
-                          | Sobald Sie eine unserer Seiten besuchen, die ein YouTube-Video eingebaut hat, setzt YouTube zumindest ein Cookie, das Ihre IP-Adresse und unsere URL speichert. Wenn Sie in Ihrem YouTube-Konto eingeloggt sind, kann YouTube Ihre Interaktionen auf unserer Webseite meist mithilfe von Cookies Ihrem Profil zuordnen. Dazu z&auml;hlen Daten wie Sitzungsdauer, Absprungrate, ungef&auml;hrer Standort, technische Informationen wie Browsertyp, Bildschirmaufl&ouml;sung oder Ihr Internetanbieter. Weitere Daten k&ouml;nnen Kontaktdaten, etwaige Bewertungen, das Teilen von Inhalten &uuml;ber Social Media oder das Hinzuf&uuml;gen zu Ihren Favoriten auf YouTube sein.
-                        p
-                          | Wenn Sie nicht in einem Google-Konto oder einem Youtube-Konto angemeldet sind, speichert Google Daten mit einer eindeutigen Kennung, die mit Ihrem Ger&auml;t, Browser oder App verkn&uuml;pft sind. So bleibt beispielsweise Ihre bevorzugte Spracheinstellung beibehalten. Aber viele Interaktionsdaten k&ouml;nnen nicht gespeichert werden, da weniger Cookies gesetzt werden.
-                        p
-                          | In der folgenden Liste zeigen wir Cookies, die in einem Test im Browser gesetzt wurden. Wir zeigen einerseits Cookies, die ohne angemeldeten YouTube-Konto gesetzt werden. Andererseits zeigen wir Cookies, die mit angemeldetem Account gesetzt werden. Die Liste kann keinen Vollst&auml;ndigkeitsanspruch erheben, weil die Userdaten immer von den Interaktionen auf YouTube abh&auml;ngen.
-                        p
-                          strong Name:
-                          |  YSC
-                          br
-                          strong Wert:
-                          |  b9-CV6ojI5Y311194399-1
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie registriert eine eindeutige ID, um Statistiken des gesehenen Videos zu speichern.
-                          br
-                          strong Ablaufdatum:
-                          |  nach Sitzungsende
-                        p
-                          strong Name:
-                          |  PREF
-                          br
-                          strong Wert:
-                          |  f1=50000000
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie registriert ebenfalls Ihre eindeutige ID. Google bekommt &uuml;ber PREF Statistiken, wie Sie YouTube-Videos auf unserer Webseite verwenden.
-                          br
-                          strong Ablaufdatum:
-                          |  nach 8 Monaten
-                        p
-                          strong Name:
-                          |  GPS
-                          br
-                          strong Wert:
-                          |  1
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie registriert Ihre eindeutige ID auf mobilen Ger&auml;ten, um den GPS-Standort zu tracken.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 30 Minuten
-                        p
-                          strong Name:
-                          |  VISITOR_INFO1_LIVE
-                          br
-                          strong Wert:
-                          |  95Chz8bagyU
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie versucht die Bandbreite des Users auf unseren Webseiten (mit eingebautem YouTube-Video) zu sch&auml;tzen.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 8 Monaten
-                        p
-                          | Weitere Cookies, die gesetzt werden, wenn Sie mit Ihrem YouTube-Konto angemeldet sind:
-                        p
-                          strong Name:
-                          |  APISID
-                          br
-                          strong Wert:
-                          |  zILlvClZSkqGsSwI/AU1aZI6HY7311194399-
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen. Gen&uuml;tzt werden die Daten f&uuml;r personalisierte Werbeanzeigen.
-                          br
-                          strong Ablaufdatum:
-                          |  nach 2 Jahren
-                        p
-                          strong Name:
-                          |  CONSENT
-                          br
-                          strong Wert:
-                          |  YES+AT.de+20150628-20-0
-                          br
-                          strong Verwendungszweck:
-                          |  Das Cookie speichert den Status der Zustimmung eines Users zur Nutzung unterschiedlicher Services von Google. CONSENT dient auch der Sicherheit, um User zu &uuml;berpr&uuml;fen und Userdaten vor unbefugten Angriffen zu sch&uuml;tzen.
-                          br
-                          strong Ablaufdatum: 
-                          | nach 19 Jahren
-                        p
-                          strong Name:
-                          |  HSID
-                          br
-                          strong Wert:
-                          |  AcRwpgUik9Dveht0I
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen. Diese Daten helfen personalisierte Werbung anzeigen zu k&ouml;nnen.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 2 Jahren
-                        p
-                          strong Name:
-                          |  LOGIN_INFO
-                          br
-                          strong Wert:
-                          |  AFmmF2swRQIhALl6aL&mldr;
-                          br
-                          strong Verwendungszweck:
-                          |  In diesem Cookie werden Informationen &uuml;ber Ihre Login-Daten gespeichert.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 2 Jahren
-                        p
-                          strong Name:
-                          |  SAPISID
-                          br
-                          strong Wert:
-                          |  7oaPxoG-pZsJuuF5/AnUdDUIsJ9iJz2vdM
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie funktioniert, indem es Ihren Browser und Ihr Ger&auml;t eindeutig identifiziert. Es wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 2 Jahren
-                        p
-                          strong Name:
-                          |  SID
-                          br
-                          strong Wert:
-                          |  oQfNKjAsI311194399-
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie speichert Ihre Google-Konto-ID und Ihren letzten Anmeldezeitpunkt in digital signierter und verschl&uuml;sselter Form.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 2 Jahren
-                        p
-                          strong Name:
-                          |  SIDCC
-                          br
-                          strong Wert:
-                          |  AN0-TYuqub2JOcDTyL
-                          br
-                          strong Verwendungszweck:
-                          |  Dieses Cookie speichert Informationen, wie Sie die Webseite nutzen und welche Werbung Sie vor dem Besuch auf unserer Seite m&ouml;glicherweise gesehen haben.
-                          br
-                          strong Ablaufdatum:
-                          | &nbsp;nach 3 Monaten
-                        h3 Wie lange und wo werden die Daten gespeichert?
-                        p
-                          | Die Daten, die YouTube von Ihnen erh&auml;lt und verarbeitet werden auf den Google-Servern gespeichert. Die meisten dieser Server befinden sich in Amerika. Unter 
-                          a(href='https://www.google.com/about/datacenters/inside/locations/?hl=de' target='_blank' rel='noopener noreferrer') https://www.google.com/about/datacenters/inside/locations/?hl=de
-                          |  &nbsp;sehen Sie genau wo sich die Google-Rechenzentren befinden. Ihre Daten sind auf den Servern verteilt. So sind die Daten schneller abrufbar und vor Manipulation besser gesch&uuml;tzt.
-                        p
-                          | Die erhobenen Daten speichert Google unterschiedlich lang. Manche Daten k&ouml;nnen Sie jederzeit l&ouml;schen, andere werden automatisch nach einer begrenzten Zeit gel&ouml;scht und wieder andere werden von Google &uuml;ber l&auml;ngere Zeit gespeichert. Einige Daten (wie Elemente aus &bdquo;Meine Aktivit&auml;t&ldquo;, Fotos oder Dokumente, Produkte), die in Ihrem Google-Konto gespeichert sind, bleiben so lange gespeichert, bis Sie sie l&ouml;schen. Auch wenn Sie nicht in einem Google-Konto angemeldet sind, k&ouml;nnen Sie einige Daten, die mit Ihrem Ger&auml;t, Browser oder App verkn&uuml;pft sind, l&ouml;schen.
-                        h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
-                        p
-                          | Grunds&auml;tzlich k&ouml;nnen Sie Daten im Google Konto manuell l&ouml;schen. Mit der 2019 eingef&uuml;hrten automatische L&ouml;schfunktion von Standort- und Aktivit&auml;tsdaten werden Informationen abh&auml;ngig von Ihrer Entscheidung &ndash; entweder 3 oder 18 Monate gespeichert und dann gel&ouml;scht.
-                        p
-                          | Unabh&auml;ngig, ob Sie ein Google-Konto haben oder nicht, k&ouml;nnen Sie Ihren Browser so konfigurieren, dass Cookies von Google gel&ouml;scht bzw. deaktiviert werden. Je nach dem welchen Browser Sie verwenden, funktioniert dies auf unterschiedliche Art und Weise. Die folgenden Anleitungen zeigen, wie Sie Cookies in Ihrem Browser verwalten:
-                        p
-                          a(href='https://support.google.com/chrome/answer/95647?tid=311194399' target='_blank' rel='noopener noreferrer') Chrome: Cookies in Chrome l&ouml;schen, aktivieren und verwalten
-                        p
-                          a(href='https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=311194399' target='_blank' rel='noopener noreferrer') Safari: Verwalten von Cookies und Websitedaten mit Safari
-                        p
-                          a(href='https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=311194399' target='_blank' rel='noopener noreferrer')
-                            | Firefox: Cookies l&ouml;schen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben
-                        p
-                          a(href='https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=311194399' target='_blank' rel='noopener noreferrer') Internet Explorer: L&ouml;schen und Verwalten von Cookies
-                        p
-                          a(href='https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=311194399' target='_blank' rel='noopener noreferrer') Microsoft Edge: L&ouml;schen und Verwalten von Cookies
-                        p
-                          | Falls Sie grunds&auml;tzlich keine Cookies haben wollen, k&ouml;nnen Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So k&ouml;nnen Sie bei jedem einzelnen Cookie entscheiden, ob Sie es erlauben oder nicht. Da YouTube ein Tochterunternehmen von Google ist, gibt es eine gemeinsame Datenschutzerkl&auml;rung. Wenn Sie mehr &uuml;ber den Umgang mit Ihren Daten erfahren wollen, empfehlen wir Ihnen die Datenschutzerkl&auml;rung unter 
-                          a(href='https://policies.google.com/privacy?hl=de' target='_blank' rel='noopener noreferrer') https://policies.google.com/privacy?hl=de.
-                        h2 Cloudflare Datenschutzerkl&auml;rung
-                        p
-                          | Wir verwenden auf dieser Webseite Cloudflare der Firma Cloudflare, Inc. (101 Townsend St., San Francisco, CA 94107, USA), um unsere Webseite schneller und sicherer zu machen. Dabei verwendet Cloudflare Cookies und verarbeitet User-Daten. Cloudflare, Inc. ist eine amerikanische Firma, die ein Content Delivery Network und diverse Sicherheitsdienste bereitstellt. Diese Dienste befinden sich zwischen dem User und unserem Hosting-Anbieter und fungieren als 
-                          a(href='https://de.wikipedia.org/wiki/Reverse_Proxy' target='_blank' rel='noopener') Reverse Proxy
-                          | &nbsp;f&uuml;r Webseiten. Was das alles genau bedeutet, versuchen wir im Folgenden genauer zu erl&auml;utern.
-                        h3 Was ist Cloudflare?
-                        p
-                          | Ein Content Delivery Network (CDN), wie es die Firma Cloudflare bereitstellt, ist nichts anderes als ein Netzwerk aus &uuml;ber das Internet verbundenen Servern. Cloudflare hat auf der ganzen Welt solche Server verteilt, um Webseiten schneller auf Ihren Bildschirm zu bringen. Ganz einfach gesagt, legt Cloudflare Kopien unserer Website an und platziert sie auf ihren eigenen Servern. Wenn Sie jetzt unsere Webseite besuchen, stellt ein System der Lastenverteilung sicher, dass die gr&ouml;&szlig;ten Teile unserer Webseite von jenem Server ausgeliefert werden, der Ihnen unsere Webseite am schnellsten anzeigen kann. Die Strecke der Daten&uuml;bertragung zu Ihrem Browser wird durch ein CDN deutlich verk&uuml;rzt. Somit wird Ihnen der Content unserer Webseite durch Cloudflare nicht nur von unserem Hosting-Server geliefert, sondern von Servern aus der ganzen Welt. Besonders hilfreich wird der Einsatz von Cloudflare f&uuml;r User aus dem Ausland, da hier die Seite von einem Server in der N&auml;he ausgeliefert werden kann. Neben dem schnellen Ausliefern von Webseiten bietet Cloudflare auch diverse Sicherheitsdienste, wie den DDoS-Schutz oder die Web Application Firewall an.
-                        h3 Warum wir Cloudflare auf unserer Website verwenden?
-                        p
-                          | Nat&uuml;rlich wollen wir Ihnen mit unserer Webseite das bestm&ouml;gliche Service bieten. Cloudflare hilft uns dabei, unsere Webseite schneller und sicherer zu machen. Cloudflare bietet uns sowohl Web-Optimierungen als auch Sicherheitsdienste, wie DDoS-Schutz und Web-Firewall, an. Dazu geh&ouml;ren auch ein 
-                          a(href='https://de.wikipedia.org/wiki/Reverse_Proxy' target='_blank' rel='noopener') Reverse-Proxy
-                          |  und das Content-Verteilungsnetzwerk (CDN). Cloudflare blockiert Bedrohungen und begrenzt missbr&auml;uchliche Bots und Crawler, die unsere Bandbreite und Serverressourcen verschwenden. Durch das Speichern unserer Webseite auf lokalen Datenzentren und das Blockieren von Spam-Software erm&ouml;glicht Cloudflare, unsere Bandbreitnutzung etwa um 60% zu reduzieren. Das Bereitstellen von Inhalten &uuml;ber ein Datenzentrum in Ihrer N&auml;he und einiger dort durchgef&uuml;hrten Web-Optimierungen reduziert die durchschnittliche Ladezeit einer Website etwa um die H&auml;lfte. Durch die Einstellung &bdquo;I&acute;m Under Attack Mode&ldquo; (&bdquo;Ich werde angegriffen&ldquo;-Modus) k&ouml;nnen laut Cloudflare weitere Angriffe abgeschw&auml;cht werden, indem eine JavaScript-Rechenaufgabe angezeigt wird, die man l&ouml;sen muss, bevor ein User auf eine Webseite zugreifen kann. Insgesamt wird dadurch unsere Website deutlich leistungsst&auml;rker und weniger anf&auml;llig auf Spam oder andere Angriffe.
-                        h3 Welche Daten werden von Cloudflare gespeichert?
-                        p
-                          | Cloudflare leitet im Allgemeinen nur jene Daten weiter, die von Websitebetreibern gesteuert werden. Die Inhalte werden also nicht von Cloudflare bestimmt, sondern immer vom Websitebetreiber selbst. Zudem erfasst Cloudflare unter Umst&auml;nden bestimmte Informationen zur Nutzung unserer Webseite und verarbeitet Daten, die von uns versendet werden oder f&uuml;r die Cloudflare entsprechende Anweisungen erhalten hat. In den meisten F&auml;llen erh&auml;lt Cloudflare Daten wie Kontaktinformationen, IP-Adressen, Sicherheitsfingerabdr&uuml;cke, DNS-Protokolldaten und Leistungsdaten f&uuml;r Webseiten, die aus der Browseraktivit&auml;ten abgeleitet werden. Protokolldaten helfen Cloudflare beispielsweise dabei, neue Bedrohungen zu erkennen. So kann Cloudflare einen hohen Sicherheitsschutz f&uuml;r unsere Webseite gew&auml;hrleisten. Cloudflare verarbeitet diese Daten im Rahmen der Services unter Einhaltung der geltenden Gesetze. Dazu z&auml;hlt nat&uuml;rlich auch die Datenschutzgrundverordnung (DSGVO).
-                        p
-                          | Aus Sicherheitsgr&uuml;nden verwendet Cloudflare auch ein Cookie. Das Cookie (__cfduid) wird verwendet, um einzelne User hinter einer gemeinsam genutzten IP-Adresse zu identifizieren und Sicherheitseinstellungen f&uuml;r jeden einzelnen User anzuwenden. Sehr n&uuml;tzlich wird dieses Cookie beispielweise, wenn Sie unsere Webseite aus einem Lokal benutzen, in dem sich eine Reihe infizierter Computer befinden. Wenn aber Ihr Computer vertrauensw&uuml;rdig ist, k&ouml;nnen wir dies anhand des Cookies erkennen. So k&ouml;nnen Sie, trotz infizierter PCs im Umfeld, ungehindert durch unsere Webseite surfen. Wichtig zu wissen ist auch noch, dass dieses Cookie keine personenbezogenen Daten speichert. Dieses Cookie ist f&uuml;r die Cloudflare-Sicherheitsfunktionen unbedingt erforderlich und kann nicht deaktiviert werden.
-                        h3 Cookies von Cloudflare
-                        ul
-                          li
-                            | __cfduid
-                            ul
-                              li Ablaufzeit: 1 Jahr
-                              li Verwendung: Sicherheitseinstellungen f&uuml;r jeden einzelnen Besucher
-                              li Beispielhafter Wert:&nbsp;d798bf7df9c1ad5b7583eda5cc5e78311194399
-                        p
-                          | Cloudflare arbeitet auch mit Drittanbietern zusammen. Diese d&uuml;rfen personenbezogene Daten nur unter Anweisung der Firma Cloudflare und in &Uuml;bereinstimmung mit den Datenschutzrichtlinien und anderer Vertraulichkeits- und Sicherheitsma&szlig;nahmen verarbeiten. Ohne explizite Einwilligung von uns gibt Cloudflare keine personenbezogenen Daten weiter.
-                        h3 Wie lange und wo werden die Daten gespeichert?
-                        p
-                          | Cloudflare speichert Ihre Informationen haupts&auml;chlich in den USA und im Europ&auml;ischen Wirtschaftsraum. Cloudflare kann die oben beschriebenen Informationen aus der ganzen Welt &uuml;bertragen und darauf zugreifen. Im Allgemeinen speichert Cloudflare Daten auf User-Ebene f&uuml;r Domains in den Versionen Free, Pro und Business f&uuml;r weniger als 24 Stunden. F&uuml;r Enterprise Domains, die Cloudflare Logs (fr&uuml;her Enterprise LogShare oder ELS) aktiviert haben, k&ouml;nnen die Daten bis zu 7 Tage gespeichert werden. Wenn allerdings IP-Adressen bei Cloudflare Sicherheitswarnungen ausl&ouml;sen, kann es zu Ausnahmen der oben angef&uuml;hrten Speicherungsdauer kommen.
-                        h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
-                        p
-                          | Cloudflare bewahrt Daten-Protokolle nur solange wie n&ouml;tig auf und diese Daten werden auch in den meisten F&auml;llen innerhalb von 24 Stunden wieder gel&ouml;scht. Cloudflare speichert auch keine personenbezogenen Daten, wie beispielsweise Ihre IP-Adresse. Es gibt allerdings Informationen, die Cloudflare als Teil seiner permanenten Protokolle auf unbestimmte Zeit speichert, um so die Gesamtleistung von Cloudflare Resolver zu verbessern und etwaige Sicherheitsrisiken zu erkennen. Welche permanenten Protokolle genau speichert werden, k&ouml;nnen Sie auf 
-                          a(href='https://www.cloudflare.com/application/privacypolicy/' target='_blank' rel='noopener') https://www.cloudflare.com/application/privacypolicy/
-                          |  nachlesen. Alle Daten, die Cloudflare sammelt (tempor&auml;r oder permanent), werden von allen personenbezogenen Daten bereinigt. Alle permanenten Protokolle werden zudem von Cloudflare anonymisiert.
-                        p
-                          | Cloudflare geht in ihrer Datenschutzerkl&auml;rung darauf ein, dass sie f&uuml;r die Inhalte, die sie erhalten nicht verantwortlich sind. Wenn Sie beispielsweise bei Cloudflare anfragen, ob sie Ihre Inhalte aktualisieren oder l&ouml;schen k&ouml;nnen, verweist Cloudflare grunds&auml;tzlich auf uns als Websitebetreiber. Sie k&ouml;nnen auch die gesamte Erfassung und Verarbeitung Ihrer Daten durch Cloudflare komplett unterbinden, indem Sie die Ausf&uuml;hrung von Script-Code in Ihrem Browser deaktivieren oder einen Script-Blocker in Ihren Browser einbinden.
-                        p
-                          | Cloudflare ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework wodurch der korrekte und sichere Datentransfer pers&ouml;nlicher Daten geregelt wird. Mehr Informationen dazu finden Sie auf 
-                          a(href='https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&tid=311194399' target='_blank' rel='noopener') https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0
-                          | .
-                          br
-                          | Mehr Informationen zum Datenschutz bei Cloudflare finden Sie auf 
-                          a(href='https://www.cloudflare.com/de-de/privacypolicy/?tid=311194399' target='_blank' rel='noopener') https://www.cloudflare.com/de-de/privacypolicy/
-                        h2 BootstrapCDN Datenschutzerkl&auml;rung
-                        p
-                          | Um Ihnen all unsere einzelnen Webseiten (Unterseiten unserer Website) auf allen Ger&auml;ten schnell und sicher ausliefern zu k&ouml;nnen, nutzen wir das Content Delivery Network (CDN) BootstrapCDN des amerikanischen Software-Unternehmens StackPath, LLC 2012 McKinney Ave. Suite 1100, Dallas, TX 75201, USA.
-                        p
-                          | Ein Content Delivery Network (CDN) ist ein Netzwerk regional verteilter Server, die &uuml;ber das Internet miteinander verbunden sind. Durch dieses Netzwerk k&ouml;nnen Inhalte, speziell sehr gro&szlig;e Dateien, auch bei gro&szlig;en Lastspitzen schnell ausgeliefert werden.
-                        p
-                          | BootstrapCDN funktioniert so, dass sogenannte JavaScript-Bibliotheken an Ihren Browser ausgeliefert werden. L&auml;dt nun Ihr Browser eine Datei vom BootstrapCDN herunter, wird Ihre IP-Adresse w&auml;hrend der Verbindung zum Bootstrap-CDN-Server an das Unternehmen StockPath &uuml;bermittelt.
-                        p
-                          | StackPath erw&auml;hnt auch in der hauseigenen Datenschutzerkl&auml;rung, dass das Unternehmen aggregierte und anonymisierte Daten von diversen Diensten (wie BootstrapCDN) f&uuml;r die Erweiterung der Sicherung und f&uuml;r andere StackPath-Dienste und Clients verwenden. All diese Daten k&ouml;nnen aber keine Person identifizieren.
-                        p
-                          | Wenn Sie diese Daten&uuml;bertragung unterbinden wollen, k&ouml;nnen Sie einen JavaScript-Blocker (siehe beispielsweise 
-                          a(href='https://noscript.net/' target='_blank' rel='noopener noreferrer') https://noscript.net/
-                          | ) installieren oder in Ihrem Browser die Ausf&uuml;hrung von JavaScript-Codes deaktivieren. Bitte beachten Sie aber, dass dadurch die Website nicht mehr das gewohnte Service (wie etwa schnelle Ladegeschwindigkeit) bieten kann.
-                        p
-                          | StackPath ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework, wodurch der korrekte und sichere Datentransfer pers&ouml;nlicher Daten geregelt wird. Mehr Informationen dazu finden Sie auf 
-                          a(href='https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&status=Active' target='_blank' rel='follow noopener noreferrer') https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&amp;status=Active
-                          | .
-                          br
-                          | Mehr Informationen zum Datenschutz bei StackPath bzw. BootstrapCDN finden Sie auf 
-                          a(href='https://www.bootstrapcdn.com/privacy-policy/?tid=311194399' target='_blank' rel='noopener') https://www.bootstrapcdn.com/privacy-policy/
-                          | .
-                        p(style='margin-top:15px;')
-                          | Quelle: Erstellt&nbsp;mit dem&nbsp;
-                          a(title='Datenschutz Generator Deutschland' href='https://www.adsimple.de/datenschutz-generator/' target='_blank' rel='follow' style='text-decoration:none;') Datenschutz Generator
-                          |  von AdSimple&nbsp;in Kooperation mit 
-                          a(href='https://www.hashtagmann.de' target='_blank' rel='follow' title='') hashtagmann.de
+    script.
+      if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+      {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
-                          
+    //- Impressum
+    section#impressum.page-section.bg-light
+      .container
+        .text-center
+          h2.section-heading.text-uppercase(style='color: var(--primary)') Datenschutzerkl&auml;rung
+        .row
+          .datenschutz
+            h2 Datenschutz
+            p
+              | Wir haben diese Datenschutzerkl&auml;rung (Fassung 14.07.2020-311194399) verfasst, um Ihnen gem&auml;&szlig; der Vorgaben der 
+              a(href='https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=311194399' target='_blank' rel='noopener') Datenschutz-Grundverordnung (EU) 2016/679
+              |  zu erkl&auml;ren, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsm&ouml;glichkeiten Sie als Besucher dieser Webseite haben.
+            p
+              | Leider liegt es in der Natur der Sache, dass diese Erkl&auml;rungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bem&uuml;ht die wichtigsten Dinge so einfach und klar wie m&ouml;glich zu beschreiben.
+            h2 Automatische Datenspeicherung
+            p
+              | Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so auch auf dieser Webseite.
+            p
+              | Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite gespeichert ist) automatisch Daten wie
+            ul
+              li die Adresse (URL) der aufgerufenen Webseite
+              li Browser und Browserversion
+              li das verwendete Betriebssystem
+              li die Adresse (URL) der zuvor besuchten Seite (Referrer URL)
+              li den Hostname und die IP-Adresse des Ger&auml;ts von welchem aus zugegriffen wird
+              li Datum und Uhrzeit
+            p in Dateien (Webserver-Logfiles).
+            p
+              | In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gel&ouml;scht. Wir geben diese Daten nicht weiter, k&ouml;nnen jedoch nicht ausschlie&szlig;en, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+            h2 Cookies
+            p
+              | Unsere Website verwendet HTTP-Cookies um nutzerspezifische Daten zu speichern.
+              br
+              | Im Folgenden erkl&auml;ren wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende Datenschutzerkl&auml;rung besser verstehen.
+            h3 Was genau sind Cookies?
+            p
+              | Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies.
+            p
+              | Eines ist nicht von der Hand zu weisen: Cookies sind echt n&uuml;tzliche Helferlein. Fast alle Webseiten verwenden&nbsp;Cookies. Genauer gesprochen sind es HTTP-Cookies, da es auch noch andere&nbsp;Cookies f&uuml;r andere Anwendungsbereiche gibt. HTTP-Cookies&nbsp;sind kleine Dateien, die von unserer Website auf Ihrem Computer gespeichert werden. Diese Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem &ldquo;Hirn&rdquo; Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und einem Wert. Bei der Definition eines Cookies m&uuml;ssen zus&auml;tzlich ein oder mehrere Attribute angegeben werden.
+            p
+              | Cookies&nbsp;speichern gewisse Nutzerdaten von Ihnen, wie beispielsweise Sprache oder pers&ouml;nliche Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen, &uuml;bermittelt Ihr Browser die &bdquo;userbezogenen&ldquo; Informationen an unsere Seite zur&uuml;ck. Dank der Cookies wei&szlig; unsere Website, wer Sie sind und bietet Ihnen Ihre gewohnte Standardeinstellung. In einigen Browsern hat jedes&nbsp;Cookie&nbsp;eine eigene Datei, in anderen wie beispielsweise Firefox sind alle&nbsp;Cookies&nbsp;in einer einzigen Datei gespeichert.
+            p
+              | Es gibt sowohl Erstanbieter Cookies als auch Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer Seite erstellt, Drittanbieter-Cookies werden von Partner-Webseiten (z.B. Google Analytics) erstellt.&nbsp;Jedes Cookie ist individuell zu bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit eines Cookies variiert von ein paar Minuten bis hin zu ein paar Jahren.&nbsp;Cookies sind keine Software-Programme und enthalten keine Viren, Trojaner oder andere &bdquo;Sch&auml;dlinge&ldquo;. Cookies k&ouml;nnen auch nicht auf Informationen Ihres PCs zugreifen.
+            p So k&ouml;nnen zum Beispiel Cookie-Daten aussehen:
+            ul
+              li Name: _ga
+              li Ablaufzeit: 2 Jahre
+              li Verwendung: Unterscheidung der Webseitenbesucher
+              li Beispielhafter Wert:&nbsp;GA1.2.1326744211.152311194399
+            p Ein Browser sollte folgende Mindestgr&ouml;&szlig;en unterst&uuml;tzen:
+            ul
+              li Ein Cookie soll mindestens 4096 Bytes enthalten k&ouml;nnen
+              li Pro Domain sollen mindestens 50 Cookies gespeichert werden k&ouml;nnen
+              li Insgesamt sollen mindestens 3000 Cookies gespeichert werden k&ouml;nnen
+            h3 Welche Arten von Cookies gibt es?
+            p
+              | Die Frage welche Cookies wir im Speziellen verwenden, h&auml;ngt von den verwendeten Diensten ab und wird in der folgenden Abschnitten der Datenschutzerkl&auml;rung gekl&auml;rt. An dieser Stelle m&ouml;chten wir kurz auf die verschiedenen Arten von HTTP-Cookies eingehen.
+            p Man kann 4 Arten von Cookies unterscheiden:
+            p
+              strong
+                | Unbedingt notwendige Cookies
+                br
+              | Diese Cookies sind n&ouml;tig, um grundlegende Funktionen der Website sicherzustellen. Zum Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und sp&auml;ter erst zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gel&ouml;scht, selbst wenn der User sein Browserfenster schlie&szlig;t.
+            p
+              strong
+                | Funktionelle Cookies
+                br
+              | Diese Cookies sammeln Infos &uuml;ber das Userverhalten und ob der User etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Website bei verschiedenen Browsern gemessen.
+            p
+              strong
+                | Zielorientierte Cookies
+                br
+              | Diese Cookies sorgen f&uuml;r eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene Standorte, Schriftgr&ouml;&szlig;en oder Formulardaten gespeichert.
+            p
+              strong
+                | Werbe-Cookies
+                br
+              | Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.
+            p
+              | &Uuml;blicherweise werden Sie beim erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten Sie zulassen m&ouml;chten. Und nat&uuml;rlich wird diese Entscheidung auch in einem Cookie gespeichert.
+            h3 Wie kann ich Cookies l&ouml;schen?
+            p
+              | Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabh&auml;ngig von welchem Service oder welcher Website die Cookies stammen, haben Sie immer die M&ouml;glichkeit&nbsp;Cookies zu l&ouml;schen, nur teilweise zuzulassen oder zu deaktivieren. Zum Beispiel k&ouml;nnen Sie Cookies von Drittanbietern blockieren, aber alle anderen Cookies zulassen.
+            p
+              | Wenn Sie feststellen m&ouml;chten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen &auml;ndern oder l&ouml;schen wollen, k&ouml;nnen Sie dies in Ihren Browser-Einstellungen finden:
+            p
+              a(href='https://support.google.com/chrome/answer/95647?tid=311194399' target='_blank' rel='noopener') Chrome: Cookies in Chrome l&ouml;schen, aktivieren und verwalten
+            p
+              a(href='https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=311194399' target='_blank' rel='noopener') Safari: Verwalten von Cookies und Websitedaten mit Safari
+            p
+              a(href='https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=311194399' target='_blank' rel='noopener')
+                | Firefox: Cookies l&ouml;schen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben
+            p
+              a(href='https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=311194399' target='_blank' rel='noopener') Internet Explorer: L&ouml;schen und Verwalten von Cookies
+            p
+              a(href='https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=311194399' target='_blank' rel='noopener') Microsoft Edge: L&ouml;schen und Verwalten von Cookies
+            p
+              | Falls Sie grunds&auml;tzlich keine Cookies haben wollen, k&ouml;nnen Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So k&ouml;nnen Sie bei jedem einzelnen Cookie entscheiden, ob Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach Browser verschieden. Am besten ist es Sie suchen die Anleitung in Google mit dem Suchbegriff &ldquo;Cookies l&ouml;schen Chrome&rdquo; oder &ldquo;Cookies deaktivieren Chrome&rdquo; im Falle eines Chrome Browsers oder tauschen das Wort &ldquo;Chrome&rdquo; gegen den Namen Ihres Browsers, z.B. Edge, Firefox, Safari aus.
+            h3 Wie sieht es mit meinem Datenschutz aus?
+            p
+              | Seit 2009 gibt es die sogenannten &bdquo;Cookie-Richtlinien&ldquo;. Darin ist festgehalten, dass das Speichern von Cookies eine Einwilligung von Ihnen verlangt. Innerhalb der EU-L&auml;nder gibt es allerdings noch sehr unterschiedliche Reaktionen auf diese Richtlinien. In Deutschland wurden die Cookie-Richtlinien nicht als nationales Recht umgesetzt. Stattdessen erfolgte die Umsetzung dieser Richtlinie weitgehend in &sect; 15 Abs.3 des Telemediengesetzes (TMG).
+            p
+              | Wenn Sie mehr &uuml;ber Cookies wissen m&ouml;chten und technischen Dokumentationen nicht scheuen, empfehlen wir&nbsp;
+              a(href='https://tools.ietf.org/html/rfc6265' target='_blank' rel='nofollow noopener') https://tools.ietf.org/html/rfc6265
+              | , dem Request for Comments der Internet Engineering Task Force (IETF) namens &ldquo;HTTP State Management Mechanism&rdquo;.
+            h2 Speicherung pers&ouml;nlicher Daten
+            p
+              | Pers&ouml;nliche Daten, die Sie uns auf dieser Website elektronisch &uuml;bermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere pers&ouml;nlichen Angaben im Rahmen der &Uuml;bermittlung eines Formulars oder Kommentaren im Blog, werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.
+            p
+              | Wir nutzen Ihre pers&ouml;nlichen Daten somit nur f&uuml;r die Kommunikation mit jenen Besuchern, die Kontakt ausdr&uuml;cklich w&uuml;nschen und f&uuml;r die Abwicklung der auf dieser Webseite angebotenen Dienstleistungen und Produkte. Wir geben Ihre pers&ouml;nlichen Daten ohne Zustimmung nicht weiter, k&ouml;nnen jedoch nicht ausschlie&szlig;en, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+            p
+              | Wenn Sie uns pers&ouml;nliche Daten per E-Mail schicken &ndash; somit abseits dieser Webseite &ndash; k&ouml;nnen wir keine sichere &Uuml;bertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals unverschl&uuml;sselt per E-Mail zu &uuml;bermitteln.
+            p
+              | Die Rechtsgrundlage besteht nach 
+              a(href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311194399' target='_blank' rel='noopener') Artikel 6&nbsp; Absatz 1 a DSGVO
+              |  (Rechtm&auml;&szlig;igkeit der Verarbeitung) darin, dass Sie uns die Einwilligung zur Verarbeitung der von Ihnen eingegebenen Daten geben. Sie k&ouml;nnen diesen Einwilligung jederzeit widerrufen &ndash; eine formlose E-Mail reicht aus, Sie finden unsere Kontaktdaten im Impressum.
+            h2 Rechte laut Datenschutzgrundverordnung
+            p
+              | Ihnen stehen laut den Bestimmungen der DSGVO grunds&auml;tzlich die folgende Rechte zu:
+            ul
+              li Recht auf Berichtigung (Artikel 16 DSGVO)
+              li Recht auf L&ouml;schung (&bdquo;Recht auf Vergessenwerden&ldquo;) (Artikel 17 DSGVO)
+              li Recht auf Einschr&auml;nkung der Verarbeitung (Artikel 18 DSGVO)
+              li
+                | Recht auf Benachrichtigung &ndash; Mitteilungspflicht im Zusammenhang mit der Berichtigung oder L&ouml;schung personenbezogener Daten oder der Einschr&auml;nkung der Verarbeitung (Artikel 19 DSGVO)
+              li Recht auf Daten&uuml;bertragbarkeit (Artikel 20 DSGVO)
+              li Widerspruchsrecht (Artikel 21 DSGVO)
+              li
+                | Recht, nicht einer ausschlie&szlig;lich auf einer automatisierten Verarbeitung &mdash; einschlie&szlig;lich Profiling &mdash; beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)
+            p
+              | Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verst&ouml;&szlig;t oder Ihre datenschutzrechtlichen Anspr&uuml;che sonst in einer Weise verletzt worden sind, k&ouml;nnen Sie sich an die 
+              a(href='https://www.bfdi.bund.de' target='_blank' rel='noopener') Bundesbeauftragte f&uuml;r den Datenschutz und die Informationsfreiheit (BfDI)
+              |  wenden.
+            h2 Auswertung des Besucherverhaltens
+            p
+              | In der folgenden Datenschutzerkl&auml;rung informieren wir Sie dar&uuml;ber, ob und wie wir Daten Ihres Besuchs dieser Website auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir k&ouml;nnen von Ihrem Verhalten auf dieser Website nicht auf Ihre Person schlie&szlig;en.
+            p
+              | Mehr &uuml;ber M&ouml;glichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden Datenschutzerkl&auml;rung.
+            h2 TLS-Verschl&uuml;sselung mit https
+            p
+              | Wir verwenden https um Daten abh&ouml;rsicher im Internet zu &uuml;bertragen (Datenschutz durch Technikgestaltung 
+              a(href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311194399' target='_blank' rel='noopener') Artikel 25 Absatz 1 DSGVO
+              | ). Durch den Einsatz von TLS (Transport Layer Security), einem Verschl&uuml;sselungsprotokoll zur sicheren Daten&uuml;bertragung im Internet k&ouml;nnen wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Daten&uuml;bertragung am kleinen Schlo&szlig;symbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.
+            h2 Google Fonts Datenschutzerkl&auml;rung
+            p
+              | Auf unserer Website verwenden wir Google Fonts. Das sind die &ldquo;Google-Schriften&rdquo; der Firma Google Inc. F&uuml;r den europ&auml;ischen Raum ist das Unternehmen Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) f&uuml;r alle Google-Dienste verantwortlich.
+            p
+              | F&uuml;r die Verwendung von Google-Schriftarten m&uuml;ssen Sie sich nicht anmelden bzw. ein Passwort hinterlegen. Weiters werden auch keine Cookies in Ihrem Browser gespeichert. Die Dateien (CSS, Schriftarten/Fonts) werden &uuml;ber die Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert. Laut Google sind die Anfragen nach CSS und Schriften vollkommen getrennt von allen anderen Google-Diensten. Wenn Sie ein Google-Konto haben, brauchen Sie keine Sorge haben, dass Ihre Google-Kontodaten, w&auml;hrend der Verwendung von Google Fonts, an Google &uuml;bermittelt werden. Google erfasst die Nutzung von CSS (Cascading Style Sheets) und der verwendeten Schriftarten und speichert diese Daten sicher. Wie die Datenspeicherung genau aussieht, werden wir uns noch im Detail ansehen.
+            h3 Was sind Google Fonts?
+            p
+              | Google Fonts (fr&uuml;her Google Web Fonts) ist ein Verzeichnis mit &uuml;ber 800 Schriftarten, die&nbsp;
+              a(href='https://de.wikipedia.org/wiki/Google_LLC?tid=311194399') Google
+              | &nbsp;seinen Nutzern kostenlos zu Verf&uuml;gung stellt.
+            p
+              | Viele dieser Schriftarten sind unter der&nbsp;SIL Open Font License&nbsp;ver&ouml;ffentlicht, w&auml;hrend andere unter der&nbsp;Apache-Lizenz&nbsp;ver&ouml;ffentlicht wurden. Beides sind&nbsp;freie Software-Lizenzen.
+            h3 Warum verwenden wir Google Fonts auf unserer Webseite?
+            p
+              | Mit Google Fonts k&ouml;nnen wir auf unserer eigenen Webseite Schriften nutzen, doch m&uuml;ssen sie nicht auf unseren eigenen Server hochladen. Google Fonts ist ein wichtiger Baustein, um die Qualit&auml;t unserer Webseite hoch zu halten. Alle Google-Schriften sind automatisch f&uuml;r das Web optimiert und dies spart Datenvolumen und ist speziell f&uuml;r die Verwendung mit mobilen Endger&auml;ten ein gro&szlig;er Vorteil. Wenn Sie unsere Seite besuchen, sorgt die niedrige Dateigr&ouml;&szlig;e f&uuml;r eine schnelle Ladezeit. Des Weiteren sind Google Fonts sichere Web Fonts. Unterschiedliche Bildsynthese-Systeme (Rendering) in verschiedenen Browsern, Betriebssystemen und mobilen Endger&auml;ten k&ouml;nnen zu Fehlern f&uuml;hren. Solche Fehler k&ouml;nnen teilweise Texte bzw. ganze Webseiten optisch verzerren. Dank des schnellen Content Delivery Networks (CDN) gibt es mit Google Fonts keine plattform&uuml;bergreifenden Probleme. Google Fonts unterst&uuml;tzt alle g&auml;ngigen Browser (Google Chrome,&nbsp;Mozilla Firefox,&nbsp;Apple Safari,&nbsp;Opera) und funktioniert zuverl&auml;ssig auf den meisten modernen mobilen Betriebssystemen, einschlie&szlig;lich Android 2.2+ und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google Fonts also, damit wir unser gesamtes Online-Service so sch&ouml;n und einheitlich wie m&ouml;glich darstellen k&ouml;nnen.
+            h3 Welche Daten werden von Google gespeichert?
+            p
+              | Wenn Sie unsere Webseite besuchen, werden die Schriften &uuml;ber einen Google-Server nachgeladen. Durch diesen externen Aufruf werden Daten an die Google-Server &uuml;bermittelt. So erkennt Google auch, dass Sie bzw. Ihre IP-Adresse unsere Webseite besuchen. Die Google Fonts API wurde entwickelt, um Verwendung, Speicherung und Erfassung von Endnutzerdaten auf das zu reduzieren, was f&uuml;r eine ordentliche Bereitstellung von Schriften n&ouml;tig ist.&nbsp;API steht &uuml;brigens f&uuml;r &bdquo;Application Programming Interface&ldquo; und dient unter anderem als Daten&uuml;bermittler im Softwarebereich.
+            p
+              | Google Fonts speichert CSS- und Schrift-Anfragen sicher bei Google und ist somit gesch&uuml;tzt.&nbsp;Durch die gesammelten Nutzungszahlen kann Google feststellen, wie gut die einzelnen Schriften ankommen. Die Ergebnisse ver&ouml;ffentlicht Google auf internen Analyseseiten, wie beispielsweise Google Analytics. Zudem verwendet Google auch Daten des eigenen Web-Crawlers, um festzustellen, welche Webseiten Google-Schriften verwenden. Diese Daten werden in der BigQuery-Datenbank von Google Fonts ver&ouml;ffentlicht. Unternehmer und Entwickler n&uuml;tzen das Google-Webservice&nbsp;BigQuery, um gro&szlig;e Datenmengen untersuchen und bewegen zu k&ouml;nnen.
+            p
+              | Zu bedenken gilt allerdings noch, dass durch jede Google Font Anfrage auch Informationen wie&nbsp;Spracheinstellungen, IP-Adresse, Version des Browsers, Bildschirmaufl&ouml;sung des Browsers und Name des Browsers automatisch an die Google-Server &uuml;bertragen werden. Ob diese Daten auch gespeichert werden, ist nicht klar feststellbar bzw. wird von Google nicht eindeutig kommuniziert.
+            h3 Wie lange und wo werden die Daten gespeichert?
+            p
+              | Anfragen f&uuml;r CSS-Assets speichert Google einen Tag lang auf seinen Servern, die haupts&auml;chlich au&szlig;erhalb der EU angesiedelt sind. Das erm&ouml;glicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu nutzen. Ein Stylesheet ist eine Formatvorlage, &uuml;ber die man einfach und schnell z.B. das Design bzw. die Schriftart einer Webseite &auml;ndern kann.
+            p
+              | Die Font-Dateien werden bei Google ein Jahr gespeichert. Google verfolgt damit das Ziel, die Ladezeit von Webseiten grunds&auml;tzlich zu verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften verweisen, werden sie nach dem ersten Besuch zwischengespeichert und erscheinen sofort auf allen anderen sp&auml;ter besuchten Webseiten wieder. Manchmal aktualisiert Google Schriftdateien, um die Dateigr&ouml;&szlig;e zu reduzieren, die Abdeckung von Sprache zu erh&ouml;hen und das Design zu verbessern.
+            h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
+            p
+              | Jene Daten, die Google f&uuml;r einen Tag bzw. ein Jahr speichert k&ouml;nnen nicht einfach gel&ouml;scht werden. Die Daten werden beim Seitenaufruf automatisch an Google &uuml;bermittelt. Um diese Daten vorzeitig l&ouml;schen zu k&ouml;nnen, m&uuml;ssen Sie den Google-Support auf 
+              a(href='https://support.google.com/?hl=de&tid=311194399') https://support.google.com/?hl=de&amp;tid=311194399
+              |  kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn Sie unsere Seite nicht besuchen.
+            p
+              | Anders als andere Web-Schriften erlaubt uns Google uneingeschr&auml;nkten Zugriff auf alle Schriftarten. Wir k&ouml;nnen also unlimitiert auf ein Meer an Schriftarten zugreifen und so das Optimum f&uuml;r unsere Webseite rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf 
+              a(href='https://developers.google.com/fonts/faq?tid=311194399') https://developers.google.com/fonts/faq?tid=311194399
+              | . Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein, doch wirklich detaillierte Informationen &uuml;ber Datenspeicherung sind nicht enthalten. Es ist relativ schwierig, von Google wirklich pr&auml;zise Informationen &uuml;ber gespeicherten Daten zu bekommen.
+            p
+              | Welche Daten grunds&auml;tzlich von Google erfasst werden und wof&uuml;r diese Daten verwendet werden, k&ouml;nnen Sie auch auf 
+              a(href='https://policies.google.com/privacy?hl=de&tid=311194399') https://www.google.com/intl/de/policies/privacy/
+              |  nachlesen.
+            h2 Eingebettete Social Media Elemente Datenschutzerkl&auml;rung
+            p
+              | Wir binden auf unserer Webseite Elemente von Social Media Diensten ein um Bilder, Videos und Texte anzuzeigen.
+              br
+              | Durch den Besuch von Seiten die diese Elemente darstellen, werden Daten von Ihrem Browser zum jeweiligen Social Media Dienst &uuml;bertragen und dort gespeichert. Wir haben keinen Zugriff auf diese Daten.
+              br
+              | Die folgenden Links f&uuml;hren Sie zu den Seiten der jeweiligen Social Media Dienste wo erkl&auml;rt wird, wie diese mit Ihren Daten umgehen:
+            ul
+              li
+                | Instagram-Datenschutzrichtlinie: 
+                a(href='https://help.instagram.com/519522125107875?tid=311194399' target='_blank' rel='noopener') https://help.instagram.com/519522125107875
+              li
+                | F&uuml;r YouTube gilt die Google Datenschutzerkl&auml;rung: 
+                a(href='https://policies.google.com/privacy?hl=de&tid=311194399' target='_blank' rel='noopener') https://policies.google.com/privacy?hl=de
+              li
+                | Facebook-Datenrichtline:&nbsp;
+                a(href='https://www.facebook.com/about/privacy?tid=311194399' target='_blank' rel='noopener') https://www.facebook.com/about/privacy
+              li
+                | Twitter Datenschutzrichtlinie:&nbsp;
+                a(href='https://twitter.com/de/privacy?tid=311194399' target='_blank' rel='noopener') https://twitter.com/de/privacy
+            h2 YouTube Datenschutzerkl&auml;rung
+            p
+              | Wir haben auf unserer Website YouTube-Videos eingebaut. So k&ouml;nnen wir Ihnen interessante Videos direkt auf unserer Seite pr&auml;sentieren. YouTube ist ein Videoportal, das seit 2006 eine Tochterfirma von Google ist. Betrieben wird das Videoportal durch YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Wenn Sie auf unserer Website eine Seite aufrufen, die ein YouTube-Video eingebettet hat, verbindet sich Ihr Browser automatisch mit den Servern von YouTube bzw. Google. Dabei werden (je nach Einstellungen) verschiedene Daten &uuml;bertragen. F&uuml;r die gesamte Datenverarbeitung im europ&auml;ischen Raum ist Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) verantwortlich.
+            p
+              | Im Folgenden wollen wir Ihnen genauer erkl&auml;ren, welche Daten verarbeitet werden, warum wir YouTube-Videos eingebunden haben und wie Sie Ihre Daten verwalten oder l&ouml;schen k&ouml;nnen.
+            h3 Was ist YouTube?
+            p
+              | Auf YouTube k&ouml;nnen die User kostenlos Videos ansehen, bewerten, kommentieren und selbst hochladen. &Uuml;ber die letzten Jahre wurde YouTube zu einem der wichtigsten Social-Media-Kan&auml;le weltweit. Damit wir Videos auf unserer Webseite anzeigen k&ouml;nnen, stellt YouTube einen Codeausschnitt zur Verf&uuml;gung, den wir auf unserer Seite eingebaut haben.
+            h3 Warum verwenden wir YouTube-Videos auf unserer Webseite?
+            p
+              | YouTube ist die Videoplattform mit den meisten Besuchern und dem besten Content. Wir sind bem&uuml;ht, Ihnen die bestm&ouml;gliche User-Erfahrung auf unserer Webseite zu bieten. Und nat&uuml;rlich d&uuml;rfen interessante Videos dabei nicht fehlen. Mithilfe unserer eingebetteten Videos stellen wir Ihnen neben unseren Texten und Bildern weiteren hilfreichen Content zur Verf&uuml;gung. Zudem wird unsere Webseite auf der Google-Suchmaschine durch die eingebetteten Videos leichter gefunden. Auch wenn wir &uuml;ber Google Ads Werbeanzeigen schalten, kann Google &ndash; dank der gesammelten Daten &ndash; diese Anzeigen wirklich nur Menschen zeigen, die sich f&uuml;r unsere Angebote interessieren.
+            h3 Welche Daten werden von YouTube gespeichert?
+            p
+              | Sobald Sie eine unserer Seiten besuchen, die ein YouTube-Video eingebaut hat, setzt YouTube zumindest ein Cookie, das Ihre IP-Adresse und unsere URL speichert. Wenn Sie in Ihrem YouTube-Konto eingeloggt sind, kann YouTube Ihre Interaktionen auf unserer Webseite meist mithilfe von Cookies Ihrem Profil zuordnen. Dazu z&auml;hlen Daten wie Sitzungsdauer, Absprungrate, ungef&auml;hrer Standort, technische Informationen wie Browsertyp, Bildschirmaufl&ouml;sung oder Ihr Internetanbieter. Weitere Daten k&ouml;nnen Kontaktdaten, etwaige Bewertungen, das Teilen von Inhalten &uuml;ber Social Media oder das Hinzuf&uuml;gen zu Ihren Favoriten auf YouTube sein.
+            p
+              | Wenn Sie nicht in einem Google-Konto oder einem Youtube-Konto angemeldet sind, speichert Google Daten mit einer eindeutigen Kennung, die mit Ihrem Ger&auml;t, Browser oder App verkn&uuml;pft sind. So bleibt beispielsweise Ihre bevorzugte Spracheinstellung beibehalten. Aber viele Interaktionsdaten k&ouml;nnen nicht gespeichert werden, da weniger Cookies gesetzt werden.
+            p
+              | In der folgenden Liste zeigen wir Cookies, die in einem Test im Browser gesetzt wurden. Wir zeigen einerseits Cookies, die ohne angemeldeten YouTube-Konto gesetzt werden. Andererseits zeigen wir Cookies, die mit angemeldetem Account gesetzt werden. Die Liste kann keinen Vollst&auml;ndigkeitsanspruch erheben, weil die Userdaten immer von den Interaktionen auf YouTube abh&auml;ngen.
+            p
+              strong Name:
+              |  YSC
+              br
+              strong Wert:
+              |  b9-CV6ojI5Y311194399-1
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie registriert eine eindeutige ID, um Statistiken des gesehenen Videos zu speichern.
+              br
+              strong Ablaufdatum:
+              |  nach Sitzungsende
+            p
+              strong Name:
+              |  PREF
+              br
+              strong Wert:
+              |  f1=50000000
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie registriert ebenfalls Ihre eindeutige ID. Google bekommt &uuml;ber PREF Statistiken, wie Sie YouTube-Videos auf unserer Webseite verwenden.
+              br
+              strong Ablaufdatum:
+              |  nach 8 Monaten
+            p
+              strong Name:
+              |  GPS
+              br
+              strong Wert:
+              |  1
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie registriert Ihre eindeutige ID auf mobilen Ger&auml;ten, um den GPS-Standort zu tracken.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 30 Minuten
+            p
+              strong Name:
+              |  VISITOR_INFO1_LIVE
+              br
+              strong Wert:
+              |  95Chz8bagyU
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie versucht die Bandbreite des Users auf unseren Webseiten (mit eingebautem YouTube-Video) zu sch&auml;tzen.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 8 Monaten
+            p
+              | Weitere Cookies, die gesetzt werden, wenn Sie mit Ihrem YouTube-Konto angemeldet sind:
+            p
+              strong Name:
+              |  APISID
+              br
+              strong Wert:
+              |  zILlvClZSkqGsSwI/AU1aZI6HY7311194399-
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen. Gen&uuml;tzt werden die Daten f&uuml;r personalisierte Werbeanzeigen.
+              br
+              strong Ablaufdatum:
+              |  nach 2 Jahren
+            p
+              strong Name:
+              |  CONSENT
+              br
+              strong Wert:
+              |  YES+AT.de+20150628-20-0
+              br
+              strong Verwendungszweck:
+              |  Das Cookie speichert den Status der Zustimmung eines Users zur Nutzung unterschiedlicher Services von Google. CONSENT dient auch der Sicherheit, um User zu &uuml;berpr&uuml;fen und Userdaten vor unbefugten Angriffen zu sch&uuml;tzen.
+              br
+              strong Ablaufdatum: 
+              | nach 19 Jahren
+            p
+              strong Name:
+              |  HSID
+              br
+              strong Wert:
+              |  AcRwpgUik9Dveht0I
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen. Diese Daten helfen personalisierte Werbung anzeigen zu k&ouml;nnen.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 2 Jahren
+            p
+              strong Name:
+              |  LOGIN_INFO
+              br
+              strong Wert:
+              |  AFmmF2swRQIhALl6aL&mldr;
+              br
+              strong Verwendungszweck:
+              |  In diesem Cookie werden Informationen &uuml;ber Ihre Login-Daten gespeichert.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 2 Jahren
+            p
+              strong Name:
+              |  SAPISID
+              br
+              strong Wert:
+              |  7oaPxoG-pZsJuuF5/AnUdDUIsJ9iJz2vdM
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie funktioniert, indem es Ihren Browser und Ihr Ger&auml;t eindeutig identifiziert. Es wird verwendet, um ein Profil &uuml;ber Ihre Interessen zu erstellen.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 2 Jahren
+            p
+              strong Name:
+              |  SID
+              br
+              strong Wert:
+              |  oQfNKjAsI311194399-
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie speichert Ihre Google-Konto-ID und Ihren letzten Anmeldezeitpunkt in digital signierter und verschl&uuml;sselter Form.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 2 Jahren
+            p
+              strong Name:
+              |  SIDCC
+              br
+              strong Wert:
+              |  AN0-TYuqub2JOcDTyL
+              br
+              strong Verwendungszweck:
+              |  Dieses Cookie speichert Informationen, wie Sie die Webseite nutzen und welche Werbung Sie vor dem Besuch auf unserer Seite m&ouml;glicherweise gesehen haben.
+              br
+              strong Ablaufdatum:
+              | &nbsp;nach 3 Monaten
+            h3 Wie lange und wo werden die Daten gespeichert?
+            p
+              | Die Daten, die YouTube von Ihnen erh&auml;lt und verarbeitet werden auf den Google-Servern gespeichert. Die meisten dieser Server befinden sich in Amerika. Unter 
+              a(href='https://www.google.com/about/datacenters/inside/locations/?hl=de' target='_blank' rel='noopener noreferrer') https://www.google.com/about/datacenters/inside/locations/?hl=de
+              |  &nbsp;sehen Sie genau wo sich die Google-Rechenzentren befinden. Ihre Daten sind auf den Servern verteilt. So sind die Daten schneller abrufbar und vor Manipulation besser gesch&uuml;tzt.
+            p
+              | Die erhobenen Daten speichert Google unterschiedlich lang. Manche Daten k&ouml;nnen Sie jederzeit l&ouml;schen, andere werden automatisch nach einer begrenzten Zeit gel&ouml;scht und wieder andere werden von Google &uuml;ber l&auml;ngere Zeit gespeichert. Einige Daten (wie Elemente aus &bdquo;Meine Aktivit&auml;t&ldquo;, Fotos oder Dokumente, Produkte), die in Ihrem Google-Konto gespeichert sind, bleiben so lange gespeichert, bis Sie sie l&ouml;schen. Auch wenn Sie nicht in einem Google-Konto angemeldet sind, k&ouml;nnen Sie einige Daten, die mit Ihrem Ger&auml;t, Browser oder App verkn&uuml;pft sind, l&ouml;schen.
+            h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
+            p
+              | Grunds&auml;tzlich k&ouml;nnen Sie Daten im Google Konto manuell l&ouml;schen. Mit der 2019 eingef&uuml;hrten automatische L&ouml;schfunktion von Standort- und Aktivit&auml;tsdaten werden Informationen abh&auml;ngig von Ihrer Entscheidung &ndash; entweder 3 oder 18 Monate gespeichert und dann gel&ouml;scht.
+            p
+              | Unabh&auml;ngig, ob Sie ein Google-Konto haben oder nicht, k&ouml;nnen Sie Ihren Browser so konfigurieren, dass Cookies von Google gel&ouml;scht bzw. deaktiviert werden. Je nach dem welchen Browser Sie verwenden, funktioniert dies auf unterschiedliche Art und Weise. Die folgenden Anleitungen zeigen, wie Sie Cookies in Ihrem Browser verwalten:
+            p
+              a(href='https://support.google.com/chrome/answer/95647?tid=311194399' target='_blank' rel='noopener noreferrer') Chrome: Cookies in Chrome l&ouml;schen, aktivieren und verwalten
+            p
+              a(href='https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=311194399' target='_blank' rel='noopener noreferrer') Safari: Verwalten von Cookies und Websitedaten mit Safari
+            p
+              a(href='https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=311194399' target='_blank' rel='noopener noreferrer')
+                | Firefox: Cookies l&ouml;schen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben
+            p
+              a(href='https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=311194399' target='_blank' rel='noopener noreferrer') Internet Explorer: L&ouml;schen und Verwalten von Cookies
+            p
+              a(href='https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=311194399' target='_blank' rel='noopener noreferrer') Microsoft Edge: L&ouml;schen und Verwalten von Cookies
+            p
+              | Falls Sie grunds&auml;tzlich keine Cookies haben wollen, k&ouml;nnen Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So k&ouml;nnen Sie bei jedem einzelnen Cookie entscheiden, ob Sie es erlauben oder nicht. Da YouTube ein Tochterunternehmen von Google ist, gibt es eine gemeinsame Datenschutzerkl&auml;rung. Wenn Sie mehr &uuml;ber den Umgang mit Ihren Daten erfahren wollen, empfehlen wir Ihnen die Datenschutzerkl&auml;rung unter 
+              a(href='https://policies.google.com/privacy?hl=de' target='_blank' rel='noopener noreferrer') https://policies.google.com/privacy?hl=de.
+            h2 Cloudflare Datenschutzerkl&auml;rung
+            p
+              | Wir verwenden auf dieser Webseite Cloudflare der Firma Cloudflare, Inc. (101 Townsend St., San Francisco, CA 94107, USA), um unsere Webseite schneller und sicherer zu machen. Dabei verwendet Cloudflare Cookies und verarbeitet User-Daten. Cloudflare, Inc. ist eine amerikanische Firma, die ein Content Delivery Network und diverse Sicherheitsdienste bereitstellt. Diese Dienste befinden sich zwischen dem User und unserem Hosting-Anbieter und fungieren als 
+              a(href='https://de.wikipedia.org/wiki/Reverse_Proxy' target='_blank' rel='noopener') Reverse Proxy
+              | &nbsp;f&uuml;r Webseiten. Was das alles genau bedeutet, versuchen wir im Folgenden genauer zu erl&auml;utern.
+            h3 Was ist Cloudflare?
+            p
+              | Ein Content Delivery Network (CDN), wie es die Firma Cloudflare bereitstellt, ist nichts anderes als ein Netzwerk aus &uuml;ber das Internet verbundenen Servern. Cloudflare hat auf der ganzen Welt solche Server verteilt, um Webseiten schneller auf Ihren Bildschirm zu bringen. Ganz einfach gesagt, legt Cloudflare Kopien unserer Website an und platziert sie auf ihren eigenen Servern. Wenn Sie jetzt unsere Webseite besuchen, stellt ein System der Lastenverteilung sicher, dass die gr&ouml;&szlig;ten Teile unserer Webseite von jenem Server ausgeliefert werden, der Ihnen unsere Webseite am schnellsten anzeigen kann. Die Strecke der Daten&uuml;bertragung zu Ihrem Browser wird durch ein CDN deutlich verk&uuml;rzt. Somit wird Ihnen der Content unserer Webseite durch Cloudflare nicht nur von unserem Hosting-Server geliefert, sondern von Servern aus der ganzen Welt. Besonders hilfreich wird der Einsatz von Cloudflare f&uuml;r User aus dem Ausland, da hier die Seite von einem Server in der N&auml;he ausgeliefert werden kann. Neben dem schnellen Ausliefern von Webseiten bietet Cloudflare auch diverse Sicherheitsdienste, wie den DDoS-Schutz oder die Web Application Firewall an.
+            h3 Warum wir Cloudflare auf unserer Website verwenden?
+            p
+              | Nat&uuml;rlich wollen wir Ihnen mit unserer Webseite das bestm&ouml;gliche Service bieten. Cloudflare hilft uns dabei, unsere Webseite schneller und sicherer zu machen. Cloudflare bietet uns sowohl Web-Optimierungen als auch Sicherheitsdienste, wie DDoS-Schutz und Web-Firewall, an. Dazu geh&ouml;ren auch ein 
+              a(href='https://de.wikipedia.org/wiki/Reverse_Proxy' target='_blank' rel='noopener') Reverse-Proxy
+              |  und das Content-Verteilungsnetzwerk (CDN). Cloudflare blockiert Bedrohungen und begrenzt missbr&auml;uchliche Bots und Crawler, die unsere Bandbreite und Serverressourcen verschwenden. Durch das Speichern unserer Webseite auf lokalen Datenzentren und das Blockieren von Spam-Software erm&ouml;glicht Cloudflare, unsere Bandbreitnutzung etwa um 60% zu reduzieren. Das Bereitstellen von Inhalten &uuml;ber ein Datenzentrum in Ihrer N&auml;he und einiger dort durchgef&uuml;hrten Web-Optimierungen reduziert die durchschnittliche Ladezeit einer Website etwa um die H&auml;lfte. Durch die Einstellung &bdquo;I&acute;m Under Attack Mode&ldquo; (&bdquo;Ich werde angegriffen&ldquo;-Modus) k&ouml;nnen laut Cloudflare weitere Angriffe abgeschw&auml;cht werden, indem eine JavaScript-Rechenaufgabe angezeigt wird, die man l&ouml;sen muss, bevor ein User auf eine Webseite zugreifen kann. Insgesamt wird dadurch unsere Website deutlich leistungsst&auml;rker und weniger anf&auml;llig auf Spam oder andere Angriffe.
+            h3 Welche Daten werden von Cloudflare gespeichert?
+            p
+              | Cloudflare leitet im Allgemeinen nur jene Daten weiter, die von Websitebetreibern gesteuert werden. Die Inhalte werden also nicht von Cloudflare bestimmt, sondern immer vom Websitebetreiber selbst. Zudem erfasst Cloudflare unter Umst&auml;nden bestimmte Informationen zur Nutzung unserer Webseite und verarbeitet Daten, die von uns versendet werden oder f&uuml;r die Cloudflare entsprechende Anweisungen erhalten hat. In den meisten F&auml;llen erh&auml;lt Cloudflare Daten wie Kontaktinformationen, IP-Adressen, Sicherheitsfingerabdr&uuml;cke, DNS-Protokolldaten und Leistungsdaten f&uuml;r Webseiten, die aus der Browseraktivit&auml;ten abgeleitet werden. Protokolldaten helfen Cloudflare beispielsweise dabei, neue Bedrohungen zu erkennen. So kann Cloudflare einen hohen Sicherheitsschutz f&uuml;r unsere Webseite gew&auml;hrleisten. Cloudflare verarbeitet diese Daten im Rahmen der Services unter Einhaltung der geltenden Gesetze. Dazu z&auml;hlt nat&uuml;rlich auch die Datenschutzgrundverordnung (DSGVO).
+            p
+              | Aus Sicherheitsgr&uuml;nden verwendet Cloudflare auch ein Cookie. Das Cookie (__cfduid) wird verwendet, um einzelne User hinter einer gemeinsam genutzten IP-Adresse zu identifizieren und Sicherheitseinstellungen f&uuml;r jeden einzelnen User anzuwenden. Sehr n&uuml;tzlich wird dieses Cookie beispielweise, wenn Sie unsere Webseite aus einem Lokal benutzen, in dem sich eine Reihe infizierter Computer befinden. Wenn aber Ihr Computer vertrauensw&uuml;rdig ist, k&ouml;nnen wir dies anhand des Cookies erkennen. So k&ouml;nnen Sie, trotz infizierter PCs im Umfeld, ungehindert durch unsere Webseite surfen. Wichtig zu wissen ist auch noch, dass dieses Cookie keine personenbezogenen Daten speichert. Dieses Cookie ist f&uuml;r die Cloudflare-Sicherheitsfunktionen unbedingt erforderlich und kann nicht deaktiviert werden.
+            h3 Cookies von Cloudflare
+            ul
+              li
+                | __cfduid
+                ul
+                  li Ablaufzeit: 1 Jahr
+                  li Verwendung: Sicherheitseinstellungen f&uuml;r jeden einzelnen Besucher
+                  li Beispielhafter Wert:&nbsp;d798bf7df9c1ad5b7583eda5cc5e78311194399
+            p
+              | Cloudflare arbeitet auch mit Drittanbietern zusammen. Diese d&uuml;rfen personenbezogene Daten nur unter Anweisung der Firma Cloudflare und in &Uuml;bereinstimmung mit den Datenschutzrichtlinien und anderer Vertraulichkeits- und Sicherheitsma&szlig;nahmen verarbeiten. Ohne explizite Einwilligung von uns gibt Cloudflare keine personenbezogenen Daten weiter.
+            h3 Wie lange und wo werden die Daten gespeichert?
+            p
+              | Cloudflare speichert Ihre Informationen haupts&auml;chlich in den USA und im Europ&auml;ischen Wirtschaftsraum. Cloudflare kann die oben beschriebenen Informationen aus der ganzen Welt &uuml;bertragen und darauf zugreifen. Im Allgemeinen speichert Cloudflare Daten auf User-Ebene f&uuml;r Domains in den Versionen Free, Pro und Business f&uuml;r weniger als 24 Stunden. F&uuml;r Enterprise Domains, die Cloudflare Logs (fr&uuml;her Enterprise LogShare oder ELS) aktiviert haben, k&ouml;nnen die Daten bis zu 7 Tage gespeichert werden. Wenn allerdings IP-Adressen bei Cloudflare Sicherheitswarnungen ausl&ouml;sen, kann es zu Ausnahmen der oben angef&uuml;hrten Speicherungsdauer kommen.
+            h3 Wie kann ich meine Daten l&ouml;schen bzw. die Datenspeicherung verhindern?
+            p
+              | Cloudflare bewahrt Daten-Protokolle nur solange wie n&ouml;tig auf und diese Daten werden auch in den meisten F&auml;llen innerhalb von 24 Stunden wieder gel&ouml;scht. Cloudflare speichert auch keine personenbezogenen Daten, wie beispielsweise Ihre IP-Adresse. Es gibt allerdings Informationen, die Cloudflare als Teil seiner permanenten Protokolle auf unbestimmte Zeit speichert, um so die Gesamtleistung von Cloudflare Resolver zu verbessern und etwaige Sicherheitsrisiken zu erkennen. Welche permanenten Protokolle genau speichert werden, k&ouml;nnen Sie auf 
+              a(href='https://www.cloudflare.com/application/privacypolicy/' target='_blank' rel='noopener') https://www.cloudflare.com/application/privacypolicy/
+              |  nachlesen. Alle Daten, die Cloudflare sammelt (tempor&auml;r oder permanent), werden von allen personenbezogenen Daten bereinigt. Alle permanenten Protokolle werden zudem von Cloudflare anonymisiert.
+            p
+              | Cloudflare geht in ihrer Datenschutzerkl&auml;rung darauf ein, dass sie f&uuml;r die Inhalte, die sie erhalten nicht verantwortlich sind. Wenn Sie beispielsweise bei Cloudflare anfragen, ob sie Ihre Inhalte aktualisieren oder l&ouml;schen k&ouml;nnen, verweist Cloudflare grunds&auml;tzlich auf uns als Websitebetreiber. Sie k&ouml;nnen auch die gesamte Erfassung und Verarbeitung Ihrer Daten durch Cloudflare komplett unterbinden, indem Sie die Ausf&uuml;hrung von Script-Code in Ihrem Browser deaktivieren oder einen Script-Blocker in Ihren Browser einbinden.
+            p
+              | Cloudflare ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework wodurch der korrekte und sichere Datentransfer pers&ouml;nlicher Daten geregelt wird. Mehr Informationen dazu finden Sie auf 
+              a(href='https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&tid=311194399' target='_blank' rel='noopener') https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0
+              | .
+              br
+              | Mehr Informationen zum Datenschutz bei Cloudflare finden Sie auf 
+              a(href='https://www.cloudflare.com/de-de/privacypolicy/?tid=311194399' target='_blank' rel='noopener') https://www.cloudflare.com/de-de/privacypolicy/
+            h2 BootstrapCDN Datenschutzerkl&auml;rung
+            p
+              | Um Ihnen all unsere einzelnen Webseiten (Unterseiten unserer Website) auf allen Ger&auml;ten schnell und sicher ausliefern zu k&ouml;nnen, nutzen wir das Content Delivery Network (CDN) BootstrapCDN des amerikanischen Software-Unternehmens StackPath, LLC 2012 McKinney Ave. Suite 1100, Dallas, TX 75201, USA.
+            p
+              | Ein Content Delivery Network (CDN) ist ein Netzwerk regional verteilter Server, die &uuml;ber das Internet miteinander verbunden sind. Durch dieses Netzwerk k&ouml;nnen Inhalte, speziell sehr gro&szlig;e Dateien, auch bei gro&szlig;en Lastspitzen schnell ausgeliefert werden.
+            p
+              | BootstrapCDN funktioniert so, dass sogenannte JavaScript-Bibliotheken an Ihren Browser ausgeliefert werden. L&auml;dt nun Ihr Browser eine Datei vom BootstrapCDN herunter, wird Ihre IP-Adresse w&auml;hrend der Verbindung zum Bootstrap-CDN-Server an das Unternehmen StockPath &uuml;bermittelt.
+            p
+              | StackPath erw&auml;hnt auch in der hauseigenen Datenschutzerkl&auml;rung, dass das Unternehmen aggregierte und anonymisierte Daten von diversen Diensten (wie BootstrapCDN) f&uuml;r die Erweiterung der Sicherung und f&uuml;r andere StackPath-Dienste und Clients verwenden. All diese Daten k&ouml;nnen aber keine Person identifizieren.
+            p
+              | Wenn Sie diese Daten&uuml;bertragung unterbinden wollen, k&ouml;nnen Sie einen JavaScript-Blocker (siehe beispielsweise 
+              a(href='https://noscript.net/' target='_blank' rel='noopener noreferrer') https://noscript.net/
+              | ) installieren oder in Ihrem Browser die Ausf&uuml;hrung von JavaScript-Codes deaktivieren. Bitte beachten Sie aber, dass dadurch die Website nicht mehr das gewohnte Service (wie etwa schnelle Ladegeschwindigkeit) bieten kann.
+            p
+              | StackPath ist aktiver Teilnehmer beim EU-U.S. Privacy Shield Framework, wodurch der korrekte und sichere Datentransfer pers&ouml;nlicher Daten geregelt wird. Mehr Informationen dazu finden Sie auf 
+              a(href='https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&status=Active' target='_blank' rel='follow noopener noreferrer') https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&amp;status=Active
+              | .
+              br
+              | Mehr Informationen zum Datenschutz bei StackPath bzw. BootstrapCDN finden Sie auf 
+              a(href='https://www.bootstrapcdn.com/privacy-policy/?tid=311194399' target='_blank' rel='noopener') https://www.bootstrapcdn.com/privacy-policy/
+              | .
+            p(style='margin-top:15px;')
+              | Quelle: Erstellt&nbsp;mit dem&nbsp;
+              a(title='Datenschutz Generator Deutschland' href='https://www.adsimple.de/datenschutz-generator/' target='_blank' rel='follow' style='text-decoration:none;') Datenschutz Generator
+              |  von AdSimple&nbsp;in Kooperation mit 
+              a(href='https://www.hashtagmann.de' target='_blank' rel='follow' title='') hashtagmann.de
 
-                        
 
-        include ../include/footer.pug
+
+
+
+    include ../include/footer.pug

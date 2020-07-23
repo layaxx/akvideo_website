@@ -30,10 +30,14 @@ html(lang='de')
                         li.nav-item
                             a.nav-link.js-scroll-trigger(href='#contact') Kontakt
         //- Masthead
-        header.masthead(style='background-image: url(assets/img/header/header-bg.jpg)')
+        header.masthead(style='background-image: url(assets/img/header/header-bg.webp)')
             .container
                 .masthead-heading.text-uppercase Wir sind der AK Video!
                 .masthead-subheading Jugendfilmarbeit seit 2000.
+
+        script.
+            if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+            {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
         //- Portfolio Grid
         section#portfolio.page-section.bg-light

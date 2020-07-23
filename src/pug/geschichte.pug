@@ -1,108 +1,112 @@
 doctype html
 html(lang='de')
 
-    include include/header.pug
-        title AK Video - Geschichte
-        meta(name='description', content='Der Arbeitskreis Video der Stadtjugend M&uuml;nchberg besteht nun schon seit &uuml;ber 20 Jahren. Diese Seite bietet einen &Uuml;berblick &uuml;ber unsere Geschichte.')
-        meta(name='keywords', content='Hugo, Singer, B&uuml;rgerzentrum, B&uuml;z, AK Video, Arbeitskreis, Video, akvideo, Stadtjugend, SJM, Münchberg, Workshop, Projekt, Film, Jugendfilmarbeit, Jugendarbeit')
+  include include/header.pug
+    title AK Video - Geschichte
+    meta(name='description', content='Der Arbeitskreis Video der Stadtjugend M&uuml;nchberg besteht nun schon seit &uuml;ber 20 Jahren. Diese Seite bietet einen &Uuml;berblick &uuml;ber unsere Geschichte.')
+    meta(name='keywords', content='Hugo, Singer, B&uuml;rgerzentrum, B&uuml;z, AK Video, Arbeitskreis, Video, akvideo, Stadtjugend, SJM, Münchberg, Workshop, Projekt, Film, Jugendfilmarbeit, Jugendarbeit')
 
-    body#page-top
+  body#page-top
 
-        //- Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-            .container
-                a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
-                    picture
-                        source(type="image/webp" srcset="assets/img/logo.webp")
-                        img(src='assets/img/logo.png', alt='logo')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars.ml-1
-                #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.text-uppercase.ml-auto
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
-                        li.nav-item
-                            a.nav-link.js-scroll-trigger(href='#contact') Kontakt
-        //- Masthead
-        header.masthead(style='background-image: url(assets/img/header/header-bg.jpg)')
-            .container
-                .masthead-heading.text-uppercase Wir sind der AK Video.
-                .masthead-subheading Unsere Entwicklung seit 2000
+    //- Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
+          picture
+            source(type="image/webp" srcset="assets/img/logo.webp")
+            img(src='assets/img/logo.png', alt='logo')
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.fas.fa-bars.ml-1
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#contact') Kontakt
+    //- Masthead
+    header.masthead(style='background-image: url(assets/img/header/header-bg.webp)')
+      .container
+        .masthead-heading.text-uppercase Wir sind der AK Video.
+        .masthead-subheading Unsere Entwicklung seit 2000
 
-        section#about.page-section
-            .container
-              .row
-                .col-lg-12
-                  h2.text-center Die Gr&uuml;ndung
-                  p(style='text-align:justify') Die Geschichte unseres Arbeitskreises beginnt, wie so manches unserer Projekte, mit
-                    |
-                    a(href="hugo.html") Hugo Singer.
-                    |
-                    | Der war um die Jahrtausendwende im Jugendtreff im M&uuml;nchberger B&uuml;rgerzentrum als Hauptamtlicher t&auml;tig.
-                    | 
-                    | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten auf Film festzuhalten.
-                    |
-                    | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann zusammen mit anderen Jugendlichen, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
-                    |
-                    | Daraus entwickelte sich schlussendlich
-                    |
-                    a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse",
-                    |
-                    | ein Actionfilm inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
-              .row
-                .col-lg-6.col-md-12
-                    picture
-                      source(type="image/webp" srcset="assets/img/history/image1.webp")
-                      img.img-fluid(src='assets/img/history/image1.jpg' alt='Zeitungsartikel')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em der erste Zeitungsartikel &uuml;ber den Arbeitskreis (Frankenpost 2000)
-                .col-lg-6.col-md-12
-                    picture
-                      source(type="image/webp" srcset="assets/img/projects/stadtkasse/image1.webp")
-                      img.img-fluid(src='assets/img/projects/stadtkasse/image1.jpg' alt='Stadtkasse')
-                    .portfolio-caption
-                      p(style='float: left;')
-                        em Dreharbeiten zu "Die geklaute Stadtkasse"
-              .row
-                .col-lg-5.col-md-12
-                  picture
-                    source(type="image/webp" srcset="assets/img/history/image3.webp")
-                    img(src='assets/img/history/image3.jpg' style='width:100%')
-                .col-lg-7.col-md-12
-                    p(style='text-align:justify; margin-left: 30px; margin-top:40px;') Weiter ging es mit dem Kurzfilm "die Probe", mit dem wir beim JuFinale 2003 den Preis für den besten Film gewinnen konnten. 
+    script.
+      if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+      {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
-        //- Contact
-        section#contact.page-section
-          .container
-            .text-center
-              h2.section-heading.text-uppercase Du willst Teil des AK Video werden?
-              h3.section-subheading(style='color: white;')
-                | Wir freuen uns immer &uuml;ber Feedback und neue
-                |
-                | Mitglieder, sowohl Kreative als auch Sponsoren.
-            form#contactForm(name='contactHistory' method='POST' data-netlify='true')
-              .row(style='overflow: hidden;')
-                .col-lg-6.col-sm-12.text-center
-                  p(style="text-align: inherit;")
-                    label
-                      input.formelem(type='text' name='name' placeholder='Dein Name')
-                .col-lg-6.col-sm-12.text-center
-                  p(style="text-align: inherit;")
-                    label
-                      input.formelem(type='email' name='email' placeholder='Deine E-Mail Adresse')
-              .text-center(style='overflow: hidden;')
-                p(style="text-align: inherit;")
-                  label
-                    textarea.formelem(name='message' placeholder='Dein Nachricht an uns' style='min-width: 61rem; min-height: 10rem;')
-              .text-center
-                p(style="text-align: inherit;")
-                  button.formButton(type='submit') Nachricht abschicken
+    section#about.page-section
+      .container
+        .row
+          .col-lg-12
+            h2.text-center Die Gr&uuml;ndung
+            p(style='text-align:justify') Die Geschichte unseres Arbeitskreises beginnt, wie so manches unserer Projekte, mit
+              |
+              a(href="hugo.html") Hugo Singer.
+              |
+              | Der war um die Jahrtausendwende im Jugendtreff im M&uuml;nchberger B&uuml;rgerzentrum als Hauptamtlicher t&auml;tig.
+              | 
+              | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten auf Film festzuhalten.
+              |
+              | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann zusammen mit anderen Jugendlichen, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
+              |
+              | Daraus entwickelte sich schlussendlich
+              |
+              a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse",
+              |
+              | ein Actionfilm inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="assets/img/history/image1.webp")
+              img.img-fluid(src='assets/img/history/image1.jpg' alt='Zeitungsartikel')
+            .portfolio-caption
+              p(style='float: left;')
+                em der erste Zeitungsartikel &uuml;ber den Arbeitskreis (Frankenpost 2000)
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="assets/img/projects/stadtkasse/image1.webp")
+              img.img-fluid(src='assets/img/projects/stadtkasse/image1.jpg' alt='Stadtkasse')
+            .portfolio-caption
+              p(style='float: left;')
+                em Dreharbeiten zu "Die geklaute Stadtkasse"
+        .row
+          .col-lg-5.col-md-12
+            picture
+              source(type="image/webp" srcset="assets/img/history/image3.webp")
+              img(src='assets/img/history/image3.jpg' style='width:100%')
+          .col-lg-7.col-md-12
+            p(style='text-align:justify; margin-left: 30px; margin-top:40px;') Weiter ging es mit dem Kurzfilm "die Probe", mit dem wir beim JuFinale 2003 den Preis für den besten Film gewinnen konnten. 
+
+    //- Contact
+    section#contact.page-section
+      .container
+        .text-center
+          h2.section-heading.text-uppercase Du willst Teil des AK Video werden?
+          h3.section-subheading(style='color: white;')
+            | Wir freuen uns immer &uuml;ber Feedback und neue
+            |
+            | Mitglieder, sowohl Kreative als auch Sponsoren.
+        form#contactForm(name='contactHistory' method='POST' data-netlify='true')
+          .row(style='overflow: hidden;')
+            .col-lg-6.col-sm-12.text-center
+              p(style="text-align: inherit;")
+                label
+                  input.formelem(type='text' name='name' placeholder='Dein Name')
+            .col-lg-6.col-sm-12.text-center
+              p(style="text-align: inherit;")
+                label
+                  input.formelem(type='email' name='email' placeholder='Deine E-Mail Adresse')
+          .text-center(style='overflow: hidden;')
+            p(style="text-align: inherit;")
+              label
+                textarea.formelem(name='message' placeholder='Dein Nachricht an uns' style='min-width: 61rem; min-height: 10rem;')
+          .text-center
+            p(style="text-align: inherit;")
+              button.formButton(type='submit') Nachricht abschicken
 
 
-        include include/footer.pug
+    include include/footer.pug

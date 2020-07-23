@@ -1,183 +1,187 @@
 doctype html
 html(lang='de')
 
-    include ../include/header_projects.pug
-      title AK Video - clipped
-      meta(name='description', content='Behind the scenes zu unserem Kurzfilm "Clipped - &Uuml;bersteuert", den wir 2016 im Rahmen eines Workshops produziert haben')
-      meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, SJM, Münchberg, Weissenstadt, Wei&szlig;stadt, clipped, &uuml;bersteuert, Workshop, nachvertonung, 2016, Jugendfilmarbeit, Jugendarbeit, grading, projekt, making of, behind the scenes, hinter den kulissen')
+  include ../include/header_projects.pug
+    title AK Video - clipped
+    meta(name='description', content='Behind the scenes zu unserem Kurzfilm "Clipped - &Uuml;bersteuert", den wir 2016 im Rahmen eines Workshops produziert haben')
+    meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, SJM, Münchberg, Weissenstadt, Wei&szlig;stadt, clipped, &uuml;bersteuert, Workshop, nachvertonung, 2016, Jugendfilmarbeit, Jugendarbeit, grading, projekt, making of, behind the scenes, hinter den kulissen')
 
-    body#page-top
+  body#page-top
 
-        //- Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-            .container
-                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
-                  picture
-                    source(type="image/webp" srcset="../assets/img/logo.webp")
-                    img(src='../assets/img/logo.png', alt='Startseite')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars.ml-1
-                #navbarResponsive.collapse.navbar-collapse
-                  ul.navbar-nav.text-uppercase.d-none.d-md-block
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
-                  ul.navbar-nav.text-uppercase.ml-auto
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#film') Film
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt    
+    //- Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+          picture
+            source(type="image/webp" srcset="../assets/img/logo.webp")
+            img(src='../assets/img/logo.png', alt='Startseite')
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.fas.fa-bars.ml-1
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.text-uppercase.d-none.d-md-block
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#film') Film
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt    
 
-        //- Masthead
-        header.masthead(style='background-image: url(../assets/img/header/header-clipped.jpg)')
-            .container
-                .masthead-heading.text-uppercase Clipped - &Uuml;ber&shy;steuert
-                .masthead-subheading Kurzfilm - Workshop 2016
+    //- Masthead
+    header.masthead(style='background-image: url(../assets/img/header/header-clipped.webp)')
+      .container
+        .masthead-heading.text-uppercase Clipped - &Uuml;ber&shy;steuert
+        .masthead-subheading Kurzfilm - Workshop 2016
 
-        //- Tables
-        section#overview.bg-light.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase &Uuml;bersicht
-            .row
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th technische Details
-                        th
-                    tbody
-                      tr
-                        td Titel
-                        td clipped - &uuml;bersteuert
-                      tr
-                        td Genre
-                        td Kurzfilm
-                      tr
-                        td L&auml;nge
-                        td 2:09
-                      tr
-                        td Produktionsjahr
-                        td 2016
-                      tr
-                        td Produktionsort
-                        td Schullandheim Wei&szlig;enstadt
-                      tr
-                        td Aufl&ouml;sung
-                        td FHD (21:9)
-                      tr
-                        td Kamera
-                        td Panasonic GH4
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th Crew
-                        th
-                    tbody
-                      tr
-                        td Hauptrolle
-                        td Lara Reichel
-                      tr
-                        td Regie
-                        td Konstantin Agel
-                      tr
-                        td Kamera
-                        td Carolin Fischer
-                      tr
-                        td Kamera
-                        td Lukas Weigmann
-                      tr
-                        td Kamera
-                        td Philipp Jahn
-                      tr
-                        td Ton
-                        td Yannick Lang
-                      tr
-                        td Ton
-                        td Sebastian R&ouml;ll
-                      tr
-                        td Produktion
-                        td Hannah Eul
-                      tr
-                        td Unterst&uuml;tzung
-                        td Kari Hennig
-                      tr
-                        td Unterst&uuml;tzung
-                        td Thea Pflaum
-                      tr
-                        td Unterst&uuml;tzung
-                        td Jannik Metz
+    script.
+      if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+      {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
-        section#film.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase(style='margin-bottom: 5%') Der fertige Film
-            .row
-              .video-container-wrapper
-                .video-container(style='margin-bottom: -5%;')
-                  iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/5b76Q5QhAcU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td clipped - &uuml;bersteuert
+                  tr
+                    td Genre
+                    td Kurzfilm
+                  tr
+                    td L&auml;nge
+                    td 2:09
+                  tr
+                    td Produktionsjahr
+                    td 2016
+                  tr
+                    td Produktionsort
+                    td Schullandheim Wei&szlig;enstadt
+                  tr
+                    td Aufl&ouml;sung
+                    td FHD (21:9)
+                  tr
+                    td Kamera
+                    td Panasonic GH4
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Hauptrolle
+                    td Lara Reichel
+                  tr
+                    td Regie
+                    td Konstantin Agel
+                  tr
+                    td Kamera
+                    td Carolin Fischer
+                  tr
+                    td Kamera
+                    td Lukas Weigmann
+                  tr
+                    td Kamera
+                    td Philipp Jahn
+                  tr
+                    td Ton
+                    td Yannick Lang
+                  tr
+                    td Ton
+                    td Sebastian R&ouml;ll
+                  tr
+                    td Produktion
+                    td Hannah Eul
+                  tr
+                    td Unterst&uuml;tzung
+                    td Kari Hennig
+                  tr
+                    td Unterst&uuml;tzung
+                    td Thea Pflaum
+                  tr
+                    td Unterst&uuml;tzung
+                    td Jannik Metz
 
-        //BTS
-        section#bts.bg-light.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase Behind The Scenes
-                .gap-20
-            .row
-              .col-lg-12
-                h3.text-uppercase &bdquo;P&auml;dagogisch wertvoll&ldquo;
-                p
-                  | Wie bei unseren Workshops &uuml;blich haben wir uns die Story des Kurzfilms am ersten Abend des Workshops, also
-                  |
-                  | also nur Stunden vor Drehbeginn, &uuml;berlgt. Thea Pflaum, die als damalige Gesch&auml;ftsf&uuml;hrerin des
-                  |
-                  | Kreisjugendrings Hof mit dabei war, war es von Anfang an wichtig, dass der Kurzfilm eine &bdquo;p&auml;dagogisch
-                  |
-                  | wertvolle&ldquo; Message enthielt. Die war nach etwas Brainstorming schlie&szlig;lich auch gefunden: 
-                  br
-                  b Das Gehör ist empfindlich und sch&uuml;tzenswert.
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/clipped/img_0019.webp")
-                  img(src='../assets/img/projects/clipped/img_0019.jpg' width='35%' style='float: left; margin-right: 5%; margin-bottom: 5%')
-                h3.text-uppercase(style='margin-top: 5%') Der Dreh
-                p
-                  | Als Drehorte standen schnell verschiedene Zimmer des Schullandheims, in dem wir den Workshop veranstalteten, sowie
-                  |
-                  | der angrenzende Wald fest. Nachdem die Story feststand, organisierten wir die notwendigen Requisiten, insbesondere das
-                  |
-                  | Fernsehger&auml;t, die Kettens&auml;ge und den B&ouml;ller. Mittels eines RGB LED Streifens haben wir dann als erstes den
-                  |
-                  | Keller des Schullandheims zur Partylocation umfunktioniert. Weitere Szenen haben wir im Garten unserer Unterkunft und im
-                  |
-                  | angrenzenden Wald gedreht.
-                
-                  
-                h3.text-uppercase(style='margin-top: 5%') Postproduktion
-                p
-                  | Von Anfang an war klar, dass bei diesem Workshop der Fokus auf der Postproduktion liegen sollte. Sowohl Schnitt,
-                  |
-                  | als auch Colorgrading und insbesondere Nachvertonung, da wir damit am wenigsten Erfahrung hatten, aber f&uuml;r
-                  |
-                  | unsere n&auml;chstes gro&szlig;es Projekt (
-                  a(href='sackgasse') Sackgasse
-                  | ) testen wollten. Aus Zeitgr&uuml;nden haben wir uns dann nach dem Dreh in zwei Gruppen aufgeteilt. Eine Gruppe hat
-                  |
-                  | Schnitt und Colorgrading &uuml;bernommen, w&auml;hrend sich die Andere mit der Aufnahme und dem Abmischen diverser
-                  |
-                  | Ger&auml;uschkulissen und Soundeffekten besch&auml;ftigt hat. Besonders interessant war die Nachvertonung der
-                  |
-                  | Videospielszene, da wir hier die Ger&auml;uschumgebung eines Videospiels von Grund auf aus verschiedenen Soundeffekten
-                  |
-                  | neu zusammengebastelt haben.
- 
-        include ../include/footer.pug
+    section#film.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Der fertige Film
+        .row
+          .video-container-wrapper
+            .video-container(style='margin-bottom: -5%;')
+              iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/5b76Q5QhAcU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase &bdquo;P&auml;dagogisch wertvoll&ldquo;
+            p
+              | Wie bei unseren Workshops &uuml;blich haben wir uns die Story des Kurzfilms am ersten Abend des Workshops, also
+              |
+              | also nur Stunden vor Drehbeginn, &uuml;berlgt. Thea Pflaum, die als damalige Gesch&auml;ftsf&uuml;hrerin des
+              |
+              | Kreisjugendrings Hof mit dabei war, war es von Anfang an wichtig, dass der Kurzfilm eine &bdquo;p&auml;dagogisch
+              |
+              | wertvolle&ldquo; Message enthielt. Die war nach etwas Brainstorming schlie&szlig;lich auch gefunden: 
+              br
+              b Das Gehör ist empfindlich und sch&uuml;tzenswert.
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/clipped/img_0019.webp")
+              img(src='../assets/img/projects/clipped/img_0019.jpg' width='35%' style='float: left; margin-right: 5%; margin-bottom: 5%')
+            h3.text-uppercase(style='margin-top: 5%') Der Dreh
+            p
+              | Als Drehorte standen schnell verschiedene Zimmer des Schullandheims, in dem wir den Workshop veranstalteten, sowie
+              |
+              | der angrenzende Wald fest. Nachdem die Story feststand, organisierten wir die notwendigen Requisiten, insbesondere das
+              |
+              | Fernsehger&auml;t, die Kettens&auml;ge und den B&ouml;ller. Mittels eines RGB LED Streifens haben wir dann als erstes den
+              |
+              | Keller des Schullandheims zur Partylocation umfunktioniert. Weitere Szenen haben wir im Garten unserer Unterkunft und im
+              |
+              | angrenzenden Wald gedreht.
+
+
+            h3.text-uppercase(style='margin-top: 5%') Postproduktion
+            p
+              | Von Anfang an war klar, dass bei diesem Workshop der Fokus auf der Postproduktion liegen sollte. Sowohl Schnitt,
+              |
+              | als auch Colorgrading und insbesondere Nachvertonung, da wir damit am wenigsten Erfahrung hatten, aber f&uuml;r
+              |
+              | unsere n&auml;chstes gro&szlig;es Projekt (
+              a(href='sackgasse') Sackgasse
+              | ) testen wollten. Aus Zeitgr&uuml;nden haben wir uns dann nach dem Dreh in zwei Gruppen aufgeteilt. Eine Gruppe hat
+              |
+              | Schnitt und Colorgrading &uuml;bernommen, w&auml;hrend sich die Andere mit der Aufnahme und dem Abmischen diverser
+              |
+              | Ger&auml;uschkulissen und Soundeffekten besch&auml;ftigt hat. Besonders interessant war die Nachvertonung der
+              |
+              | Videospielszene, da wir hier die Ger&auml;uschumgebung eines Videospiels von Grund auf aus verschiedenen Soundeffekten
+              |
+              | neu zusammengebastelt haben.
+
+    include ../include/footer.pug

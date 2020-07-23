@@ -1,296 +1,300 @@
 doctype html
 html(lang='de')
 
-    include ../include/header_projects.pug
-      title AK Video - Sackgasse
-      meta(name='description', content='Behind the scenes zu unserem Kurzfilm "Sackgasse", den wir 2018 in M&uuml;nchberg gedreht haben')
-      meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, SJM, Münchberg, Verfolgung, Polizei, clipped, &uuml;bersteuert, Workshop, nachvertonung, Gras, Jugendfilmarbeit, Jugendarbeit, Drogen, projekt, making of, behind the scenes, hinter den kulissen')
+  include ../include/header_projects.pug
+    title AK Video - Sackgasse
+    meta(name='description', content='Behind the scenes zu unserem Kurzfilm "Sackgasse", den wir 2018 in M&uuml;nchberg gedreht haben')
+    meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, SJM, Münchberg, Verfolgung, Polizei, clipped, &uuml;bersteuert, Workshop, nachvertonung, Gras, Jugendfilmarbeit, Jugendarbeit, Drogen, projekt, making of, behind the scenes, hinter den kulissen')
 
-    body#page-top
+  body#page-top
 
-        //- Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-            .container
-                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
-                  picture
-                    source(type="image/webp" srcset="../assets/img/logo.webp")
-                    img(src='../assets/img/logo.png', alt='Startseite')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars.ml-1
-                #navbarResponsive.collapse.navbar-collapse
-                  ul.navbar-nav.text-uppercase.d-none.d-md-block
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='../index.html') Startseite
-                  ul.navbar-nav.text-uppercase.ml-auto
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#trailer') Trailer
-                    li.nav-item
-                      a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
-    
-        //- Masthead
-        header.masthead(style='background-image: url(../assets/img/header/header-sackgasse.jpg)')
-            .container
-                .masthead-heading.text-uppercase Sackgasse
-                .masthead-subheading Kurzfilm aus dem Jahr 2017
+    //- Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
+          picture
+            source(type="image/webp" srcset="../assets/img/logo.webp")
+            img(src='../assets/img/logo.png', alt='Startseite')
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.fas.fa-bars.ml-1
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.text-uppercase.d-none.d-md-block
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='../index.html') Startseite
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#trailer') Trailer
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
-        
-        //- Tables
-        section#overview.bg-light.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase &Uuml;bersicht
-            .row
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th technische Details
-                        th
-                    tbody
-                      tr
-                        td Titel
-                        td Sackgasse
-                      tr
-                        td Genre
-                        td Kurzfilm
-                      tr
-                        td L&auml;nge
-                        td 7:55
-                      tr
-                        td Produktionsjahr
-                        td 2017
-                      tr
-                        td Produktionsort
-                        td M&uuml;nchberg
-                      tr
-                        td Aufl&ouml;sung
-                        td FHD (21:9)
-                      tr
-                        td Kamera
-                        td Panasonic GH4
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th Cast
-                        th
-                    tbody
-                      tr
-                        td Polizistin
-                        td Dominique Marquet
-                      tr
-                        td Polizist
-                        td Steffen Merkel
-                      tr
-                        td Elias
-                        td Marius Blo&szlig;
-                      tr
-                        td Kumpel 1
-                        td Gilian Offial
-                      tr
-                        td Kumpel 2
-                        td Timo Rauh
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead.thead-dark
-                      tr
-                        th Crew
-                        th
-                    tbody
-                      tr
-                        td nach einer Kurzgeschichte von
-                        td Kari Hennig
-                      tr
-                        td Regie
-                        td Konstantin Agel
-                      tr
-                        td Buch/Kamera/Post
-                        td Philipp Jahn
-                      tr
-                        td Setton
-                        td Yannick Lang
-                      tr
-                        td Setton
-                        td Victor Fischer
-                      tr
-                        td Aufnahmeleitung
-                        td Hannah Eul
-                      tr
-                        td Aufnahmeleitung
-                        td Lara Reichel
-                      tr
-                        td Aufnahmeleitung
-                        td Yannick Lang
-                      tr
-                        td Kameraassistenz
-                        td Lukas Weigmann
-                      tr
-                        td Kameraassistenz
-                        td Timo Rauh
-                      tr
-                        td Technik
-                        td Lucas Krau&szlig;
-                      tr
-                        td Technik
-                        td André Kienzle
-                      tr
-                        td Technik
-                        td Niklas Jahn
-                      tr
-                        td Klappe
-                        td Adrian Ro&szlig;ner
-                      tr
-                        td Colour Grading
-                        td Lukas Weigmann
-              .col-sm-6
-                .team-member
-                  table.table.table-sm
-                    thead
-                      tr
-                        th(style='color: transparent') m
-                        th
-                    tbody
-                      tr
-                        td Colour Grading
-                        td Philipp Jahn
-                      tr
-                        td Tonschnitt (Stimmen)
-                        td Yannick Lang
-                      tr
-                        td Tonschnitt (Ger&auml;usche)
-                        td Philipp Jahn
-                      tr
-                        td Nachvertonung
-                        td Philipp Jahn 
-                      tr
-                        td Nachvertonung
-                        td Yannick Lang
-                      tr
-                        td Nachvertonung
-                        td Konstantin Agel
-                      tr
-                        td Requisite
-                        td Jannik Metz
-                      tr
-                        td Requisite
-                        td Hannah Eul
-                      tr
-                        td Maske
-                        td Renate Merkel
-                      tr
-                        td Funkstimme
-                        td Thomas Agel
-                      tr
-                        td Fotografie & Making-of
-                        td Jonas Wiede
-                      tr
-                        td Catering
-                        td Christiane Jahn
-                      tr
-                        td Catering
-                        td Thomas Jahn
-                      tr
-                        td Catering
-                        td Heike Eul
+    //- Masthead
+    header.masthead(style='background-image: url(../assets/img/header/header-sackgasse.webp)')
+      .container
+        .masthead-heading.text-uppercase Sackgasse
+        .masthead-subheading Kurzfilm aus dem Jahr 2017
+
+    script.
+      if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+      {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
 
-        section#trailer.page-section
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase Wovon handelt der Film?
-              .col-lg-12.text-center
-                p Die Polizisten Sarah und Benno sind auf Streife und werden auf drei kiffende Jugendliche aufmerksam.
-                  |
-                  | Als Sarah einen der Kifferbis in ein stillgelegtes Fabrikgel&auml;nde verfolgt, merkt sie, dass der Junge ihr Sohn ist.
-                  |
-                  | Nun haben die beiden ein ernsthaftes Problem.
-        section#bts.page-section.bg-light
-          .container
-            .row
-              .col-lg-12.text-center
-                h2.section-heading.text-uppercase Behind The Scenes
-                .gap-20
-            .row
-              .col-lg-12
-                h3.text-uppercase Die Location
-                p(style='text-align: justify')
-                    | Als Hauptdrehort haben wir ein leerstehendes Fabrikgel&auml;nde ausgew&auml;hlt. Zusammen mit dem Regenwetter w&auml;hrend des Drehs,
-                    |
-                    | das zwar unangenehm f&uuml;r Mensch und Technik war, aber viel zur Stimmung des Films beigetragen hat, konnten wir so eine perfekte Welt
-                    |
-                    | f&uuml;r unsere Geschichte schaffen. Kleinere Szenen haben wir au&szlig;erdem auf dem Dachboden des
-                    |
-                    | M&uuml;nchberger B&uuml;rgerzentrums und auf dem Sch&uuml;tzenplatz gedreht.
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Sackgasse
+                  tr
+                    td Genre
+                    td Kurzfilm
+                  tr
+                    td L&auml;nge
+                    td 7:55
+                  tr
+                    td Produktionsjahr
+                    td 2017
+                  tr
+                    td Produktionsort
+                    td M&uuml;nchberg
+                  tr
+                    td Aufl&ouml;sung
+                    td FHD (21:9)
+                  tr
+                    td Kamera
+                    td Panasonic GH4
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Cast
+                    th
+                tbody
+                  tr
+                    td Polizistin
+                    td Dominique Marquet
+                  tr
+                    td Polizist
+                    td Steffen Merkel
+                  tr
+                    td Elias
+                    td Marius Blo&szlig;
+                  tr
+                    td Kumpel 1
+                    td Gilian Offial
+                  tr
+                    td Kumpel 2
+                    td Timo Rauh
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td nach einer Kurzgeschichte von
+                    td Kari Hennig
+                  tr
+                    td Regie
+                    td Konstantin Agel
+                  tr
+                    td Buch/Kamera/Post
+                    td Philipp Jahn
+                  tr
+                    td Setton
+                    td Yannick Lang
+                  tr
+                    td Setton
+                    td Victor Fischer
+                  tr
+                    td Aufnahmeleitung
+                    td Hannah Eul
+                  tr
+                    td Aufnahmeleitung
+                    td Lara Reichel
+                  tr
+                    td Aufnahmeleitung
+                    td Yannick Lang
+                  tr
+                    td Kameraassistenz
+                    td Lukas Weigmann
+                  tr
+                    td Kameraassistenz
+                    td Timo Rauh
+                  tr
+                    td Technik
+                    td Lucas Krau&szlig;
+                  tr
+                    td Technik
+                    td André Kienzle
+                  tr
+                    td Technik
+                    td Niklas Jahn
+                  tr
+                    td Klappe
+                    td Adrian Ro&szlig;ner
+                  tr
+                    td Colour Grading
+                    td Lukas Weigmann
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead
+                  tr
+                    th(style='color: transparent') m
+                    th
+                tbody
+                  tr
+                    td Colour Grading
+                    td Philipp Jahn
+                  tr
+                    td Tonschnitt (Stimmen)
+                    td Yannick Lang
+                  tr
+                    td Tonschnitt (Ger&auml;usche)
+                    td Philipp Jahn
+                  tr
+                    td Nachvertonung
+                    td Philipp Jahn 
+                  tr
+                    td Nachvertonung
+                    td Yannick Lang
+                  tr
+                    td Nachvertonung
+                    td Konstantin Agel
+                  tr
+                    td Requisite
+                    td Jannik Metz
+                  tr
+                    td Requisite
+                    td Hannah Eul
+                  tr
+                    td Maske
+                    td Renate Merkel
+                  tr
+                    td Funkstimme
+                    td Thomas Agel
+                  tr
+                    td Fotografie & Making-of
+                    td Jonas Wiede
+                  tr
+                    td Catering
+                    td Christiane Jahn
+                  tr
+                    td Catering
+                    td Thomas Jahn
+                  tr
+                    td Catering
+                    td Heike Eul
 
-            .row
-              .col-lg-6.col-md-12
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image1.webp")
-                  img.img-fluid(src='../assets/img/projects/sackgasse/image1.jpg' alt='Au&szlig;enansicht')
-                .portfolio-caption
-                  p(style='float: left;')
-                    em Die Location von au&szlig;en...
-              .col-lg-6.col-md-12
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image3.webp")
-                  img.img-fluid(src='../assets/img/projects/sackgasse/image3.jpg' alt='Innenr&auml;ume')
-                .portfolio-caption
-                  p(style='float: left;')
-                    em ... und von innen
-             
-            .row      
-              h3.text-uppercase(style='margin-top: 5%') Der Dreh
-              p(style='text-align: justify')
-                | An einem Nachmittag und zwei Tagen, an denen wir jeweils mehr als 10 Stunden mit Drehen besch&auml;ftigt waren, konnten wir alle Szenen einfangen. Im Anschluss haben wir dann
-                |
-                | den kompletten Film nachvertont, was zwar von Anfang an geplant war, aber durch das schlechte Wetter und die dadurch entstehenden Ger&auml;usche auch notwendig wurde. Zusammen mit
-                |
-                | den Darstellern und einem Rohschnitt des Films verbrachten wir noch einige Stunden im Tonstudio des Kreisjugendrings in Konradsreuth.
 
-            .row
-              .col-lg-6.col-md-12
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image4.webp")
-                  img.img-fluid(src='../assets/img/projects/sackgasse/image4.jpg' alt='Crew')
-                .portfolio-caption
-                  p(style='float: left;')
-                    em Die Crew bei der Arbeit
-              .col-lg-6.col-md-12
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image5.webp")
-                  img.img-fluid(src='../assets/img/projects/sackgasse/image5.jpg' alt='Philipp an der Kamera')
-                small.copyright 
-                  a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
-                .portfolio-caption
-                  p(style='float: left;')
-                    em Philipp an der Kamera
+    section#trailer.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Wovon handelt der Film?
+          .col-lg-12.text-center
+            p Die Polizisten Sarah und Benno sind auf Streife und werden auf drei kiffende Jugendliche aufmerksam.
+              |
+              | Als Sarah einen der Kifferbis in ein stillgelegtes Fabrikgel&auml;nde verfolgt, merkt sie, dass der Junge ihr Sohn ist.
+              |
+              | Nun haben die beiden ein ernsthaftes Problem.
+    section#bts.page-section.bg-light
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase Die Location
+            p(style='text-align: justify')
+              | Als Hauptdrehort haben wir ein leerstehendes Fabrikgel&auml;nde ausgew&auml;hlt. Zusammen mit dem Regenwetter w&auml;hrend des Drehs,
+              |
+              | das zwar unangenehm f&uuml;r Mensch und Technik war, aber viel zur Stimmung des Films beigetragen hat, konnten wir so eine perfekte Welt
+              |
+              | f&uuml;r unsere Geschichte schaffen. Kleinere Szenen haben wir au&szlig;erdem auf dem Dachboden des
+              |
+              | M&uuml;nchberger B&uuml;rgerzentrums und auf dem Sch&uuml;tzenplatz gedreht.
 
-              .row
-              .col-lg-6.col-md-12
-                small.copyright(style='left:35px;') 
-                  a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image6.webp")
-                  img.img-fluid(style ='display: block; margin-left: auto; margin-right: auto;' src='../assets/img/projects/sackgasse/image6.jpg' alt='Klappe')
-                .portfolio-caption
-                  p(style='float: left;')
-                    em Hannah mit der Klappe 
-              .col-lg-6.col-md-12
-                small.copyright(style='left:35px;') 
-                  a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
-                picture
-                  source(type="image/webp" srcset="../assets/img/projects/sackgasse/image7.webp")
-                  img.img-fluid(style ='display: block; margin-left: auto; margin-right: auto;' src='../assets/img/projects/sackgasse/image7.jpg' alt='Tonteam')
-                .portfolio-caption
-                  p(style='float: left;')
-                    em Yannick und Lara mit dem Tonequipment
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image1.webp")
+              img.img-fluid(src='../assets/img/projects/sackgasse/image1.jpg' alt='Au&szlig;enansicht')
+            .portfolio-caption
+              p(style='float: left;')
+                em Die Location von au&szlig;en...
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image3.webp")
+              img.img-fluid(src='../assets/img/projects/sackgasse/image3.jpg' alt='Innenr&auml;ume')
+            .portfolio-caption
+              p(style='float: left;')
+                em ... und von innen
 
-        include ../include/footer.pug
+        .row      
+          h3.text-uppercase(style='margin-top: 5%') Der Dreh
+          p(style='text-align: justify')
+            | An einem Nachmittag und zwei Tagen, an denen wir jeweils mehr als 10 Stunden mit Drehen besch&auml;ftigt waren, konnten wir alle Szenen einfangen. Im Anschluss haben wir dann
+            |
+            | den kompletten Film nachvertont, was zwar von Anfang an geplant war, aber durch das schlechte Wetter und die dadurch entstehenden Ger&auml;usche auch notwendig wurde. Zusammen mit
+            |
+            | den Darstellern und einem Rohschnitt des Films verbrachten wir noch einige Stunden im Tonstudio des Kreisjugendrings in Konradsreuth.
+
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image4.webp")
+              img.img-fluid(src='../assets/img/projects/sackgasse/image4.jpg' alt='Crew')
+            .portfolio-caption
+              p(style='float: left;')
+                em Die Crew bei der Arbeit
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image5.webp")
+              img.img-fluid(src='../assets/img/projects/sackgasse/image5.jpg' alt='Philipp an der Kamera')
+            small.copyright 
+              a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
+            .portfolio-caption
+              p(style='float: left;')
+                em Philipp an der Kamera
+
+          .row
+          .col-lg-6.col-md-12
+            small.copyright(style='left:35px;') 
+              a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image6.webp")
+              img.img-fluid(style ='display: block; margin-left: auto; margin-right: auto;' src='../assets/img/projects/sackgasse/image6.jpg' alt='Klappe')
+            .portfolio-caption
+              p(style='float: left;')
+                em Hannah mit der Klappe 
+          .col-lg-6.col-md-12
+            small.copyright(style='left:35px;') 
+              a(href='https://www.schoenebuntefilme.de/') &copy; Kari Hennig
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/sackgasse/image7.webp")
+              img.img-fluid(style ='display: block; margin-left: auto; margin-right: auto;' src='../assets/img/projects/sackgasse/image7.jpg' alt='Tonteam')
+            .portfolio-caption
+              p(style='float: left;')
+                em Yannick und Lara mit dem Tonequipment
+
+    include ../include/footer.pug

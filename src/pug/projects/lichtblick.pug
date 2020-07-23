@@ -10,12 +10,12 @@ html(lang='de')
     nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
       .container
         a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
-           picture
+          picture
             source(type="image/webp" srcset="../assets/img/logo.webp")
             img(src='../assets/img/logo.png', alt='Startseite')
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-            | Menu
-            i.fas.fa-bars.ml-1
+          | Menu
+          i.fas.fa-bars.ml-1
         #navbarResponsive.collapse.navbar-collapse
           ul.navbar-nav.text-uppercase.d-none.d-md-block
             li.nav-item
@@ -29,11 +29,15 @@ html(lang='de')
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
     //- Masthead
-    header.masthead(style='background-image: url(../assets/img/header/header-lichtblick.jpg)')
-        .container
-            .masthead-heading.text-uppercase Lichtblick
-            .masthead-subheading Kurzfilm aus dem Jahr 2015
-    
+    header.masthead(style='background-image: url(../assets/img/header/header-lichtblick.webp)')
+      .container
+        .masthead-heading.text-uppercase Lichtblick
+        .masthead-subheading Kurzfilm aus dem Jahr 2015
+
+    script.
+      if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+      {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
+
     //- Tables
     section#overview.bg-light.page-section
       .container
@@ -183,7 +187,7 @@ html(lang='de')
                   tr
                     td Licht
                     td Lucas Krau&szlig;
-                 
+
           .col-sm-6
             .team-member
               table.table.table-sm
@@ -222,7 +226,7 @@ html(lang='de')
                   tr
                     td Organisation
                     td Hugo Singer
-                
+
     section#trailer.page-section
       .container
         .row
@@ -242,7 +246,7 @@ html(lang='de')
             .video-container-wrapper
               .video-container(style='margin-bottom: -5%;')
                 iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/MKp10FyhZgU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-  
+
     section#bts.bg-light.page-section
       .container
         .row
