@@ -35,6 +35,7 @@ html(lang='de')
                 .masthead-heading.text-uppercase Wir sind der AK Video!
                 .masthead-subheading Jugendfilmarbeit seit 2000.
 
+        //- Replace wepb backgroundimage with jpeg version for Safari-based Browsers, as they currently do not support wep
         script.
             if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
             {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
@@ -124,8 +125,6 @@ html(lang='de')
                             button.btn.btn-primary.btn-xl.text-uppercase(style='margin-top: 5%; margin-bottom: -3%') Mehr Projekte
 
 
-
-
         //- About
         section#about.page-section
             .container
@@ -133,12 +132,12 @@ html(lang='de')
                     h2.section-heading.text-uppercase 20 Jahre AK Video
                     p.text-muted(style='margin-bottom: 5%; ') Der Arbeitskreis Video ist ein Zusammenschluss von Jugendlichen, die die Begeisterung f&uuml;r Film teilen und gerne selbst kreativ werden.
                         |
-                        | Der AK Video ist Teil der Stadtjugend M&uuml;nchberg und wurde 1999 von
-                        a(href="hugo.html") &#32;Hugo Singer&#32;
-                        | gegr&uuml;ndet. Neben unseren Filmprojekten organisieren wir auch Workshops und Abenteuerfreizeiten. Da wir gr&ouml;ßtenteils Sch&uuml;ler und Studenten sind, sind wir auch immer auf der Suche nach
-                        a(href="#contact") &#32;Sponsoren und Unterst&uuml;tzern&#32;
-                        | f&uuml;r unsere
-                        a(href="projects/all.html") &#32;Projekte.
+                        | Der AK Video ist Teil der Stadtjugend M&uuml;nchberg und wurde 1999 von&#32;
+                        a(href="hugo.html") Hugo Singer
+                        | &#32;gegr&uuml;ndet. Neben unseren Filmprojekten organisieren wir auch Workshops und Abenteuerfreizeiten. Da wir gr&ouml;ßtenteils Sch&uuml;ler und Studenten sind, sind wir auch immer auf der Suche nach&#32;
+                        a(href="#contact") Sponsoren und Unterst&uuml;tzern
+                        | &#32;f&uuml;r unsere&#32;
+                        a(href="projects/all.html") Projekte.
                 ul.timeline
                     li
                         .timeline-image
@@ -157,8 +156,8 @@ html(lang='de')
                                     |
                                     | M&uuml;nchberg auf Video festhielten. 2000 drehte die erste Generation des
                                     |
-                                    | Arbeitskreises den ersten gemeinsamen Kurzfilm:
-                                    a(href="projects/stadtkasse.html") &#32;"Die geklaute Stadtkasse".
+                                    | Arbeitskreises den ersten gemeinsamen Kurzfilm:&#32;
+                                    a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse".
                     li.timeline-inverted
                         .timeline-image
                             picture
@@ -170,11 +169,11 @@ html(lang='de')
                                 h4.subheading 2. Generation
                             .timeline-body
                                 p.text-muted
-                                    | In dieser Zeit fanden viele Kooperationen mit Schulen der Umgebung statt, so zum Beispiel der in Zusammenarbeit mit der Parkschule M&uuml;nchberg entstandene Film
-                                    a(href="projects/unterwelt.html") &#32;"Die TRAUMhafte M&uuml;nchberger Unterwelt"&#32;
-                                    | oder
-                                    a(href="projects/stuhlgeschichten.html") &#32;"Stuhlgeschichten - Menschen auf St&uuml;hlen"&#32;
-                                    | zusammen mit der staatlichen Realschule Helmbrechts.
+                                    | In dieser Zeit fanden viele Kooperationen mit Schulen der Umgebung statt, so zum Beispiel der in Zusammenarbeit mit der Parkschule M&uuml;nchberg entstandene Film&#32;
+                                    a(href="projects/unterwelt.html") "Die TRAUMhafte M&uuml;nchberger Unterwelt"
+                                    | &#32;oder&#32;
+                                    a(href="projects/stuhlgeschichten.html") "Stuhlgeschichten - Menschen auf St&uuml;hlen"
+                                    | &#32;zusammen mit der staatlichen Realschule Helmbrechts.
                     li
                         .timeline-image
                             picture
@@ -186,12 +185,12 @@ html(lang='de')
                                 h4.subheading 3. Generation
                             .timeline-body
                                 p.text-muted
-                                    | Mit Filmen wie
-                                    a(href="projects/panzerknacker.html") &#32;"Die Panzerknacker",&#32;
-                                    a(href="projects/lichtblick.html") &#32;"Lichtblick"&#32;
-                                    | und
-                                    a(href="projects/sackgasse.html") &#32;"Sackgasse"&#32;
-                                    | war es insbesondere Philipp Jahn, der die 3. Generation des AK Video pr&auml;gte
+                                    | Mit Filmen wie&#32;
+                                    a(href="projects/panzerknacker.html") "Die Panzerknacker",&#32;
+                                    a(href="projects/lichtblick.html") "Lichtblick"
+                                    | &#32;und&#32;
+                                    a(href="projects/sackgasse.html") "Sackgasse"
+                                    | &#32;war es insbesondere Philipp Jahn, der die 3. Generation des AK Video pr&auml;gte.
                     li.timeline-inverted
                         .timeline-image
                             picture
@@ -265,6 +264,7 @@ html(lang='de')
                                     a(href='projects/probe.html') "Die Probe"    
 
 
+        //- Contact Form
         section#contact.page-section
             .container
               .text-center
