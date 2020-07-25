@@ -5,35 +5,39 @@ const path = require('path');
 const sh = require('shelljs');
 
 module.exports = function renderScripts() {
-    const sourcePath = path.resolve(path.dirname(__filename), '../src/js/scripts.js');
-    const destPath = path.resolve(path.dirname(__filename), '../dist/js/scripts.js');
+	const sourcePath = path.resolve(path.dirname(__filename), '../src/js/scripts.js');
+	const destPath = path.resolve(path.dirname(__filename), '../dist/js/scripts.js');
 
-    const sourcePath2 = path.resolve(path.dirname(__filename), '../src/js/bootstrap-toc.min.js');
-    const destPath2 = path.resolve(path.dirname(__filename), '../dist/js/bootstrap-toc.min.js');
+	const sourcePath2 = path.resolve(path.dirname(__filename), '../src/js/bootstrap-toc.min.js');
+	const destPath2 = path.resolve(path.dirname(__filename), '../dist/js/bootstrap-toc.min.js');
 
-    const sourcePath3 = path.resolve(path.dirname(__filename), '../src/js/loadxml.js');
-    const destPath3 = path.resolve(path.dirname(__filename), '../dist/js/loadxml.js');
+	const sourcePath3 = path.resolve(path.dirname(__filename), '../src/js/loadxml.js');
+	const destPath3 = path.resolve(path.dirname(__filename), '../dist/js/loadxml.js');
 
-    const sourcePath4 = path.resolve(path.dirname(__filename), '../src/js/loadxmlVideos.js');
-    const destPath4 = path.resolve(path.dirname(__filename), '../dist/js/loadxmlVideos.js');
+	const sourcePath4 = path.resolve(path.dirname(__filename), '../src/js/loadxmlVideos.js');
+	const destPath4 = path.resolve(path.dirname(__filename), '../dist/js/loadxmlVideos.js');
 
-    const copyright = `/*!
+	const sourcePath5 = path.resolve(path.dirname(__filename), '../src/js/tothetop.js');
+	const destPath5 = path.resolve(path.dirname(__filename), '../dist/js/tothetop.js');
+
+	const copyright = `/*!
     * Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
     * Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
     * Licensed under ${packageJSON.license} (https://github.com/BlackrockDigital/${packageJSON.name}/blob/master/LICENSE)
     */
     `;
-    const scriptsJS = fs.readFileSync(sourcePath);
-    const destPathDirname = path.dirname(destPath);
+	const scriptsJS = fs.readFileSync(sourcePath);
+	const destPathDirname = path.dirname(destPath);
 
-    const TOC = fs.readFileSync(sourcePath2);
+	const TOC = fs.readFileSync(sourcePath2);
 
-    if (!sh.test('-e', destPathDirname)) {
-        sh.mkdir('-p', destPathDirname);
-    }
+	if (!sh.test('-e', destPathDirname)) {
+		sh.mkdir('-p', destPathDirname);
+	}
 
-    fs.writeFileSync(destPath, copyright + scriptsJS);
-    fs.writeFileSync(destPath2, TOC);
-    fs.writeFileSync(destPath3, fs.readFileSync(sourcePath3));
-    fs.writeFileSync(destPath4, fs.readFileSync(sourcePath4));
+	fs.writeFileSync(destPath, copyright + scriptsJS);
+	fs.writeFileSync(destPath2, TOC);
+	fs.writeFileSync(destPath3, fs.readFileSync(sourcePath3));
+	fs.writeFileSync(destPath4, fs.readFileSync(sourcePath4));
+	fs.writeFileSync(destPath5, fs.readFileSync(sourcePath5));
 };

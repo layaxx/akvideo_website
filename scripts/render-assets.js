@@ -15,7 +15,7 @@ module.exports = function renderAssets() {
 };
 
 function convertToWebP(dirPath) {
-    console.log('converting images in directory ' + dirPath);
+    console.log('### INFO: converting images in directory ' + dirPath);
     try {
         // Get the files as an array
         const files = fs.readdirSync(dirPath);
