@@ -39,6 +39,133 @@ html(lang='de')
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Die Probe
+                  tr
+                    td Genre
+                    td Kurzspielfilm
+                  tr
+                    td L&auml;nge
+                    td 7:00
+                  tr
+                    td Produktionsjahr
+                    td 2003
+                  tr
+                    td Produktionsort
+                    td M&uuml;nchberg
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Organisation
+                    td Hugo Singer
+                  tr
+                    td Kamera
+                    td Sebastian Frank
+                  tr
+                    td Kamera/Regie/Schnitt
+                    td Sebastian Quilitz
+                  tr
+                    td Licht/Ton
+                    td Michael Frank
+                  tr
+                    td Regie
+                    td Philipp Hirschmann
+                  tr
+                    td Kamera/Licht/Ton
+                    td Andreas Weißbach
+                  tr
+                    td Aufnahmeleitung
+                    td Sandra Koch
+                 
+
+    section#synopsis.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Kurz&shy;zusammen&shy;fassung
+            p Zuf&auml;llig entdecken einige Sch&uuml;ler auf dem Schulcomputer die L&ouml;sungen zur anstehenden Mathematik-Probe.&#32;
+              | Schnell ist der Plan geboren und in die Tat umgesetzt, die L&ouml;sungen gegen Bares an die Mitsch&uuml;ler zu verkaufen.&#32;
+              | Die Mathe-Probe f&auml;llt nach dieser Manipulation erwartungsgem&auml;ß berdurchschnittlich gut aus, was die Lehrerin jedoch misstrauisch macht.
+
+
+
+
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/probe/image1.webp")
+              img.img-fluid(src='../assets/img/projects/probe/image1.jpg' alt='Dreh Schule')
+            .portfolio-caption
+              p(style='float: left;')
+                em Dreh in der Schule
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/probe/image4.webp")
+              img.img-fluid(src='../assets/img/projects/probe/image4.jpg' alt='Spickzettel')
+            .portfolio-caption
+              p(style='float: left;')
+                em Spickzettel in Aktion
+
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/probe/image3.webp")
+              img.img-fluid(src='../assets/img/projects/probe/image3.jpg' alt='Crew')
+            .portfolio-caption
+              p(style='float: left;')
+                em Die Crew
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/probe/image2.webp")
+              img.img-fluid(src='../assets/img/projects/probe/image2.jpg' alt='Drehpause')
+            .portfolio-caption
+              p(style='float: left;')
+                em Drehpause mit Verpflegung
+
+        .row
+          .col-lg-6
+            picture
+              source(type="image/webp" srcset="../assets/img/history/image3.webp")
+              img.img-fluid(src='../assets/img/history/image3.jpg' alt='Urkunde')
+            .portfolio-caption
+              p(style='float: left;')
+                em Urkunde
+          .col-lg-6.text-center
+            h3.text-uppercase Dreharbeiten
+            p.
+              Die Dreharbeiten fanden gr&ouml;&szlig;tenteils in der Mittelschule Poppenreuth statt.
+            h3.text-uppercase Jufinale 2003
+            .gap-20
+            p Beim 8. JuFinale konnten wir 2003 den Preis für den besten Film gewinnen.
 
 
 

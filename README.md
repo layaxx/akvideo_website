@@ -25,6 +25,7 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
          - Stuhlgeschichten - Menschen auf Stühlen
       - missing some content:
          - TRAUMhafte Unterwelt (add more text)
+         - Die Probe (add more text)
          - Sackgasse (add text)
          - Lichtblick (rewrite text)
          - Clipped 
