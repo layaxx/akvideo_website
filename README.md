@@ -23,8 +23,8 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
          - Das Geheimnis des Waldsteins
          - Zusammen durch die Zeit
          - Stuhlgeschichten - Menschen auf Stühlen
-         - Die TRAUMhafte Münchberger Unterwelt
       - missing some content:
+         - TRAUMhafte Unterwelt (add more text)
          - Sackgasse (add text)
          - Lichtblick (rewrite text)
          - Clipped 
