@@ -19,7 +19,6 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
     - 20 Jahre AK (Text)
     - sites for most important projects (Images + Text)
       - completely missing
-         - Die geklaute Stadtkasse
          - Das Geheimnis des Waldsteins
          - Zusammen durch die Zeit
          - Stuhlgeschichten - Menschen auf Stühlen
