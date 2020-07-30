@@ -3,12 +3,13 @@
     "name": "startbootstrap-agency",
     "version": "6.0.1",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && npm run minify",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js"
+        "clean": "node scripts/clean.js",
+        "minify": "node scripts/minify.js"
     },
     "description": "Agency is a one page HTML theme for Bootstrap.",
     "keywords": ["css", "sass", "html", "responsive", "theme", "template"],
@@ -32,6 +33,7 @@
         "chokidar": "3.4.1",
         "concurrently": "5.2.0",
         "cwebp-bin": "^6.1.1",
+        "minify": "^5.1.1",
         "postcss": "7.0.32",
         "prettier": "2.0.5",
         "pug": "3.0.0",
