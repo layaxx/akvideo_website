@@ -3,6 +3,8 @@ html(lang='de')
 
   include ../include/header_projects.pug
     title AK Video - Zusammen durch die Zeit
+    meta(name='description', content='Behind the Scenes zu Zusammen durch die Zeit, den wir 2012 produziert haben')
+    meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, akvideo, Gymnasium, Münchberg, Filme, Roboter, Elefant, Preis, Museum, Vergangenheit, Zukunft, Jugendarbeit, projekt, behind the scenes, hinter den kulissen')
 
   body#page-top
 
@@ -24,7 +26,7 @@ html(lang='de')
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#film') Film
+              a.nav-link.js-scroll-trigger(href='#synopsis') Zusammenfassung
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
@@ -39,8 +41,128 @@ html(lang='de')
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Zusammen durch die Zeit
+                  tr
+                    td Genre
+                    td Kurzfilm
+                  tr
+                    td L&auml;nge
+                    td 14:04
+                  tr
+                    td Produktionsjahr
+                    td 2012
+                  tr
+                    td Produktionsort
+                    td M&uuml;nchberg
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Organisation
+                    td Hugo Singer
+                  tr
+                    td Kamera &amp; Ton
+                    td Niklas K&ouml;hler
+                  tr
+                    td Kamera &amp; Ton
+                    td Fabian Tatai
+                  tr
+                    td Kamera &amp; Ton
+                    td Philipp Jahn
+                  tr
+                    td Schnitt
+                    td Kari Hennig
+                  tr
+                    td Darsteller
+                    td Klasse 5d
+                                  
 
-
-
+    section#synopsis.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Kurz&shy;zusammen&shy;fassung
+            p.
+              Eine Schulklasse findet sich in verschiedenen Zeitebenen wieder und erf&auml;hrt Unterrichtsmethoden aus Vergangenhiet und Zukunft. Die Sch&uuml;lerinnen und Sch&uuml;ler m&uuml;ssen nun&#32;
+              zusammenarbeiten, um wieder in die Gegenwart zur&uuml;ckzufinden.  
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase Hintergrund
+            p.
+              &quot;Zusammen durch die Zeit&quot; erz&auml;hlt die Geschichte von zwei Schulkindern, die Au&szlig;enseiter in ihrer Klasse sind. Als die Klasse w&auml;hrend des Unterrichts pl&ouml;tzlich geteilt wird,&#32;
+              und sich ein Teil der Klasse in einem Unterrichtsraum der Zukunft inklusive Roboterlehrer wiederfindet, w&auml;hrend der andere von einem strengen Lehrer aus der Vergangenheit unterrichtet wird. Die Kinder&#32;
+              schmieden einen Plan um zu entkommen, sind dazu aber auf die Mithilfe aller angewiesen - auch der Au&szlig;enseiter, die aber viel lieber in ihren neuen Zeitebenen bleiben w&uuml;rden. Schlie&szlig;lich gelingt&#32;
+              es den Sch&uuml;lerinnen und Sch&uuml;lern, sich zu vers&ouml;hnen und in die Gegenwart zur&uuml;zukehren.
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/zddz/image3.webp")
+              img.img-fluid(src='../assets/img/projects/zddz/image3.jpg' alt='Zukunft')
+            .portfolio-caption
+              p(style='float: left;')
+                em Unterricht in der Vergangenheit
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/zddz/image2.webp")
+              img.img-fluid(src='../assets/img/projects/zddz/image2.jpg' alt='Zukunft')
+            .portfolio-caption
+              p(style='float: left;')
+                em Roboterlehrer in der Zukunft
+        .row
+          .col-lg-12
+            h3.text-uppercase Dreharbeiten
+            p.
+              Gedreht wurde der Film teils im Gymnasium M&uuml;nchberg und teils im Schulmuseum Selbitz. Darsteller und Technikassistenten waren Sch&uuml;ler der 5d, der Ganztagesklasse des Gymnasium. Unterst&uuml;tzt wurden wir&#32;
+              au&szlig;erdem vom Forchheimer Kameramann und Filmemacher Kari Hennig.   
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/zddz/image1.webp")
+              img.img-fluid(src='../assets/img/projects/zddz/image1.jpg' alt='Dreharbeiten')
+            .portfolio-caption
+              p(style='float: left;')
+                em Dreh im Gymnasium M&uuml;nchberg
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/zddz/image4.webp")
+              img.img-fluid(src='../assets/img/projects/zddz/image4.jpg' alt='Schulmuseum')
+            .portfolio-caption
+              p(style='float: left;')
+                em Au&szlig;enansicht des Schulmuseums
+        .row
+          .col-lg-12
+            h3.text-uppercase Auszeichnungen
+            .gap-20
+            p.
+              Mit &quot;Zusammen durch die Zeit&quot; konnten wir den vom M&uuml;nchner Medien Club verliehenen Kinder-Medien-Preis &quot;Wei&szlig;er Elefant&quot; in der Kategorie &quot;Einreichungen bis 6. Klasse&quot; gewinnen.&#32;
+              Neben der Statue eines Elefanten konnten wir uns &uuml;ber ein Preisgeld in H&ouml;he von 1000&euro; freuen. 
 
     include ../include/footer.pug
