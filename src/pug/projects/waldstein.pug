@@ -3,6 +3,8 @@ html(lang='de')
 
   include ../include/header_projects.pug
     title AK Video - Das Geheimnis des Waldsteins
+    meta(name='description', content='Behind the Scenes zu Zusammen durch die Zeit, den wir 2012 produziert haben')
+    meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, akvideo, Gymnasium, Münchberg, Filme, Schatzsuche, Windrad, Preis, Bauernhofuseum, Natur, Waldstein, Jugendarbeit, projekt, behind the scenes, hinter den kulissen')
 
   body#page-top
 
@@ -24,7 +26,7 @@ html(lang='de')
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#film') Film
+              a.nav-link.js-scroll-trigger(href='#synopsis') Film
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
@@ -32,15 +34,173 @@ html(lang='de')
     //- Masthead
     header.masthead(style='background-image: url(../assets/img/header/header-bg.webp)')
       .container
-        .masthead-heading.text-uppercase Das Geheimnis des Waldsteins
-        .masthead-subheading Filmprojekt mit dem Gymnasium M&uuml;nchberg
+        .masthead-heading.text-uppercase Das Geheim&shy;nis des Wald&shy;steins
+        .masthead-subheading F&uuml;nf Freunde auf der Jagd nach dem gr&ouml;&szlig;ten Schatz ihrer Heimat
 
     script.
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
 
+        //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Das Geheimnis des Waldsteins
+                  tr
+                    td Genre
+                    td Kurzfilm
+                  tr
+                    td L&auml;nge
+                    td 32:18
+                  tr
+                    td Produktionsjahr
+                    td 2012
+                  tr
+                    td Produktionsort
+                    td M&uuml;nchberg/&shy;Kleinlosnitz/&shy;Waldstein
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Porduktion
+                    td Hugo Singer
+                  tr
+                    td Regie &amp; Buch
+                    td Kathrin Adam
+                  tr
+                    td Kamera &amp; Schnitt &amp; Buch
+                    td Kari Hennig
+                  tr
+                    td nach einer Idee von
+                    td Adrian Ro&szlig;ner
+                  tr
+                    td Darsteller
+                    td Tamara Schott
+                  tr
+                    td Darsteller
+                    td Florian Neukamm
+                  tr
+                    td Darsteller
+                    td Lara Reichel
+                  tr
+                    td Darsteller
+                    td Jan Weisheit
+                  tr
+                    td Darsteller
+                    td Ricco Mehl
+                  tr
+                    td Darsteller
+                    td Kathrin Adam
+                  tr
+                    td Darsteller
+                    td Thomas Agel
+                  tr
+                    td Darsteller
+                    td J&ouml;rg Albrecht
+                  tr
+                    td Darsteller
+                    td Adrian Ro&szlig;ner
+                  tr
+                    td Darsteller
+                    td Wolfgang Herzog
 
 
+
+                                  
+
+    section#synopsis.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Kurz&shy;zusammen&shy;fassung
+            p.
+              F&uuml;r Andera und ihre Freunde bricht eine Welt zusammen, als ihre Heimat rund um M&uuml;nchberg durch den Bau von Windkraftanlagen bedroht wird.&#32;
+              Nur per Zufall entdecken sie das geheime Tagebuch des Heimatforschers Karl Bedal, der &uuml;berzeugt war, dass die Steinkreuze in der Region zu einem l&auml;ngst&#32;
+              vergessenen Schatz f&uuml;hren. Verfolgt von Mitarbeitern der WKA-Firma wagen sich die f&uuml;nf Freunde auf die gef&auml;hrliche Suche. Es ist die einzige&#32;
+              Chance, ihre Heimat freizukaufen. Doch die Spur f&uuml;hrt hinauf auf den Waldstein, jenen sagenumwobenen Berg, der seine Geheimnisse noch die preisgegeben hat.
+              Und die Zeit rennt ihnen davon...
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase Hintergrund
+            p.
+              Um den Bau der geplanten Windkraftanlagen zu verhindern, machen sich Schulkinder auf die Suche nach einem versteckten Schatz. Am Ende ihrer Schatzsuche stellen sie fest,&#32;
+              dass die atemberaubende Landschaft des Fichtelgebirges selbst der gr&ouml;&szlig;te Schatz ihrer Heimat ist, und es gelingt ihnen auch, den B&uuml;rgermeister zu &uuml;berzeugen.
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image1.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image1.jpg' alt='Zeitungsartikel')
+            .portfolio-caption
+              p(style='float: left;')
+                em Artikel in der Frankenpost &uuml;ber den Film
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image2.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image2.jpg' alt='Dreh Steinkreuze')
+            .portfolio-caption
+              p(style='float: left;')
+                em Dreharbeiten an einem der Steinkreuze
+        .row
+          .col-lg-12
+            h3.text-uppercase Dreharbeiten
+            p.
+              Gedreht wurde der Film haupts&auml;chlich am Waldstein und im Bauernhofmuseum Kleinlosnitz. Einzelne Szenen wurden zudem im M&uuml;nchberger Rathaus und im Stadtarchiv gedreht.&#32;
+              F&uuml;r die Luftaufnahmen wurden wir von der M&uuml;nchberger Feuerwehr mit einer Drehleiter unterst&uuml;tzt.
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image3.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image3.jpg' alt='Waldstein')
+            .portfolio-caption
+              p(style='float: left;')
+                em Waldstein und Waldsteinhaus
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image4.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image4.jpg' alt='Teufelstisch')
+            .portfolio-caption
+              p(style='float: left;')
+                em Vorbereitungen am Teufelstisch
+
+        .row
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image5.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image5.jpg' alt='Dreharbeiten')
+            .portfolio-caption
+              p(style='float: left;')
+                em Dreharbeiten auf dem Waldstein
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/waldstein/image6.webp")
+              img.img-fluid(src='../assets/img/projects/waldstein/image6.jpg' alt='Schulmuseum')
+            .portfolio-caption
+              p(style='float: left;')
+                em Unterst&uuml;tztung durch die Feuerwehr
 
     include ../include/footer.pug
