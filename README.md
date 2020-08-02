@@ -19,10 +19,10 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
     - 20 Jahre AK (Text)
     - sites for most important projects (Images + Text)
       - completely missing
-         - Das Geheimnis des Waldsteins
-         - Zusammen durch die Zeit
          - Stuhlgeschichten - Menschen auf Stühlen
       - missing some content:
+         - Zusammen durch die Zeit
+         - Das Geheimnis des Waldsteins (add more text)
          - TRAUMhafte Unterwelt (add more text)
          - Die Probe (add more text)
          - Sackgasse (add text)
@@ -60,12 +60,13 @@ Apart from `npm run-script build` there are other npm scripts available, which w
 
 #### npm Scripts
 
-- `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-- `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
+- `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist` and minifies them
+- `npm run build:assets` copies the files in the `src/assets/` directory into `dist`, converts images to .webp
 - `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
-- `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
+- `npm run build:scripts` copies JavaScript files from `src/js/` file into `dist`
 - `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
 - `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
+- `npm run minify` minifies all .js/.css/.html files in the `dist` directory
 
 #### publish changes to Github pages live-demo
 - `git subtree push --prefix dist origin gh-pages`
