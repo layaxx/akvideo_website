@@ -20,6 +20,7 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
     - sites for most important projects (Images + Text)
       - completely missing
          - Stuhlgeschichten - Menschen auf Stühlen
+         - Handycap
       - missing some content:
          - Zusammen durch die Zeit
          - Das Geheimnis des Waldsteins (add more text)
