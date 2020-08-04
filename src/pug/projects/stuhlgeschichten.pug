@@ -31,15 +31,11 @@ html(lang='de')
     //- Masthead
     header.masthead(style='background-image: url(../assets/img/header/header-bg.webp)')
       .container
-        .masthead-heading.text-uppercase Stuhlgeschichten
+        .masthead-heading.text-uppercase Stuhl&shy;geschichten
         .masthead-subheading Menschen auf St&uuml;hlen
 
     script.
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
-
-
-
-
 
     include ../include/footer.pug

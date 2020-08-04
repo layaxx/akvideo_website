@@ -59,6 +59,17 @@ Note that the contact form will not work locally, as it depends on a Netlify plu
 
 Apart from `npm run-script build` there are other npm scripts available, which will only build parts of the website instead of everything. You can view all available scripts in `package.json`.
 
+## Guidelines for Images
+
+Thumbnails should be 400 by 300 pixels, named like site for the film and located in `src\assets\img\projects`
+
+Headers should be 1900 by 1250 pixels, named header-NAME_OF_SITE.jpg and located in `src\assets\img\header`
+
+Behind The Scenes Pictures for films should be 500 by 800 or 800 by 500 pixels, named imageCOUNTER.jpg and located in `src\assets\img\projects\NAME_OF_SITE`
+
+All Images should be in JPEG format. They are converted to .webp format for every not-safari-based browser during the build process. Since most images (apart from headers) are quite small, sharpening can/should be applied after resizing.
+All Images should be [tinyfied](https://tinyjpg.com/) before being comitted to the repository. 
+
 #### npm Scripts
 
 - `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist` and minifies them
