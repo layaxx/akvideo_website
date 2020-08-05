@@ -9,7 +9,7 @@ Re-Design der AK Video Münchberg Website
 
 **[View Production Deploy](https://arbeitskreis.video)**
 
-The Production version of this website is hosted by [Netlify](https://www.netlify.com/)
+The production version of this website is hosted by [Netlify](https://www.netlify.com/)
 
 ## TODO:
 - Bilder:
@@ -20,8 +20,8 @@ The Production version of this website is hosted by [Netlify](https://www.netlif
     - sites for most important projects (Images + Text)
       - completely missing
          - Stuhlgeschichten - Menschen auf Stühlen
-         - Handycap
       - missing some content:
+         - Handycap (add text + images)
          - Zusammen durch die Zeit
          - Das Geheimnis des Waldsteins (add more text)
          - TRAUMhafte Unterwelt (add more text)

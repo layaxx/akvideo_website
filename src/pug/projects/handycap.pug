@@ -3,6 +3,8 @@ html(lang='de')
 
   include ../include/header_projects.pug
     title AK Video - Handycap
+    meta(name='description', content='Behind the Scenes zum Kurzfilm &quot;Handycap&quot;, den wir 2014 produziert haben')
+    meta(name='keywords', content='AK Video, Arbeitskreis, Video, Stadtjugend, akvideo, Handycap, Sucht, Smartphone, Alkohol, Münchberg, Jugendarbeit, projekt, behind the scenes, hinter den kulissen')
 
   body#page-top
 
@@ -24,23 +26,167 @@ html(lang='de')
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#film') Film
+              a.nav-link.js-scroll-trigger(href='#synopsis') Kurz&uuml;bersicht
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
 
     //- Masthead
-    header.masthead(style='background-image: url(../assets/img/header/header-bg.webp)')
+    header.masthead(style='background-image: url(../assets/img/header/header-handycap.webp)')
       .container
-        .masthead-heading.text-uppercase Wir sind der AK Video!
-        .masthead-subheading Das sind unsere Projekte aus den letzten 20 Jahren
+        .masthead-heading.text-uppercase Handy&shy;cap
+        .masthead-subheading S&uuml;chtig nach Handy &amp; Co
 
     script.
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Handycap
+                  tr
+                    td Genre
+                    td Kurzfilm
+                  tr
+                    td L&auml;nge
+                    td 28:24
+                  tr
+                    td Produktionsjahr
+                    td 2014
+                  tr
+                    td Produktionsort
+                    td M&uuml;nchberg
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Idee
+                    td Alexander Tho&szlig;
+                  tr
+                    td 
+                    td Paul Sch&ouml;nberger
+                  tr
+                    td 
+                    td Philipp Jahn
+                  tr  
+                    td Buch/Regie/&shy;Kamera/Schnitt
+                    td Philipp Jahn
+                  tr  
+                    td Ton
+                    td Hannah Eul
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Cast
+                    th
+                tbody
+                  tr
+                    td Julian 
+                    td Paul Sch&ouml;nberger
+                  tr
+                    td Lukas
+                    td Alexander Tho&szlig;
+                  tr
+                    td Mutter
+                    td Heike Eul
+                  tr
+                    td Laura
+                    td Laura Loy
+                  tr
+                    td Lisa
+                    td Lara Reichel
+                  tr
+                    td Bruder
+                    td Niklas Jahn
+                  tr
+                    td Niklas
+                    td Timo Rauh
+                  tr
+                    td Lehrer
+                    td Udo Sch&ouml;nberger
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead
+                  tr
+                    th(style='color: transparent') m
+                    th
+                tbody
+                  tr
+                    td Arzt
+                    td Thomas Tho&szlig;
+                  tr
+                    td Krankenpfleger
+                    td Thomas Jahn
+                  tr
+                    td Mitsch&uuml;ler
+                    td Jennifer Popp
+                  tr
+                    td Mitsch&uuml;ler
+                    td Selina Hoffmann
+                  tr
+                    td Mitsch&uuml;ler
+                    td Nina Rudolph
+                  tr
+                    td Mitsch&uuml;ler
+                    td Celina Gerspitzer
+                  tr
+                    td Mitsch&uuml;ler
+                    td Johanna B&ouml;hm
+                  tr
+                    td Mitsch&uuml;ler
+                    td Adrian Ro&szlig;ner
 
-
-
+    section#synopsis.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Kurz&shy;zusammen&shy;fassung
+            p.
+              Julian ist ein vierzehnj&auml;:hriger Junge, der nur noch &uuml;ber das Mobiltelefon kommuniziert und dabei seinen Freundeskreis vernachl&auml;ssigt.&#32;
+              Auch von seiner Familie nimmt er kaum noch Notiz. Erst, als seine Mutter das Handy aus dem Fenster wirft und dieses dabei kaputtgeht, sucht er wieder Kontakt zu den Mitsch&uuml;lern.&#32;
+              Doch diese weisen ihn ab, nachdem er sie monatelang ignoriert hat. Als seine Mutter zur Fortbildung nach M&uuml;nchen f&auml;hrt und den kleinen Bruder mitnimmt, eskaliert die Situation, denn Julian&#32;
+              stolpert von einer Sucht zur n&auml;chsten...
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase Hintergrund
+            p.
+              Nachdem Mitglieder des Arbeitskreises bei einer Freizeit des Kreisjugendrings in Berchtesgarden auf die Idee kamen, spontan einen Clip zu drehen, der sich mit der Abh&auml;ngigkeit&#32;
+              von Smartphones und virtuellen Assistenten besch&auml;ftigt, wollte sich Philipp Jahn intensiver mit dem Thema auseinandersetzen. Zusammen mit Alexander Tho&szlig; und Paul Sch&ouml;nberger&#32;
+              entwickelte er deshalb zun&auml;chst die Ideee und sp&auml;ter das Drehbuch f&uuml;r &quot;Handycap&quot;.
+        .row
+          .col-lg-12
+            h3.text-uppercase Dreharbeiten
+            p.
+              Gedreht wurde der Film an f&uuml;nf Drehtagen, unter anderem in der Jean-Paul-Grundschule in Schwarzenbach und in der Krankenpflegeschule in M&uuml;nchberg.
 
     include ../include/footer.pug
