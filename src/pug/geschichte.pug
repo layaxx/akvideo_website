@@ -5,8 +5,31 @@ html(lang='de')
     title AK Video - Geschichte
     meta(name='description', content='Der Arbeitskreis Video der Stadtjugend M&uuml;nchberg besteht nun schon seit &uuml;ber 20 Jahren. Diese Seite bietet einen &Uuml;berblick &uuml;ber unsere Geschichte.')
     meta(name='keywords', content='Hugo, Singer, B&uuml;rgerzentrum, B&uuml;z, AK Video, Arbeitskreis, Video, akvideo, Stadtjugend, SJM, Münchberg, Workshop, Projekt, Film, Jugendfilmarbeit, Jugendarbeit')
+    script(defer src='/js/tothetop.js')
+    style.
+      #tothetop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        transform: rotate(270deg);
+        border: none;
+        outline: none;
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      #tothetop:hover {
+        background-color: #555;
+      }
 
   body#page-top
+
+    button(onclick="topFunction()" id="tothetop" title="Go to top") 
+      i.fas.fa-2x.fa-arrow-right
 
     //- Navigation
     nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
@@ -96,15 +119,30 @@ html(lang='de')
             h2.text-center Finanzierung
             p(style='text-align:justify') Bei vielen unserer Projekte werden wir vom Kreis- und Bezirksjugendring unterst&uuml;tzt;. Davon abgesehen sind wir als gemeinn&uuml;tziger Verein auch auf Spenden angewiesen.&#32;
               | Fr&uuml;her haben wir im alten G&ouml;tz-Geb&auml;ude mit der Organisation von Flohm&auml;rkten Geld f&uuml;r die Umsetzung neuer Filme verdient, seit dem Abriss des Geb&auml;udes fehlt uns diese Einnahmequelle allerdings.
-
-            
+        .row
+          .col-lg-12
+            h2.text-center Der Medienraum
+            p(style='text-align:justify') Der Medienraum ist unser eigener Raum im zweiten Stock des B&uuml;rgerzentrums, in dem wir unsere Technik aufbewahren und ums treffen, um neue Ideen zu besprechen Workshops durchzuf&uuml;hren oder Filme zu schneiden.
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="assets/img/history/image7.webp")
+              img.img-fluid(src='assets/img/history/image7.jpg' alt='Medienraum alt')
+            .portfolio-caption
+              p(style='float: left;')
+                em Medienraum Anfang der 2000er
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="assets/img/history/image9.webp")
+              img.img-fluid(src='assets/img/history/image9.jpg' alt='Medienraum 2020')
+            .portfolio-caption
+              p(style='float: left;')
+                em Teil des Medienraums 2020
+    
     //- TODO:
       add more Content: 
         different names:
           Evolution Pictures
           Resign Films
-
-
 
     //- Contact
     section#contact.page-section
@@ -112,9 +150,7 @@ html(lang='de')
         .text-center
           h2.section-heading.text-uppercase Du willst Teil des AK Video werden?
           h3.section-subheading(style='color: white;')
-            | Wir freuen uns immer &uuml;ber Feedback und neue
-            |
-            | Mitglieder, sowohl Kreative als auch Sponsoren.
+            | Wir freuen uns immer &uuml;ber Feedback und neue Mitglieder, sowohl Kreative als auch Sponsoren.
         form#contactForm(name='contactHistory' method='POST' data-netlify='true')
           .row(style='overflow: hidden;')
             .col-lg-6.col-sm-12.text-center
