@@ -3,6 +3,8 @@ html(lang='de')
 
   include ../include/header_projects.pug
     title AK Video - Stuhlgeschichten
+    meta(name='description', content='Behind the Scenes zum Kurzfilm &quot;Handycap&quot;, den wir 2014 produziert haben')
+
   body#page-top
 
     //- Navigation
@@ -23,7 +25,7 @@ html(lang='de')
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#film') Film
+              a.nav-link.js-scroll-trigger(href='#synopsis') Film
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
 
@@ -37,5 +39,108 @@ html(lang='de')
     script.
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
+
+    //- Tables
+    section#overview.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase &Uuml;bersicht
+        .row
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th technische Details
+                    th
+                tbody
+                  tr
+                    td Titel
+                    td Stuhlgeschichten
+                  tr
+                    td Genre
+                    td Charakterstudie
+                  tr
+                    td L&auml;nge
+                    td 42:47
+                  tr
+                    td Produktionsjahr
+                    td 2010
+                  tr
+                    td Produktionsort
+                    td Helmbrechts
+          .col-sm-6
+            .team-member
+              table.table.table-sm
+                thead.thead-dark
+                  tr
+                    th Crew
+                    th
+                tbody
+                  tr
+                    td Regie
+                    td Jutta Moser
+                  tr
+                    td Kamera &amp; Schnitt
+                    td Niklas K&ouml;hler
+                  tr
+                    td Kamera
+                    td Jannik Metz
+                  tr
+                    td Kamera
+                    td Hugo Singer
+                  tr
+                    td Darsteller
+                    td Sch&uuml;ler der Realschule Helmbrechts
+                  tr  
+                    td in Anlehnung an
+                    td &quot;Zwischen allen St&uuml;hlen&quot; von Norbert Frank
+
+    section#synopsis.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Wovon handelt der Film?
+            p.
+              &quot;Stuhlgeschichten - Menschen auf St&uuml;hlen&quot; ist in vielerlei Hinsicht anders als andere Produktionen des Arbeitskreises. Mit seinen langen Einstellungen, wenigen Schaupl&aumlTzen und fast ohne Schnitte wirkt&#32;
+              diese Charakterstudie, die sich vor allem auf die vorkommenden Personen und deren Beziehung zueinander und weniger auf eine actionreiche Handlung konzentriert, mehr wie ein auf Film festgehaltenes Theaterst&uuml;ck.
+    //BTS
+    section#bts.bg-light.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Behind The Scenes
+            .gap-20
+        .row
+          .col-lg-12
+            h3.text-uppercase Hintergrund
+            p.
+              In vier Kapiteln zeigt der Film, der an Norbert Franks Theaterst&uuml;ck &quot;Zwischen allen St&uuml;hlen&quot; angelehnt ist, verschiedene Situationen aus dem Leben der Figuren.&#32;
+              W&auml;hrend das erste Kapitel eine Therapierunde in einem Garten zeigt, in dem die Patienten ihre Probleme schildern, erz&auml;hlt das zweite Kapitel eine Geschichte von allm&auml;hlicher Akzeptanz. Holger stellt&#32;
+              seinen Freunden hier seine neue Freundin Isabell vor, eine Politikstudentin, die auf dem Hamburger Kiez auch unter dem K&uuml;nstlernamen &quot;Lola&quot; bekannt ist. Im dritten Kapitel verfolgt man zwei auf&#32;
+              einer einsamen Insel gestrandete M&auml;dchen, die sich angesichts ihrer aktuellen Probleme an die scheinbaren Problem der Vergangenheit erinnern, die nun so irrelevant erscheinen. Das letzte Kaptel spielt in einem Kino,&#32;
+              wo es zu Spannungen innerhalb von und zwischen P&auml;rchen und Gruppen kommt. Die besten Sitzpl&auml;tze und wer schon wie oft &quot;Casablanca&quot; gesehen hat, l&ouml;sen ebensoviel Konflikte aus wie ein vergessener&#32;
+              Hochzeitstag.
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/stuhlgeschichten/image2.webp")
+              img.img-fluid(src='../assets/img/projects/stuhlgeschichten/image2.jpg' alt='Opening Scene')
+            .portfolio-caption
+              p(style='float: left;')
+                em Die Er&ouml;ffnungsszene des Films
+          .col-lg-6.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/stuhlgeschichten/image1.webp")
+              img.img-fluid(src='../assets/img/projects/stuhlgeschichten/image1.jpg' alt='einsame Insel')
+            .portfolio-caption
+              p(style='float: left;')
+                em gestrandet auf einer einsamen Insel
+
+        .row
+          .col-lg-12
+            h3.text-uppercase Dreharbeiten
+            p.
+              Gedreht wurde der Film zusammen mit Sch&uuml;lern der Helmbrechtser Realschule. Als Drehort wurde unter anderem das Naturfreibad Helmbrechts genutzt, das die Kulisse f&uuml;r die einsame Insel bot.
 
     include ../include/footer.pug
