@@ -67,7 +67,7 @@ html(lang='de')
                                         i.fas.fa-arrow-right.fa-3x
                                 picture
                                     source(type="image/webp" srcset="assets/img/projects/johns_adventure.webp")
-                                    img.img-fluid(src='assets/img/projects/johns_adventure.jpg', alt='Thumbnail John&acute;s Adventure')
+                                    img.img-fluid(src='assets/img/projects/johns_adventure.jpg', alt='Thumbnail John´s Adventure')
                             .portfolio-caption
                                 .portfolio-caption-heading John's Adventure
                                 .portfolio-caption-subheading.text-muted Trickfilm, 2020
@@ -133,7 +133,7 @@ html(lang='de')
                     p.text-muted(style='margin-bottom: 5%; ') Der Arbeitskreis Video ist ein Zusammenschluss von Jugendlichen, die die Begeisterung f&uuml;r Film teilen und gerne selbst kreativ werden.
                         |
                         | Der AK Video ist Teil der Stadtjugend M&uuml;nchberg und wurde 1999 von&#32;
-                        a(href="hugo.html") Hugo Singer
+                        a(href="portrait/hugo.html") Hugo Singer
                         | &#32;gegr&uuml;ndet. Neben unseren Filmprojekten organisieren wir auch Workshops und Abenteuerfreizeiten. Da wir gr&ouml;ßtenteils Sch&uuml;ler und Studenten sind, sind wir auch immer auf der Suche nach&#32;
                         a(href="#contact") Sponsoren und Unterst&uuml;tzern
                         | &#32;f&uuml;r unsere&#32;
@@ -236,7 +236,7 @@ html(lang='de')
                         .award
                             picture
                                 source(type="image/webp" srcset="assets/img/index/jufinale1.webp")
-                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
+                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Trophäe')
                             h4 BESTER FILM
                             p.text-muted JUFINALE 2017
                             p f&uuml;r den Film&#32;
@@ -246,7 +246,7 @@ html(lang='de')
                         .award
                             picture
                                 source(type="image/webp" srcset="assets/img/index/weisserElefant.webp")
-                                img.mx-auto.rounded-circle(src='assets/img/index/weisserElefant.jpg', alt='wei&szlig;er Elefant')
+                                img.mx-auto.rounded-circle(src='assets/img/index/weisserElefant.jpg', alt='weißer Elefant')
                             h4 Wei&szlig;er Elefant
                             p.text-muted Kinder-Medien-Preis 2012
                             p f&uuml;r den Film&#32;
@@ -256,13 +256,12 @@ html(lang='de')
                         .award
                             picture
                                 source(type="image/webp" srcset="assets/img/index/jufinale1.webp")
-                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Troph&auml;e')
+                                img.mx-auto.rounded-circle(src='assets/img/index/jufinale1.jpg', alt='Jufinale Trophäe')
                             h4 BESTER FILM
                             p.text-muted JUFINALE 2003
                             p f&uuml;r den Film&#32;
                                 b
                                     a(href='projects/probe.html') "Die Probe"    
-
 
         //- Contact Form
         section#contact.page-section
@@ -290,6 +289,11 @@ html(lang='de')
                 .text-center
                   p
                     button.formButton(type='submit') Nachricht abschicken
+
+        //- Replace wepb backgroundimage with jpeg version for Safari-based Browsers, as they currently do not support wep
+        script.
+            if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
+            {document.getElementById("contact").style.backgroundImage = document.getElementById("contact").style.backgroundImage.replace("webp", "jpg")}
 
         include include/footer.pug
 

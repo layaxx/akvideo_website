@@ -1,7 +1,7 @@
 doctype html
 html(lang='de')
 
-    include include/header.pug
+    include ../include/header.pug
         title AK Video - Hugo Singer
         meta(name='description', content='Hugo Singer ist der Gr&uuml;nder des Ak Video. Zusammen mit ihm haben wir schon viele Projekte verwirklicht.')
         meta(name='keywords', content='Hugo, Singer, B&uuml;rgerzentrum, B&uuml;z, AK Video, Arbeitskreis, Video, akvideo, Stadtjugend, SJM, Münchberg, Workshop, Projekt, Film, Jugendfilmarbeit, Jugendarbeit')
@@ -11,25 +11,25 @@ html(lang='de')
         //- Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
+                a.navbar-brand.js-scroll-trigger(href='../index.html#page-top')
                     picture
-                        source(type="image/webp" srcset="assets/img/logo.webp")
-                        img(src='assets/img/logo.png', alt='logo')
+                        source(type="image/webp" srcset="../assets/img/logo.webp")
+                        img(src='../assets/img/logo.png', alt='logo')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ml-auto
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#portfolio') Projekte
+                            a.nav-link.js-scroll-trigger(href='../index.html#portfolio') Projekte
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#about') 20 Jahre AK
+                            a.nav-link.js-scroll-trigger(href='../index.html#about') 20 Jahre AK
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#awards') Auszeichnungen
+                            a.nav-link.js-scroll-trigger(href='../index.html#awards') Auszeichnungen
                         li.nav-item
-                            a.nav-link.js-scroll-trigger(href='index.html#contact') Kontakt
+                            a.nav-link.js-scroll-trigger(href='../index.html#contact') Kontakt
         //- Masthead
-        header.masthead(style='background-image: url(assets/img/header/header-bg.webp)')
+        header.masthead(style='background-image: url(../assets/img/header/header-bg.webp)')
             .container
                 .masthead-heading.text-uppercase Hugo Singer
                 .masthead-subheading Der Gründer des Arbeitskreises
@@ -44,8 +44,8 @@ html(lang='de')
                 .col-lg-12
                     h2.section-heading.text-uppercase.text-center Wer ist Hugo?
                     picture
-                        source(type="image/webp" srcset="assets/img/hugo/portrait_2.webp")
-                        img(src='assets/img/hugo/portrait_2.jpg' width='40%' style='float: left; margin-right: 5%; margin-bottom: 5%')
+                        source(type="image/webp" srcset="../assets/img/portrait/hugo/portrait_2.webp")
+                        img(src='../assets/img/portrait/hugo/portrait_2.jpg' width='40%' style='float: left; margin-right: 5%; margin-bottom: 5%')
                     p(style='text-align: justify')
                       | Ohne unseren Hugo g&auml;be es den AK Video nicht. Seit der Gr&uuml;ndung ist
                       |
@@ -61,13 +61,13 @@ html(lang='de')
               .row
                 .col-lg-6
                     picture
-                        source(type="image/webp" srcset="assets/img/hugo/rsz_img_7592.webp")
-                        img(src='assets/img/hugo/rsz_img_7592.jpg' width='100%' style='margin-bottom: 3%' alt='Hugo')
+                        source(type="image/webp" srcset="../assets/img/portrait/hugo/rsz_img_7592.webp")
+                        img(src='../assets/img/portrait/hugo/rsz_img_7592.jpg' width='100%' style='margin-bottom: 3%' alt='Hugo')
                 .col-lg-6
                     picture
-                        source(type="image/webp" srcset="assets/img/hugo/auto.webp")
-                        img(src='assets/img/hugo/auto.jpg' width='100%' style='float: right' alt='Hugos Auto')
+                        source(type="image/webp" srcset="../assets/img/portrait/hugo/auto.webp")
+                        img(src='../assets/img/portrait/hugo/auto.jpg' width='100%' style='float: right' alt='Hugos Auto')
                
 
-        include include/footer.pug
+        include ../include/footer.pug
 

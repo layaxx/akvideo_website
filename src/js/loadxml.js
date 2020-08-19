@@ -6,6 +6,9 @@ function dir(url) {
     if (url.includes('legal')) {
         return 'Rechtliches';
     }
+    if (url.includes('portrait')) {
+        return 'Portrait';
+    }
     if (url.includes('projects')) {
         return 'Projekte';
     }

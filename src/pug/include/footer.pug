@@ -76,7 +76,10 @@ footer.footer.py-4
         .row.align-items-center
             .col-lg-4.text-lg-left
               .tooltipContainer 
-                | Copyright &copy; AK Video 2020
+                if new Date().getFullYear() === 2020
+                    p Copyright &copy; AK Video 2020
+                else 
+                    p!= "Copyright &copy; AK Video 2020-" + new Date().getFullYear()
                 .tooltiptext
                   | This site is maintained by&#32;
                   a(href='https://www.github.com/layaxx') Yannick Lang
