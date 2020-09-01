@@ -6,6 +6,10 @@ html(lang='de')
     meta(name='description', content='Der Arbeitskreis Video der Stadtjugend M&uuml;nchberg besteht nun schon seit &uuml;ber 20 Jahren. Diese Seite bietet einen &Uuml;berblick &uuml;ber unsere Geschichte.')
     meta(name='keywords', content='Hugo, Singer, B&uuml;rgerzentrum, B&uuml;z, AK Video, Arbeitskreis, Video, akvideo, Stadtjugend, SJM, Münchberg, Workshop, Projekt, Film, Jugendfilmarbeit, Jugendarbeit')
     script(defer src='/js/tothetop.js')
+    //- TimelineJS
+    link(title='timeline-styles' rel='stylesheet' href='https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css')
+    script(defer src='https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js')
+    script(defer src='/js/timelineHistory.js')
     style.
       #tothetop {
         display: none;
@@ -24,6 +28,9 @@ html(lang='de')
       }
       #tothetop:hover {
         background-color: #555;
+      }
+      .tl-timeline a{
+        color: #f69021;
       }
 
   body#page-top
@@ -61,7 +68,14 @@ html(lang='de')
       if(/Mac|iPod|iPhone|iPad/.test(navigator.platform))
       {document.getElementsByClassName("masthead")[0].style.backgroundImage = document.getElementsByClassName("masthead")[0].style.backgroundImage.replace("webp", "jpg")}
 
-    section#about.page-section
+    section#overview.page-section
+      .container
+        .row
+          .col-lg-12
+            h2.text-center &Uuml;bersicht: Meilensteine
+            div#timeline-embed(style="width: 100%; height: 600px")
+
+    section#about.bg-light.page-section
       .container
         .row
           .col-lg-12
@@ -70,13 +84,13 @@ html(lang='de')
               a(href="portrait/hugo.html") Hugo Singer.
               | &#32;Der war um die Jahrtausendwende im Jugendtreff im M&uuml;nchberger B&uuml;rgerzentrum als Hauptamtlicher t&auml;tig.
               | 
-              | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten auf Film festzuhalten.
+              | Zusammem mit einigen Jugendlichen begann er, die verschiedenen Angebote und Aktivit&auml;ten der Stadtjugend auf Film festzuhalten.
               |
               | Nun mit der Technik vertraut, begannen Jonas Leutenberger, Sebastian Frank und Philipp Hirschmann zusammen mit anderen Jugendlichen, das Drehbuch f&uuml;r den ersten eigenen Kurzfilm zu schreiben.
               |
               | Daraus entwickelte sich schlussendlich&#32;
-              a(href="projects/stadtkasse.html") "Die geklaute Stadtkasse",
-              | &#32;eine Krimikom&ouml;die inklusive Verfolgungsjagd und der erste "richtige" Film des AK Video.
+              a(href="projects/stadtkasse.html") &quot;Die geklaute Stadtkasse&quot;,
+              | &#32;eine Krimikom&ouml;die inklusive Verfolgungsjagd und der erste &quot;richtige&quot; Film des AK Video.
         .row
           .col-lg-6.col-md-12
             picture
@@ -99,21 +113,21 @@ html(lang='de')
               img(src='assets/img/history/image3.jpg' style='width:100%')
           .col-lg-7.col-md-12
             h2.text-center Weitere Filmprojekte
-            p(style='text-align:justify; margin-left: 30px; margin-top:40px;') Weiter ging es mit dem Kurzfilm&#32;
-              a(href='projects/probe.html') Die Probe
+            p(style='text-align:justify') Weiter ging es mit dem Kurzfilm&#32;
+              a(href='projects/probe.html') &quot;Die Probe&quot;
               | &#32;den wir zusammen mit Sch&uuml;ern aus Poppenreuth gedreht haben, und mit dem wir beim&#32;
               | JuFinale 2003 den Preis für den besten Film gewinnen konnten. Zwei Jahre sp&auml;ter erkundeten wir zusammen mit Grundsch&uuml;lern einen sagenumwobenen Geheimgang, der M&uuml;nchberg mit der&#32;
               | Waldsteinburg verbinden soll (
-              a(href='projects/unterwelt.html') M&uuml;nchbergs TRAUMhafte Unterwelt
+              a(href='projects/unterwelt.html') &quot;M&uuml;nchbergs TRAUMhafte Unterwelt&quot;
               | ). Der Waldstein war sp&auml;ter auch die Kulisse f&uuml;r einen weiteren Film:&#32;
-              a(href='projects/waldstein') Das Geheimnis des Waldsteins.
+              a(href='projects/waldstein') &quot;Das Geheimnis des Waldsteins&quot;.
         .row
-          .col-lg-12
+          .col-lg-12.mt-4
             h2.text-center Kooperationen
             p(style='text-align:justify') Oft organisieren wir Workshops oder Filmprojekte zusammen mit anderen Jugendfilmgruppen in der Region. Insbesondere mit der Filmwerkstatt Helmbrechts,&#32;
               | aber auch mit den Jugendtreffs benachbarter Orte, so zum Beispiel Schwarzenbach oder Stammbach, konnten wir in der Vergangenheit schon erfolgreich Projekte auf die Beine stellen. Zusammen mit Jugendlichen&#32;
               | vom Schwarzenbacher Jugendtreff &quot;Gleis 2&quot; haben wir beispielsweise den Film&#32;
-              a(href="projects/panzerknacker.html") Die Panzerknacker schlagen zu
+              a(href="projects/panzerknacker.html") &quot;Die Panzerknacker schlagen zu&quot;
               | &#32;gedreht und mit Jugendlichen des Stammbacher Jugendtreffs &quot;ZOOM&quot; den Film &quot;Das letzte Paket&quot;, der auch beim JuFinale einen Preis gewinnen konnte. Diese Kooperationen waren f&uuml;r&#32;
               | alle Beteiligten immer sehr wertvoll, da sie einen Austausch von Technik, Know-How und Helfern erm&ouml;glichen und damit auch die Realisierung komplexerer Projekte erlauben.
             h2.text-center Finanzierung
