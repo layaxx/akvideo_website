@@ -1,5 +1,5 @@
 const options = {
-    scale_factor: 0.5
+    scale_factor: 0.7
 };
 
 const json = {
@@ -80,6 +80,21 @@ const json = {
         },
         {
             media: {
+                url: '/assets/img/projects/stuhlgeschichten.jpg',
+                caption: 'Menschen auf St&uuml;hlen (Charakterstudie, 2010)',
+                link: '/projects/stuhlgeschichten.html'
+            },
+            start_date: {
+                year: '2010'
+            },
+            text: {
+                headline: 'Menschen auf St&uuml;hlen',
+                text: '<p>&quot;Stuhlgeschichten - Menschen auf St&uuml;hlen&quot; ist in vielerlei Hinsicht anders als andere Produktionen des Arbeitskreises. Mit seinen wenigen Schaupl&auml;tzen und langen Einstellungen wirkt diese Charakterstudie wie ein auf Film festgehaltenes Theaterst&uuml;ck.</p><a href="/projects/stuhlgeschichten.html">Behind The Scenes</a>'
+            },
+            group: 'filme'
+        },
+        {
+            media: {
                 url: '/assets/img/projects/unterwelt.jpg',
                 caption: 'M&uuml;nchbergs TRAUMhafte Unterwelt (Kurzfilm, 2005)',
                 link: '/projects/unterwelt.html'
@@ -136,6 +151,16 @@ const json = {
                 headline: 'Gr&uuml;ndung',
                 text: '<p>Hugo Singer gr&uuml;ndet den Arbeitskreis Video</p>'
             }
+        }
+    ],
+    eras: [
+        { start_date: { year: '2000' }, end_date: { year: '2005' }, text: { headline: 'Anfangsphase' } },
+        { start_date: { year: '2005' }, end_date: { year: '2011' }, text: { headline: '2. Generation' } },
+        { start_date: { year: '2011' }, end_date: { year: '2019' }, text: { headline: '3. Generation' } },
+        {
+            start_date: { year: '2019' },
+            end_date: { year: new Date().getFullYear() },
+            text: { headline: '4. Generation' }
         }
     ]
 };
