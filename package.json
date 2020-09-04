@@ -1,7 +1,6 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
-    "version": "6.0.1",
+    "title": "AkVideo",
+    "name": "akvideo-website",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && npm run minify",
         "build:assets": "node scripts/build-assets.js",
@@ -11,13 +10,7 @@
         "clean": "node scripts/clean.js",
         "minify": "node scripts/minify.js"
     },
-    "description": "Agency is a one page HTML theme for Bootstrap.",
-    "keywords": ["css", "sass", "html", "responsive", "theme", "template"],
-    "homepage": "https://startbootstrap.com/template-overviews/agency",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "description": "New Design for the AKVideo Website, based on the Agency Bootstrap Template by StartBootstrap.",
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": ["David Miller (http://davidmiller.io/)", "Yannick Lang (http://y-lang.eu/)"],
@@ -26,16 +19,16 @@
         "url": "https://github.com/layaxx/akvideo_website.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.0"
+        "bootstrap": "4.5.2"
     },
     "devDependencies": {
-        "autoprefixer": "9.8.5",
-        "chokidar": "3.4.1",
-        "concurrently": "5.2.0",
+        "autoprefixer": "9.8.6",
+        "chokidar": "3.4.2",
+        "concurrently": "5.3.0",
         "cwebp-bin": "^6.1.1",
         "minify": "^5.1.1",
         "postcss": "7.0.32",
-        "prettier": "2.0.5",
+        "prettier": "2.1.1",
         "pug": "3.0.0",
         "sass": "1.26.10",
         "shelljs": "0.8.4"
