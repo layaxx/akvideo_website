@@ -26,9 +26,9 @@ html(lang='de')
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#overview') &Uuml;bersicht
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#synopsis') Kurz&uuml;bersicht
-            li.nav-item
               a.nav-link.js-scroll-trigger(href='#bts') Behind The Scenes
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#film') Film
 
 
     //- Masthead
@@ -188,5 +188,28 @@ html(lang='de')
             h3.text-uppercase Dreharbeiten
             p.
               Gedreht wurde der Film an f&uuml;nf Drehtagen, unter anderem in der Jean-Paul-Grundschule in Schwarzenbach und in der Krankenpflegeschule in M&uuml;nchberg.
+        .row
+          .col-lg-2.col-md-0
+          .col-lg-8.col-md-12
+            picture
+              source(type="image/webp" srcset="../assets/img/projects/handycap/image1.webp")
+              img.img-fluid(src='../assets/img/projects/handycap/image1.jpg' alt='Frame aus dem Film')
+            .portfolio-caption
+              p(style='float:left')
+                em
+                  | Julian (Paul Sch&ouml;nberger)
+          .col-lg-2.col-md-0
+
+    section#film.page-section
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase(style='margin-bottom: 5%') Der fertige Film
+        .row
+          .video-container-wrapper
+            .video-container(style='margin-bottom: -5%;')
+              iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/e8A2A1zbX8w' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      
+    hr
 
     include ../include/footer.pug

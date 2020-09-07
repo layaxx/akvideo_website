@@ -13,7 +13,10 @@
     "description": "New Design for the AKVideo Website, based on the Agency Bootstrap Template by StartBootstrap.",
     "license": "MIT",
     "author": "Start Bootstrap",
-    "contributors": ["David Miller (http://davidmiller.io/)", "Yannick Lang (http://y-lang.eu/)"],
+    "contributors": [
+        "David Miller (http://davidmiller.io/)",
+        "Yannick Lang (http://y-lang.eu/)"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/layaxx/akvideo_website.git"

@@ -10,14 +10,20 @@
 <videolist>
     <video>
         <name>John's Adventure</name>
-        <length>3:30</length>
+        <length>03:30</length>
         <year>2020</year>
         <url>https://youtu.be/zVVgRe6Opjc</url>
     </video>
     <video>
         <name>Clipped - Übersteuert</name>
-        <length>2:09</length>
+        <length>02:09</length>
         <year>2016</year>
         <url>https://youtu.be/5b76Q5QhAcU</url>
+    </video>
+    <video>
+        <name>Handycap</name>
+        <length>28:24</length>
+        <year>2014</year>
+        <url>https://youtu.be/e8A2A1zbX8w</url>
     </video>
 </videolist>
