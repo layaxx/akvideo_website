@@ -15,6 +15,9 @@ module.exports = function renderAssets() {
 };
 
 function convertToWebP(dirPath) {
+    if (dirPath.endsWith('fav')) {
+        return;
+    }
     console.log('### INFO: converting images in directory ' + dirPath);
     try {
         // Get the files as an array
