@@ -5,31 +5,21 @@ Re-Design der AK Video Münchberg Website
 
 ## Live Versions
 
-**[View Live Preview on Github Pages](https://layaxx.github.io/akvideo_website/)**
+**[View Preview on Github Pages](https://layaxx.github.io/akvideo_website/)**
 
 **[View Production Deploy](https://arbeitskreis.video)**
 
 The production version of this website is hosted by [Netlify](https://www.netlify.com/)
 
-## TODO:
-- Bilder:
-  - change Thumbnails in 20 JAHRE AK VIDEO Section 
-  
+## TODO: 
  - missing Content:
-    - 20 Jahre AK (Text)
+    - Geschichte (more Images and Text, specifically: more about Medienraum)
     - sites for most important projects (Images + Text)
-      - completely missing
-         - Stuhlgeschichten - Menschen auf Stühlen
       - missing some content:
          - Handycap (add text + images)
-         - Zusammen durch die Zeit
          - Das Geheimnis des Waldsteins (add more text)
-         - TRAUMhafte Unterwelt (add more text)
-         - Die Probe (add more text)
          - Sackgasse (add text)
          - Lichtblick (rewrite text)
-         - Clipped 
-         - Geschichte
   
  - structure:
     - maybe show Awards as Slideshow?
@@ -70,7 +60,7 @@ Behind The Scenes Pictures for films should be 500 by 800 or 800 by 500 pixels, 
 All Images should be in JPEG format. They are converted to .webp format for every not-safari-based browser during the build process. Since most images (apart from headers) are quite small, sharpening can/should be applied after resizing.
 All Images should be [tinyfied](https://tinyjpg.com/) before being comitted to the repository. 
 
-#### npm Scripts
+## npm Scripts
 
 - `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist` and minifies them
 - `npm run build:assets` copies the files in the `src/assets/` directory into `dist`, converts images to .webp
@@ -80,5 +70,5 @@ All Images should be [tinyfied](https://tinyjpg.com/) before being comitted to t
 - `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
 - `npm run minify` minifies all .js/.css/.html files in the `dist` directory
 
-#### publish changes to Github pages live-demo
+### publish changes to Github pages live-demo
 - `git subtree push --prefix dist origin gh-pages`
