@@ -14,11 +14,11 @@ var dirPath = path.resolve(path.dirname(__filename), '../dist/.');
 
 minifyJS(dirPath);
 
-function minifyJS(dirPath) {
-	flag = false;
-	const files = fs.readdirSync(dirPath);
+function minifyJS(dirPathParam) {
+	let flag = false;
+	const files = fs.readdirSync(dirPathParam);
 	for (const file of files) {
-		const filePath = path.join(dirPath, file);
+		const filePath = path.join(dirPathParam, file);
 		const stat = fs.statSync(filePath);
 		if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.html') || file.endsWith('.css'))) {
 			flag = true;
@@ -33,5 +33,5 @@ function minifyJS(dirPath) {
 			minifyJS(filePath);
 		}
 	}
-	if (flag) console.log('### INFO: minified files in directory: ' + dirPath);
+	if (flag) console.log('### INFO: minified files in directory: ' + dirPathParam);
 }
