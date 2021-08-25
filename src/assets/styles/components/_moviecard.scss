@@ -1,0 +1,57 @@
+// Styling for the portfolio section
+#projects {
+  div.row > div {
+    display: flex;
+  }
+  .movie-card-item {
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    .movie-card-link {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      .movie-card-hover {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: fade-out($primary, 0.1);
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity ease-in-out 0.25s;
+        .movie-card-hover-content {
+          font-size: 1.25rem;
+          color: white;
+        }
+      }
+      &:hover {
+        .movie-card-hover {
+          opacity: 1;
+        }
+      }
+    }
+    .movie-card-caption {
+      padding: 1.5rem;
+      text-align: center;
+      background-color: $white;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .movie-card-caption-heading {
+        font-size: 1.5rem;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        margin-bottom: 0;
+      }
+      .movie-card-caption-subheading {
+        font-style: italic;
+        font-family: $subheadings-font-family;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="movie-card-item">
+  <a class="movie-card-link" href="{{ movie.url }}"
+    ><div class="movie-card-hover">
+      <div class="movie-card-hover-content">
+        <i class="fas fa-arrow-right fa-3x"></i>
+      </div>
+    </div>
+
+    <img
+      class="img-fluid"
+      src="{{ movie.thumbnail }}"
+      alt="Thumbnail {{ movie.title }}"
+    />
+  </a>
+  <div class="movie-card-caption">
+    <div class="movie-card-caption-heading">
+      {{ movie.title }}
+    </div>
+    <div class="movie-card-caption-subheading text-muted">
+      {{ movie.category }}, {{ movie.year }}
+    </div>
+  </div>
+</div>

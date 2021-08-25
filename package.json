@@ -1,0 +1,22 @@
+{
+  "name": "akvideo-11ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\"",
+    "watch:11ty": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass src/assets/styles:_site/assets/css --watch --style=compressed",
+    "start": "yarn build",
+    "build": "yarn clean && npx @11ty/eleventy",
+    "clean": "node ./scripts/clean.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "concurrently": "^6.2.1",
+    "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
+}
