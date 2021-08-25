@@ -25,16 +25,17 @@ layout: base.liquid
         </h3>
       </div>
       <div class="row">
-        {% for movie in frontpage.featuredProjects.items %}
+        {% for movieString in frontpage.index.featuredProjects %}
         <div class="col-lg-4 col-sm-6 mb-4">
-          {% include components/frontpage/moviecard, movie: movie %}
+          {% assign movie = movieString | makeMovie %} {% include
+          components/frontpage/moviecard with movie %}
         </div>
         {% endfor %}
 
         <div class="mt-5 mx-auto">
           <a
-            href="/projects/"
             class="mx-auto btn btn-primary btn-xl text-uppercase"
+            href="/projects/"
           >
             Mehr Projekte
           </a>
@@ -47,15 +48,16 @@ layout: base.liquid
     <div class="container">
       <div class="text-center">
         <h2 class="section-heading text-uppercase">20 Jahre AK Video</h2>
-        <p class="text-muted" style="margin-bottom: 5%">
+        <p class="text-muted mb-4">
           Der Arbeitskreis Video ist ein Zusammenschluss von Jugendlichen, die
           die Begeisterung für Film teilen und gerne selbst kreativ werden. Der
           AK Video ist Teil der Stadtjugend Münchberg und wurde 1999 von
-          <a href="/portrait/hugo">Hugo Singer</a> gegründet. Neben unseren
-          Filmprojekten organisieren wir auch Workshops und Abenteuerfreizeiten.
-          Da wir größtenteils Schüler und Studenten sind, sind wir auch immer
-          auf der Suche nach
-          <a href="#contact">Sponsoren und Unterstützern</a> für unsere
+          <a href="/portrait/hugo">Hugo Singer</a>
+          gegründet. Neben unseren Filmprojekten organisieren wir auch Workshops
+          und Abenteuerfreizeiten. Da wir größtenteils Schüler und Studenten
+          sind, sind wir auch immer auf der Suche nach
+          <a href="#contact">Sponsoren und Unterstützern</a>
+          für unsere
           <a href="/projects/">Projekte.</a>
         </p>
       </div>
@@ -64,15 +66,15 @@ layout: base.liquid
           <div class="timeline-image">
             <picture>
               <source
-                type="image/webp"
                 srcset="
                   https://d33wubrfki0l68.cloudfront.net/c9370575e55e758569d229a7167062693a5f25e0/07f18/assets/img/index/1.webp
                 "
+                type="image/webp"
               />
               <img
+                alt=""
                 class="rounded-circle img-fluid"
                 src="https://d33wubrfki0l68.cloudfront.net/afa3a1fbb3368669127d2107555e55db5535f416/c9b77/assets/img/index/1.jpg"
-                alt=""
               />
             </picture>
           </div>
@@ -97,15 +99,15 @@ layout: base.liquid
           <div class="timeline-image">
             <picture>
               <source
-                type="image/webp"
                 srcset="
                   https://d33wubrfki0l68.cloudfront.net/3503b194152f4d5f15cbc92a34b381961b3aab22/4e3cd/assets/img/index/2.webp
                 "
+                type="image/webp"
               />
               <img
+                alt=""
                 class="rounded-circle img-fluid"
                 src="https://d33wubrfki0l68.cloudfront.net/2597853e22e19bc8467361b88122cda3e8f47b6f/dc296/assets/img/index/2.jpg"
-                alt=""
               />
             </picture>
           </div>
@@ -135,15 +137,15 @@ layout: base.liquid
           <div class="timeline-image">
             <picture>
               <source
-                type="image/webp"
                 srcset="
                   https://d33wubrfki0l68.cloudfront.net/2c11b4f73d756763557cc14501bb5bcd122ebdcb/fedd7/assets/img/index/3.webp
                 "
+                type="image/webp"
               />
               <img
+                alt=""
                 class="rounded-circle img-fluid"
                 src="https://d33wubrfki0l68.cloudfront.net/fee9f5433d40b1d32cb764892601cfd803be41a2/18225/assets/img/index/3.jpg"
-                alt=""
               />
             </picture>
           </div>
@@ -156,10 +158,11 @@ layout: base.liquid
               <p class="text-muted">
                 Mit Filmen wie
                 <a href="/projects/panzerknacker">"Die Panzerknacker", </a>
-                <a href="/projects/lichtblick">"Lichtblick"</a> und
-                <a href="/projects/sackgasse">"Sackgasse"</a> war es
-                insbesondere Philipp Jahn, der die 3. Generation des AK Video
-                prägte.
+                <a href="/projects/lichtblick">"Lichtblick"</a>
+                und
+                <a href="/projects/sackgasse">"Sackgasse"</a>
+                war es insbesondere Philipp Jahn, der die 3. Generation des AK
+                Video prägte.
               </p>
             </div>
           </div>
@@ -168,15 +171,15 @@ layout: base.liquid
           <div class="timeline-image">
             <picture>
               <source
-                type="image/webp"
                 srcset="
                   https://d33wubrfki0l68.cloudfront.net/05804d6429776c71f97b58a8f52916f4790659c5/79790/assets/img/index/4.webp
                 "
+                type="image/webp"
               />
               <img
+                alt=""
                 class="rounded-circle img-fluid"
                 src="https://d33wubrfki0l68.cloudfront.net/ba1bd401146022cbb53997be62ba7f093d2d1a25/cc58f/assets/img/index/4.jpg"
-                alt=""
               />
             </picture>
           </div>
@@ -197,19 +200,11 @@ layout: base.liquid
             </div>
           </div>
         </li>
-        <li class="timeline-inverted d-none d-md-block">
-          <div class="timeline-image">
-            <h4>Sei auch<br />DU<br />mit dabei!</h4>
-          </div>
-        </li>
       </ul>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <a
-            href="/geschichte"
-            class="btn btn-primary btn-xl text-uppercase mt-4"
-          >
-            detailliertere Chronik
+          <a class="btn btn-primary btn-xl text-uppercase mt-4" href="#contact">
+            Du willst die Zukunft mitgestalten?
           </a>
         </div>
       </div>
@@ -229,7 +224,7 @@ layout: base.liquid
         </h3>
       </div>
       <div class="row">
-        {% for award in frontpage.awards.awards %} {% include
+        {% for award in frontpage.index.awards %} {% include
         components/frontpage/award, award: award %} {% endfor %}
       </div>
     </div>

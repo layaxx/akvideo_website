@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: 11ty
+
+publish_mode: editorial_workflow
+media_folder: "src/assets/img/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+local_backend: true
+
+collections:
+  - name: "projekte" # Used in routes, e.g., /admin/collections/blog
+    label: "Projekt" # Used in the UI
+    folder: "src/projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "project",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Production Year",
+          name: "year",
+          widget: "date",
+          format: "YYYY",
+          date_format: "YYYY",
+        }
+      - { label: "Category", name: "category", widget: "string" }
+      - {
+          label: "Cast",
+          name: "cast",
+          widget: "list",
+          fields:
+            [
+              { name: "name", label: "Name", widget: "string" },
+              { name: "role", label: "Rolle", widget: "string" },
+            ],
+        }
+
+      - {
+          label: "Crew",
+          name: "crew",
+          widget: "list",
+          fields:
+            [
+              { name: "name", label: "Name", widget: "string" },
+              { name: "task", label: "Aufgabe", widget: "string" },
+            ],
+        }
+      - {
+          label: "Image Header",
+          name: "header",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Image Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Startseite"
+        name: "frontpage"
+        file: "src/_data/frontpage/index.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - {
+              label: Featured Projects,
+              name: featuredProjects,
+              widget: "relation",
+              multiple: true,
+              min: 3,
+              max: 6,
+              collection: "projekte",
+              value_field: "{{slug}}",
+              search_fields: ["title"],
+              display_fields: ["title"],
+            }
+          - {
+              label: "Awards",
+              name: "awards",
+              widget: "list",
+              min: 3,
+              max: 3,
+              fields:
+                [
+                  { name: "title", label: "Titel", widget: "string" },
+                  { name: "award", label: "Preisverleihung", widget: "string" },
+                  { name: "film", label: "Filmtitel", widget: "string" },
+                  { name: "img", label: "Bild", widget: "image" },
+                  { name: "url", label: "Link zu Film", widget: "string" },
+                ],
+            }

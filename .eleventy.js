@@ -1,3 +1,6 @@
+const fs = require("fs");
+const matter = require("gray-matter");
+
 module.exports = function (eleventyConfig) {
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
@@ -17,6 +20,21 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget("./src/assets/styles/");
+
+  // custom filters:
+  // 1. unstringify movie
+  eleventyConfig.addFilter("makeMovie", function (slug) {
+    const projectLocation = "./src/projects/";
+    const fileExtension = ".md";
+    const path = projectLocation + slug + fileExtension;
+    if (fs.existsSync(path)) {
+      const file = matter.read(path);
+      return { ...file.data };
+    } else {
+      console.error("invalid path to project: " + slug);
+      return {};
+    }
+  });
 
   return {
     dir: {
