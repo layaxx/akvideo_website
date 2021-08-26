@@ -16,7 +16,17 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {% for item in frontpage.navigation.items %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ item.url }}">{{ item.text }}</a>
+          {% if active and active == forloop.index %}
+          <a class="nav-link active" href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+          <a
+            class="nav-link"
+            href="{{ item.url }}"
+            data-bs-target="{{ item.url | | remove_leading_slash }}"
+          >
+            {{ item.text }}
+          </a>
+          {% endif%}
         </li>
         {% endfor %}
       </ul>

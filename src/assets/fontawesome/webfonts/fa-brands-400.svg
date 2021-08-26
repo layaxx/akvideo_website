@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20170812 at Fri Jul 24 18:06:24 2020
+ By www-data
+Copyright (c) Font Awesome
+</metadata>
+<defs>
+<font id="MyFontRegular" horiz-adv-x="20" >
+  <font-face 
+    font-family="My Font"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0.343146 -32 561 675"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+0020-F168"
+  />
+<missing-glyph horiz-adv-x="457" 
+d="M20 675h417v-675h-417v675zM68 48h320v579h-320v-579z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="457" 
+d="M20 675h417v-675h-417v675zM68 48h320v579h-320v-579z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="457" 
+d="M20 675h417v-675h-417v675zM68 48h320v579h-320v-579z" />
+    <glyph glyph-name="space" unicode=" " 
+ />
+    <glyph glyph-name="uniE000" unicode="&#xe000;" 
+ />
+    <glyph glyph-name="uniF167" unicode="&#xf167;" horiz-adv-x="576" 
+d="M550 324v0c2 -8 4 -18 6 -30c1 -12 2 -24 3 -35c1 -12 1 -23 2 -33v-25v0v-9c0 -60 -4 -104 -11 -133v0c-3 -11 -9 -21 -18 -30s-19 -15 -31 -18v0c-13 -3 -37 -6 -72 -7c-35 -2 -68 -3 -97 -4v0h-44c-114 0 -185 4 -213 11v0c-26 7 -42 23 -49 48v0c-3 13 -6 30 -7 53
+c-2 22 -3 41 -4 56v0v24c0 59 4 103 11 132v0c3 12 9 22 18 31s19 15 31 18v0c13 3 37 6 72 8c35 1 68 2 97 3v0h44c114 0 185 -4 213 -11v0c12 -3 22 -9 31 -18s15 -19 18 -31zM232 273v-163l143 82z" />
+    <glyph glyph-name="uniF168" unicode="&#xf168;" horiz-adv-x="384" 
+d="M118 316l45 -78s-23 -41 -70 -124v0c-5 -8 -11 -12 -18 -12v0h-65c-4 0 -7 2 -8 5c-2 3 -2 6 -1 9v0l69 122l-44 76c-2 3 -2 7 0 10s5 4 9 4v0h65c7 0 13 -4 18 -12v0zM383 402v0l-144 -253l91 -167c2 -3 2 -6 1 -9c-2 -3 -5 -5 -9 -5v0h-66c-7 0 -13 4 -18 12v0l-92 169
+c1 1 6 11 17 29c10 18 27 48 51 91c24 42 50 87 77 135v0c5 8 10 12 17 12v0h66c4 0 7 -1 9 -4c1 -3 1 -7 0 -10z" />
+  </font>
+</defs></svg>

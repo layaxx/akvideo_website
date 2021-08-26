@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Meta Info -->
     <title>AK Video</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicons -->
+    {% include components/favicons %}
+
+    <!-- Styles and JS -->
+    <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
     <link href="/assets/css/frontpage/styles.css" rel="stylesheet" />
     <script src="/assets/js/bootstrap.min.js"></script>
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navbar">
-    {% include nav.liquid %}
+    {% include components/nav %}
     {{ content }}
-    {% include footer.liquid %}
+    {% include components/footer %}
   </body>
 </html>

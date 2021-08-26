@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img");
+  eleventyConfig.addPassthroughCopy("./src/assets/fontawesome");
 
   // Copy favicon to /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
@@ -29,11 +30,18 @@ module.exports = function (eleventyConfig) {
     const path = projectLocation + slug + fileExtension;
     if (fs.existsSync(path)) {
       const file = matter.read(path);
-      return { ...file.data };
+      return { ...file.data, slug };
     } else {
       console.error("invalid path to project: " + slug);
       return {};
     }
+  });
+  // 2. remove leading slash (used in navigation)
+  eleventyConfig.addFilter("remove_leading_slash", function (string) {
+    if (string.charAt(0) === "/") {
+      return string.slice(1);
+    }
+    return string;
   });
 
   return {

@@ -1,8 +1,8 @@
 {
   "items": [
-    { "text": "Projekte", "url": "#projects" },
-    { "text": "20 Jahre AK", "url": "#history" },
-    { "text": "Auszeichnungen", "url": "#awards" },
-    { "text": "Kontakt", "url": "#contact" }
+    { "text": "Projekte", "url": "/#projects" },
+    { "text": "20 Jahre AK", "url": "/#history" },
+    { "text": "Auszeichnungen", "url": "/#awards" },
+    { "text": "Kontakt", "url": "/#contact" }
   ]
 }

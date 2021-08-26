@@ -2,17 +2,8 @@
 layout: base.liquid
 ---
 
-<header
-  class="masthead"
-  style="
-    background-image: url(https://arbeitskreis.video/assets/img/header/header-bg.webp);
-  "
->
-  <div class="container">
-    <div class="masthead-heading text-uppercase">Wir sind der AK Video!</div>
-    <div class="masthead-subheading">Jugendfilmarbeit seit 2000.</div>
-  </div>
-</header>
+{% include components/masthead, title: "Wir sind der AK Video!", subtitle:
+"Jugendfilmarbeit seit 2000.", url: "/assets/img/index/header-bg.jpg" %}
 
 <main>
   <section class="page-section bg-light" id="projects">
@@ -32,7 +23,7 @@ layout: base.liquid
         </div>
         {% endfor %}
 
-        <div class="mt-5 mx-auto">
+        <div class="mt-5">
           <a
             class="mx-auto btn btn-primary btn-xl text-uppercase"
             href="/projects/"
@@ -61,20 +52,14 @@ layout: base.liquid
           <a href="/projects/">Projekte.</a>
         </p>
       </div>
-      <ul class="timeline">
+      <ul class="timeline mt-5">
         <li>
           <div class="timeline-image">
             <picture>
-              <source
-                srcset="
-                  https://d33wubrfki0l68.cloudfront.net/c9370575e55e758569d229a7167062693a5f25e0/07f18/assets/img/index/1.webp
-                "
-                type="image/webp"
-              />
               <img
-                alt=""
+                alt="Bild Generation 1"
                 class="rounded-circle img-fluid"
-                src="https://d33wubrfki0l68.cloudfront.net/afa3a1fbb3368669127d2107555e55db5535f416/c9b77/assets/img/index/1.jpg"
+                src="/assets/img/index/1.jpg"
               />
             </picture>
           </div>
@@ -98,16 +83,10 @@ layout: base.liquid
         <li class="timeline-inverted">
           <div class="timeline-image">
             <picture>
-              <source
-                srcset="
-                  https://d33wubrfki0l68.cloudfront.net/3503b194152f4d5f15cbc92a34b381961b3aab22/4e3cd/assets/img/index/2.webp
-                "
-                type="image/webp"
-              />
               <img
-                alt=""
+                alt="Bild Generation 2"
                 class="rounded-circle img-fluid"
-                src="https://d33wubrfki0l68.cloudfront.net/2597853e22e19bc8467361b88122cda3e8f47b6f/dc296/assets/img/index/2.jpg"
+                src="/assets/img/index/2.jpg"
               />
             </picture>
           </div>
@@ -136,16 +115,10 @@ layout: base.liquid
         <li>
           <div class="timeline-image">
             <picture>
-              <source
-                srcset="
-                  https://d33wubrfki0l68.cloudfront.net/2c11b4f73d756763557cc14501bb5bcd122ebdcb/fedd7/assets/img/index/3.webp
-                "
-                type="image/webp"
-              />
               <img
-                alt=""
+                alt="Bild Generation 3"
                 class="rounded-circle img-fluid"
-                src="https://d33wubrfki0l68.cloudfront.net/fee9f5433d40b1d32cb764892601cfd803be41a2/18225/assets/img/index/3.jpg"
+                src="/assets/img/index/3.jpg"
               />
             </picture>
           </div>
@@ -170,16 +143,10 @@ layout: base.liquid
         <li class="timeline-inverted">
           <div class="timeline-image">
             <picture>
-              <source
-                srcset="
-                  https://d33wubrfki0l68.cloudfront.net/05804d6429776c71f97b58a8f52916f4790659c5/79790/assets/img/index/4.webp
-                "
-                type="image/webp"
-              />
               <img
-                alt=""
+                alt="Bild Generation 4"
                 class="rounded-circle img-fluid"
-                src="https://d33wubrfki0l68.cloudfront.net/ba1bd401146022cbb53997be62ba7f093d2d1a25/cc58f/assets/img/index/4.jpg"
+                src="/assets/img/index/4.jpg"
               />
             </picture>
           </div>
@@ -230,5 +197,5 @@ layout: base.liquid
     </div>
   </section>
 
-  {%include _includes/contact.liquid %}
+  {%include components/contact.liquid %}
 </main>
