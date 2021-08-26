@@ -18,13 +18,15 @@
   </head>
 
   <body>
-    {% include components/nav , active: -1 %} {% include
-    components/masthead,title, url:
-    "https://arbeitskreis.video/assets/img/header/header-bg.webp" %}
+    {% include components/nav , active: -1 %}
 
     <main>
       <section class="page-section bg-light">
-        <div class="container">
+        <div class="text-center mt-5">
+          <h1 class="section-heading">{{ title }}</h1>
+          <h2 class="section-subheading text-muted">{{ subtitle }}</h2>
+        </div>
+        <div class="container mt-5">
           {{ content }}
         </div>
       </section>

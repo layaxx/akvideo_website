@@ -14,17 +14,64 @@
 
     <!-- Styles and JS -->
     <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
-    <link href="/assets/css/frontpage/styles.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/components/embeddedVideos.css" rel="stylesheet" />
     <script src="/assets/js/bootstrap.min.js"></script>
   </head>
 
   <body>
     {% include components/nav , active: 1 %} {% assign subtitle= category |
     append: ", " | append: year %} {% include components/masthead, title,
-    subtitle, url: "https://arbeitskreis.video/assets/img/header/header-bg.webp"
-    %}
+    subtitle, url: header %}
 
     <main>
+      {% if details or trailer %}
+      <section class="page-section" id="details">
+        <div class="container">
+          <h2 class="text-uppercase text-center section-heading">Übersicht</h2>
+          <div class="row">
+            {% if details %}
+            <div class="col-lg-6">
+              <table class="table">
+                <thead class="table-dark">
+                  <th>technische Details</th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  {% for detail in details %}
+                  <td>{{ detail.type }}</td>
+                  <td>{{ detail.value }}</td>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            {% endif %}{% if trailer.text or trailer.url %}
+            <div class="col-lg-6">
+              {%if trailer.url%}
+              <div class="video-container-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="{{ trailer.url }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media;
+            gyroscope; picture-in-picture"
+                    allowfullscreen=""
+                  ></iframe>
+                </div>
+              </div>
+              {%endif %} {% if trailer.text %}
+              <div>
+                <p>{{ trailer.text }}</p>
+              </div>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+      {% endif %}
       <section class="page-section bg-light" id="projects">
         <div class="container">
           {{ content }}
