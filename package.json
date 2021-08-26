@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\"",
+    "dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\" \"npx netlify-cms-proxy-server\"",
     "watch:11ty": "npx @11ty/eleventy --serve",
     "watch:sass": "npx sass src/assets/styles:_site/assets/css --watch --style=compressed",
     "start": "yarn build",

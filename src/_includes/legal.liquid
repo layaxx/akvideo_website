@@ -19,15 +19,16 @@
   </head>
 
   <body>
-    {% include components/nav , active: 1 %} {% assign subtitle= category |
-    append: ", " | append: year %} {% include components/masthead, title,
-    subtitle, url: "https://arbeitskreis.video/assets/img/header/header-bg.webp"
-    %}
+    {% include components/nav , active: -1 %} {% include
+    components/masthead,title, url:
+    "https://arbeitskreis.video/assets/img/header/header-bg.webp" %}
 
     <main>
       <section class="page-section bg-light" id="projects">
         <div class="container">
-          {{ content }}
+          <div class="impressum">
+            {{ content }}
+          </div>
         </div>
       </section>
     </main>
