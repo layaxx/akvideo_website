@@ -15,5 +15,6 @@ trailer:
 header: /assets/img/uploads/header-lichtblick.jpg
 thumbnail: /assets/img/uploads/lichtblick.jpg
 cast: []
+tags: project
 ---
 tbd

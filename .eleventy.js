@@ -43,6 +43,16 @@ module.exports = function (eleventyConfig) {
     }
     return string;
   });
+  // 3. technically not a filter. returns projects in reverse chronological order, grouped by year
+  eleventyConfig.addCollection("projects_ordered", function (collection) {
+    return Object.entries(
+      collection.getFilteredByTag("project").reduce(function (r, a) {
+        r[a.data.year] = r[a.data.year] || [];
+        r[a.data.year].push(a);
+        return r;
+      }, Object.create(null))
+    ).reverse();
+  });
 
   return {
     dir: {

@@ -37,6 +37,7 @@ collections:
           widget: "hidden",
           default: "project",
         }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "project" }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Production Year",
