@@ -7,11 +7,13 @@ module.exports = function (eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/bootstrap/dist/js/bootstrap.min.js":
       "./assets/js/bootstrap.min.js",
+    "./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
   });
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fontawesome");
+  eleventyConfig.addPassthroughCopy("./src/assets/js");
 
   // Copy favicon to /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
@@ -52,6 +54,21 @@ module.exports = function (eleventyConfig) {
         return r;
       }, Object.create(null))
     ).reverse();
+  });
+  eleventyConfig.addCollection("search_data", function (collection) {
+    const all = collection.getAll();
+    return JSON.stringify(
+      all.map((p) => {
+        return {
+          content: p.template.frontMatter.content.replace(
+            /<|<\/|>|\/>|/gim,
+            ""
+          ),
+          url: p.url,
+          title: p.data.title,
+        };
+      })
+    );
   });
 
   return {

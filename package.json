@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.1.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "lunr": "^2.3.9"
   }
 }

@@ -1,12 +1,31 @@
 ---
-layout: base.liquid
+layout: search.liquid
 ---
 
-{% include components/masthead, title: "Wir sind der AK Video!", subtitle:
-"Jugendfilmarbeit seit 2000.", url: "/assets/img/index/header-bg.jpg" %}
-
 <main>
-  <section class="page-section bg-light" id="projects">
-    <div class="container"></div>
+  <section class="page-section bg-light mt-5">
+    <div class="container" id="output">
+      <h1 class="my-3 section-heading">Suche</h1>
+    </div>
+    <div class="container">
+      <form method="GET" action="/suche/">
+        <input
+          type="search"
+          name="query"
+          class="form-control"
+          placeholder="Suchbegriff"
+          required
+          aria-required
+        />
+        <div class="d-grid gap-2 mt-3">
+          <input type="submit" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
   </section>
 </main>
+
+{% assign data = collections.search_data %}
+<script>
+  const data = {{data}};
+</script>
