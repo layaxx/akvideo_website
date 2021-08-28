@@ -9,11 +9,17 @@
     </div>
     <form name="contact" method="POST">
       <input type="hidden" name="form-name" value="contact" />
-      <div class="row" style="overflow: hidden">
+      <div class="row">
         <div class="col-lg-6 col-sm-12 text-center">
           <label class="w-100">
             name
-            <input class="formelem" name="name" placeholder="Dein Name" />
+            <input
+              class="formelem"
+              name="name"
+              placeholder="Dein Name"
+              required
+              aria-required
+            />
           </label>
         </div>
         <div class="col-lg-6 col-sm-12 text-center">
@@ -24,18 +30,22 @@
               type="email"
               name="email"
               placeholder="Deine E-Mail Adresse"
+              required
+              aria-required
             />
           </label>
         </div>
       </div>
-      <div class="text-center" style="overflow: hidden">
-        <label style="color: transparent">
+      <div class="text-center">
+        <label class="w-100 h" style="color: transparent">
           Nachricht
           <textarea
             class="formelem"
             name="message"
             placeholder="Deine Nachricht an uns"
-            style="min-width: 61rem; min-height: 10rem"
+            rows="5"
+            required
+            aria-required
           ></textarea>
         </label>
       </div>

@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img");
-  eleventyConfig.addPassthroughCopy("./src/assets/fontawesome");
+  eleventyConfig.addPassthroughCopy("./src/assets/webfonts");
   eleventyConfig.addPassthroughCopy("./src/assets/js");
 
   // Copy favicon to /_site
