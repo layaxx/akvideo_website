@@ -14,7 +14,7 @@
 
     <!-- Styles -->
     <link href="/assets/css/fontawesome.css" rel="stylesheet" />
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/projekte/styles.css" rel="stylesheet" />
     <link href="/assets/css/components/embeddedVideos.css" rel="stylesheet" />
   </head>
 
@@ -70,12 +70,45 @@
           </div>
         </div>
       </section>
+      {% endif %} {% if timeline %}
+      <section class="page-section" id="timeline">
+        <div class="container">
+          <h2 class="text-uppercase text-center section-heading">Timeline</h2>
+          <div class="row shadow">
+            {% for timelineElem in timeline %}{% include
+            components/timelineElement with timelineElem %}{% endfor %}
+          </div>
+        </div>
+      </section>
       {% endif %}
       <section class="page-section bg-light" id="projects">
         <div class="container">
           {{ content }}
         </div>
       </section>
+      {%if finishedFilm %}
+      <section class="page-section" id="finishedFilm">
+        <div class="container">
+          <h2 class="text-uppercase text-center section-heading">
+            Der fertige Film:
+          </h2>
+          <div class="video-container-wrapper">
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="{{ finishedFilm }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media;
+            gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      {%endif %} {% if contact %} {% include components/contact , heading: "Bei
+      neuen Projekten dabei sein?" subheading: "Schreib uns!" %} {% endif %}
     </main>
     {% include components/footer %}
 

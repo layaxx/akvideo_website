@@ -58,6 +58,18 @@ collections:
             ],
         }
       - {
+          label: "Timeline",
+          name: "timeline",
+          widget: "list",
+          max: 6,
+          fields:
+            [
+              { name: "date", label: "Termin", widget: "string" },
+              { name: "title", label: "Titel", widget: "string" },
+              { name: "description", label: "Beschreibung", widget: "text" },
+            ],
+        }
+      - {
           label: "Trailer",
           name: "trailer",
           widget: "object",
@@ -78,12 +90,24 @@ collections:
             ],
         }
       - {
+          label: "Link to finished Film",
+          name: "finishedFilm",
+          widget: "string",
+          required: false,
+        }
+      - {
           label: "Image Header",
           name: "header",
           widget: "image",
           required: false,
         }
       - { label: "Image Thumbnail", name: "thumbnail", widget: "image" }
+      - {
+          label: "Show Contact Form",
+          name: "contact",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Pages"
     name: "pages"
@@ -92,10 +116,10 @@ collections:
         name: "frontpage"
         file: "src/_data/frontpage/index.json"
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
           - {
-              label: Featured Projects,
+              label: "Featured Projects",
               name: featuredProjects,
               widget: "relation",
               multiple: true,
