@@ -14,4 +14,4 @@
   - add contact option
   - add timeline option
 - choose new fonts
-- refactor search
+- refactor /project/* paths to /projekt/*

@@ -4,15 +4,22 @@ layout: search.liquid
 
 <main>
   <section class="page-section bg-light mt-5">
-    <div class="container" id="output">
+    <div class="container">
       <h1 class="my-3 section-heading">Suche</h1>
+      <div class="text-center" id="spinner">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="output"></div>
     </div>
 
     <div class="container">
-      <form method="GET" action="/suche/">
+      <form id="searchform">
         <input
           type="search"
           name="query"
+          id="queryfield"
           class="form-control"
           placeholder="Suchbegriff"
           required
@@ -25,8 +32,3 @@ layout: search.liquid
     </div>
   </section>
 </main>
-
-{% assign data = collections.search_data %}
-<script>
-  const data = {{data}};
-</script>

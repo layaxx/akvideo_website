@@ -1,5 +1,6 @@
 const fs = require("fs");
 const matter = require("gray-matter");
+const lunr = require("lunr");
 
 module.exports = function (eleventyConfig) {
   // Copy Static Files to /_Site
@@ -56,19 +57,29 @@ module.exports = function (eleventyConfig) {
     ).reverse();
   });
   eleventyConfig.addCollection("search_data", function (collection) {
-    const all = collection.getAll();
-    return JSON.stringify(
-      all.map((p) => {
-        return {
-          content: p.template.frontMatter.content.replace(
-            /<|<\/|>|\/>|/gim,
-            ""
-          ),
-          url: p.url,
-          title: p.data.title,
-        };
-      })
-    );
+    const data = collection.getAll().map((p) => {
+      return {
+        content: p.template.frontMatter.content
+          .replace(/<[^>]+>/gim, "") // remove html tags
+          .replace(/{{[^}]+}}/gim, "") // remove liquid interpolations
+          .replace(/{%[^%]+%}/gim, "") // remove liquid tags
+          .replace(/\s\s+/gim, " ") // replace multiple whitespaces with a single whitespace
+          .replace(/\\./, ""), // remove escape sequences
+        url: p.url,
+        title: p.data.title,
+      };
+    });
+
+    const idx = lunr(function () {
+      this.field("content");
+      this.field("title");
+      this.field("url");
+      this.ref("url");
+
+      data.forEach((project) => this.add(project), this);
+    });
+
+    return JSON.stringify(idx);
   });
 
   return {
