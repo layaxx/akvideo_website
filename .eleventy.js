@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
   // custom filters:
   // 1. unstringify movie
   eleventyConfig.addFilter("makeMovie", function (slug) {
-    const projectLocation = "./src/projects/";
+    const projectLocation = "./src/projekte/";
     const fileExtension = ".md";
     const path = projectLocation + slug + fileExtension;
     if (fs.existsSync(path)) {
