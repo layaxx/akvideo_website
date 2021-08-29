@@ -24,7 +24,26 @@
     subtitle, url: header %}
 
     <main>
-      {% if details or trailer %}
+      {% if nopage %}
+      <section class="page-section" id="details">
+        <div class="container">
+          <p class="fs-3 fw-bold text-muted">
+            {% if external %} Du kannst hier weitere Informationen zu diesem
+            Projekt finden:
+            <a
+              href="{{ external }}"
+              class="text-break"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ external }}
+            </a>
+            {% else %} Für dieses Projekt sind leider keine weiteren
+            Informationen verfügbar. {% endif %}
+          </p>
+        </div>
+      </section>
+      {% else %} {% if details or trailer %}
       <section class="page-section" id="details">
         <div class="container">
           <h2 class="text-uppercase text-center section-heading">Übersicht</h2>
@@ -107,8 +126,9 @@
           </div>
         </div>
       </section>
-      {%endif %} {% if contact %} {% include components/contact , heading: "Bei
-      neuen Projekten dabei sein?" subheading: "Schreib uns!" %} {% endif %}
+      {%endif %} {% endif %}{% if contact %} {% include components/contact ,
+      heading: "Bei neuen Projekten dabei sein?" subheading: "Schreib uns!" %}
+      {% endif %}
     </main>
     {% include components/footer %}
 

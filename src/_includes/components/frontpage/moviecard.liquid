@@ -1,8 +1,20 @@
 <div class="movie-card-item">
+  {% if movie.nopage %} {% if movie.external %}
+  <a class="movie-card-link" href="{{movie.external}}" target="_blank" rel="noopener noreferrer">
+  {% else %}
+  <a class="movie-card-link disabled">
+  {% endif%} {% else %}
   <a class="movie-card-link" href="/projekte/{{ movie.slug }}">
+  {% endif %}
     <div class="movie-card-hover">
       <div class="movie-card-hover-content">
+        {% if movie.nopage %} {% if movie.external %}
+        <i class="fas fa-external-link-alt fa-3x"></i>
+        {% else %}
+        <i class="fas fa-times fa-3x"></i>
+        {% endif%} {% else %}
         <i class="fas fa-arrow-right fa-3x"></i>
+        {% endif %}
       </div>
     </div>
 
