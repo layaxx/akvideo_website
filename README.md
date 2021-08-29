@@ -5,8 +5,7 @@
 - add sitemap
 - auto convert images to webp, manage img tags accordingly
 - logo in navbar
-- history page
-- content
+  - new logo?
 - refactor layouts
 - add meta information to <head>
 - choose new fonts

@@ -1,0 +1,93 @@
+{
+  "timeline": {
+    "eras": [
+      {
+        "start_year": "2000",
+        "end_year": "2005",
+        "headline": "Anfangsphase"
+      },
+      {
+        "start_year": "2005",
+        "end_year": "2011",
+        "headline": "2. Generation"
+      },
+      {
+        "start_year": "2011",
+        "end_year": "2019",
+        "headline": "3. Generation"
+      },
+      {
+        "start_year": "2019",
+        "end_year": "2022",
+        "headline": "4. Generation"
+      }
+    ],
+    "events": [
+      {
+        "year": "2000",
+        "media": "/assets/img/uploads/hugo-singer_1.jpg",
+        "caption": "Hugo Singer",
+        "link": "/portraits/hugo-singer/",
+        "headline": "Gründung",
+        "text": "Hugo Singer gründet den Arbeitskreis Video"
+      }
+    ],
+    "films": [
+      {
+        "group": "filme",
+        "film": "johns-adventure",
+        "headline": "John's Adventure",
+        "text": "<p>Der verurteilte Verbrecher John begibt sich auf eine Rachemission.</p><a href=\"/projekte/johns-adventure/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "sackgasse",
+        "headline": "Sackgasse",
+        "text": "<p>Die Polizisten Sarah und Benno sind auf Streife und werden auf drei kiffende Jugendliche aufmerksam. Als Sarah einen der Kiffer bis in ein stillgelegtes Fabrikgel&auml;nde verfolgt, merkt sie, dass der Junge ihr Sohn ist. Nun haben die beiden ein ernsthaftes Problem.</p><a href=\"/projekte/sackgasse/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "lichtblick",
+        "headline": "Lichtblick",
+        "text": "<p>Elias Koch braucht dringend Geld und bittet den Computerfreak Lennard um Hilfe bei der Suche nach einem Schatz. Doch wie sollen die zwei an das Geld kommen, wenn nicht beide am selben Strang ziehen?</p><a href=\"/projekte/lichtblick/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "panzerknacker",
+        "headline": "Die Panzerknacker schlagen zu",
+        "text": "<p>Die gefürchteten Panzerknacker sind wieder einmal entwischt und terrorisieren ganz Schwarzenbach, und es gibt nur einen der sie aufhalten kann...</p><a href=\"/projekte/panzerknacker/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "das-geheimnis-des-waldsteins",
+        "headline": "Das Geheimnis des Waldsteins",
+        "text": "<p>Um den Bau von Windkraftanlagen in ihrer Heimat zu verhindern, machen sich Andrea und ihre Freunde auf eine gef&auml;hrliche Schatzsuche durch das Fichtelgebirge. Doch jemand ist hinter ihnen her und die Zeit rennt ihnen davon...</p><a href=\"/projekte/das-geheimnis-des-waldsteins/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "stuhlgeschichten-menschen-auf-stühlen",
+        "headline": "Menschen auf Stühlen",
+        "text": "<p>&quot;Stuhlgeschichten - Menschen auf St&uuml;hlen&quot; ist in vielerlei Hinsicht anders als andere Produktionen des Arbeitskreises. Mit seinen wenigen Schaupl&auml;tzen und langen Einstellungen wirkt diese Charakterstudie wie ein auf Film festgehaltenes Theaterst&uuml;ck.</p>"
+      },
+      {
+        "group": "filme",
+        "film": "münchbergs-traumhafte-unterwelt",
+        "headline": "Münchbergs TRAUMhafte Unterwelt",
+        "text": "<p>Schüler der Parkschule Münchberg finden beim Skateboardfahren einen Keller. Nach einem Gespr&auml;ch in der Schule untersuchen die Sch&uuml;ler den unterirdischen Gang und machen dabei eine fantastische Entdeckung.</p>"
+      },
+      {
+        "group": "filme",
+        "film": "die-probe",
+        "headline": "Die Probe",
+        "text": "<p>Zuf&auml;llig entdecken einige Sch&uuml;ler auf dem Schulcomputer die L&ouml;sungen zur anstehenden Mathematik-Probe. Die Mathe-Probe f&auml;llt nach nach der Manipulation erwartungsgem&auml;&szlig; &uuml;berdurchschnittlich gut aus, was die Lehrerin jedoch misstrauisch macht.</p><a href=\"/projekte/die-probe/\">Behind The Scenes</a>"
+      },
+      {
+        "group": "filme",
+        "film": "die-geklaute-stadtkasse",
+        "headline": "Die geklaute Stadtkasse",
+        "text": "<p>Die Krimikomödie handelt von drei Jugendlichen, die ihr ganzes Geld versoffen und verspielt haben. Um wieder an etwas Bares zu kommen, schmieden sie den Plan, die Stadtkasse aus dem M&uuml;nchberger Rathaus zu stehlen. Auf ihren Mofas flüchten sie mit der Beute, jetzt muss die Kasse nur noch geknackt werden.</p><a href=\"/projekte/die-geklaute-stadtkasse/\">Behind The Scenes</a>"
+      }
+    ]
+  },
+  "body": "sdafasg"
+}

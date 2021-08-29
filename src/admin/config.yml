@@ -30,6 +30,7 @@ collections:
     folder: "src/projekte" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    sortable_fields: ["title", "year"]
     fields: # The fields for each document, usually in front matter
       - {
           label: "Layout",
@@ -39,6 +40,18 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "hidden", default: "project" }
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Keine eigene Seite",
+          name: "nopage",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Link zu extern",
+          name: "external",
+          widget: "string",
+          required: false,
+        }
       - {
           label: "Production Year",
           name: "year",
@@ -145,3 +158,106 @@ collections:
                   { name: "url", label: "Link zu Film", widget: "string" },
                 ],
             }
+      - label: "Geschichte"
+        name: "history"
+        file: "src/_data/history/index.json"
+        fields:
+          - {
+              label: "Timeline",
+              name: "timeline",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "events",
+                    name: "events",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Foto", name: "media", widget: "image" },
+                        {
+                          label: "Bildunterschrift",
+                          name: "caption",
+                          widget: "string",
+                        },
+                        { label: "Link", name: "link", widget: "string" },
+                        {
+                          label: "Jahr",
+                          name: "year",
+                          widget: "date",
+                          format: "YYYY",
+                          date_format: "YYYY",
+                        },
+                        {
+                          label: "Überschrift",
+                          name: "headline",
+                          widget: "string",
+                        },
+                        { label: "Text", name: "text", widget: "text" },
+                        {
+                          label: "Gruppe",
+                          name: "group",
+                          widget: "string",
+                          required: false,
+                        },
+                      ],
+                  },
+                  {
+                    label: "Filme",
+                    name: "films",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Film",
+                          name: "film",
+                          widget: "relation",
+                          collection: "projekte",
+                          value_field: "{{slug}}",
+                          search_fields: ["title"],
+                          display_fields: ["title"],
+                        },
+                        {
+                          label: "Überschrift",
+                          name: "headline",
+                          widget: "string",
+                        },
+                        { label: "Text", name: "text", widget: "text" },
+                        {
+                          label: "Gruppe",
+                          name: "group",
+                          widget: "string",
+                          default: "filme",
+                        },
+                      ],
+                  },
+                  {
+                    label: "Eras",
+                    name: "eras",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Startjahr",
+                          name: "start_year",
+                          widget: "date",
+                          format: "YYYY",
+                          date_format: "YYYY",
+                        },
+                        {
+                          label: "Endjahr",
+                          name: "end_year",
+                          widget: "date",
+                          format: "YYYY",
+                          date_format: "YYYY",
+                        },
+                        {
+                          label: "Überschrift",
+                          name: "headline",
+                          widget: "string",
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: "Hauptinhalt", name: "body", widget: "markdown" }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <!-- Meta Info -->
+    <title>Chronik - AK Video</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      title="timeline-styles"
+      rel="stylesheet"
+      href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"
+    />
+    <script
+      defer
+      src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"
+    ></script>
+    <script defer src="/assets/js/timelineHistory.js"></script>
+
+    <!-- Favicons -->
+    {% include components/favicons %}
+
+    <!-- Styles -->
+    <link href="/assets/css/history/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {% include components/nav %}
+    {{ content }}
+    {% include components/footer %}
+    <script src="/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

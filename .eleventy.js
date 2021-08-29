@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
 
   // custom filters:
   // 1. unstringify movie
-  eleventyConfig.addFilter("makeMovie", function (slug) {
+  const fetchMovie = (slug) => {
     const projectLocation = "./src/projekte/";
     const fileExtension = ".md";
     const path = projectLocation + slug + fileExtension;
@@ -38,7 +38,8 @@ module.exports = function (eleventyConfig) {
       console.error("invalid path to project: " + slug);
       return {};
     }
-  });
+  };
+  eleventyConfig.addFilter("makeMovie", fetchMovie);
   // 2. remove leading slash (used in navigation)
   eleventyConfig.addFilter("remove_leading_slash", function (string) {
     if (string.charAt(0) === "/") {
@@ -46,7 +47,45 @@ module.exports = function (eleventyConfig) {
     }
     return string;
   });
-  // 3. technically not a filter. returns projects in reverse chronological order, grouped by year
+  // 3. format timeline data properly
+  eleventyConfig.addFilter("buildTimelineData", function (data) {
+    const eras = data.eras.map((era) => {
+      return {
+        text: { headline: era.headline },
+        start_date: { year: era.start_year },
+        end_date: { year: era.end_year },
+      };
+    });
+    const events = [
+      ...data.films.map(({ headline, text, group, film }) => {
+        const movie = fetchMovie(film);
+
+        return {
+          media: {
+            url: movie.thumbnail,
+            caption: `${movie.title} (${movie.category}, ${movie.year})`,
+            link: "/projekte/" + movie.slug,
+          },
+          start_date: { year: movie.year },
+          text: { headline, text },
+          group,
+        };
+      }),
+      ...data.events.map(({ year, media, caption, link, headline, text }) => {
+        return {
+          media: {
+            url: media,
+            caption,
+            link,
+          },
+          start_date: { year },
+          text: { headline, text },
+        };
+      }),
+    ];
+    return { events, eras };
+  });
+  // 4. technically not a filter. returns projects in reverse chronological order, grouped by year
   eleventyConfig.addCollection("projects_ordered", function (collection) {
     return Object.entries(
       collection.getFilteredByTag("project").reduce(function (r, a) {

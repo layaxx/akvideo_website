@@ -1,10 +1,12 @@
 ---
 layout: project
+tags: project
 title: Sackgasse
-year: "2018"
+nopage: false
+year: "2017"
 category: Kurzfilm
 header: /assets/img/uploads/header-sackgasse.jpg
 thumbnail: /assets/img/uploads/sackgasse.jpg
-tags: project
+contact: false
 ---
 tbd

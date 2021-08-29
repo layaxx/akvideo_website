@@ -1,0 +1,8 @@
+---
+permalink: "/assets/js/timelineHistory.js"
+---
+
+const options = { scale_factor: 0.7, }; const json =
+{{ history.index.timeline | buildTimelineData }}
+
+window.timeline = new TL.Timeline("timeline-embed", json, options);
