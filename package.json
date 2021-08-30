@@ -8,8 +8,9 @@
     "watch:11ty": "npx @11ty/eleventy --serve",
     "watch:sass": "npx sass src/assets/styles:_site/assets/css --watch --style=compressed",
     "start": "yarn build",
-    "build": "yarn clean && npx @11ty/eleventy",
-    "clean": "node ./scripts/clean.js"
+    "build": "yarn clean && npx @11ty/eleventy && npx sass src/assets/styles:_site/assets/css --style=compressed && yarn minify",
+    "clean": "node ./scripts/clean.js",
+    "minify": "node ./scripts/minify.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -21,6 +22,9 @@
     "eleventy-plugin-metagen": "^1.4.0",
     "eleventy-plugin-purgecss": "^0.1.1",
     "gray-matter": "^4.0.3",
-    "lunr": "^2.3.9"
+    "html-minifier": "^4.0.0",
+    "lunr": "^2.3.9",
+    "pretty-data": "^0.40.0",
+    "uglify-js": "^3.14.1"
   }
 }
