@@ -2,7 +2,6 @@ const fs = require("fs");
 const matter = require("gray-matter");
 const lunr = require("lunr");
 const metagen = require("eleventy-plugin-metagen");
-const purgeCssPlugin = require("eleventy-plugin-purgecss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
@@ -153,10 +152,6 @@ module.exports = function (eleventyConfig) {
   /* PLUGINS */
   // 1: generate Metadata
   eleventyConfig.addPlugin(metagen);
-  // 2: PurgeCSS (only in Production)
-  if (process.env.NODE_ENV === "production") {
-    eleventyConfig.addPlugin(purgeCssPlugin);
-  }
 
   return {
     dir: {

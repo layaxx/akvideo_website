@@ -8,23 +8,26 @@
     "watch:11ty": "npx @11ty/eleventy --serve",
     "watch:sass": "npx sass src/assets/styles:_site/assets/css --watch --style=compressed",
     "start": "yarn build",
-    "build": "yarn clean && npx @11ty/eleventy && npx sass src/assets/styles:_site/assets/css --style=compressed && yarn minify",
+    "prebuild": "yarn clean",
+    "build": "npx @11ty/eleventy && npx sass src/assets/styles:_site/assets/css --style=compressed",
+    "postbuild": "yarn minify && yarn purgecss",
     "clean": "node ./scripts/clean.js",
-    "minify": "node ./scripts/minify.js"
+    "minify": "node ./scripts/minify.js",
+    "purgecss": "node ./scripts/purgeCSS.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "concurrently": "^6.2.1",
-    "sass": "^1.38.0"
+    "concurrently": "^6.2.1"
   },
   "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
     "bootstrap": "^5.1.0",
     "eleventy-plugin-metagen": "^1.4.0",
-    "eleventy-plugin-purgecss": "^0.1.1",
     "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
     "lunr": "^2.3.9",
     "pretty-data": "^0.40.0",
+    "purgecss": "^4.0.3",
+    "sass": "^1.38.0",
     "uglify-js": "^3.14.1"
   }
 }

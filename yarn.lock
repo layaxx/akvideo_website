@@ -764,13 +764,6 @@ eleventy-plugin-metagen@^1.4.0:
   dependencies:
     "@11ty/eleventy" "^0.12.1"
 
-eleventy-plugin-purgecss@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-purgecss/-/eleventy-plugin-purgecss-0.1.1.tgz#536bef74947bf05763ce2b9e645359b96cb3d401"
-  integrity sha512-ILVfg0bpxmA+UvmE8NT73Gbb5uRQniqTnDiscvI0mvmBaDw6UaEtYIQ0A4rTTC2VCdDZGvNVyagHlRHoyRiFZQ==
-  dependencies:
-    purgecss "^4.0.3"
-
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
