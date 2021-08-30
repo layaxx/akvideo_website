@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^5.1.0",
     "eleventy-plugin-metagen": "^1.4.0",
+    "eleventy-plugin-purgecss": "^0.1.1",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9"
   }

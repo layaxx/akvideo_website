@@ -2,6 +2,7 @@ const fs = require("fs");
 const matter = require("gray-matter");
 const lunr = require("lunr");
 const metagen = require("eleventy-plugin-metagen");
+const purgeCssPlugin = require("eleventy-plugin-purgecss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
@@ -17,8 +18,9 @@ module.exports = function (eleventyConfig) {
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/webfonts");
-  eleventyConfig.addPassthroughCopy("./src/assets/js");
-
+  eleventyConfig.addPassthroughCopy({
+    "./src/assets/js/passthrough": "./assets/js",
+  });
   // Copy favicon to /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
@@ -28,7 +30,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/assets/styles/");
 
-  // custom filters:
+  /* CUSTOM FILTERS */
   // 1. unstringify movie
   const fetchMovie = (slug) => {
     const projectLocation = "./src/projekte/";
@@ -88,8 +90,11 @@ module.exports = function (eleventyConfig) {
     ];
     return { events, eras };
   });
+  eleventyConfig.addFilter("loadfile", function (path) {
+    return fs.readFileSync(path);
+  });
 
-  // COLLECTIONS
+  /* COLLECTIONS */
   // returns projects in reverse chronological order, grouped by year
   eleventyConfig.addCollection("projects_ordered", function (collection) {
     return Object.entries(
@@ -145,7 +150,13 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(idx);
   });
 
+  /* PLUGINS */
+  // 1: generate Metadata
   eleventyConfig.addPlugin(metagen);
+  // 2: PurgeCSS (only in Production)
+  if (process.env.NODE_ENV === "production") {
+    eleventyConfig.addPlugin(purgeCssPlugin);
+  }
 
   return {
     dir: {
