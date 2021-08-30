@@ -1,17 +1,13 @@
 <div class="col-lg-4">
-  <div class="award">
-    <img
-      class="mx-auto rounded-circle"
-      src="{{ award.img }}"
-      alt="Jufinale Trophäe"
-    />
-    <h4>{{ award.title }}</h4>
-    <p class="text-muted">{{ award.award }}</p>
-    <p>
-      für
-      <b>
-        <a href="{{ award.url }}">"{{ award.film }}"</a>
-      </b>
-    </p>
-  </div>
+    <div class="award">
+        {% image award.img, award.award, "mx-auto rounded-circle" %}
+        <h4>{{ award.title }}</h4>
+        <p class="text-muted">{{ award.award }}</p>
+        <p>
+            für
+            <b>
+                <a href="{{ award.url }}">"{{ award.film }}"</a>
+            </b>
+        </p>
+    </div>
 </div>

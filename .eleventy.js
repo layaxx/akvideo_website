@@ -2,6 +2,33 @@ const fs = require("fs");
 const matter = require("gray-matter");
 const lunr = require("lunr");
 const metagen = require("eleventy-plugin-metagen");
+const Image = require("@11ty/eleventy-img");
+const { parseHTML } = require("linkedom");
+
+const IMAGE_OPTIONS = {
+  urlPath: "/assets/img/",
+  outputDir: "./_site/assets/img/",
+};
+
+async function imageShortcode(src, alt, classes) {
+  if (src && src.startsWith("/")) {
+    src = "./src" + src;
+  } else if (!src) {
+    console.warn("ndsaoipö");
+    return;
+  }
+  let metadata = await Image(src, IMAGE_OPTIONS);
+
+  let imageAttributes = {
+    alt,
+    loading: "lazy",
+    decoding: "async",
+    class: classes,
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
@@ -152,6 +179,33 @@ module.exports = function (eleventyConfig) {
   /* PLUGINS */
   // 1: generate Metadata
   eleventyConfig.addPlugin(metagen);
+  // 2: Images
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+
+  eleventyConfig.addTransform("transform", (content, outputPath) => {
+    // apply Image Plugin to Images in Markdown files
+    // loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
+    if (outputPath && outputPath.endsWith(".html")) {
+      let { document } = parseHTML(content);
+
+      [...document.querySelectorAll(".md-content img")]
+        .filter((i) => !i.src.startsWith("http"))
+        .forEach((i) => {
+          const src = "./src" + i.getAttribute("src");
+          Image(src, IMAGE_OPTIONS);
+          const metadata = Image.statsSync(src, IMAGE_OPTIONS);
+          let imageAttributes = {
+            alt: i.getAttribute("alt") || "",
+            loading: "lazy",
+            decoding: "async",
+          };
+          i.outerHTML = Image.generateHTML(metadata, imageAttributes);
+        });
+
+      return `<!DOCTYPE html>${document.documentElement.outerHTML}`;
+    }
+    return content;
+  });
 
   return {
     dir: {

@@ -20,10 +20,12 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^0.10.0",
     "bootstrap": "^5.1.0",
     "eleventy-plugin-metagen": "^1.4.0",
     "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
+    "linkedom": "^0.11.2",
     "lunr": "^2.3.9",
     "pretty-data": "^0.40.0",
     "purgecss": "^4.0.3",

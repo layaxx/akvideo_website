@@ -17,12 +17,8 @@
         {% endif %}
       </div>
     </div>
-
-    <img
-      class="img-fluid"
-      src="{{ movie.thumbnail }}"
-      alt="Thumbnail {{ movie.title }}"
-    />
+    {% assign alt= "Thumbnail " | append: movie.title %}
+    {% image movie.thumbnail, alt, "img-fluid" %}
   </a>
   <div class="movie-card-caption">
     <div class="movie-card-caption-heading">
