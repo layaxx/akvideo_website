@@ -1,0 +1,16 @@
+---
+layout: legal
+title: Seitenübersicht
+sitemap:
+  ignore: true
+---
+
+<ul>
+  {% for category in collections.allSitemapSorted %}
+  <h2>{{ category | first }}</h2>
+  {% for item in category[1] %}
+  <li>
+    <a href="{{ item.url }}">https://arbeitskreis.video{{ item.url }}</a>
+  </li>
+  {% endfor %} {% endfor %}
+</ul>

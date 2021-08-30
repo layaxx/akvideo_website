@@ -95,6 +95,23 @@ module.exports = function (eleventyConfig) {
       }, Object.create(null))
     ).reverse();
   });
+  eleventyConfig.addCollection("allSitemapSorted", function (collection) {
+    const defaultCategory = "";
+    return Object.entries(
+      collection
+        .getAll()
+        .filter((item) => !item.data.sitemap.ignore && !item.data.nopage)
+        .reduce(function (r, a) {
+          r[a.data.sitemap.category || defaultCategory] =
+            r[a.data.sitemap.category || defaultCategory] || [];
+          r[a.data.sitemap.category || defaultCategory].push(a);
+          return r;
+        }, Object.create(null))
+    ).map(([category, ...list]) => [
+      category,
+      ...list.sort((a, b) => a.url.localeCompare(b.url)),
+    ]);
+  });
   eleventyConfig.addCollection("search_data", function (collection) {
     const data = collection.getAll().map((p) => {
       return {

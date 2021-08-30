@@ -19,6 +19,7 @@ header.masthead {
     font-family: $subheadings-font-family;
   }
   .masthead-heading {
+    overflow-wrap: break-word;
     font-size: 3.25rem;
     font-weight: 700;
     line-height: 3.25rem;
