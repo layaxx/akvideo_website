@@ -1,29 +1,20 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <!-- Meta Info -->
-    <title>Suche | AK Video</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+---
+layout: document
+---
 
-    <!-- Favicons -->
-    {% include components/favicons %}
+  <!-- Favicons -->
+  {% include components/favicons %}
+  <!-- Styles -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
 
-    <!-- Styles -->
-    <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-  </head>
+<body>
+  {% include components/nav , active: -1 %}
+  {{ content }}
+  {% include components/footer %}
+</body>
 
-  <body>
-    {% include components/nav , active: -1 %}
-    {{ content }}
-    {% include components/footer %}
-  </body>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/lunr.min.js"></script>
+<script src="/assets/js/search.js"></script>
 
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/lunr.min.js"></script>
-  <script src="/assets/js/search.js"></script>
-</html>

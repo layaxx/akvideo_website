@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <!-- Meta Info -->
-    <title>{{ title }} | AK Video</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+---
+layout: document
+---
+  <!-- Styles -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
 
-    <!-- Favicons -->
-    {% include components/favicons %}
+<body>
+  {% include components/nav , active: -1 %}
+  <main>
+    <section class="page-section bg-light">
+      <div class="text-center mt-5">
+        <h1 class="section-heading">{{ title }}</h1>
+        <h2 class="section-subheading text-muted">{{ subtitle }}</h2>
+      </div>
+      <div class="container mt-5">
+        {{ content }}
+      </div>
+    </section>
+  </main>
+  {% include components/footer %}
+  <script src="/assets/js/bootstrap.min.js"></script>
+</body>
 
-    <!-- Styles -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    {% include components/nav , active: -1 %}
-
-    <main>
-      <section class="page-section bg-light">
-        <div class="text-center mt-5">
-          <h1 class="section-heading">{{ title }}</h1>
-          <h2 class="section-subheading text-muted">{{ subtitle }}</h2>
-        </div>
-        <div class="container mt-5">
-          {{ content }}
-        </div>
-      </section>
-    </main>
-    {% include components/footer %}
-
-    <script src="/assets/js/bootstrap.min.js"></script>
-  </body>
-</html>

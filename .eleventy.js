@@ -1,8 +1,11 @@
 const fs = require("fs");
 const matter = require("gray-matter");
 const lunr = require("lunr");
+const metagen = require("eleventy-plugin-metagen");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true);
+
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",
@@ -85,7 +88,9 @@ module.exports = function (eleventyConfig) {
     ];
     return { events, eras };
   });
-  // 4. technically not a filter. returns projects in reverse chronological order, grouped by year
+
+  // COLLECTIONS
+  // returns projects in reverse chronological order, grouped by year
   eleventyConfig.addCollection("projects_ordered", function (collection) {
     return Object.entries(
       collection.getFilteredByTag("project").reduce(function (r, a) {
@@ -95,6 +100,7 @@ module.exports = function (eleventyConfig) {
       }, Object.create(null))
     ).reverse();
   });
+  // returns sorted page data for use in sitemap
   eleventyConfig.addCollection("allSitemapSorted", function (collection) {
     const defaultCategory = "";
     return Object.entries(
@@ -112,6 +118,7 @@ module.exports = function (eleventyConfig) {
       ...list.sort((a, b) => a.url.localeCompare(b.url)),
     ]);
   });
+  // returns index for search module
   eleventyConfig.addCollection("search_data", function (collection) {
     const data = collection.getAll().map((p) => {
       return {
@@ -137,6 +144,8 @@ module.exports = function (eleventyConfig) {
 
     return JSON.stringify(idx);
   });
+
+  eleventyConfig.addPlugin(metagen);
 
   return {
     dir: {

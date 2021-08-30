@@ -727,6 +727,13 @@ ejs@^2.7.4:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
+eleventy-plugin-metagen@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-metagen/-/eleventy-plugin-metagen-1.4.0.tgz#3c82673dbcec81c5f265914c8cfc9349b3b0ffa0"
+  integrity sha512-rIQKT7jts4+wabba+rSzdTUq6dzgdo5VlejPMMreHEVtsi3jBEAgWZKLBLaZ0FmwrDrKpTxMeuc1cI0J6SXSww==
+  dependencies:
+    "@11ty/eleventy" "^0.12.1"
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"

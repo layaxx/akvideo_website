@@ -1,0 +1,19 @@
+---
+eleventyComputed:
+  meta:
+    url: "https://arbeitskreis.video{{page.url}}"
+    title: "{{title}} | Arbeitskreis Video Münchberg"
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <!-- Meta Info -->
+    {% metagen meta %}
+
+    <!-- Favicons -->
+    {% include components/favicons %}
+
+    
+  {{content}}
+</html>

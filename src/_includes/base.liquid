@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <!-- Meta Info -->
-    <title>AK Video</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+---
+layout: document
+---
 
-    <!-- Favicons -->
-    {% include components/favicons %}
+<!-- Styles -->
+<link href="/assets/css/fontawesome.css" rel="stylesheet" />
+<link href="/assets/css/frontpage/styles.css" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link href="/assets/css/fontawesome.css" rel="stylesheet" />
-    <link href="/assets/css/frontpage/styles.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body data-bs-spy="scroll" data-bs-target="#navbar">
-    {% include components/nav %}
-    {{ content }}
-    {% include components/footer %}
-    <script src="/assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+  {% include components/nav %}
+  {{ content }}
+  {% include components/footer %}
+  <script src="/assets/js/bootstrap.min.js"></script>
+</body>

@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <!-- Meta Info -->
-    <title>{{ title }} | AK Video</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Favicons -->
-    {% include components/favicons %}
+---
+layout: document
+---
+  <!-- Styles -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+</head>
 
-    <!-- Styles -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-  </head>
+<body>
+  {% include components/nav , active: -1 %} {% include
+  components/masthead,title, url:
+  "https://arbeitskreis.video/assets/img/header/header-bg.webp" %}
+  <main>
+    <section class="page-section bg-light">
+      <div class="container">
+        {{ content }}
+      </div>
+    </section>
+  </main>
+  {% include components/footer %}
+  <script src="/assets/js/bootstrap.min.js"></script>
+</body>
 
-  <body>
-    {% include components/nav , active: -1 %} {% include
-    components/masthead,title, url:
-    "https://arbeitskreis.video/assets/img/header/header-bg.webp" %}
-
-    <main>
-      <section class="page-section bg-light">
-        <div class="container">
-          {{ content }}
-        </div>
-      </section>
-    </main>
-    {% include components/footer %}
-
-    <script src="/assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
