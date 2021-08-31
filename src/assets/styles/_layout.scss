@@ -29,3 +29,14 @@ body {
     margin-top: auto;
   }
 }
+
+.md-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @extend .mb-2;
+    @extend .mt-4;
+  }
+}

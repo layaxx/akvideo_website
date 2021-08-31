@@ -10,6 +10,20 @@ const IMAGE_OPTIONS = {
   outputDir: "./_site/assets/img/",
 };
 
+function stringToHash(string) {
+  var hash = 0;
+
+  if (string.length == 0) return hash;
+
+  for (i = 0; i < string.length; i++) {
+    char = string.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash;
+  }
+
+  return hash;
+}
+
 async function imageShortcode(src, alt, classes) {
   if (src && src.startsWith("/")) {
     src = "./src" + src;
@@ -47,8 +61,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/assets/js/passthrough": "./assets/js",
   });
-  // Copy favicon to /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   eleventyConfig.setBrowserSyncConfig({
     files: "./_site/assets/css/**/*.css",
@@ -187,6 +199,7 @@ module.exports = function (eleventyConfig) {
     // loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
     if (outputPath && outputPath.endsWith(".html")) {
       let { document } = parseHTML(content);
+      const hashes = [];
 
       [...document.querySelectorAll(".md-content img")]
         .filter((i) => !i.src.startsWith("http"))
@@ -198,9 +211,29 @@ module.exports = function (eleventyConfig) {
             alt: i.getAttribute("alt") || "",
             loading: "lazy",
             decoding: "async",
+            class: "img-fluid",
           };
-          i.outerHTML = Image.generateHTML(metadata, imageAttributes);
+          const container = document.createElement("div");
+          container.className =
+            "md-img " + stringToHash(i.parentElement.innerText);
+          hashes.push(stringToHash(i.parentElement.innerText));
+
+          container.innerHTML = Image.generateHTML(metadata, imageAttributes);
+          i.parentElement.append(container);
+          i.remove();
         });
+
+      [...new Set(hashes)].forEach((hash) => {
+        const container = document.createElement("div");
+        container.className = "row mt-4";
+
+        const parent = document.querySelector("." + hash).parentElement;
+        [...document.querySelectorAll("." + hash)].forEach((elem) => {
+          elem.className = "col-lg-6 col-md-12 mx-auto";
+          container.append(elem);
+        });
+        parent.append(container);
+      });
 
       return `<!DOCTYPE html>${document.documentElement.outerHTML}`;
     }

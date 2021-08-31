@@ -6,16 +6,20 @@ nopage: false
 year: 2021
 category: Test
 timeline:
-  - date: To be determined
-    title: Sektion 1
-    description: Hier wird das Drehbuch geschrieben
-  - date: Later
-    title: Dreh
-    description: Hier werden die eigenmtlichen Aufnahmen angefertigt
-  - date: noch l8er
+  - date: Termin 1
+    title: Vorstellung
+    description: Wir kommen an die Grundschule, zeigen unsere Filme und erzählen,
+      was zur Produktion eines Films alles dazugehört.
+  - date: Termin 2 (Wochenende)
+    title: Filmdreh
+    description: Zusammen mit interessierten Schülern denken wir uns eine Geschichte
+      aus, schreiben ein Drehbuch und produzieren daraus einen Kurzfilm.
+  - date: Termin 3
     title: Premiere
-    description: Mit vielen Leuten und so
-finishedFilm: https://www.youtube.com/embed/msxMRwQyXI8
+    description: "Wir bringen nochmal Kinoatmosphäre in die Grundschule: Die
+      Premiere des entstandenen Films mit Beteiligten, Eltern & Freunden"
+finishedFilm: ""
+header: /assets/img/uploads/header-grundschule.jpg
 thumbnail: /assets/img/uploads/kreuzbergschule.jpg
 contact: true
 ---
@@ -25,11 +29,7 @@ contact: true
 
 Weil viele unserer Mitglieder aktuell wenig Zeit für die Planung großer Filmprojekte haben, manche weil sie gerade mit Abschlussprüfungen beschäftigt sind, andere weil sie gerade ihr Studium begonnen haben und eventuell auch gar nicht mehr in Münchberg wohnen, sind wir aktuell auf der Suche nach neuen, jüngeren Mitgliedern. Als wir vom Schulleiter der Münchberger Grundschule gefragt wurden, ob wir nicht zusammen ein Projekt planen und umsetzen wollen, machten wir uns sofort auf die Suche nach einem Konzept, mit dem wir Schulkindern das Filmen näherbringen wollen.
 
-![crew](https://d33wubrfki0l68.cloudfront.net/4eaa43dae254b2e887d17ec3ac4322e81c1b67e9/c6d61/assets/img/projects/grundschule/image1.jpg)
-
-*Marius, John, Yannick, Lara, Philipp, Philipp und Hugo (Foto)*
-
-*Strategiebesprechung Februar 2020*
+![Strategiebesprechung  Anfang 2020](/assets/img/uploads/image1.jpg "Strategiebesprechung  Anfang 2020")
 
 ### PHASE 1 - FILME SCHAUEN!
 

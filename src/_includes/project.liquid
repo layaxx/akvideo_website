@@ -15,7 +15,7 @@ layout: document
 
     <main>
       {% if nopage %}
-      <section class="page-section" id="details">
+      <section class="page-section" >
         <div class="container">
           <p class="fs-3 fw-bold text-muted">
             {% if external %} Du kannst hier weitere Informationen zu diesem
@@ -39,7 +39,7 @@ layout: document
           <h2 class="text-uppercase text-center section-heading">Übersicht</h2>
           <div class="row">
             {% if details %}
-            <div class="col-lg-6">
+            <div class="col-lg-6 mx-auto">
               <table class="table">
                 <thead class="table-dark">
                   <th>technische Details</th>
@@ -47,14 +47,16 @@ layout: document
                 </thead>
                 <tbody>
                   {% for detail in details %}
-                  <td>{{ detail.type }}</td>
-                  <td>{{ detail.value }}</td>
+                  <tr>
+                    <td>{{ detail.type }}</td>
+                    <td>{{ detail.value }}</td>
+                  </tr>
                   {% endfor %}
                 </tbody>
               </table>
             </div>
             {% endif %}{% if trailer.text or trailer.url %}
-            <div class="col-lg-6">
+            <div class="col-lg-6 mx-auto">
               {%if trailer.url%}
               <div class="video-container-wrapper">
                 <div class="video-container">
