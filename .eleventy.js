@@ -13,15 +13,13 @@ const IMAGE_OPTIONS = {
 function stringToHash(string) {
   var hash = 0;
 
-  if (string.length == 0) return hash;
-
   for (i = 0; i < string.length; i++) {
     char = string.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
 
-  return hash;
+  return "h-" + hash;
 }
 
 async function imageShortcode(src, alt, classes) {
@@ -214,25 +212,42 @@ module.exports = function (eleventyConfig) {
             class: "img-fluid",
           };
           const container = document.createElement("div");
-          container.className =
-            "md-img " + stringToHash(i.parentElement.innerText);
-          hashes.push(stringToHash(i.parentElement.innerText));
+          container.className = "md-img ";
 
           container.innerHTML = Image.generateHTML(metadata, imageAttributes);
-          i.parentElement.append(container);
+          if (i.parentElement.textContent !== "") {
+            i.parentElement.append(container);
+          } else {
+            i.parentElement.outerHTML = container;
+          }
+
           i.remove();
         });
+
+      let currentHash = 0;
+      [...document.querySelectorAll(".md-content > *")].forEach((elem) => {
+        if (elem.tagName === "P") {
+          currentHash = stringToHash(elem.textContent);
+          hashes.push(currentHash);
+        } else if (elem.tagName === "DIV" && elem.className === "md-img") {
+          elem.className = elem.className + " " + currentHash;
+        }
+      });
 
       [...new Set(hashes)].forEach((hash) => {
         const container = document.createElement("div");
         container.className = "row mt-4";
-
-        const parent = document.querySelector("." + hash).parentElement;
+        const first = document.querySelector("." + hash);
+        if (first) {
+          const clone = first.cloneNode(true);
+          clone.className = "col-lg-6 col-md-12 mx-auto";
+          container.append(clone);
+          first.replaceWith(container);
+        }
         [...document.querySelectorAll("." + hash)].forEach((elem) => {
           elem.className = "col-lg-6 col-md-12 mx-auto";
           container.append(elem);
         });
-        parent.append(container);
       });
 
       return `<!DOCTYPE html>${document.documentElement.outerHTML}`;
