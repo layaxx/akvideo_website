@@ -1,49 +1,49 @@
-const fs = require("fs");
-const matter = require("gray-matter");
-const lunr = require("lunr");
-const metagen = require("eleventy-plugin-metagen");
-const Image = require("@11ty/eleventy-img");
-const { parseHTML } = require("linkedom");
+const fs = require("fs")
+const matter = require("gray-matter")
+const lunr = require("lunr")
+const metagen = require("eleventy-plugin-metagen")
+const Image = require("@11ty/eleventy-img")
+const { parseHTML } = require("linkedom")
 
 const IMAGE_OPTIONS = {
   urlPath: "/assets/img/",
   outputDir: "./_site/assets/img/",
-};
+}
 
 function stringToHash(string) {
-  var hash = 0;
+  var hash = 0
 
   for (i = 0; i < string.length; i++) {
-    char = string.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash;
+    char = string.charCodeAt(i)
+    hash = (hash << 5) - hash + char
+    hash = hash & hash
   }
 
-  return "h-" + hash;
+  return "h-" + hash
 }
 
 async function imageShortcode(src, alt, classes) {
   if (src && src.startsWith("/")) {
-    src = "./src" + src;
+    src = "./src" + src
   } else if (!src) {
-    console.warn("ndsaoipö");
-    return;
+    console.warn("ndsaoipö")
+    return
   }
-  let metadata = await Image(src, IMAGE_OPTIONS);
+  let metadata = await Image(src, IMAGE_OPTIONS)
 
   let imageAttributes = {
     alt,
     loading: "lazy",
     decoding: "async",
     class: classes,
-  };
+  }
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
+  return Image.generateHTML(metadata, imageAttributes)
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setDataDeepMerge(true)
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
@@ -51,43 +51,43 @@ module.exports = function (eleventyConfig) {
     "./node_modules/bootstrap/dist/js/bootstrap.min.js":
       "./assets/js/bootstrap.min.js",
     "./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
-  });
+  })
 
   // Copy Image Folder to /_site
-  eleventyConfig.addPassthroughCopy("./src/assets/img");
-  eleventyConfig.addPassthroughCopy("./src/assets/webfonts");
+  eleventyConfig.addPassthroughCopy("./src/assets/img")
+  eleventyConfig.addPassthroughCopy("./src/assets/webfonts")
   eleventyConfig.addPassthroughCopy({
     "./src/assets/js/passthrough": "./assets/js",
-  });
+  })
 
   eleventyConfig.setBrowserSyncConfig({
     files: "./_site/assets/css/**/*.css",
-  });
+  })
 
-  eleventyConfig.addWatchTarget("./src/assets/styles/");
+  eleventyConfig.addWatchTarget("./src/assets/styles/")
 
   /* CUSTOM FILTERS */
   // 1. unstringify movie
   const fetchMovie = (slug) => {
-    const projectLocation = "./src/projekte/";
-    const fileExtension = ".md";
-    const path = projectLocation + slug + fileExtension;
+    const projectLocation = "./src/projekte/"
+    const fileExtension = ".md"
+    const path = projectLocation + slug + fileExtension
     if (fs.existsSync(path)) {
-      const file = matter.read(path);
-      return { ...file.data, slug };
+      const file = matter.read(path)
+      return { ...file.data, slug }
     } else {
-      console.error("invalid path to project: " + slug);
-      return {};
+      console.error("invalid path to project: " + slug)
+      return {}
     }
-  };
-  eleventyConfig.addFilter("makeMovie", fetchMovie);
+  }
+  eleventyConfig.addFilter("makeMovie", fetchMovie)
   // 2. remove leading slash (used in navigation)
   eleventyConfig.addFilter("remove_leading_slash", function (string) {
     if (string.charAt(0) === "/") {
-      return string.slice(1);
+      return string.slice(1)
     }
-    return string;
-  });
+    return string
+  })
   // 3. format timeline data properly
   eleventyConfig.addFilter("buildTimelineData", function (data) {
     const eras = data.eras.map((era) => {
@@ -95,11 +95,11 @@ module.exports = function (eleventyConfig) {
         text: { headline: era.headline },
         start_date: { year: era.start_year },
         end_date: { year: era.end_year },
-      };
-    });
+      }
+    })
     const events = [
       ...data.films.map(({ headline, text, group, film }) => {
-        const movie = fetchMovie(film);
+        const movie = fetchMovie(film)
 
         return {
           media: {
@@ -110,7 +110,7 @@ module.exports = function (eleventyConfig) {
           start_date: { year: movie.year },
           text: { headline, text },
           group,
-        };
+        }
       }),
       ...data.events.map(({ year, media, caption, link, headline, text }) => {
         return {
@@ -121,47 +121,49 @@ module.exports = function (eleventyConfig) {
           },
           start_date: { year },
           text: { headline, text },
-        };
+        }
       }),
-    ];
-    return { events, eras };
-  });
+    ]
+    return { events, eras }
+  })
   eleventyConfig.addFilter("loadfile", function (path) {
-    return fs.readFileSync(path);
-  });
+    return fs.readFileSync(path)
+  })
 
   /* COLLECTIONS */
   // returns projects in reverse chronological order, grouped by year
   eleventyConfig.addCollection("projects_ordered", function (collection) {
     return Object.entries(
       collection.getFilteredByTag("project").reduce(function (r, a) {
-        r[a.data.year] = r[a.data.year] || [];
-        r[a.data.year].push(a);
-        return r;
+        r[a.data.year] = r[a.data.year] || []
+        r[a.data.year].push(a)
+        return r
       }, Object.create(null))
-    ).reverse();
-  });
+    ).reverse()
+  })
   // returns sorted page data for use in sitemap
   eleventyConfig.addCollection("allSitemapSorted", function (collection) {
-    const defaultCategory = "";
+    const defaultCategory = ""
     return Object.entries(
       collection
         .getAll()
         .filter((item) => !item.data.sitemap.ignore && !item.data.nopage)
         .reduce(function (r, a) {
           r[a.data.sitemap.category || defaultCategory] =
-            r[a.data.sitemap.category || defaultCategory] || [];
-          r[a.data.sitemap.category || defaultCategory].push(a);
-          return r;
+            r[a.data.sitemap.category || defaultCategory] || []
+          r[a.data.sitemap.category || defaultCategory].push(a)
+          return r
         }, Object.create(null))
     ).map(([category, ...list]) => [
       category,
       ...list.sort((a, b) => a.url.localeCompare(b.url)),
-    ]);
-  });
+    ])
+  })
   // returns index for search module
   eleventyConfig.addCollection("search_data", function (collection) {
     const data = collection.getAll().map((p) => {
+      const url = p.url
+      const title = p.data.title
       return {
         content: p.template.frontMatter.content
           .replace(/<[^>]+>/gim, "") // remove html tags
@@ -169,95 +171,95 @@ module.exports = function (eleventyConfig) {
           .replace(/{%[^%]+%}/gim, "") // remove liquid tags
           .replace(/\s\s+/gim, " ") // replace multiple whitespaces with a single whitespace
           .replace(/\\./, ""), // remove escape sequences
-        url: p.url,
-        title: p.data.title,
-      };
-    });
+        url,
+        title,
+        ref: JSON.stringify({ url, title }),
+      }
+    })
 
     const idx = lunr(function () {
-      this.field("content");
-      this.field("title");
-      this.field("url");
-      this.ref("url");
+      this.field("content")
+      this.field("title")
+      this.field("url")
+      this.ref("ref")
 
-      data.forEach((project) => this.add(project), this);
-    });
+      data.forEach((project) => this.add(project), this)
+    })
 
-    return JSON.stringify(idx);
-  });
+    return JSON.stringify(idx)
+  })
 
   /* PLUGINS */
   // 1: generate Metadata
-  eleventyConfig.addPlugin(metagen);
+  eleventyConfig.addPlugin(metagen)
   // 2: Images
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode)
 
   eleventyConfig.addTransform("transform", (content, outputPath) => {
     // apply Image Plugin to Images in Markdown files
     // loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
     if (outputPath && outputPath.endsWith(".html")) {
-      let { document } = parseHTML(content);
-      const hashes = [];
+      let { document } = parseHTML(content)
+      const hashes = []
 
-      [...document.querySelectorAll(".md-content img")]
+      ;[...document.querySelectorAll(".md-content img")]
         .filter((i) => !i.src.startsWith("http"))
         .forEach((i) => {
-          const src = "./src" + i.getAttribute("src");
-          Image(src, IMAGE_OPTIONS);
-          const metadata = Image.statsSync(src, IMAGE_OPTIONS);
+          const src = "./src" + i.getAttribute("src")
+          Image(src, IMAGE_OPTIONS)
+          const metadata = Image.statsSync(src, IMAGE_OPTIONS)
           let imageAttributes = {
             alt: i.getAttribute("alt") || "",
             loading: "lazy",
             decoding: "async",
             class: "img-fluid",
-          };
-          const container = document.createElement("div");
-          container.className = "md-img ";
+          }
+          const container = document.createElement("div")
+          container.className = "md-img "
 
-          container.innerHTML = Image.generateHTML(metadata, imageAttributes);
+          container.innerHTML = Image.generateHTML(metadata, imageAttributes)
           if (i.parentElement.textContent !== "") {
-            i.parentElement.append(container);
+            i.parentElement.append(container)
           } else {
-            i.parentElement.outerHTML = container;
+            i.parentElement.outerHTML = container
           }
 
-          i.remove();
-        });
+          i.remove()
+        })
 
-      let currentHash = 0;
-      [...document.querySelectorAll(".md-content > *")].forEach((elem) => {
+      let currentHash = 0
+      ;[...document.querySelectorAll(".md-content > *")].forEach((elem) => {
         if (elem.tagName === "P") {
-          currentHash = stringToHash(elem.textContent);
-          hashes.push(currentHash);
+          currentHash = stringToHash(elem.textContent)
+          hashes.push(currentHash)
         } else if (elem.tagName === "DIV" && elem.className === "md-img") {
-          elem.className = elem.className + " " + currentHash;
+          elem.className = elem.className + " " + currentHash
         }
-      });
-
-      [...new Set(hashes)].forEach((hash) => {
-        const container = document.createElement("div");
-        container.className = "row mt-4";
-        const first = document.querySelector("." + hash);
+      })
+      ;[...new Set(hashes)].forEach((hash) => {
+        const container = document.createElement("div")
+        container.className = "row mt-4"
+        const first = document.querySelector("." + hash)
         if (first) {
-          const clone = first.cloneNode(true);
-          clone.className = "col-lg-6 col-md-12 mx-auto";
-          container.append(clone);
-          first.replaceWith(container);
+          const clone = first.cloneNode(true)
+          clone.className = "col-lg-6 col-md-12 mx-auto"
+          container.append(clone)
+          first.replaceWith(container)
         }
-        [...document.querySelectorAll("." + hash)].forEach((elem) => {
-          elem.className = "col-lg-6 col-md-12 mx-auto";
-          container.append(elem);
-        });
-      });
+        ;[...document.querySelectorAll("." + hash)].forEach((elem) => {
+          elem.className = "col-lg-6 col-md-12 mx-auto"
+          container.append(elem)
+        })
+      })
 
-      return `<!DOCTYPE html>${document.documentElement.outerHTML}`;
+      return `<!DOCTYPE html>${document.documentElement.outerHTML}`
     }
-    return content;
-  });
+    return content
+  })
 
   return {
     dir: {
       input: "src",
     },
-  };
-};
+  }
+}

@@ -1,76 +1,75 @@
-const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search)
 
-const add = (elem) => document.querySelector("#output").append(elem);
+const add = (elem) => document.querySelector("#output").append(elem)
 
-let index = undefined;
+let index = undefined
 
 async function loadIndex() {
   const json = await fetch("/search_index.json").then((response) => {
     if (!response.ok) {
-      throw new Error("failed to fetch data");
+      throw new Error("failed to fetch data")
     }
-    return response.json();
-  });
-  return lunr.Index.load(json);
+    return response.json()
+  })
+  return lunr.Index.load(json)
 }
 
 async function search(term) {
   if (!index) {
-    index = await loadIndex();
+    index = await loadIndex()
   }
-  return index.search(term + "~2");
+  return index.search(term + "~" + Math.floor(Math.log(term.length)))
 }
 
 function displayResults(results) {
-  const headline = document.createElement("h2");
-  headline.className = "text-muted";
-  headline.innerText = results.length + " Treffer gefunden:";
-  add(headline);
-  document.querySelector("#spinner").style.display = "none";
+  const headline = document.createElement("h2")
+  headline.className = "text-muted"
+  headline.innerText = results.length + " Treffer gefunden:"
+  add(headline)
+  document.querySelector("#spinner").style.display = "none"
   if (results.length > 0) {
-    const list = document.createElement("ul");
-    list.className = "mb-5";
-    for (res of results) {
-      const listElem = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = res.ref;
-      link.innerText = res.ref;
-      listElem.append(link);
-      list.append(listElem);
+    const list = document.createElement("ul")
+    list.className = "mb-5"
+    for ({ ref } of results) {
+      const { url, title } = JSON.parse(ref)
+      const listElem = document.createElement("li")
+      const link = document.createElement("a")
+      link.href = url
+      link.innerText = `${url} - ${title}`
+      listElem.append(link)
+      list.append(listElem)
     }
-    add(list);
+    add(list)
   }
 }
 
 function handleSearch(event) {
-  event.preventDefault();
+  event.preventDefault()
   /* change url param */
-  const query = document.querySelector("#queryfield").value;
-  const url = new URL(window.location);
-  url.searchParams.set("query", query);
-  window.history.pushState({}, "", url);
+  const query = document.querySelector("#queryfield").value
+  const url = new URL(window.location)
+  url.searchParams.set("query", query)
+  window.history.pushState({}, "", url)
   /* clear output */
   document
     .querySelectorAll("#output > *")
-    .forEach((element) => element.remove());
+    .forEach((element) => element.remove())
   /* display spinner */
-  document.querySelector("#spinner").style.display = "block";
+  document.querySelector("#spinner").style.display = "block"
   /* search and display results */
-  search(query).then(displayResults);
+  search(query).then(displayResults)
 }
 
 function init() {
-  document
-    .querySelector("#searchform")
-    .addEventListener("submit", handleSearch);
+  document.querySelector("#searchform").addEventListener("submit", handleSearch)
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search)
 
   if (urlParams.has("query") && urlParams.get("query")) {
-    const query = urlParams.get("query");
-    document.querySelector("#queryfield").value = query;
-    search(query).then(displayResults);
+    const query = urlParams.get("query")
+    document.querySelector("#queryfield").value = query
+    search(query).then(displayResults)
   }
 }
 
-init();
+init()
