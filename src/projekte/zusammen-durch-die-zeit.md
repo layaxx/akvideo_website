@@ -16,14 +16,17 @@ details:
     value: "2012"
   - type: Produktionsort
     value: Münchberg
+trailer:
+  text: "Wie hart das Schulleben früher gewesen ist erleben die Schüler der Klasse
+    5d am eigenen Leib. Durch einen Unfall im Deutschunterricht werden sie von
+    einem Zeitstrudel direkt in die Vergangenheit katapultiert! Um
+    zurückzukehren hilft nur eins: Die Kinder müssen zusammenhalten. Doch das
+    ist gar nicht so leicht, denn die andere Hälfte der Klasse ist in der
+    Zukunft gelandet. Und dort herrschen ganz andere Gesetze…"
 header: /assets/img/uploads/header-zddz.jpg
 thumbnail: /assets/img/uploads/zddz.jpg
 contact: false
 ---
-## KURZ­ZUSAMMEN­FASSUNG
-
-Wie hart das Schulleben früher gewesen ist erleben die Schüler der Klasse 5d am eigenen Leib. Durch einen Unfall im Deutschunterricht werden sie von einem Zeitstrudel direkt in die Vergangenheit katapultiert! Um zurückzukehren hilft nur eins: Die Kinder müssen zusammenhalten. Doch das ist gar nicht so leicht, denn die andere Hälfte der Klasse ist in der Zukunft gelandet. Und dort herrschen ganz andere Gesetze…
-
 ## BEHIND THE SCENES
 
 ### HINTERGRUND
@@ -34,8 +37,6 @@ Wie hart das Schulleben früher gewesen ist erleben die Schüler der Klasse 5d a
 
 ![Roboterlehrer in der Zukunft](/assets/img/uploads/zddz2.jpg "Roboterlehrer in der Zukunft")
 
-
-
 ### DREHARBEITEN
 
 Gedreht wurde der Film teils im Gymnasium Münchberg und teils im Schulmuseum Selbitz. Darsteller und Technikassistenten waren Schüler der 5d, der Ganztagsklasse des Gymnasiums. Unterstützt wurden wir außerdem vom Forchheimer Kameramann und Filmemacher [Kari Hennig.](https://arbeitskreis.video/portrait/kari)
@@ -43,8 +44,6 @@ Gedreht wurde der Film teils im Gymnasium Münchberg und teils im Schulmuseum Se
 ![Dreh im Gymnasium Münchberg](/assets/img/uploads/zddz3.jpg "Dreh im Gymnasium Münchberg")
 
 ![Außenansicht des Schulmuseums](/assets/img/uploads/zddz4.jpg "Außenansicht des Schulmuseums")
-
-
 
 ### AUSZEICHNUNGEN
 

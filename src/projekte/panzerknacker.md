@@ -24,19 +24,16 @@ header: /assets/img/uploads/header-panzerknacker.jpg
 thumbnail: /assets/img/uploads/panzerknacker.jpg
 contact: false
 ---
-## BEHIND THE SCENES
 
-### HINTERGRUND
+# BEHIND THE SCENES
+
+## HINTERGRUND
 
 2015 wurde in Schwarzenbach an der Saale das [Erika-Fuchs-Haus ](http://www.erika-fuchs.de/)eröffnet, ein Museum zu Ehren der Übersetzerin der Comics rund um Micky Maus und Donald Duck, die jahrzehntelang in Schwarzenbach lebte und arbeitete. Bereits während der Entwicklungsphase machten sich Jugendliche der Gitarrengruppe von Hugo Singer im Jugendtreff "Gleis 2" erste Gedanken über ein Filmprojekt zum Thema "Donald Duck", unter ihnen auch Joschka Plaum, der Weltmeister im Badewannenrennen. Schließlich steht das Drehbuch: Die gefürchteten Panzerknacker sind wieder einmal entwischt und terrorisieren ganz Schwarzenbach, und es gibt nur einen der sie aufhalten kann …
 
-![Erika Fuchs Haus](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Erika-Fuchs-Haus%2C_Schwarzenbach_an_der_Saale.jpg/381px-Erika-Fuchs-Haus%2C_Schwarzenbach_an_der_Saale.jpg "Das Erika Fuchs Haus; Bild von Kreuzschnabel/Wikimedia Commons, License: artlibre")
-
 ![Die Panzerknacker überqueren die Saale.](/assets/img/uploads/pk1.jpg "Die Panzerknacker überqueren die Saale.")
 
-### [](https://commons.wikimedia.org/wiki/File:Erika-Fuchs-Haus,_Schwarzenbach_an_der_Saale.jpg "Kreuzschnabel / CC BY-SA (https\://creativecommons.org/licenses/by-sa/3.0)")
-
-### DER DREH
+## DER DREH
 
 Geld von Straßenkünstlern, Kunstwerke, der Tresor der Sparkasse: Nach ihrem Ausbruch brauchen die Panzerknacker erst einmal Geld und dabei ist nichts und niemand vor ihnen sicher. Zusammen mit den Jugendlichen aus dem Schwarzenbacher Jugendtreff "Gleis 2" haben wir ein Drehbuch finalisiert und umgesetzt. Als Kulisse dient hierfür Schwarzenbach selbst, insbesondere das Ufer der sächsischen Saale, der Jugendtreff und das Gelände der alten Porzellanfabrik Winterling, auf dem die Panzerknackerbande ihr Hauptquartier aufgeschlagen hat.
 
@@ -44,7 +41,7 @@ Geld von Straßenkünstlern, Kunstwerke, der Tresor der Sparkasse: Nach ihrem Au
 
 ![Angriff auf die Bank](/assets/img/uploads/pk3.jpg "Angriff auf die Bank")
 
-### BLAULICHT, EXPLOSIONEN UND UNBEMANNTE FLUGOBJEKTE
+## BLAULICHT, EXPLOSIONEN UND UNBEMANNTE FLUGOBJEKTE
 
 Nachdem die Panzerknacker den Tresor der Sparkasse geklaut und zu ihrem Wohnwagen transportiert haben, müssen sie nur noch an den Inhalt gelangen. Dafür gibt es natürlich nur eine Möglichkeit: TNT. Beim Drehen dieser Szene hatten wir jede Menge Unterstützung: Neben einem Sprengmeister war die örtliche Feuerwehr mit einer Drehleiter vor Ort und für zusätzliche Luftaufnahmen ließen wir auch noch eine Drohne inklusive Kamera fliegen. Vielen Dank hierfür an [Marco Schott](http://www.marcoschott.com/), der früher auch selbst aktives Mitglied im AK Video war. Zusammen mit Schülern der Grundschule gelingt es schlussendlich Phantomias, die Verbrecher einzufangen und der Polizei zu übergeben.
 
@@ -52,7 +49,7 @@ Nachdem die Panzerknacker den Tresor der Sparkasse geklaut und zu ihrem Wohnwage
 
 ![Panzerknackerbande](/assets/img/uploads/pk5.jpg "Panzerknackerbande ist gefangen!")
 
-### FILM AB!
+## FILM AB!
 
 ... hieß es am 28. November 2015 im inzwischen fertiggestellten Erika-Fuchs-Haus, das natürlich der perfekte Ort für die Premiere unseres Films war. Davor hatten wir noch im Museum einen kurzen Trailer im Comic-Stil produziert.[](http://www.erika-fuchs.de/wp-content/uploads/2015/12/2015-12-01_frankenpost_Filmpremiere-Panzerknacker.pdf "Artikel der Frankenpost über die Premiere")
 

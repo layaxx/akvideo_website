@@ -26,6 +26,7 @@ header: /assets/img/uploads/header-ja.jpg
 thumbnail: /assets/img/uploads/johns_adventure.jpg
 contact: false
 ---
+
 ## BEHIND THE SCENES
 
 ### VORBEREITUNG
@@ -36,8 +37,6 @@ Besonders wichtig für das Gelingen eines Films ist die Story. Die kommt in dies
 
 ![darsteller](/assets/img/uploads/ja2.jpg "Darsteller waren schnell gefunden.")
 
-
-
 ### DER DREH
 
 Bild machen, Figuren bewegen, Bild machen, Figuren bewegen …\
@@ -46,8 +45,6 @@ Mehr als 1200 einzelne Bilder haben wir nach diesem Muster über mehrere Drehtag
 ![Liveview](/assets/img/uploads/ja3.jpg "Liveview via EOS Utility")
 
 ![Unser Setup](/assets/img/uploads/ja4.jpg "Unser Setup")
-
-
 
 ### POSTPRODUKTION
 

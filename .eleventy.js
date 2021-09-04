@@ -217,7 +217,17 @@ module.exports = function (eleventyConfig) {
           const container = document.createElement("div")
           container.className = "md-img "
 
-          container.innerHTML = Image.generateHTML(metadata, imageAttributes)
+          const figure = document.createElement("figure")
+          figure.innerHTML = Image.generateHTML(metadata, imageAttributes)
+
+          if (i.getAttribute("title")) {
+            const caption = document.createElement("figcaption")
+            caption.textContent = i.getAttribute("title")
+            caption.classList.add("fst-italic")
+            figure.append(caption)
+          }
+
+          container.appendChild(figure)
           if (i.parentElement.textContent !== "") {
             i.parentElement.append(container)
           } else {

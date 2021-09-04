@@ -34,8 +34,8 @@ trailer:
     Strang ziehen?
 header: /assets/img/uploads/header-lichtblick.jpg
 thumbnail: /assets/img/uploads/lichtblick.jpg
-cast: []
 ---
+
 ## BEHIND THE SCENES
 
 ### NOVEMBER 2014 - MÄRZ 2015
