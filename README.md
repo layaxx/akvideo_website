@@ -4,4 +4,3 @@
 
 - logo in navbar
   - new logo?
-- choose new fonts
