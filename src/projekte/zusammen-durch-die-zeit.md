@@ -39,7 +39,7 @@ contact: false
 
 ### DREHARBEITEN
 
-Gedreht wurde der Film teils im Gymnasium Münchberg und teils im Schulmuseum Selbitz. Darsteller und Technikassistenten waren Schüler der 5d, der Ganztagsklasse des Gymnasiums. Unterstützt wurden wir außerdem vom Forchheimer Kameramann und Filmemacher [Kari Hennig.](https://arbeitskreis.video/portrait/kari)
+Gedreht wurde der Film teils im Gymnasium Münchberg und teils im Schulmuseum Selbitz. Darsteller und Technikassistenten waren Schüler der 5d, der Ganztagsklasse des Gymnasiums. Unterstützt wurden wir außerdem vom Forchheimer Kameramann und Filmemacher [Kari Hennig.](https://www.schoenebuntefilme.de/)
 
 ![Dreh im Gymnasium Münchberg](/assets/img/uploads/zddz3.jpg "Dreh im Gymnasium Münchberg")
 
