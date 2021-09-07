@@ -6,6 +6,8 @@ layout: document
 <link href="/assets/css/fontawesome.css" rel="stylesheet" />
 <link href="/assets/css/frontpage/styles.css" rel="stylesheet" />
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -13,4 +15,15 @@ layout: document
   {{ content }}
   {% include components/footer %}
   <script src="/assets/js/bootstrap.min.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
