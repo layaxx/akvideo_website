@@ -8,28 +8,26 @@ sind unsere Projekte aus den letzten 20 Jahren", url:
 "/assets/img/index/header-bg.jpg" %}
 
 <main>
-  <section class="page-section bg-light" id="projects">
-    <div class="container">
-      <div class="alert alert-info">
-        Diese Auflistung erhebt keinen Anspruch auf Vollständigkeit. Sie soll
-        lediglich einen Überblick über unsere größeren Projekte geben.
-      </div>
-      {% for array in collections.projects_ordered %}
-      <div class="mt-5">
-        <h2 class="section-heading text-muted text-center">
-          {{ array | first }}
-        </h2>
-        <div class="d-flex flex-row flex-wrap justify-content-evenly">
-          {% for project in array[1] %} {% assign movie = project.fileSlug |
-          makeMovie %} {% include components/frontpage/moviecard with movie %}
-          {% endfor %}
+    <section class="page-section bg-light" id="projects">
+        <div class="container">
+            <div class="alert alert-info">
+                Diese Auflistung erhebt keinen Anspruch auf Vollständigkeit. Sie soll
+                                        lediglich einen Überblick über unsere größeren Projekte geben.
+            </div>
+            {% for array in collections.projects_ordered %}
+                <div class="mt-5">
+                    <h2 class="section-heading text-muted text-center">
+                        {{ array | first }}
+                    </h2>
+                    <div class="d-flex flex-row flex-wrap justify-content-evenly">
+                        {% for project in array[1] %}
+                            {% assign movie = project.fileSlug |
+          makeMovie %}
+                            {% include components/frontpage/moviecard with movie %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
+    </section>
 </main>
-
-<!-- 
-{% assign movie = movieString | makeMovie %} {% include
-    components/frontpage/moviecard with movie %} -->

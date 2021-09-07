@@ -59,4 +59,4 @@ Beim 9. JuFinale, das 2005 im Münchberger Apollo-Kino stattfand, konnten wir be
 
 ## FILM ANSEHEN
 
-Eine DVD des Films kann in der [Münchberger Stadtbibliothek](http://www.stadtbibliothek-muenchberg.de/Permalink.aspx?id=0032480) ausgeliehen werden.
+Eine DVD des Films kann in der [Münchberger Stadtbibliothek](https://sb-muenchberg.lmscloud.net/cgi-bin/koha/opac-detail.pl?biblionumber=6517) ausgeliehen werden.

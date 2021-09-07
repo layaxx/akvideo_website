@@ -1,16 +1,13 @@
 {% if url %}
-<header class="masthead" style="background-image: url({{ url }})">
-  {% else %}
-  <header
-    class="masthead"
-    style="background-image: url('/assets/img/index/header-bg.jpg')"
-  >
-    {% endif %}
-    <div class="container">
-      <div class="masthead-heading text-uppercase">{{ title }}</div>
-      {% if subtitle %}
-      <div class="masthead-subheading">{{ subtitle }}</div>
-      {% endif %}
-    </div>
-  </header>
+    <header class="masthead" style="background-image: url({{ url }})">
+    {% else %}
+        <header class="masthead" style="background-image: url('/assets/img/index/header-bg.jpg')">
+        {% endif %}
+        <div class="container">
+            <div class="masthead-heading text-uppercase">{{ title }}</div>
+            {% if subtitle %}
+                <div class="masthead-subheading">{{ subtitle }}</div>
+            {% endif %}
+        </div>
+    </header>
 </header>

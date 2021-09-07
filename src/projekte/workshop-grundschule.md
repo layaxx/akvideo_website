@@ -43,7 +43,7 @@ Nachdem wir in der ersten Phase den Kindern gezeigt haben, wie man einen Film dr
 
 ## PHASE 3 - WIEDER FILM SCHAUEN!
 
-Nachdem Dreharbeiten und Schnitt abgeschlossen sind, werden wir eine richtige Premiere organisieren, wie wir das bei unseren eigenen Kurzfilmen, u. A. [Lichtblick ](https://arbeitskreis.video/projekte/lichtblick)und [Sackgasse,](https://arbeitskreis.video/projekte/sackgasse) auch gemacht haben. Diese wird in der Aula der Grundschule stattfinden, und die Gäste, insbesondere natürlich die mitwirkenden Schüler und deren Eltern, erwartet neben Popcorn und einem roten Teppich ein spannendes Programm aus Making-of, Outtakes und natürlich den fertigen Filmen.
+Nachdem Dreharbeiten und Schnitt abgeschlossen sind, werden wir eine richtige Premiere organisieren, wie wir das bei unseren eigenen Kurzfilmen, u. A. [Lichtblick ](/projekte/lichtblick)und [Sackgasse,](/projekte/sackgasse) auch gemacht haben. Diese wird in der Aula der Grundschule stattfinden, und die Gäste, insbesondere natürlich die mitwirkenden Schüler und deren Eltern, erwartet neben Popcorn und einem roten Teppich ein spannendes Programm aus Making-of, Outtakes und natürlich den fertigen Filmen.
 
 ### AUSBLICK
 
