@@ -4,7 +4,6 @@ title: Hugo Singer
 subtitle: Gründer des Arbeitskreises Video
 ---
 
-
 ## WER IST HUGO?
 
 ![](/assets/img/uploads/hugo-singer_2.jpg)

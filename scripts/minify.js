@@ -15,13 +15,7 @@ const minifyDirectory = async (directory) => {
 
       const stat = await fs.promises.stat(newPath);
 
-      if (
-        stat.isFile() &&
-        !newPath.includes(".min.") &&
-        (newPath.endsWith(".js") ||
-          newPath.endsWith(".html") ||
-          newPath.endsWith(".xml"))
-      ) {
+      if (stat.isFile() && !newPath.includes(".min.") && (newPath.endsWith(".js") || newPath.endsWith(".html") || newPath.endsWith(".xml"))) {
         const contents = fs.readFileSync(newPath, "utf8");
         if (newPath.endsWith(".js")) {
           fs.writeFileSync(newPath, UglifyJS.minify(contents).code);

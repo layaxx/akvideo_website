@@ -8,13 +8,11 @@ category: Test
 timeline:
   - date: Termin 1
     title: Vorstellung
-    description:
-      Wir kommen an die Grundschule, zeigen unsere Filme und erzählen,
+    description: Wir kommen an die Grundschule, zeigen unsere Filme und erzählen,
       was zur Produktion eines Films alles dazugehört.
   - date: Termin 2 (Wochenende)
     title: Filmdreh
-    description:
-      Zusammen mit interessierten Schülern denken wir uns eine Geschichte
+    description: Zusammen mit interessierten Schülern denken wir uns eine Geschichte
       aus, schreiben ein Drehbuch und produzieren daraus einen Kurzfilm.
   - date: Termin 3
     title: Premiere

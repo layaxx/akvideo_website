@@ -56,8 +56,7 @@ module.exports = function (eleventyConfig) {
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js":
-      "./assets/js/bootstrap.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.min.js": "./assets/js/bootstrap.min.js",
     "./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
   });
 
@@ -132,7 +131,7 @@ module.exports = function (eleventyConfig) {
         };
       }),
     ];
-    return { events, eras };
+    return JSON.stringify({ events, eras });
   });
   eleventyConfig.addFilter("loadfile", function (path) {
     return fs.readFileSync(path);
@@ -157,15 +156,11 @@ module.exports = function (eleventyConfig) {
         .getAll()
         .filter((item) => !item.data.sitemap.ignore && !item.data.nopage)
         .reduce(function (r, a) {
-          r[a.data.sitemap.category || defaultCategory] =
-            r[a.data.sitemap.category || defaultCategory] || [];
+          r[a.data.sitemap.category || defaultCategory] = r[a.data.sitemap.category || defaultCategory] || [];
           r[a.data.sitemap.category || defaultCategory].push(a);
           return r;
         }, Object.create(null))
-    ).map(([category, ...list]) => [
-      category,
-      ...list.sort((a, b) => a.url.localeCompare(b.url)),
-    ]);
+    ).map(([category, ...list]) => [category, ...list.sort((a, b) => a.url.localeCompare(b.url))]);
   });
   // returns index for search module
   eleventyConfig.addCollection("search_data", function (collection) {

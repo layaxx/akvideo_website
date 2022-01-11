@@ -1,12 +1,5 @@
 {
-  "featuredProjects": [
-    "workshop-grundschule",
-    "johns-adventure",
-    "sackgasse",
-    "clipped-übersteuert",
-    "lichtblick",
-    "panzerknacker"
-  ],
+  "featuredProjects": ["workshop-grundschule", "johns-adventure", "sackgasse", "clipped-übersteuert", "lichtblick", "panzerknacker"],
   "awards": [
     {
       "title": "BESTER FILM",

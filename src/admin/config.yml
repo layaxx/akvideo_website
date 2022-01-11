@@ -13,12 +13,7 @@ collections:
     create: true
     slug: "{{title}}"
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "portrait",
-        }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "portrait" }
       - { label: "Name/Titel", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -30,95 +25,26 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     sortable_fields: ["title", "year"]
     fields: # The fields for each document, usually in front matter
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "project",
-        }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "project" }
       - { label: "Tags", name: "tags", widget: "hidden", default: "project" }
       - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Keine eigene Seite",
-          name: "nopage",
-          widget: "boolean",
-          default: false,
-        }
-      - {
-          label: "Link zu extern",
-          name: "external",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Production Year",
-          name: "year",
-          widget: "date",
-          format: "YYYY",
-          date_format: "YYYY",
-        }
+      - { label: "Keine eigene Seite", name: "nopage", widget: "boolean", default: false }
+      - { label: "Link zu extern", name: "external", widget: "string", required: false }
+      - { label: "Production Year", name: "year", widget: "date", format: "YYYY", date_format: "YYYY" }
       - { label: "Category", name: "category", widget: "string" }
-      - {
-          label: "Details",
-          name: "details",
-          widget: "list",
-          fields:
-            [
-              { name: "type", label: "Type", widget: "string" },
-              { name: "value", label: "Wert", widget: "string" },
-            ],
-        }
+      - { label: "Details", name: "details", widget: "list", fields: [{ name: "type", label: "Type", widget: "string" }, { name: "value", label: "Wert", widget: "string" }] }
       - {
           label: "Timeline",
           name: "timeline",
           widget: "list",
           max: 6,
-          fields:
-            [
-              { name: "date", label: "Termin", widget: "string" },
-              { name: "title", label: "Titel", widget: "string" },
-              { name: "description", label: "Beschreibung", widget: "text" },
-            ],
+          fields: [{ name: "date", label: "Termin", widget: "string" }, { name: "title", label: "Titel", widget: "string" }, { name: "description", label: "Beschreibung", widget: "text" }],
         }
-      - {
-          label: "Trailer",
-          name: "trailer",
-          widget: "object",
-          fields:
-            [
-              {
-                label: "YouTube URL",
-                name: "url",
-                required: false,
-                widget: string,
-              },
-              {
-                label: "Trailer Text",
-                name: "text",
-                required: false,
-                widget: text,
-              },
-            ],
-        }
-      - {
-          label: "Link to finished Film",
-          name: "finishedFilm",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Image Header",
-          name: "header",
-          widget: "image",
-          required: false,
-        }
+      - { label: "Trailer", name: "trailer", widget: "object", fields: [{ label: "YouTube URL", name: "url", required: false, widget: string }, { label: "Trailer Text", name: "text", required: false, widget: text }] }
+      - { label: "Link to finished Film", name: "finishedFilm", widget: "string", required: false }
+      - { label: "Image Header", name: "header", widget: "image", required: false }
       - { label: "Image Thumbnail", name: "thumbnail", widget: "image" }
-      - {
-          label: "Show Contact Form",
-          name: "contact",
-          widget: "boolean",
-          default: false,
-        }
+      - { label: "Show Contact Form", name: "contact", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Pages"
     name: "pages"
@@ -129,18 +55,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro", name: "intro", widget: "markdown" }
-          - {
-              label: "Featured Projects",
-              name: featuredProjects,
-              widget: "relation",
-              multiple: true,
-              min: 3,
-              max: 6,
-              collection: "projekte",
-              value_field: "{{slug}}",
-              search_fields: ["title"],
-              display_fields: ["title"],
-            }
+          - { label: "Featured Projects", name: featuredProjects, widget: "relation", multiple: true, min: 3, max: 6, collection: "projekte", value_field: "{{slug}}", search_fields: ["title"], display_fields: ["title"] }
           - {
               label: "Awards",
               name: "awards",
@@ -173,31 +88,12 @@ collections:
                     fields:
                       [
                         { label: "Foto", name: "media", widget: "image" },
-                        {
-                          label: "Bildunterschrift",
-                          name: "caption",
-                          widget: "string",
-                        },
+                        { label: "Bildunterschrift", name: "caption", widget: "string" },
                         { label: "Link", name: "link", widget: "string" },
-                        {
-                          label: "Jahr",
-                          name: "year",
-                          widget: "date",
-                          format: "YYYY",
-                          date_format: "YYYY",
-                        },
-                        {
-                          label: "Überschrift",
-                          name: "headline",
-                          widget: "string",
-                        },
+                        { label: "Jahr", name: "year", widget: "date", format: "YYYY", date_format: "YYYY" },
+                        { label: "Überschrift", name: "headline", widget: "string" },
                         { label: "Text", name: "text", widget: "text" },
-                        {
-                          label: "Gruppe",
-                          name: "group",
-                          widget: "string",
-                          required: false,
-                        },
+                        { label: "Gruppe", name: "group", widget: "string", required: false },
                       ],
                   },
                   {
@@ -206,27 +102,10 @@ collections:
                     widget: "list",
                     fields:
                       [
-                        {
-                          label: "Film",
-                          name: "film",
-                          widget: "relation",
-                          collection: "projekte",
-                          value_field: "{{slug}}",
-                          search_fields: ["title"],
-                          display_fields: ["title"],
-                        },
-                        {
-                          label: "Überschrift",
-                          name: "headline",
-                          widget: "string",
-                        },
+                        { label: "Film", name: "film", widget: "relation", collection: "projekte", value_field: "{{slug}}", search_fields: ["title"], display_fields: ["title"] },
+                        { label: "Überschrift", name: "headline", widget: "string" },
                         { label: "Text", name: "text", widget: "text" },
-                        {
-                          label: "Gruppe",
-                          name: "group",
-                          widget: "string",
-                          default: "filme",
-                        },
+                        { label: "Gruppe", name: "group", widget: "string", default: "filme" },
                       ],
                   },
                   {
@@ -235,25 +114,9 @@ collections:
                     widget: "list",
                     fields:
                       [
-                        {
-                          label: "Startjahr",
-                          name: "start_year",
-                          widget: "date",
-                          format: "YYYY",
-                          date_format: "YYYY",
-                        },
-                        {
-                          label: "Endjahr",
-                          name: "end_year",
-                          widget: "date",
-                          format: "YYYY",
-                          date_format: "YYYY",
-                        },
-                        {
-                          label: "Überschrift",
-                          name: "headline",
-                          widget: "string",
-                        },
+                        { label: "Startjahr", name: "start_year", widget: "date", format: "YYYY", date_format: "YYYY" },
+                        { label: "Endjahr", name: "end_year", widget: "date", format: "YYYY", date_format: "YYYY" },
+                        { label: "Überschrift", name: "headline", widget: "string" },
                       ],
                   },
                 ],
