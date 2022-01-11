@@ -19,8 +19,9 @@
     "concurrently": "^6.2.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.10.0",
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^1.0.0",
+    "@11ty/eleventy-upgrade-help": "^1.0.1",
     "bootstrap": "^5.1.0",
     "eleventy-plugin-metagen": "^1.4.0",
     "gray-matter": "^4.0.3",
