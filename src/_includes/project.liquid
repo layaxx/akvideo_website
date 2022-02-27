@@ -9,9 +9,9 @@ layout: document
   </head>
 
   <body>
-    {% include components/nav , active: 1 %} {% assign subtitle= category |
-    append: ", " | append: year %} {% include components/masthead, title,
-    subtitle, url: header %}
+    {% include components/nav , active: 1 %} 
+    {% assign subtitle= category | append: ", " | append: year %} 
+    {% include components/masthead, title: title, subtitle: subtitle, url: header %}
 
     <main>
       {% if nopage %}

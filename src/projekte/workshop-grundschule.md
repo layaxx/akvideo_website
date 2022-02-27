@@ -3,8 +3,8 @@ layout: project
 tags: project
 title: Workshop Grundschule
 nopage: false
-year: 2021
-category: Test
+year: 2023
+category: Workshop
 timeline:
   - date: Termin 1
     title: Vorstellung
