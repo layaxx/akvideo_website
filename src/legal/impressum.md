@@ -25,7 +25,7 @@ E-Mail: stadtjugend -et- t-online.de
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 
 Yannick Lang\
-yl -et- arbeitskreis.video\
+dev -et- y-lang.eu\
 Mussener Weg 7\
 95213 M&uuml;nchberg
 
