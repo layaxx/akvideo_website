@@ -5,8 +5,6 @@ const metagen = require("eleventy-plugin-metagen");
 const Image = require("@11ty/eleventy-img");
 const { parseHTML } = require("linkedom");
 
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
-
 const IMAGE_OPTIONS = {
   urlPath: "/assets/img/",
   outputDir: "./_site/assets/img/",
@@ -45,8 +43,6 @@ async function imageShortcode(src, alt, classes) {
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(UpgradeHelper);
-
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setLiquidOptions({
@@ -65,10 +61,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/webfonts");
   eleventyConfig.addPassthroughCopy({
     "./src/assets/js/passthrough": "./assets/js",
-  });
-
-  eleventyConfig.setBrowserSyncConfig({
-    files: "./_site/assets/css/**/*.css",
   });
 
   eleventyConfig.addWatchTarget("./src/assets/styles/");
@@ -164,11 +156,13 @@ module.exports = function (eleventyConfig) {
   });
   // returns index for search module
   eleventyConfig.addCollection("search_data", function (collection) {
-    const data = collection.getAll().map((p) => {
+    const data = collection.getAll().map(async (p) => {
       const url = p.url;
       const title = p.data.title;
+      const pageData = await p.template.read();
+
       return {
-        content: p.template.frontMatter.content
+        content: pageData.content
           .replace(/<[^>]+>/gim, "") // remove html tags
           .replace(/{{[^}]+}}/gim, "") // remove liquid interpolations
           .replace(/{%[^%]+%}/gim, "") // remove liquid tags

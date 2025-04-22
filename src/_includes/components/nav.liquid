@@ -22,7 +22,7 @@
           <a
             class="nav-link"
             href="{{ item.url }}"
-            data-bs-target="{{ item.url | | remove_leading_slash }}"
+            data-bs-target="{{ item.url | remove_leading_slash }}"
           >
             {{ item.text }}
           </a>
