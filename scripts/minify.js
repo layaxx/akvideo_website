@@ -1,27 +1,26 @@
-const fs = require("fs");
+const fs = require("fs/promises");
 const path = require("path");
 var UglifyJS = require("uglify-js");
 var minify = require("html-minifier").minify;
 const { pd: prettyData } = require("pretty-data");
 
-const startingDir = "./_site/";
-
 const minifyDirectory = async (directory) => {
-  try {
-    const files = await fs.promises.readdir(directory);
+  const files = await fs.readdir(directory);
 
-    for (const file of files) {
+  await Promise.all(
+    files.map(async (file) => {
       const newPath = path.join(directory, file);
 
-      const stat = await fs.promises.stat(newPath);
+      const stat = await fs.stat(newPath);
 
-      if (stat.isFile() && !newPath.includes(".min.") && (newPath.endsWith(".js") || newPath.endsWith(".html") || newPath.endsWith(".xml"))) {
-        const contents = fs.readFileSync(newPath, "utf8");
+      if (stat.isFile() && !newPath.includes(".min.") && ["js", "html", "xml"].includes(newPath.split(".").at(-1))) {
+        const contents = await fs.readFile(newPath, "utf8");
+
         if (newPath.endsWith(".js")) {
-          fs.writeFileSync(newPath, UglifyJS.minify(contents).code);
+          await fs.writeFile(newPath, UglifyJS.minify(contents).code);
           console.log("minified: " + newPath);
         } else if (newPath.endsWith(".html")) {
-          fs.writeFileSync(
+          await fs.writeFile(
             newPath,
             minify(contents, {
               collapseBooleanAttributes: true,
@@ -40,16 +39,14 @@ const minifyDirectory = async (directory) => {
           );
           console.log("minified: " + newPath);
         } else if (newPath.endsWith(".xml")) {
-          fs.writeFileSync(newPath, prettyData.xmlmin(contents));
+          await fs.writeFile(newPath, prettyData.xmlmin(contents));
           console.log("minified: " + newPath);
         }
       } else if (stat.isDirectory()) {
-        minifyDirectory(newPath);
+        await minifyDirectory(newPath);
       }
-    }
-  } catch (e) {
-    console.error("Error during minification", e);
-  }
+    })
+  );
 };
 
-minifyDirectory(startingDir);
+minifyDirectory("./_site/");
