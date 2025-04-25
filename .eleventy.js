@@ -160,7 +160,9 @@ module.exports = function (eleventyConfig) {
       const url = p.url;
       const title = p.data.title;
       const pageData = await p.template.read();
-
+      if ("content" in pageData || typeof pageData.content !== "string") {
+        return;
+      }
       return {
         content: pageData.content
           .replace(/<[^>]+>/gim, "") // remove html tags
