@@ -1,20 +1,26 @@
-const fs = require("fs");
-const matter = require("gray-matter");
-const lunr = require("lunr");
-const metagen = require("eleventy-plugin-metagen");
-const Image = require("@11ty/eleventy-img");
-const { parseHTML } = require("linkedom");
+import fs from "node:fs";
+import matter from "gray-matter";
+import lunr from "lunr";
+import metagen from "eleventy-plugin-metagen";
+import Image from "@11ty/eleventy-img";
+import { parseHTML } from "linkedom";
+import history from "./src/_data/history/index.json";
+import { z } from "zod";
+
+const movieSchema = z.object({ slug: z.string(), tags: z.string(), title: z.string(), nopage: z.boolean(), year: z.union([z.string(), z.number()]), category: z.string(), thumbnail: z.string(), contact: z.boolean() });
+
+type Movie = z.infer<typeof movieSchema>;
 
 const IMAGE_OPTIONS = {
   urlPath: "/assets/img/",
   outputDir: "./_site/assets/img/",
 };
 
-function stringToHash(string) {
+function stringToHash(input: string) {
   var hash = 0;
 
-  for (i = 0; i < string.length; i++) {
-    char = string.charCodeAt(i);
+  for (let i = 0; i < input.length; i++) {
+    const char = input.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
@@ -42,7 +48,7 @@ async function imageShortcode(src, alt, classes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setLiquidOptions({
@@ -64,19 +70,22 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget("./src/assets/styles/");
+  // eleventyConfig.addTemplateFormats("11ty.ts,11ty.tsx");
 
   /* CUSTOM FILTERS */
   // 1. unstringify movie
-  const fetchMovie = (slug) => {
+  const fetchMovie = (slug: string): Movie | null => {
     const projectLocation = "./src/projekte/";
     const fileExtension = ".md";
     const path = projectLocation + slug + fileExtension;
+    console.log("fetching movie: " + slug);
     if (fs.existsSync(path)) {
       const file = matter.read(path);
-      return { ...file.data, slug };
+      const movie = { ...file.data, slug };
+      return movieSchema.parse(movie);
     } else {
       console.error("invalid path to project: " + slug);
-      return {};
+      return null;
     }
   };
   eleventyConfig.addFilter("makeMovie", fetchMovie);
@@ -88,7 +97,7 @@ module.exports = function (eleventyConfig) {
     return string;
   });
   // 3. format timeline data properly
-  eleventyConfig.addFilter("buildTimelineData", function (data) {
+  eleventyConfig.addFilter("buildTimelineData", function (data: typeof history.timeline) {
     const eras = data.eras.map((era) => {
       return {
         text: { headline: era.headline },
@@ -99,6 +108,11 @@ module.exports = function (eleventyConfig) {
     const events = [
       ...data.films.map(({ headline, text, group, film }) => {
         const movie = fetchMovie(film);
+
+        if (!movie) {
+          console.error("invalid path to project: " + film);
+          return null;
+        }
 
         return {
           media: {
@@ -143,6 +157,7 @@ module.exports = function (eleventyConfig) {
   // returns sorted page data for use in sitemap
   eleventyConfig.addCollection("allSitemapSorted", function (collection) {
     const defaultCategory = "";
+    // FIXME: this is a bit of a mess
     return Object.entries(
       collection
         .getAll()
@@ -152,7 +167,10 @@ module.exports = function (eleventyConfig) {
           r[a.data.sitemap.category || defaultCategory].push(a);
           return r;
         }, Object.create(null))
-    ).map(([category, ...list]) => [category, ...list.sort((a, b) => a.url.localeCompare(b.url))]);
+    ).map(([category, ...list]) => [
+      category,
+      ...list.sort((a, b) => (typeof a == "object" && a && "url" in a && typeof a.url === "string" ? a.url.localeCompare(typeof b === "object" && b && "url" in b && typeof b.url === "string" ? b.url : "undefined") : 0)), // FIXME: what even is this
+    ]);
   });
   // returns index for search module
   eleventyConfig.addCollection("search_data", function (collection) {
@@ -199,7 +217,7 @@ module.exports = function (eleventyConfig) {
     // loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
     if (outputPath && outputPath.endsWith(".html")) {
       let { document } = parseHTML(content);
-      const hashes = [];
+      const hashes: string[] = [];
 
       [...document.querySelectorAll(".md-content img")]
         .filter((i) => !i.src.startsWith("http"))
@@ -236,7 +254,7 @@ module.exports = function (eleventyConfig) {
           i.remove();
         });
 
-      let currentHash = 0;
+      let currentHash;
       [...document.querySelectorAll(".md-content > *")].forEach((elem) => {
         if (elem.tagName === "P") {
           currentHash = stringToHash(elem.textContent);
@@ -266,9 +284,19 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  /*   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
+    key: "11ty.js",
+    compile: function () {
+      return async function (data) {
+        let content = await this.defaultRenderer(data);
+        return renderToStaticMarkup(content);
+      };
+    },
+  });
+ */
   return {
     dir: {
       input: "src",
     },
   };
-};
+}
