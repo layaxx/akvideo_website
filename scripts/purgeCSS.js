@@ -1,6 +1,5 @@
 const { PurgeCSS } = require("purgecss")
 const fs = require("node:fs/promises")
-
 ;(async () => {
 	const result = await new PurgeCSS().purge({
 		content: ["_site/**/*.html"],
