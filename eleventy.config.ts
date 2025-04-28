@@ -6,17 +6,22 @@ import Image from "@11ty/eleventy-img";
 import { parseHTML } from "linkedom";
 import history from "./src/_data/history/index.json";
 import { z } from "zod";
+import UserConfig from "./types/@11ty/eleventy/UserConfig";
 
 const movieSchema = z.object({ slug: z.string(), tags: z.string(), title: z.string(), nopage: z.boolean(), year: z.union([z.string(), z.number()]), category: z.string(), thumbnail: z.string(), contact: z.boolean() });
 
 type Movie = z.infer<typeof movieSchema>;
+type Collection = {
+  getAll: () => Array<{ url: string; data: { title: string; sitemap: { ignore: boolean; category?: string }; nopage?: boolean }; template: { read: () => Promise<{ content: string }> } }>;
+  getFilteredByTag: (tag: string) => Array<{ data: { year: number } }>;
+};
 
 const IMAGE_OPTIONS = {
   urlPath: "/assets/img/",
   outputDir: "./_site/assets/img/",
 };
 
-function stringToHash(input: string) {
+function stringToHash(input: string): string {
   var hash = 0;
 
   for (let i = 0; i < input.length; i++) {
@@ -28,7 +33,7 @@ function stringToHash(input: string) {
   return "h-" + hash;
 }
 
-async function imageShortcode(src, alt, classes) {
+async function imageShortcode(src: string, alt: string, classes: string) {
   if (src && src.startsWith("/")) {
     src = "./src" + src;
   } else if (!src) {
@@ -48,19 +53,19 @@ async function imageShortcode(src, alt, classes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-export default function (eleventyConfig) {
+export default function (eleventyConfig: UserConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,
   });
 
-  // Copy Static Files to /_Site
-  eleventyConfig.addPassthroughCopy({
-    "./src/admin/config.yml": "./admin/config.yml",
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js": "./assets/js/bootstrap.min.js",
-    "./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
-  });
+  eleventyConfig // Copy Static Files to /_Site
+    .addPassthroughCopy({
+      "./src/admin/config.yml": "./admin/config.yml",
+      "./node_modules/bootstrap/dist/js/bootstrap.min.js": "./assets/js/bootstrap.min.js",
+      "./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
+    });
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img");
@@ -90,11 +95,11 @@ export default function (eleventyConfig) {
   };
   eleventyConfig.addFilter("makeMovie", fetchMovie);
   // 2. remove leading slash (used in navigation)
-  eleventyConfig.addFilter("remove_leading_slash", function (string) {
-    if (string.charAt(0) === "/") {
-      return string.slice(1);
+  eleventyConfig.addFilter("remove_leading_slash", function (input: string) {
+    if (input.charAt(0) === "/") {
+      return input.slice(1);
     }
-    return string;
+    return input;
   });
   // 3. format timeline data properly
   eleventyConfig.addFilter("buildTimelineData", function (data: typeof history.timeline) {
@@ -139,13 +144,13 @@ export default function (eleventyConfig) {
     ];
     return JSON.stringify({ events, eras });
   });
-  eleventyConfig.addFilter("loadfile", function (path) {
+  eleventyConfig.addFilter("loadfile", function (path: string) {
     return fs.readFileSync(path);
   });
 
   /* COLLECTIONS */
   // returns projects in reverse chronological order, grouped by year
-  eleventyConfig.addCollection("projects_ordered", function (collection) {
+  eleventyConfig.addCollection("projects_ordered", function (collection: Collection) {
     return Object.entries(
       collection.getFilteredByTag("project").reduce(function (r, a) {
         r[a.data.year] = r[a.data.year] || [];
@@ -155,7 +160,7 @@ export default function (eleventyConfig) {
     ).reverse();
   });
   // returns sorted page data for use in sitemap
-  eleventyConfig.addCollection("allSitemapSorted", function (collection) {
+  eleventyConfig.addCollection("allSitemapSorted", function (collection: Collection) {
     const defaultCategory = "";
     // FIXME: this is a bit of a mess
     return Object.entries(
@@ -173,12 +178,12 @@ export default function (eleventyConfig) {
     ]);
   });
   // returns index for search module
-  eleventyConfig.addCollection("search_data", function (collection) {
+  eleventyConfig.addCollection("search_data", function (collection: Collection) {
     const data = collection.getAll().map(async (p) => {
       const url = p.url;
       const title = p.data.title;
       const pageData = await p.template.read();
-      if ("content" in pageData || typeof pageData.content !== "string") {
+      if (!("content" in pageData) || typeof pageData.content !== "string") {
         return;
       }
       return {
@@ -212,7 +217,7 @@ export default function (eleventyConfig) {
   // 2: Images
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
-  eleventyConfig.addTransform("transform", (content, outputPath) => {
+  eleventyConfig.addTransform("transform", (content: unknown, outputPath: string) => {
     // apply Image Plugin to Images in Markdown files
     // loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
     if (outputPath && outputPath.endsWith(".html")) {
@@ -220,11 +225,12 @@ export default function (eleventyConfig) {
       const hashes: string[] = [];
 
       [...document.querySelectorAll(".md-content img")]
-        .filter((i) => !i.src.startsWith("http"))
+        .filter((i) => "src" in i && typeof i.src === "string" && !i.src.startsWith("http"))
         .forEach((i) => {
           const src = "./src" + i.getAttribute("src");
           Image(src, IMAGE_OPTIONS);
           const metadata = Image.statsSync(src, IMAGE_OPTIONS);
+
           let imageAttributes = {
             alt: i.getAttribute("alt") || "",
             loading: "lazy",
@@ -245,19 +251,25 @@ export default function (eleventyConfig) {
           }
 
           container.appendChild(figure);
+
+          if (i.parentElement === null) {
+            console.error("Image has no parent element");
+            return;
+          }
+
           if (i.parentElement.textContent !== "") {
             i.parentElement.append(container);
           } else {
-            i.parentElement.outerHTML = container;
+            i.parentElement.outerHTML = container.outerHTML;
           }
 
           i.remove();
         });
 
-      let currentHash;
+      let currentHash: string;
       [...document.querySelectorAll(".md-content > *")].forEach((elem) => {
         if (elem.tagName === "P") {
-          currentHash = stringToHash(elem.textContent);
+          currentHash = stringToHash(elem.textContent ?? "");
           hashes.push(currentHash);
         } else if (elem.tagName === "DIV" && elem.className === "md-img") {
           elem.className = elem.className + " " + currentHash;
@@ -269,7 +281,12 @@ export default function (eleventyConfig) {
         const first = document.querySelector("." + hash);
         if (first) {
           const clone = first.cloneNode(true);
-          clone.className = "col-lg-6 col-md-12 mx-auto";
+          if ("className" in clone) {
+            clone.className = "col-lg-6 col-md-12 mx-auto";
+          } else {
+            console.error("clone has no className property");
+            return;
+          }
           container.append(clone);
           first.replaceWith(container);
         }
