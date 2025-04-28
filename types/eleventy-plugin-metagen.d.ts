@@ -1,1 +1,1 @@
-declare module "eleventy-plugin-metagen";
+declare module "eleventy-plugin-metagen"

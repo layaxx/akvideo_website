@@ -1,43 +1,45 @@
 {
-  "name": "akvideo-website",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\" \"yarn netlify-cms-proxy-server\"",
-    "watch:11ty": "tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts --serve",
-    "watch:sass": "yarn sass src/assets/styles:_site/assets/css --watch --style=compressed",
-    "build": "yarn clean && tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts && yarn sass src/assets/styles:_site/assets/css --style=compressed",
-    "postbuild": "yarn minify && yarn purgecss",
-    "clean": "node ./scripts/clean.js",
-    "minify": "node ./scripts/minify.js",
-    "purgecss": "node ./scripts/purgeCSS.js",
-    "postinstall": "node scripts/buildTypes.mjs"
-  },
-  "devDependencies": {
-    "@types/11ty__eleventy-img": "^4.0.0",
-    "@types/lunr": "^2.3.7",
-    "@types/node": "^22.15.2",
-    "concurrently": "^6.2.1",
-    "execa": "^9.5.2",
-    "netlify-cms-proxy-server": "^1.3.24",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^3.0.0",
-    "bootstrap": "^5.1.0",
-    "eleventy-plugin-metagen": "^1.4.0",
-    "gray-matter": "^4.0.3",
-    "html-minifier": "^4.0.0",
-    "linkedom": "^0.18.10",
-    "lunr": "^2.3.9",
-    "pretty-data": "^0.40.0",
-    "purgecss": "^4.0.3",
-    "sass": "^1.38.0",
-    "uglify-js": "^3.14.1",
-    "zod": "^3.24.3"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+	"name": "akvideo-website",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\" \"yarn netlify-cms-proxy-server\"",
+		"watch:11ty": "tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts --serve",
+		"watch:sass": "yarn sass src/assets/styles:_site/assets/css --watch --style=compressed",
+		"build": "yarn clean && tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts && yarn sass src/assets/styles:_site/assets/css --style=compressed",
+		"postbuild": "yarn minify && yarn purgecss",
+		"clean": "node ./scripts/clean.js",
+		"minify": "node ./scripts/minify.js",
+		"purgecss": "node ./scripts/purgeCSS.js",
+		"postinstall": "node scripts/buildTypes.mjs",
+		"lint": "biome check"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/11ty__eleventy-img": "^4.0.0",
+		"@types/lunr": "^2.3.7",
+		"@types/node": "^22.15.2",
+		"concurrently": "^6.2.1",
+		"execa": "^9.5.2",
+		"netlify-cms-proxy-server": "^1.3.24",
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^3.0.0",
+		"bootstrap": "^5.1.0",
+		"eleventy-plugin-metagen": "^1.4.0",
+		"gray-matter": "^4.0.3",
+		"html-minifier": "^4.0.0",
+		"linkedom": "^0.18.10",
+		"lunr": "^2.3.9",
+		"pretty-data": "^0.40.0",
+		"purgecss": "^4.0.3",
+		"sass": "^1.38.0",
+		"uglify-js": "^3.14.1",
+		"zod": "^3.24.3"
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

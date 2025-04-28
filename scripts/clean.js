@@ -1,7 +1,7 @@
-const fs = require("fs");
+const fs = require("node:fs")
 
-console.log("Removing build folder...");
+console.log("Removing build folder...")
 
-fs.rmSync("./_site", { recursive: true, force: true });
+fs.rmSync("./_site", { recursive: true, force: true })
 
-console.log("Build folder removed!");
+console.log("Build folder removed!")

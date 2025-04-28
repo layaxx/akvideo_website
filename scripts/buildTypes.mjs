@@ -1,9 +1,9 @@
 // Based on https://bennypowers.dev/posts/typescript-11ty-config/
 
-import { $ } from "execa";
-import fs from "fs/promises";
+import fs from "node:fs/promises"
+import { $ } from "execa"
 
-await fs.rm("types/@11ty/", { recursive: true, force: true });
+await fs.rm("types/@11ty/", { recursive: true, force: true })
 
 // 11ty doesn't actually export this type, so we have to make use
 // of our private knowledge of 11ty guts, if we want to have cognitive a11y
@@ -15,4 +15,4 @@ await $`yarn tsc
         --declaration
         --allowJs
         --emitDeclarationOnly
-        --outDir types/@11ty/eleventy`;
+        --outDir types/@11ty/eleventy`
