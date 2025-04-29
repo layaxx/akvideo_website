@@ -19,7 +19,24 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"all": true,
+			"suspicious": {
+				"noConsole": "off",
+				"noConsoleLog": "off"
+			},
+			"correctness": { "noNodejsModules": "off" },
+			"style": {
+				"useNamingConvention": {
+					"level": "info",
+					"options": {
+						"strictCase": false
+					}
+				},
+				"useFilenamingConvention": {
+					"level": "warn",
+					"options": { "strictCase": false }
+				}
+			}
 		}
 	},
 	"javascript": {

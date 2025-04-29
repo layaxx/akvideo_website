@@ -1,8 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search)
-
 const add = (elem) => document.querySelector("#output").append(elem)
 
-let index = undefined
+let index
 
 async function loadIndex() {
 	const json = await fetch("/search_index.json").then((response) => {
@@ -11,6 +9,7 @@ async function loadIndex() {
 		}
 		return response.json()
 	})
+
 	return lunr.Index.load(json)
 }
 
@@ -30,7 +29,7 @@ function displayResults(results) {
 	if (results.length > 0) {
 		const list = document.createElement("ul")
 		list.className = "mb-5"
-		for ({ ref } of results) {
+		for (const { ref } of results) {
 			const { url, title } = JSON.parse(ref)
 			const listElem = document.createElement("li")
 			const link = document.createElement("a")

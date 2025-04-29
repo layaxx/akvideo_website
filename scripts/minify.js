@@ -1,7 +1,7 @@
 const fs = require("node:fs/promises")
 const path = require("node:path")
-const UglifyJS = require("uglify-js")
-const minify = require("html-minifier").minify
+const { minifyJS } = require("uglify-js")
+const { minify } = require("html-minifier")
 const { pd: prettyData } = require("pretty-data")
 
 const minifyDirectory = async (directory) => {
@@ -21,7 +21,7 @@ const minifyDirectory = async (directory) => {
 				const contents = await fs.readFile(newPath, "utf8")
 
 				if (newPath.endsWith(".js")) {
-					await fs.writeFile(newPath, UglifyJS.minify(contents).code)
+					await fs.writeFile(newPath, minifyJS(contents).code)
 					console.log("minified", newPath)
 				} else if (newPath.endsWith(".html")) {
 					await fs.writeFile(

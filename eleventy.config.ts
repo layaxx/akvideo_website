@@ -6,7 +6,7 @@ import { parseHTML } from "linkedom"
 import lunr from "lunr"
 import { z } from "zod"
 import type history from "./src/_data/history/index.json"
-import type UserConfig from "./types/@11ty/eleventy/UserConfig"
+import type UserConfig from "./types/@11ty/eleventy/UserConfig.d.ts"
 
 const movieSchema = z.object({
 	slug: z.string(),
@@ -44,7 +44,7 @@ function stringToHash(input: string): string {
 	for (let i = 0; i < input.length; i++) {
 		const char = input.charCodeAt(i)
 		hash = (hash << 5) - hash + char
-		hash = hash & hash
+		hash &= hash
 	}
 
 	return `h-${hash}`
@@ -72,6 +72,7 @@ async function imageShortcode(src: string, alt: string, classes: string) {
 	return Image.generateHTML(metadata, imageAttributes)
 }
 
+// biome-ignore lint/style/noDefaultExport: needs to be default export for 11ty
 export default function (eleventyConfig: UserConfig) {
 	eleventyConfig.setDataDeepMerge(true)
 
@@ -186,7 +187,7 @@ export default function (eleventyConfig: UserConfig) {
 		return Object.entries(
 			collection
 				.getAll()
-				.filter((item) => !item.data.sitemap.ignore && !item.data.nopage)
+				.filter((item) => !(item.data.sitemap.ignore || item.data.nopage))
 				.reduce((r, a) => {
 					r[a.data.sitemap.category || defaultCategory] =
 						r[a.data.sitemap.category || defaultCategory] || []
@@ -223,8 +224,7 @@ export default function (eleventyConfig: UserConfig) {
 					.replace(/<[^>]+>/gim, "") // remove html tags
 					.replace(/{{[^}]+}}/gim, "") // remove liquid interpolations
 					.replace(/{%[^%]+%}/gim, "") // remove liquid tags
-					.replace(/\s\s+/gim, " ") // replace multiple whitespaces with a single whitespace
-					.replace(/\\./, ""), // remove escape sequences
+					.replace(/\s\s+/gim, " "), // replace multiple whitespaces with a single whitespace
 				url,
 				title,
 				ref: JSON.stringify({ url, title }),

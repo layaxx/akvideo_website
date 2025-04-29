@@ -7,7 +7,7 @@ const fs = require("node:fs/promises")
 	})
 
 	await Promise.all(
-		result.map(async ({ file, css }) => {
+		result.map(({ file, css }) => {
 			console.log(`Writing ${file} after purge`)
 			return fs.writeFile(file, css)
 		}),
