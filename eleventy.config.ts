@@ -1,76 +1,12 @@
 import fs from "node:fs"
-import Image from "@11ty/eleventy-img"
 import metagen from "eleventy-plugin-metagen"
-import matter from "gray-matter"
-import { parseHTML } from "linkedom"
-import lunr from "lunr"
-import { z } from "zod"
+import { fetchMovie } from "./config/fetchMovie.ts"
+import { imageShortcode, transformImages } from "./config/image.ts"
+import { makeSearchCollection } from "./config/search/collection.ts"
+import { makeSitemapCollection } from "./config/sitemap.ts"
 import type history from "./src/_data/history/index.json"
 import type UserConfig from "./types/@11ty/eleventy/UserConfig.d.ts"
-
-const movieSchema = z.object({
-	slug: z.string(),
-	tags: z.string(),
-	title: z.string(),
-	nopage: z.boolean(),
-	year: z.union([z.string(), z.number()]),
-	category: z.string(),
-	thumbnail: z.string(),
-	contact: z.boolean(),
-})
-
-type Movie = z.infer<typeof movieSchema>
-type Collection = {
-	getAll: () => Array<{
-		url: string
-		data: {
-			title: string
-			sitemap: { ignore: boolean; category?: string }
-			nopage?: boolean
-		}
-		template: { read: () => Promise<{ content: string }> }
-	}>
-	getFilteredByTag: (tag: string) => Array<{ data: { year: number } }>
-}
-
-const IMAGE_OPTIONS = {
-	urlPath: "/assets/img/",
-	outputDir: "./_site/assets/img/",
-}
-
-function stringToHash(input: string): string {
-	let hash = 0
-
-	for (let i = 0; i < input.length; i++) {
-		const char = input.charCodeAt(i)
-		hash = (hash << 5) - hash + char
-		hash &= hash
-	}
-
-	return `h-${hash}`
-}
-
-async function imageShortcode(src: string, alt: string, classes: string) {
-	if (!src) {
-		console.error("No Source")
-		return
-	}
-
-	const metadata = await Image(
-		src.startsWith("/") ? `./src${src}` : src,
-		IMAGE_OPTIONS,
-	)
-
-	const imageAttributes = {
-		alt,
-		loading: "lazy",
-		decoding: "async",
-		class: classes,
-	}
-
-	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-	return Image.generateHTML(metadata, imageAttributes)
-}
+import type { Collection } from "./types/custom.ts"
 
 // biome-ignore lint/style/noDefaultExport: needs to be default export for 11ty
 export default function (eleventyConfig: UserConfig) {
@@ -100,19 +36,6 @@ export default function (eleventyConfig: UserConfig) {
 
 	/* CUSTOM FILTERS */
 	// 1. unstringify movie
-	const fetchMovie = (slug: string): Movie | null => {
-		const projectLocation = "./src/projekte/"
-		const fileExtension = ".md"
-		const path = projectLocation + slug + fileExtension
-		console.log(`fetching movie: ${slug}`)
-		if (fs.existsSync(path)) {
-			const file = matter.read(path)
-			const movie = { ...file.data, slug }
-			return movieSchema.parse(movie)
-		}
-		console.error(`invalid path to project: ${slug}`)
-		return null
-	}
 	eleventyConfig.addFilter("makeMovie", fetchMovie)
 	// 2. remove leading slash (used in navigation)
 	eleventyConfig.addFilter("remove_leading_slash", (input: string) => {
@@ -181,179 +104,17 @@ export default function (eleventyConfig: UserConfig) {
 		).reverse(),
 	)
 	// returns sorted page data for use in sitemap
-	eleventyConfig.addCollection("allSitemapSorted", (collection: Collection) => {
-		const defaultCategory = ""
-		// FIXME: this is a bit of a mess
-		return Object.entries(
-			collection
-				.getAll()
-				.filter((item) => !(item.data.sitemap.ignore || item.data.nopage))
-				.reduce((r, a) => {
-					r[a.data.sitemap.category || defaultCategory] =
-						r[a.data.sitemap.category || defaultCategory] || []
-					r[a.data.sitemap.category || defaultCategory].push(a)
-					return r
-				}, Object.create(null)),
-		).map(([category, ...list]) => [
-			category,
-			...list.sort((a, b) =>
-				typeof a === "object" && a && "url" in a && typeof a.url === "string"
-					? a.url.localeCompare(
-							typeof b === "object" &&
-								b &&
-								"url" in b &&
-								typeof b.url === "string"
-								? b.url
-								: "undefined",
-						)
-					: 0,
-			), // FIXME: what even is this
-		])
-	})
+	eleventyConfig.addCollection("allSitemapSorted", makeSitemapCollection)
 	// returns index for search module
-	eleventyConfig.addCollection("search_data", (collection: Collection) => {
-		const data = collection.getAll().map(async (p) => {
-			const url = p.url
-			const title = p.data.title
-			const pageData = await p.template.read()
-			if (!("content" in pageData) || typeof pageData.content !== "string") {
-				return
-			}
-			return {
-				content: pageData.content
-					.replace(/<[^>]+>/gim, "") // remove html tags
-					.replace(/{{[^}]+}}/gim, "") // remove liquid interpolations
-					.replace(/{%[^%]+%}/gim, "") // remove liquid tags
-					.replace(/\s\s+/gim, " "), // replace multiple whitespaces with a single whitespace
-				url,
-				title,
-				ref: JSON.stringify({ url, title }),
-			}
-		})
-
-		const idx = lunr(function () {
-			this.field("content")
-			this.field("title")
-			this.field("url")
-			this.ref("ref")
-
-			for (const project of data) {
-				this.add(project)
-			}
-		})
-
-		return JSON.stringify(idx)
-	})
+	eleventyConfig.addCollection("search_data", makeSearchCollection)
 
 	/* PLUGINS */
 	// 1: generate Metadata
 	eleventyConfig.addPlugin(metagen)
 	// 2: Images
 	eleventyConfig.addLiquidShortcode("image", imageShortcode)
-
-	eleventyConfig.addTransform(
-		"transform",
-		(content: unknown, outputPath: string) => {
-			// apply Image Plugin to Images in Markdown files
-			// loosely based on https://gist.github.com/Alexs7zzh/d92ae991ad05ed585d072074ea527b5c
-			// biome-ignore lint/complexity/useOptionalChain: <explanation>
-			if (outputPath && outputPath.endsWith(".html")) {
-				const { document } = parseHTML(content)
-				const hashes: string[] = []
-
-				const imagesToBeTransformed = [
-					...document.querySelectorAll(".md-content img"),
-				].filter(
-					(i) =>
-						"src" in i &&
-						typeof i.src === "string" &&
-						!i.src.startsWith("http"),
-				)
-
-				for (const i of imagesToBeTransformed) {
-					const src = `./src${i.getAttribute("src")}`
-					Image(src, IMAGE_OPTIONS)
-					const metadata = Image.statsSync(src, IMAGE_OPTIONS)
-
-					const imageAttributes = {
-						alt: i.getAttribute("alt") || "",
-						loading: "lazy",
-						decoding: "async",
-						class: "img-fluid",
-					}
-					const container = document.createElement("div")
-					container.className = "md-img "
-
-					const figure = document.createElement("figure")
-					figure.innerHTML = Image.generateHTML(metadata, imageAttributes)
-
-					if (i.getAttribute("title")) {
-						const caption = document.createElement("figcaption")
-						caption.textContent = i.getAttribute("title")
-						caption.classList.add("fst-italic")
-						figure.append(caption)
-					}
-
-					container.appendChild(figure)
-
-					if (i.parentElement === null) {
-						console.error("Image has no parent element")
-						return
-					}
-
-					if (i.parentElement.textContent !== "") {
-						i.parentElement.append(container)
-					} else {
-						i.parentElement.outerHTML = container.outerHTML
-					}
-
-					i.remove()
-				}
-
-				let currentHash = ""
-				const markdownContentChildren = [
-					...document.querySelectorAll(".md-content > *"),
-				]
-				for (const elem of markdownContentChildren) {
-					if (elem.tagName === "P") {
-						currentHash = stringToHash(elem.textContent ?? "")
-						hashes.push(currentHash)
-					} else if (elem.tagName === "DIV" && elem.className === "md-img") {
-						elem.className = `${elem.className} ${currentHash}`
-					}
-				}
-
-				const hashSet = [...new Set(hashes)]
-
-				for (const hash of hashSet) {
-					const container = document.createElement("div")
-					container.className = "row mt-4"
-					const first = document.querySelector(`.${hash}`)
-					if (first) {
-						const clone = first.cloneNode(true)
-						if ("className" in clone) {
-							clone.className = "col-lg-6 col-md-12 mx-auto"
-						} else {
-							console.error("clone has no className property")
-							return
-						}
-						container.append(clone)
-						first.replaceWith(container)
-					}
-
-					const elements = [...document.querySelectorAll(`.${hash}`)]
-
-					for (const elem of elements) {
-						elem.className = "col-lg-6 col-md-12 mx-auto"
-						container.append(elem)
-					}
-				}
-
-				return `<!DOCTYPE html>${document.documentElement.outerHTML}`
-			}
-			return content
-		},
-	)
+	// 3: Image from Markdown Files
+	eleventyConfig.addTransform("transformImages", transformImages)
 
 	/*   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
     key: "11ty.js",

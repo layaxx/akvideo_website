@@ -1,6 +1,6 @@
 const fs = require("node:fs/promises")
 const path = require("node:path")
-const { minifyJS } = require("uglify-js")
+const { minify: minifyJS } = require("uglify-js")
 const { minify } = require("html-minifier")
 const { pd: prettyData } = require("pretty-data")
 
