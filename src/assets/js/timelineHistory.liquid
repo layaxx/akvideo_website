@@ -4,9 +4,6 @@ sitemap:
   ignore: true
 ---
 
-<!-- prettier-ignore-->
 const options = { scale_factor: 0.7 };
-<!-- prettier-ignore-->
 const json = {{ history.index.timeline | buildTimelineData }};
-<!-- prettier-ignore-->
 window.timeline = new TL.Timeline("timeline-embed", json, options);

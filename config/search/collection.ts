@@ -10,7 +10,7 @@ export async function makeSearchCollection(collection: Collection) {
 	const data = await Promise.all(
 		collection.getAll().map(async (page) => {
 			if (page.data.sitemap.ignore) {
-				console.trace("should not be indexed", page.url)
+				console.info("should not be indexed", page.url)
 				return
 			}
 
@@ -45,6 +45,7 @@ export async function makeSearchCollection(collection: Collection) {
 		this.field("title")
 		this.field("url")
 		this.ref("ref")
+		this.use(lunr.de)
 
 		const projects = data.filter((p) => p !== undefined)
 

@@ -21,6 +21,10 @@ export default function (eleventyConfig: UserConfig) {
 			"./node_modules/bootstrap/dist/js/bootstrap.min.js":
 				"./assets/js/bootstrap.min.js",
 			"./node_modules/lunr/lunr.min.js": "./assets/js/lunr.min.js",
+			"./node_modules/lunr-languages/lunr.de.js": "./assets/js/lunr.de.js",
+			"./node_modules/lunr-languages/lunr.stemmer.support.js":
+				"./assets/js/lunr.stemmer.support.js",
+			"./node_modules/requirejs/require.js": "./assets/js/require.js",
 		})
 
 	// Copy Image Folder to /_site

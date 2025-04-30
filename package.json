@@ -37,6 +37,7 @@
 		"lunr-languages": "^1.14.0",
 		"pretty-data": "^0.40.0",
 		"purgecss": "^4.0.3",
+		"requirejs": "^2.3.7",
 		"sass": "^1.38.0",
 		"uglify-js": "^3.14.1",
 		"zod": "^3.24.3"

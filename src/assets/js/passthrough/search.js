@@ -10,7 +10,7 @@ async function loadIndex() {
 		return response.json()
 	})
 
-	return lunr.Index.load(json)
+	return globalThis.lunr.Index.load(json)
 }
 
 async function search(term) {
@@ -71,4 +71,12 @@ function init() {
 	}
 }
 
-init()
+require(["/assets/js/lunr.stemmer.support.js", "/assets/js/lunr.de.js"], (
+	stemmerSupport,
+	de,
+) => {
+	stemmerSupport(globalThis.lunr) // adds lunr.stemmerSupport
+	de(globalThis.lunr) // adds lunr.de key
+
+	init()
+})
