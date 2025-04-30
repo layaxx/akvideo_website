@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "yarn clean && concurrently \"yarn watch:11ty\"  \"yarn watch:sass\" \"yarn netlify-cms-proxy-server\"",
-		"watch:11ty": "tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts --serve",
+		"watch:11ty": "tsx watch ./node_modules/.bin/eleventy --config=eleventy.config.ts --serve",
 		"watch:sass": "yarn sass src/assets/styles:_site/assets/css --watch --style=compressed",
 		"build": "yarn clean && tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts && yarn sass src/assets/styles:_site/assets/css --style=compressed",
 		"postbuild": "yarn minify && yarn purgecss",
@@ -34,6 +34,7 @@
 		"html-minifier": "^4.0.0",
 		"linkedom": "^0.18.10",
 		"lunr": "^2.3.9",
+		"lunr-languages": "^1.14.0",
 		"pretty-data": "^0.40.0",
 		"purgecss": "^4.0.3",
 		"sass": "^1.38.0",

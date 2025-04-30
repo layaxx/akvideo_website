@@ -1,4 +1,3 @@
-import fs from "node:fs"
 import metagen from "eleventy-plugin-metagen"
 import { fetchMovie } from "./config/fetchMovie.ts"
 import { imageShortcode, transformImages } from "./config/image.ts"
@@ -32,6 +31,7 @@ export default function (eleventyConfig: UserConfig) {
 	})
 
 	eleventyConfig.addWatchTarget("./src/assets/styles/")
+	eleventyConfig.addWatchTarget("./config/")
 	// eleventyConfig.addTemplateFormats("11ty.ts,11ty.tsx");
 
 	/* CUSTOM FILTERS */
@@ -90,7 +90,6 @@ export default function (eleventyConfig: UserConfig) {
 			return JSON.stringify({ events, eras })
 		},
 	)
-	eleventyConfig.addFilter("loadfile", (path: string) => fs.readFileSync(path))
 
 	/* COLLECTIONS */
 	// returns projects in reverse chronological order, grouped by year
