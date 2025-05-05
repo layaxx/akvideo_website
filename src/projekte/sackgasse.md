@@ -19,7 +19,7 @@ details:
   - type: Auflösung
     value: FHD (21:9)
   - type: Kamera
-    value: Pansonic GH4
+    value: Panasonic GH4
 trailer:
   text: Die Polizisten Sarah und Benno sind auf Streife und werden auf drei
     kiffende Jugendliche aufmerksam. Als Sarah einen der Kiffer bis in ein

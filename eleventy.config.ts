@@ -1,6 +1,8 @@
 import metagen from "eleventy-plugin-metagen"
+import type MarkdownIt from "markdown-it"
 import { fetchMovie } from "./config/fetchMovie.ts"
-import { imageShortcode, transformImages } from "./config/image.ts"
+import { imageShortcode } from "./config/image.ts"
+import { markdownImageParser } from "./config/markdown-image-parser.ts"
 import { makeSearchCollection } from "./config/search/collection.ts"
 import { makeSitemapCollection } from "./config/sitemap.ts"
 import type history from "./src/_data/history/index.json"
@@ -13,6 +15,9 @@ export default function (eleventyConfig: UserConfig) {
 
 	eleventyConfig.setLiquidOptions({
 		dynamicPartials: false,
+	})
+	eleventyConfig.amendLibrary("md", (mdLib: MarkdownIt) => {
+		mdLib.use(markdownImageParser)
 	})
 
 	eleventyConfig // Copy Static Files to /_Site
@@ -116,8 +121,6 @@ export default function (eleventyConfig: UserConfig) {
 	eleventyConfig.addPlugin(metagen)
 	// 2: Images
 	eleventyConfig.addLiquidShortcode("image", imageShortcode)
-	// 3: Image from Markdown Files
-	eleventyConfig.addTransform("transformImages", transformImages)
 
 	/*   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
     key: "11ty.js",
