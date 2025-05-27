@@ -1,33 +1,33 @@
 {
-	"featuredProjects": [
-		"workshop-grundschule",
-		"johns-adventure",
-		"sackgasse",
-		"clipped-übersteuert",
-		"lichtblick",
-		"panzerknacker"
-	],
-	"awards": [
-		{
-			"title": "BESTER FILM",
-			"award": "JUFINALE 2017",
-			"film": "Sackgasse",
-			"img": "/assets/img/uploads/jufinale1.jpg",
-			"url": "/projekte/sackgasse/"
-		},
-		{
-			"title": "Weißer Elefant",
-			"award": "Kinder-Medien-Preis 2012",
-			"film": "Zusammen durch die Zeit",
-			"img": "/assets/img/uploads/weisserElefant.jpg",
-			"url": "/projekte/zusammen-durch-die-zeit/"
-		},
-		{
-			"title": "BESTER FILM",
-			"award": "JUFINALE 2015",
-			"film": "Lichtblick",
-			"img": "/assets/img/uploads/jufinale1.jpg",
-			"url": "/projekte/lichtblick/"
-		}
-	]
+  "featuredProjects": [
+    "sepp-the-cap",
+    "johns-adventure",
+    "sackgasse",
+    "clipped-übersteuert",
+    "lichtblick",
+    "panzerknacker"
+  ],
+  "awards": [
+    {
+      "title": "BESTER FILM",
+      "award": "JUFINALE 2017",
+      "film": "Sackgasse",
+      "img": "/assets/img/uploads/jufinale1.jpg",
+      "url": "/projekte/sackgasse/"
+    },
+    {
+      "title": "Weißer Elefant",
+      "award": "Kinder-Medien-Preis 2012",
+      "film": "Zusammen durch die Zeit",
+      "img": "/assets/img/uploads/weisserElefant.jpg",
+      "url": "/projekte/zusammen-durch-die-zeit/"
+    },
+    {
+      "title": "BESTER FILM",
+      "award": "JUFINALE 2015",
+      "film": "Lichtblick",
+      "img": "/assets/img/uploads/jufinale1.jpg",
+      "url": "/projekte/lichtblick/"
+    }
+  ]
 }

@@ -126,8 +126,6 @@ collections:
         name: "frontpage"
         file: "src/_data/frontpage/index.json"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro", name: "intro", widget: "markdown" }
           - {
               label: "Featured Projects",
               name: featuredProjects,
