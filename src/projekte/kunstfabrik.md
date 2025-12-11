@@ -5,7 +5,7 @@ title: KunstFabrik
 nopage: false
 year: "2025"
 category: Aftermovie
-finishedFilm: https://youtu.be/rDkMdqG9kPQ
+finishedFilm: https://www.youtube.com/embed/rDkMdqG9kPQ
 header: /assets/img/uploads/header_kunstfabrik.png
 thumbnail: /assets/img/uploads/kunstfabrik_small.png
 contact: false
